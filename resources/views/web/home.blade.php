@@ -117,12 +117,12 @@
             </div>
         </section>
 
-        <!-- CEO Message -->
+        <!-- CEO's Message -->
         <section class="py-20 bg-white">
             <div class="container mx-auto px-4">
                 <div class="flex flex-col-reverse md:flex-row items-center gap-12">
                     <div class="md:w-1/2">
-                        <h2 class="text-4xl font-bold text-gray-800 mb-6">CEO Message</h2>
+                        <h2 class="text-4xl font-bold text-gray-800 mb-6">CEO's Message</h2>
                         <p class="text-gray-600 mb-6 italic">"At HAITRAC, we are committed to equipping students with the
                             skills and knowledge needed to thrive in today's fast-evolving world. Our focus on practical,
                             hands-on training ensures our graduates are job-ready and capable of making a meaningful impact

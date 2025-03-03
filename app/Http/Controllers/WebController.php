@@ -24,7 +24,7 @@ class WebController extends Controller
 
     public function faq()
     {
-        return view('web.faq');
+        return view('web.faqs');
     }
 
     // Admissions

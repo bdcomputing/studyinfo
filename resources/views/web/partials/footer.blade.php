@@ -61,7 +61,7 @@
                             class="text-blue-200 hover:text-white text-sm">Events</a></li>
                     <li><a href="{{ route('web.about.blog') }}" class="text-blue-200 hover:text-white text-sm">Blog</a>
                     </li>
-                    <li><a href="{{ route('web.faq') }}" class="text-blue-200 hover:text-white text-sm">FAQs</a></li>
+                    <li><a href="{{ route('web.faqs') }}" class="text-blue-200 hover:text-white text-sm">FAQs</a></li>
                 </ul>
             </div>
 

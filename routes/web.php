@@ -11,7 +11,7 @@ Route::get('/', function () {
 Route::get('/', [WebController::class, 'index'])->name('web.home');
 Route::get('/contact', [WebController::class, 'contact'])->name('web.contact');
 Route::get('/about', [WebController::class, 'about'])->name('web.about');
-Route::get('/faq', [WebController::class, 'faq'])->name('web.faq');
+Route::get('/faqs', [WebController::class, 'faq'])->name('web.faqs');
 Route::get('/admissions', [WebController::class, 'admissions'])->name('web.admissions');
 Route::get('/apply', [WebController::class, 'apply'])->name('web.apply');
 // Programs
