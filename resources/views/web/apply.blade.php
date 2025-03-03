@@ -1,6 +1,7 @@
 @extends('layouts.web')
 @section('title')
-    Contact
+    Apply for Admission
 @endsection
 @section('content')
+    {{--  --}}
 @endsection

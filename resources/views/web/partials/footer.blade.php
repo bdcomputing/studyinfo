@@ -1,4 +1,3 @@
-<!-- resources/views/web/partials/footer.blade.php -->
 <div class="bg-blue-900 text-white pt-12 pb-6">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -50,15 +49,19 @@
             <div class="col-span-1">
                 <h3 class="text-lg font-medium mb-4">Quick Links</h3>
                 <ul class="space-y-2">
-                    <li><a href="{{ route('home') }}" class="text-blue-200 hover:text-white text-sm">Home</a></li>
-                    <li><a href="{{ route('about') }}" class="text-blue-200 hover:text-white text-sm">About Us</a></li>
-                    <li><a href="{{ route('courses.all') }}" class="text-blue-200 hover:text-white text-sm">Our
+                    <li><a href="{{ route('web.home') }}" class="text-blue-200 hover:text-white text-sm">Home</a></li>
+                    <li><a href="{{ route('web.about') }}" class="text-blue-200 hover:text-white text-sm">About Us</a>
+                    </li>
+                    <li><a href="{{ route('web.programs.all') }}" class="text-blue-200 hover:text-white text-sm">Our
                             Courses</a></li>
-                    <li><a href="{{ route('success-stories') }}" class="text-blue-200 hover:text-white text-sm">Success
+                    <li><a href="{{ route('web.about.success-stories') }}"
+                            class="text-blue-200 hover:text-white text-sm">Success
                             Stories</a></li>
-                    <li><a href="{{ route('events') }}" class="text-blue-200 hover:text-white text-sm">Events</a></li>
-                    <li><a href="{{ route('blog') }}" class="text-blue-200 hover:text-white text-sm">Blog</a></li>
-                    <li><a href="{{ route('faq') }}" class="text-blue-200 hover:text-white text-sm">FAQs</a></li>
+                    <li><a href="{{ route('web.about.events') }}"
+                            class="text-blue-200 hover:text-white text-sm">Events</a></li>
+                    <li><a href="{{ route('web.about.blog') }}" class="text-blue-200 hover:text-white text-sm">Blog</a>
+                    </li>
+                    <li><a href="{{ route('web.faq') }}" class="text-blue-200 hover:text-white text-sm">FAQs</a></li>
                 </ul>
             </div>
 
@@ -66,17 +69,20 @@
             <div class="col-span-1">
                 <h3 class="text-lg font-medium mb-4">Our Programs</h3>
                 <ul class="space-y-2">
-                    <li><a href="{{ route('courses.nursing') }}"
+                    <li><a href="{{ route('web.programs.nursing') }}"
                             class="text-blue-200 hover:text-white text-sm">Nursing</a></li>
-                    <li><a href="{{ route('courses.ict') }}" class="text-blue-200 hover:text-white text-sm">ICT &
+                    <li><a href="{{ route('web.programs.ict') }}" class="text-blue-200 hover:text-white text-sm">ICT &
                             Software Development</a></li>
-                    <li><a href="{{ route('courses.engineering') }}"
-                            class="text-blue-200 hover:text-white text-sm">Mechanical Engineering</a></li>
-                    <li><a href="{{ route('courses.hospitality') }}"
-                            class="text-blue-200 hover:text-white text-sm">Hospitality Management</a></li>
-                    <li><a href="{{ route('courses.business') }}"
-                            class="text-blue-200 hover:text-white text-sm">Business Administration</a></li>
-                    <li><a href="{{ route('courses.shortcourses') }}"
+                    <li><a href="{{ route('web.programs.mechEngineering') }}"
+                            class="text-blue-200 hover:text-white text-sm">Mechanical
+                            Engineering</a></li>
+                    <li><a href="{{ route('web.programs.hospitality') }}"
+                            class="text-blue-200 hover:text-white text-sm">Hospitality
+                            Management</a></li>
+                    <li><a href="{{ route('web.programs.business') }}"
+                            class="text-blue-200 hover:text-white text-sm">Business
+                            Administration</a></li>
+                    <li><a href="{{ route('web.programs.shortcourses') }}"
                             class="text-blue-200 hover:text-white text-sm">Short Courses</a></li>
                 </ul>
             </div>
@@ -123,7 +129,7 @@
                     </div>
 
                     <div class="pt-4">
-                        <a href="{{ route('apply') }}"
+                        <a href="{{ route('web.apply') }}"
                             class="inline-block px-5 py-3 text-sm font-medium text-white bg-yellow-600 rounded-md hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 focus:ring-offset-blue-900">
                             Apply Now
                         </a>
@@ -139,13 +145,13 @@
                     &copy; {{ date('Y') }} HAITRAC. All rights reserved.
                 </p>
                 <div class="mt-4 md:mt-0 flex space-x-6">
-                    <a href="{{ route('privacy-policy') }}" class="text-sm text-blue-300 hover:text-white">
+                    <a href="{{ route('web.bottom.privacy') }}" class="text-sm text-blue-300 hover:text-white">
                         Privacy Policy
                     </a>
-                    <a href="{{ route('terms-of-service') }}" class="text-sm text-blue-300 hover:text-white">
+                    <a href="{{ route('web.bottom.terms') }}" class="text-sm text-blue-300 hover:text-white">
                         Terms of Service
                     </a>
-                    <a href="{{ route('cookie-policy') }}" class="text-sm text-blue-300 hover:text-white">
+                    <a href="{{ route('web.bottom.cookie') }}" class="text-sm text-blue-300 hover:text-white">
                         Cookie Policy
                     </a>
                 </div>

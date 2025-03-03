@@ -1,6 +1,7 @@
 @extends('layouts.web')
 @section('title')
-    Contact
+    Mechanical Engineering
 @endsection
 @section('content')
+    {{--  --}}
 @endsection

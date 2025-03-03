@@ -1,4 +1,3 @@
-<!-- resources/views/web/partials/navbar.blade.php -->
 <nav x-data="{ mobileMenuOpen: false, programsDropdownOpen: false, aboutDropdownOpen: false }" class="bg-white shadow-md">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-20">
@@ -44,14 +43,14 @@
                             class="absolute z-10 left-0 mt-16 w-56 origin-top-left rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                             style="display: none;">
                             <div class="py-1">
-                                <a {{-- href="{{ route('programs.nursing') }}" --}}
+                                <a href="{{ route('web.programs.nursing') }}"
                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Nursing</a>
-                                <a {{-- href="{{ route('programs.ict') }}" --}}
+                                <a href="{{ route('web.programs.ict') }}"
                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">ICT</a>
-                                <a {{-- href="{{ route('programs.mechanical-engineering') }}" --}}
+                                <a href="{{ route('web.programs.mechEngineering') }}"
                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Mechanical
                                     Engineering</a>
-                                <a {{-- href="{{ route('programs.all') }}" --}}
+                                <a href="{{ route('web.programs.all') }}"
                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">All Programs</a>
                             </div>
                         </div>
@@ -78,19 +77,19 @@
                             class="absolute z-10 left-0 mt-16 w-56 origin-top-left rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                             style="display: none;">
                             <div class="py-1">
-                                <a {{-- href="{{ route('about.mission') }}" --}}
+                                <a href="{{ route('web.about.mission') }}"
                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Our Mission</a>
-                                <a {{-- href="{{ route('about.faculty') }}" --}}
+                                <a href="{{ route('web.about.faculty') }}"
                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Our Faculty</a>
-                                <a {{-- href="{{ route('about.success-stories') }}" --}}
+                                <a href="{{ route('web.about.success-stories') }}"
                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Success Stories</a>
-                                <a {{-- href="{{ route('about.partnerships') }}" --}}
+                                <a href="{{ route('web.about.partnerships') }}"
                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Partnerships</a>
                             </div>
                         </div>
                     </div>
 
-                    <a {{-- href="{{ route('admissions') }}" --}}
+                    <a href="{{ route('web.admissions') }}"
                         class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->routeIs('admissions') ? 'border-blue-500 text-gray-900 font-medium' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700' }}">
                         Admissions
                     </a>
@@ -104,7 +103,7 @@
 
             <!-- Right Side CTA and Mobile Menu Button -->
             <div class="flex items-center">
-                <a {{-- href="{{ route('admissions.apply') }}" --}}
+                <a href="{{ route('web.apply') }}"
                     class="hidden md:inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
                     Apply Now
                 </a>
@@ -154,19 +153,19 @@
                     </svg>
                 </button>
                 <div x-show="open" class="pl-6" style="display: none;">
-                    <a {{-- href="{{ route('programs.nursing') }}" --}}
+                    <a href="{{ route('web.programs.nursing') }}"
                         class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800">
                         Nursing
                     </a>
-                    <a {{-- href="{{ route('programs.ict') }}" --}}
+                    <a href="{{ route('web.programs.ict') }}"
                         class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800">
                         ICT
                     </a>
-                    <a {{-- href="{{ route('programs.mechanical-engineering') }}" --}}
+                    <a href="{{ route('web.programs.mechEngineering') }}"
                         class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800">
                         Mechanical Engineering
                     </a>
-                    <a {{-- href="{{ route('programs.all') }}" --}}
+                    <a href="{{ route('web.programs.all') }}"
                         class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800">
                         All Programs
                     </a>

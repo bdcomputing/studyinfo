@@ -1,6 +1,7 @@
 @extends('layouts.web')
 @section('title')
-    Contact
+    Nursing
 @endsection
 @section('content')
+    {{--  --}}
 @endsection

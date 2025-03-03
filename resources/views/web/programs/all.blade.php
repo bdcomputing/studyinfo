@@ -1,6 +1,7 @@
 @extends('layouts.web')
 @section('title')
-    Contact
+    All Programs
 @endsection
 @section('content')
+    {{--  --}}
 @endsection

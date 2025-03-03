@@ -1,6 +1,7 @@
 @extends('layouts.web')
 @section('title')
-    Contact
+    Cookie Policy
 @endsection
 @section('content')
+    {{--  --}}
 @endsection
