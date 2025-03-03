@@ -4,7 +4,7 @@
             <!-- Logo and About -->
             <div class="col-span-1 md:col-span-1">
                 <div class="flex items-center mb-4">
-                    <img class="h-10 w-auto mr-2" src="{{ asset('images/logo.png') }}" alt="HAITRAC Logo">
+                    <img class="h-20 w-auto mr-2" src="{{ asset('/assets/logos/logo.png') }}" alt="HAITRAC Logo">
                     <div class="flex flex-col">
                         <span class="font-bold text-lg leading-tight">HAITRAC</span>
                         <span class="text-xs leading-tight text-blue-200">Excellence in Education</span>

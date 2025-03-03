@@ -7,7 +7,7 @@
                 <div class="flex-shrink-0 flex items-center">
                     <a href="{{ route('web.home') }}" class="flex items-center">
                         <!-- Replace with your actual logo -->
-                        <img class="h-12 w-auto" src="{{ asset('images/logo.png') }}" alt="HAITRAC">
+                        <img class="h-20 w-auto" src="{{ asset('/assets/logos/logo.png') }}" alt="HAITRAC">
                         <div class="ml-3">
                             <span class="text-xl font-bold text-gray-900">HAITRAC</span>
                             <span class="block text-xs text-gray-600">Hue African Industrial Training Center</span>

@@ -23,7 +23,7 @@
                         </div>
                     </div>
                     <div class="md:w-1/2 flex justify-center">
-                        <img src="{{ asset('images/hero-image.png') }}" alt="HAITRAC Students"
+                        <img src="{{ asset('/assets/images/grad.jpg') }}" alt="HAITRAC Students"
                             class="max-w-full animate-pulse">
                     </div>
                 </div>
@@ -80,7 +80,7 @@
             <div class="container mx-auto px-4">
                 <div class="flex flex-col md:flex-row items-center gap-12">
                     <div class="md:w-1/2">
-                        <img src="{{ asset('images/about-image.png') }}" alt="HAITRAC Campus"
+                        <img src="{{ asset('/assets/images/about.jpg') }}" alt="HAITRAC Campus"
                             class="rounded-xl shadow-lg w-full">
                     </div>
                     <div class="md:w-1/2">
@@ -130,8 +130,8 @@
                         <h4 class="text-xl font-semibold text-primary">CEO, HAITRAC</h4>
                     </div>
                     <div class="md:w-1/2 flex justify-center mb-8 md:mb-0">
-                        <img src="{{ asset('images/ceo-image.png') }}" alt="HAITRAC CEO"
-                            class="rounded-xl shadow-lg w-full max-w-md">
+                        <img src="{{ asset('/assets/leadership/a1.png') }}" alt="HAITRAC CEO"
+                            class="rounded-3xl shadow-lg w-full max-w-md">
                     </div>
                 </div>
             </div>
@@ -151,7 +151,7 @@
                     <div
                         class="bg-white rounded-xl overflow-hidden shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-xl">
                         <div class="h-48 overflow-hidden">
-                            <img src="{{ asset('images/nursing-program.png') }}" alt="Nursing Program"
+                            <img src="{{ asset('/assets/images/nursing.jpg') }}" alt="Nursing Program"
                                 class="w-full h-full object-cover transition duration-300 hover:scale-110">
                         </div>
                         <div class="p-6">
@@ -174,7 +174,7 @@
                     <div
                         class="bg-white rounded-xl overflow-hidden shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-xl">
                         <div class="h-48 overflow-hidden">
-                            <img src="{{ asset('images/ict-program.png') }}" alt="ICT Program"
+                            <img src="{{ asset('/assets/images/ict-program.jpg') }}" alt="ICT Program"
                                 class="w-full h-full object-cover transition duration-300 hover:scale-110">
                         </div>
                         <div class="p-6">
@@ -197,7 +197,7 @@
                     <div
                         class="bg-white rounded-xl overflow-hidden shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-xl">
                         <div class="h-48 overflow-hidden">
-                            <img src="{{ asset('images/technical-program.png') }}" alt="Technical Program"
+                            <img src="{{ asset('/assets/images/technical-program.jpg') }}" alt="Technical Program"
                                 class="w-full h-full object-cover transition duration-300 hover:scale-110">
                         </div>
                         <div class="p-6">

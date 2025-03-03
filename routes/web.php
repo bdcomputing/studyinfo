@@ -32,8 +32,6 @@ Route::get('/news', [WebController::class, 'news'])->name('web.about.news');
 Route::get('/events', [WebController::class, 'events'])->name('web.about.events');
 Route::get('/gallery', [WebController::class, 'gallery'])->name('web.about.gallery');
 Route::get('/blog', [WebController::class, 'blog'])->name('web.about.blog');
-
-
 // Bottom (Footer Links)
 Route::get('/privacy-policy', [WebController::class, 'privacy'])->name('web.bottom.privacy');
 Route::get('/terms-of-service', [WebController::class, 'terms'])->name('web.bottom.terms');
