@@ -49,7 +49,6 @@
             <div class="col-span-1">
                 <h3 class="text-lg font-medium mb-4">Quick Links</h3>
                 <ul class="space-y-2">
-                    <li><a href="{{ route('web.home') }}" class="text-blue-200 hover:text-white text-sm">Home</a></li>
                     <li><a href="{{ route('web.about') }}" class="text-blue-200 hover:text-white text-sm">About Us</a>
                     </li>
                     <li><a href="{{ route('web.programs.all') }}" class="text-blue-200 hover:text-white text-sm">Our

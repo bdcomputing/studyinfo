@@ -9,7 +9,8 @@
             <div class="container mx-auto px-4">
                 <div class="flex flex-col md:flex-row items-center">
                     <div class="md:w-1/2 mb-10 md:mb-0">
-                        <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Shaping Tomorrow's Leaders Today</h1>
+                        <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Shaping Tomorrow's
+                            Leaders Today</h1>
                         <p class="text-lg mb-8 opacity-90">At HAITRAC, we empower students through quality education in
                             Nursing, ICT, and Technical disciplines. Join us to develop practical skills for a successful
                             career.</p>
@@ -223,7 +224,7 @@
         <section class="py-20 bg-white">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl font-bold text-gray-800 mb-4">Our Vision & Mission</h2>
+                    <h2 class="text-4xl font-bold text-secondary-400 mb-4">Our Vision & Mission</h2>
                     <p class="text-lg text-gray-600 max-w-2xl mx-auto">Guiding principles that shape our approach to
                         education</p>
                 </div>
