@@ -2,66 +2,6 @@
 @section('title')
     Short Courses
 @endsection
-{{-- @section('content')
-    <div class="bg-gradient-to-br from-blue-100 to-white min-h-screen py-16">
-        <div class="container mx-auto px-4">
-            <div class="max-w-5xl mx-auto">
-                <h1 class="text-4xl font-bold text-blue-900 mb-8 text-center">
-                    Short Courses & Professional Development
-                </h1>
-
-                <div class="grid md:grid-cols-3 gap-6">
-                    @php
-                        $courses = [
-                            [
-                                'title' => 'Digital Marketing',
-                                'duration' => '3 Months',
-                                'description' => 'Learn modern digital marketing strategies and tools.',
-                            ],
-                            [
-                                'title' => 'Web Development',
-                                'duration' => '4 Months',
-                                'description' => 'Master front-end and back-end web development skills.',
-                            ],
-                            [
-                                'title' => 'Project Management',
-                                'duration' => '2 Months',
-                                'description' => 'Gain professional project management certification.',
-                            ],
-                        ];
-                    @endphp
-
-                    @foreach ($courses as $course)
-                        <div class="bg-white shadow-2xl rounded-xl p-6 transform transition hover:scale-105">
-                            <h2 class="text-xl font-semibold text-blue-800 mb-3">
-                                {{ $course['title'] }}
-                            </h2>
-                            <p class="text-gray-600 mb-4">
-                                {{ $course['description'] }}
-                            </p>
-                            <div class="flex items-center text-blue-600">
-                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                                <span>{{ $course['duration'] }}</span>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-
-                <div class="mt-12 text-center">
-                    <a href="{{ route('web.contact') }}"
-                        class="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition-colors text-lg font-semibold">
-                        Inquire About Courses
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-@endsection --}}
-
-
 @section('content')
     <div class="bg-gradient-to-br from-blue-100 to-white min-h-screen py-16">
         <div class="container mx-auto px-4">
