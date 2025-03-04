@@ -25,7 +25,7 @@ Route::get('/mechEngineering', [WebController::class, 'mechEngineering'])->name(
 // About
 Route::get('/mission', [WebController::class, 'mission'])->name('web.about.mission');
 Route::get('/faculty', [WebController::class, 'faculty'])->name('web.about.faculty');
-Route::get('/partnership', [WebController::class, 'partnership'])->name('web.about.partnerships');
+Route::get('/partnerships', [WebController::class, 'partnership'])->name('web.about.partnerships');
 Route::get('/success', [WebController::class, 'success'])->name('web.about.success-stories');
 Route::get('/careers', [WebController::class, 'careers'])->name('web.about.careers');
 Route::get('/news', [WebController::class, 'news'])->name('web.about.news');
