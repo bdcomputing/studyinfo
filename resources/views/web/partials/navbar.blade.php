@@ -1,5 +1,5 @@
 <nav x-data="{ mobileMenuOpen: false, programsDropdownOpen: false, aboutDropdownOpen: false }" class="bg-white shadow-md">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-20">
             <!-- Logo and Primary Nav -->
             <div class="flex">
@@ -104,7 +104,7 @@
             <!-- Right Side CTA and Mobile Menu Button -->
             <div class="flex items-center">
                 <a href="{{ route('web.apply') }}"
-                    class="hidden md:inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                    class="hidden md:inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary-500 hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
                     Apply Now
                 </a>
 

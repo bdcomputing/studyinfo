@@ -16,22 +16,22 @@
                         [
                             'title' => 'Nursing',
                             'description' => 'Comprehensive healthcare training with practical clinical experience.',
-                            'route' => 'nursing',
+                            'route' => 'web.programs.nursing',
                         ],
                         [
                             'title' => 'ICT',
                             'description' => 'Cutting-edge technology and software development programs.',
-                            'route' => 'ict',
+                            'route' => 'web.programs.ict',
                         ],
                         [
                             'title' => 'Mechanical Engineering',
                             'description' => 'Advanced technical training with industry-relevant skills.',
-                            'route' => 'mech-engineering',
+                            'route' => 'web.programs.mechEngineering',
                         ],
                         [
                             'title' => 'Short Courses',
                             'description' => 'Flexible, skill-focused training for quick professional development.',
-                            'route' => 'shortcourses',
+                            'route' => 'web.programs.shortcourses',
                         ],
                     ];
                 @endphp
