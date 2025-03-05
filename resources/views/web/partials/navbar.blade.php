@@ -188,7 +188,7 @@
                             clip-rule="evenodd" />
                     </svg>
                 </button>
-                <div x-show="open" class="pl-6" style="display: none;">
+                <div x-show="open" class="pl-6 mt-72" style="display: none;">
                     <a href="{{ route('web.programs.nursing') }}"
                         class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800">
                         Nursing

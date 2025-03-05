@@ -25,7 +25,7 @@
 <body class="font-sans antialiased bg-gray-50">
     <div class="min-h-screen flex flex-col">
         <!-- Navigation Bar -->
-        @include('web.partials.navbar')
+        @include('web.partials.nav')
 
         <!-- Alert Messages -->
         @if (session('success') || session('error') || session('info'))
