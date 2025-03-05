@@ -60,7 +60,7 @@
         @endif
 
         <!-- Page Content -->
-        <main class="flex-grow">
+        <main class="flex-grow pt-20">
             @yield('content')
         </main>
 
