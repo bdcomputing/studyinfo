@@ -114,6 +114,12 @@ class WebController extends Controller
         return view('web.about.blog');
     }
 
+    public function team()
+    {
+        return view('web.about.team');
+    }
+
+
 
 
     // Bottom (Footer Links)

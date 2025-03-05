@@ -1,5 +1,5 @@
 <nav x-data="{ mobileMenuOpen: false, programsDropdownOpen: false, aboutDropdownOpen: false }" class="bg-white shadow-md">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-20">
             <!-- Logo and Primary Nav -->
             <div class="flex">
@@ -76,15 +76,17 @@
                             x-transition:leave-end="opacity-0 translate-y-1"
                             class="absolute z-10 left-0 mt-16 w-56 origin-top-left rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                             style="display: none;">
-                            <div class="py-1">
+                            <div class="py-5 mt-5">
                                 <a href="{{ route('web.about.mission') }}"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Our Mission</a>
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Our Mission1</a>
                                 <a href="{{ route('web.about.faculty') }}"
                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Our Faculty</a>
                                 <a href="{{ route('web.about.success-stories') }}"
                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Success Stories</a>
                                 <a href="{{ route('web.about.partnerships') }}"
                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Partnerships</a>
+
+
                             </div>
                         </div>
                     </div>
@@ -104,7 +106,7 @@
             <!-- Right Side CTA and Mobile Menu Button -->
             <div class="flex items-center">
                 <a href="{{ route('web.apply') }}"
-                    class="hidden md:inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                    class="hidden md:inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary-500 hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
                     Apply Now
                 </a>
 
