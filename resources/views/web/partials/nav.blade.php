@@ -37,8 +37,15 @@
                         class="block py-2 px-3 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Admissions</a>
                 </li>
                 <li>
-                    <a href="{{ route('web.about') }}"
-                        class="block py-2 px-3 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+                    <button id="mega-menu-about-button" data-collapse-toggle="mega-menu-about-dropdown"
+                        class="flex items-center justify-between w-full py-2 px-3 font-medium text-gray-900 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">
+                        About
+                        <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 1 4 4 4-4" />
+                        </svg>
+                    </button>
                 </li>
                 <li>
                     <a href="{{ route('web.contact') }}"
@@ -111,6 +118,74 @@
                     </svg>
                 </button>
             </a>
+        </div>
+    </div>
+    <div id="mega-menu-about-dropdown"
+        class="mt-1 bg-white border-gray-200 shadow-sm border-y dark:bg-gray-800 dark:border-gray-600 hidden">
+        <div
+            class="grid max-w-screen-xl px-4 py-5 mx-auto text-sm text-gray-500 dark:text-gray-400 md:grid-cols-3 md:px-6">
+            <ul class="space-y-4" aria-labelledby="mega-menu-about-button">
+                <li>
+                    <a href="{{ route('web.about.mission') }}"
+                        class="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                        Mission & Vision
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('web.about.faculty') }}"
+                        class="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                        Faculty
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('web.about.partnerships') }}"
+                        class="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                        Partnerships
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('web.about.success-stories') }}"
+                        class="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                        Success Stories
+                    </a>
+                </li>
+            </ul>
+            <ul class="space-y-4">
+                <li>
+                    <a href="{{ route('web.about.careers') }}"
+                        class="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                        Careers
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('web.about.news') }}"
+                        class="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                        News
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('web.about.events') }}"
+                        class="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                        Events
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('web.about.gallery') }}"
+                        class="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                        Gallery
+                    </a>
+                </li>
+            </ul>
+            <div class="space-y-4">
+                <a href="{{ route('web.about.blog') }}"
+                    class="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                    Blog
+                </a>
+                <a href="{{ route('web.about.team') }}"
+                    class="block hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                    Our Team
+                </a>
+            </div>
         </div>
     </div>
 </nav>
