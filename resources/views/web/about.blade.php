@@ -44,7 +44,7 @@
 
                     <section>
                         <h2 class="text-2xl font-semibold text-blue-700 mb-4">Core Values</h2>
-                        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
                             @php
                                 $values = [
                                     ['Excellence', 'Striving for the highest standards in education and training'],

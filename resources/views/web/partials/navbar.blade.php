@@ -76,15 +76,17 @@
                             x-transition:leave-end="opacity-0 translate-y-1"
                             class="absolute z-10 left-0 mt-16 w-56 origin-top-left rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                             style="display: none;">
-                            <div class="py-1">
+                            <div class="py-5 mt-5">
                                 <a href="{{ route('web.about.mission') }}"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Our Mission</a>
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Our Mission1</a>
                                 <a href="{{ route('web.about.faculty') }}"
                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Our Faculty</a>
                                 <a href="{{ route('web.about.success-stories') }}"
                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Success Stories</a>
                                 <a href="{{ route('web.about.partnerships') }}"
                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Partnerships</a>
+
+
                             </div>
                         </div>
                     </div>

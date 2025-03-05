@@ -7,14 +7,14 @@
         <!-- Hero Section -->
         <section class="bg-gradient-to-r from-primary to-blue-800 text-white py-20">
             <div class="container mx-auto px-4">
-                <div class="flex flex-col md:flex-row items-center gap-5">
+                <div class="flex flex-col md:flex-row items-center gap-10">
                     <div class="md:w-1/2 mb-10 md:mb-0">
                         <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Shaping Tomorrow's
                             Leaders Today</h1>
                         <p class="text-lg mb-8 opacity-90">At HAITRAC, we empower students through quality education in
                             Nursing, ICT, and Technical disciplines. Join us to develop practical skills for a successful
                             career.</p>
-                        <div class="flex flex-wrap gap-4">
+                        <div class="flex flex-wrap gap-5">
                             <button
                                 class="bg-primary hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition duration-300">Explore
                                 Programs</button>
@@ -36,7 +36,7 @@
             <div class="container mx-auto">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6">
-                        Why Choose HAITRAC? 🏆
+                        Why Choose HAITRAC?
                     </h2>
                     <p class="text-lg text-gray-600 max-w-2xl mx-auto">We provide a unique learning experience focused on
                         practical skills and industry demands</p>
@@ -121,22 +121,46 @@
                             students gain hands-on expertise to excel in their careers.</p>
 
                         <h3 class="text-xl font-bold mb-4">Our Core Values</h3>
-                        <div class="space-y-3">
-                            <div class="flex items-center">
-                                <i class="fas fa-check-circle text-success mr-3"></i>
-                                <span>Excellence in Education</span>
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-5 h-5 rounded-full bg-primary-500 flex items-center justify-center">
+                                    <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-gray-700 font-medium">Excellence in Education</span>
                             </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-check-circle text-success mr-3"></i>
-                                <span>Innovation & Creativity</span>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-5 h-5 rounded-full bg-secondary-500 flex items-center justify-center">
+                                    <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-gray-700 font-medium">Innovation & Creativity</span>
                             </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-check-circle text-success mr-3"></i>
-                                <span>Practical Learning</span>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-5 h-5 rounded-full bg-accent-500 flex items-center justify-center">
+                                    <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-gray-700 font-medium">Practical Learning</span>
                             </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-check-circle text-success mr-3"></i>
-                                <span>Industry Relevance</span>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-5 h-5 rounded-full bg-red-500 flex items-center justify-center">
+                                    <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-gray-700 font-medium">Industry Relevance</span>
                             </div>
                         </div>
                     </div>
@@ -249,31 +273,62 @@
         <!-- Vision & Mission -->
         <section class="py-20 bg-white">
             <div class="container mx-auto px-4">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-bold text-secondary-400 mb-4">Our Vision & Mission</h2>
-                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">Guiding principles that shape our approach to
-                        education</p>
+                <div class="text-center md:text-left items-start">
+                    <h2 class="text-4xl font-bold text-secondary-950">Our <span class="text-primary-600">Mission</span>
+                    </h2>
+                    <p class="text-lg text-secondary-600 max-w-5xl">To be a leading center of excellence in
+                        education,
+                        recognized for producing globally competent and socially responsible professionals who shape the
+                        future of healthcare, technology, and technical fields.</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- Vision -->
-                    <div class="bg-gray-50 rounded-xl p-8 text-center transition duration-300 hover:shadow-lg">
-                        <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i class="fas fa-eye text-3xl text-primary"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">Vision</h3>
-                        <p class="text-gray-600">To be a leading center of excellence in education, recognized for
-                            producing globally competent and socially responsible professionals who shape the future of
-                            healthcare, technology, and technical fields.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5 pt-10">
+                    <!-- Mission -->
+                    <div
+                        class="bg-white rounded-3xl p-5 md:p-10 transition duration-300 hover:shadow-lg border border-secondary-100">
+
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Our Commitment</h3>
+                        <p class="text-gray-600">At HAITRAC, we are deeply committed to transforming education by providing
+                            practical, industry-aligned training that equips students with the skills and knowledge needed
+                            to excel in healthcare, technology, and technical fields.</p>
                     </div>
 
-                    <!-- Mission -->
-                    <div class="bg-gray-50 rounded-xl p-8 text-center transition duration-300 hover:shadow-lg">
-                        <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i class="fas fa-bullseye text-3xl text-primary"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">Mission</h3>
-                        <p class="text-gray-600">To empower individuals with knowledge, skills, and practical experience
+                    <!-- Vision -->
+                    <div
+                        class="bg-white rounded-2xl p-5 md:p-10 transition duration-300 hover:shadow-lg border border-secondary-100">
+
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">The Impact</h3>
+                        <p class="text-gray-600">Through strategic partnerships, community initiatives, and hands-on
+                            training, HAITRAC creates meaningful opportunities for students to develop career-critical
+                            skills and make significant contributions to society.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5 pt-5">
+                    <!-- Vision -->
+                    <div
+                        class="bg-white rounded-3xl p-5 md:p-10 transition duration-300 hover:shadow-lg border border-secondary-100">
+
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">The Importance</h3>
+                        <p class="text-gray-600">HAITRAC recognizes education as a powerful tool for individual and
+                            community transformation, focusing on developing professionals who can address real-world
+                            challenges with expertise and social responsibility.</p>
+                    </div>
+                    <!-- Vision -->
+                    <div
+                        class="bg-white rounded-3xl p-5 md:p-10 transition duration-300 hover:shadow-lg border border-secondary-100">
+
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Our Resolve</h3>
+                        <p class="text-gray-600">We are dedicated to bridging the skills gap by delivering innovative,
+                            practical, and transformative education that empowers students to become leaders,
+                            problem-solvers, and change-makers in their respective industries.</p>
+                    </div>
+                    <!-- Vision -->
+                    <div
+                        class="bg-white rounded-3xl p-5 md:p-10 transition duration-300 hover:shadow-lg border border-secondary-100">
+
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Our Vision</h3>
+                        <p class="text-gray-600"> To empower individuals with knowledge, skills, and practical experience
                             through innovative education in Nursing, ICT, and technical disciplines, fostering a generation
                             of professionals who drive change and make a positive impact in their communities.</p>
                     </div>
@@ -287,36 +342,45 @@
         <!-- Recognition Section -->
         <section class="py-20 bg-gray-100">
             <div class="container mx-auto px-4">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-bold text-gray-800 mb-4">Recognition for Excellence</h2>
-                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">HAITRAC has been recognized as a leading institution
+                <div class="text-left mb-16">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Recognition for Excellence</h2>
+                    <p class="text-md text-gray-600 max-w-4xl">HAITRAC has been recognized as a leading institution
                         in Nursing, ICT, and technical courses, earning accolades from local education boards and industry
                         organizations.</p>
                 </div>
 
-                <div class="flex flex-wrap justify-center gap-8">
-                    <!-- Award 1 -->
-                    <div class="bg-gray-50 rounded-xl p-8 text-center w-48 transition duration-300 hover:scale-105">
-                        <div class="text-4xl text-secondary mb-4">
-                            <i class="fas fa-award"></i>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Success Story 1: Nursing -->
+                    <div
+                        class="bg-white rounded-xl p-8 text-center transition duration-300 hover:scale-105 hover:shadow-lg">
+                        <div class="text-4xl text-blue-600 mb-4">
+                            <i class="fas fa-user-md"></i>
                         </div>
-                        <p class="font-semibold text-gray-800">Excellence in Education</p>
+                        <h3 class="font-semibold text-gray-800 mb-5 text-2xl">Nursing Excellence</h3>
+                        <p class="text-md text-gray-600">Valerie Cherunya graduated and secured a position at a leading
+                            European hospital, winning the "Rising Star in Healthcare" award.</p>
                     </div>
 
-                    <!-- Award 2 -->
-                    <div class="bg-gray-50 rounded-xl p-8 text-center w-48 transition duration-300 hover:scale-105">
-                        <div class="text-4xl text-secondary mb-4">
-                            <i class="fas fa-medal"></i>
+                    <!-- Success Story 2: ICT -->
+                    <div
+                        class="bg-white rounded-xl p-8 text-center transition duration-300 hover:scale-105 hover:shadow-lg">
+                        <div class="text-4xl text-green-600 mb-4">
+                            <i class="fas fa-laptop-code"></i>
                         </div>
-                        <p class="font-semibold text-gray-800">Top Nursing Program</p>
+                        <h3 class="font-semibold text-gray-800 mb-5 text-2xl">ICT Innovation</h3>
+                        <p class="text-md text-gray-600">Edwin developed a mobile app simplifying government services,
+                            gaining national recognition at the Kenya Tech Summit.</p>
                     </div>
 
-                    <!-- Award 3 -->
-                    <div class="bg-gray-50 rounded-xl p-8 text-center w-48 transition duration-300 hover:scale-105">
-                        <div class="text-4xl text-secondary mb-4">
-                            <i class="fas fa-trophy"></i>
+                    <!-- Success Story 3: Technical Fields -->
+                    <div
+                        class="bg-white rounded-xl p-8 text-center transition duration-300 hover:scale-105 hover:shadow-lg">
+                        <div class="text-4xl text-purple-600 mb-4">
+                            <i class="fas fa-industry"></i>
                         </div>
-                        <p class="font-semibold text-gray-800">Innovation in Teaching</p>
+                        <h3 class="font-semibold text-gray-800 mb-5 text-2xl">Technical Leadership</h3>
+                        <p class="text-md text-gray-600">Hosea became the first woman to lead a technical team at a
+                            manufacturing firm in Finland, driving innovation.</p>
                     </div>
                 </div>
             </div>

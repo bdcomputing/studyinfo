@@ -53,7 +53,7 @@
                         <h2 class="text-2xl font-semibold text-blue-700 mb-6">
                             Career Pathways
                         </h2>
-                        <div class="grid grid-cols-2 gap-4">
+                        <div class="grid grid-cols-2 gap-5">
                             <div class="bg-blue-50 p-4 rounded-lg text-center">
                                 <svg class="w-12 h-12 mx-auto text-blue-600 mb-3" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24">
