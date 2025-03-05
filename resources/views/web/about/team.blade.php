@@ -5,7 +5,7 @@
 @section('content')
     <div class="bg-gray-50 min-h-screen py-12">
         <div class="container mx-auto px-4">
-            <h1 class="text-4xl font-bold text-blue-800 mb-10 text-center">Our Leadership Team</h1>
+            <h1 class="text-4xl font-bold text-primary-800 mb-10 text-center">Our Leadership Team</h1>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-white shadow-lg rounded-lg overflow-hidden">
@@ -18,7 +18,7 @@
                 </div>
 
                 <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                    <img src="/api/placeholder/400/400" alt="Mr. Kiplagat" class="w-full h-64 object-cover">
+                    <img src="/assets/leadership/a1.png" alt="Mr. Kiplagat" class="w-full h-64 object-contain">
                     <div class="p-6 text-center">
                         <h2 class="text-xl font-semibold text-gray-800">Mr. Kiplagat</h2>
                         <p class="text-gray-600 mb-2">CEO</p>
@@ -27,7 +27,7 @@
                 </div>
 
                 <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                    <img src="/api/placeholder/400/400" alt="Ms. Kapkiyai" class="w-full h-64 object-cover">
+                    <img src="/assets/leadership/a5.png" alt="Ms. Kapkiyai" class="w-full h-64 object-contain">
                     <div class="p-6 text-center">
                         <h2 class="text-xl font-semibold text-gray-800">Ms. Kapkiyai</h2>
                         <p class="text-gray-600 mb-2">Director</p>

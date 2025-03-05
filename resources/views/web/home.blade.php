@@ -255,6 +255,9 @@
             </div>
         </section>
 
+        <!-- Team Section -->
+        {{-- @include('web.about.team') --}}
+
         <!-- Recognition Section -->
         <section class="py-20 bg-gray-100">
             <div class="container mx-auto px-4">
