@@ -74,19 +74,52 @@
                             x-transition:leave="transition ease-in duration-150"
                             x-transition:leave-start="opacity-100 translate-y-0"
                             x-transition:leave-end="opacity-0 translate-y-1"
-                            class="absolute z-10 left-0 mt-16 w-56 origin-top-left rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                            class="absolute -left-1/4 -translate-x-1/4 z-50 mt-64 w-screen bg-white shadow-lg rounded-lg border"
                             style="display: none;">
-                            <div class="py-5 mt-5">
-                                <a href="{{ route('web.about.mission') }}"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Our Mission1</a>
-                                <a href="{{ route('web.about.faculty') }}"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Our Faculty</a>
-                                <a href="{{ route('web.about.success-stories') }}"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Success Stories</a>
-                                <a href="{{ route('web.about.partnerships') }}"
-                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Partnerships</a>
-
-
+                            <div class="p-6">
+                                <div class="grid grid-cols-4 gap-8">
+                                    <div>
+                                        <h3 class="text-lg font-semibold text-gray-900 mb-4">About HAITRAC</h3>
+                                        <div class="space-y-3">
+                                            <a href="{{ route('web.about.mission') }}"
+                                                class="block text-gray-600 hover:text-primary-600">Our Mission</a>
+                                            <a href="{{ route('web.about.faculty') }}"
+                                                class="block text-gray-600 hover:text-primary-600">Our Faculty</a>
+                                            <a href="{{ route('web.about.team') }}"
+                                                class="block text-gray-600 hover:text-primary-600">Our Team</a>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Success & Careers</h3>
+                                        <div class="space-y-3">
+                                            <a href="{{ route('web.about.success-stories') }}"
+                                                class="block text-gray-600 hover:text-primary-600">Success Stories</a>
+                                            <a href="{{ route('web.about.careers') }}"
+                                                class="block text-gray-600 hover:text-primary-600">Career
+                                                Opportunities</a>
+                                            <a href="{{ route('web.about.gallery') }}"
+                                                class="block text-gray-600 hover:text-primary-600">Photo Gallery</a>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-semibold text-gray-900 mb-4">News & Updates</h3>
+                                        <div class="space-y-3">
+                                            <a href="{{ route('web.about.news') }}"
+                                                class="block text-gray-600 hover:text-primary-600">Latest News</a>
+                                            <a href="{{ route('web.about.events') }}"
+                                                class="block text-gray-600 hover:text-primary-600">Upcoming Events</a>
+                                            <a href="{{ route('web.about.blog') }}"
+                                                class="block text-gray-600 hover:text-primary-600">Blog</a>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Partners</h3>
+                                        <div class="space-y-3">
+                                            <a href="{{ route('web.about.partnerships') }}"
+                                                class="block text-gray-600 hover:text-primary-600">Partnerships</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -117,14 +150,15 @@
                         aria-expanded="false">
                         <span class="sr-only">Open main menu</span>
                         <!-- Icon when menu is closed -->
-                        <svg x-show="!mobileMenuOpen" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <svg x-show="!mobileMenuOpen" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                         <!-- Icon when menu is open -->
-                        <svg x-show="mobileMenuOpen" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" style="display: none;">
+                        <svg x-show="mobileMenuOpen" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"
+                            style="display: none;">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M6 18L18 6M6 6l12 12" />
                         </svg>
@@ -187,26 +221,26 @@
                     </svg>
                 </button>
                 <div x-show="open" class="pl-6" style="display: none;">
-                    <a {{-- href="{{ route('about.mission') }}" --}}
+                    <a href="{{ route('web.about.mission') }}"
                         class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800">
                         Our Mission
                     </a>
-                    <a {{-- href="{{ route('about.faculty') }}" --}}
+                    <a href="{{ route('web.about.faculty') }}"
                         class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800">
                         Our Faculty
                     </a>
-                    <a {{-- href="{{ route('about.success-stories') }}" --}}
+                    <a href="{{ route('web.about.success-stories') }}"
                         class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800">
                         Success Stories
                     </a>
-                    <a {{-- href="{{ route('about.partnerships') }}" --}}
+                    <a href="{{ route('web.about.partnerships') }}"
                         class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800">
                         Partnerships
                     </a>
                 </div>
             </div>
 
-            <a {{-- href="{{ route('admissions') }}" --}}
+            <a href="{{ route('web.admissions') }}"
                 class="{{ request()->routeIs('admissions') ? 'bg-blue-50 border-blue-500 text-blue-700' : 'border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800' }} block pl-3 pr-4 py-2 border-l-4 text-base font-medium">
                 Admissions
             </a>
@@ -217,7 +251,7 @@
             </a>
 
             <div class="pt-4 pb-3 border-t border-gray-200">
-                <a {{-- href="{{ route('admissions.apply') }}" --}}
+                <a href="{{ route('web.apply') }}"
                     class="block w-full text-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
                     Apply Now
                 </a>
