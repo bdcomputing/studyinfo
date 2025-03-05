@@ -7,7 +7,7 @@
         <!-- Hero Section -->
         <section class="bg-gradient-to-r from-primary to-blue-800 text-white py-20">
             <div class="container mx-auto px-4">
-                <div class="flex flex-col md:flex-row items-center">
+                <div class="flex flex-col md:flex-row items-center gap-5">
                     <div class="md:w-1/2 mb-10 md:mb-0">
                         <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Shaping Tomorrow's
                             Leaders Today</h1>
@@ -31,50 +31,76 @@
             </div>
         </section>
 
-        <!-- Features Section -->
-        <section class="py-20 bg-white">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-bold text-gray-800 mb-4">Why Choose HAITRAC?</h2>
+
+        <div class="bg-white py-12 px-4 sm:px-6 lg:px-8">
+            <div class="container mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6">
+                        Why Choose HAITRAC? 🏆
+                    </h2>
                     <p class="text-lg text-gray-600 max-w-2xl mx-auto">We provide a unique learning experience focused on
                         practical skills and industry demands</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Feature 1 -->
-                    <div
-                        class="bg-gray-50 rounded-xl p-8 text-center transition duration-300 hover:shadow-lg hover:-translate-y-2">
-                        <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i class="fas fa-graduation-cap text-3xl text-primary"></i>
+                <div class="grid md:grid-cols-3 gap-8">
+                    {{-- Credential Section --}}
+                    <div class="bg-white shadow-lg rounded-lg p-6 transform transition hover:scale-105 hover:shadow-xl">
+                        <div class="flex items-center mb-4">
+                            <svg class="w-12 h-12 text-blue-600 mr-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-1.horizo ntal 0 5v-4.102l1.69-.725a1 1 0 000-1.838l-7-3-7 3a1 1 0 000 1.838l7 3z" />
+                            </svg>
+                            <h3 class="text-xl font-bold text-gray-900">Industry-Recognized Credentials</h3>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">Expert Faculty</h3>
-                        <p class="text-gray-600">Learn from industry professionals with extensive experience and expertise
+                        <p class="text-gray-600">
+                            Transform your future with our fully accredited programs. We don't just teach—we prepare you for
+                            success. Our courses are rigorously validated by leading professional bodies, ensuring your
+                            qualifications carry weight both locally and internationally.
                         </p>
                     </div>
 
-                    <!-- Feature 2 -->
-                    <div
-                        class="bg-gray-50 rounded-xl p-8 text-center transition duration-300 hover:shadow-lg hover:-translate-y-2">
-                        <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i class="fas fa-laptop-code text-3xl text-primary"></i>
+                    {{-- Industry Connections Section --}}
+                    <div class="bg-white shadow-lg rounded-lg p-6 transform transition hover:scale-105 hover:shadow-xl">
+                        <div class="flex items-center mb-4">
+                            <svg class="w-12 h-12 text-green-600 mr-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.24-.445.47-.89.683-1.335C14.327 14.028 15.635 13 17 13c1.364 0 2.673 1.028 3.387 2.665.216.445.44.89.684 1.335H12.93zM5.5 13c1.472 0 2.779.8 3.636 2.012a9.608 9.608 0 01.728 1.988H1.136a7.608 7.608 0 01.728-1.988A4.468 4.468 0 015.5 13z" />
+                            </svg>
+                            <h3 class="text-xl font-bold text-gray-900">Unparalleled Industry Connections</h3>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">Hands-on Training</h3>
-                        <p class="text-gray-600">Gain practical experience through our state-of-the-art facilities and labs
+                        <p class="text-gray-600 mb-4">
+                            Your career starts here. We've forged strategic partnerships with top-tier hospitals,
+                            cutting-edge IT companies, and innovative technical firms.
                         </p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li>Direct internship opportunities</li>
+                            <li>Mentorship from industry experts</li>
+                            <li>A seamless pathway to professional employment</li>
+                        </ul>
                     </div>
 
-                    <!-- Feature 3 -->
-                    <div
-                        class="bg-gray-50 rounded-xl p-8 text-center transition duration-300 hover:shadow-lg hover:-translate-y-2">
-                        <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i class="fas fa-briefcase text-3xl text-primary"></i>
+                    {{-- Community Impact Section --}}
+                    <div class="bg-white shadow-lg rounded-lg p-6 transform transition hover:scale-105 hover:shadow-xl">
+                        <div class="flex items-center mb-4">
+                            <svg class="w-12 h-12 text-purple-600 mr-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z"
+                                    clip-rule="evenodd" />
+                                <path
+                                    d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.152 24.152 0 0110 15c-2.95 0-5.662-.826-8-2.308z" />
+                            </svg>
+                            <h3 class="text-xl font-bold text-gray-900">Beyond Skills: Making a Difference</h3>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">Industry Connections</h3>
-                        <p class="text-gray-600">Benefit from our strong relationships with leading employers</p>
+                        <p class="text-gray-600">
+                            Education is more than learning—it's about creating impact. At HAITRAC, we're committed to
+                            community empowerment. Our student-led projects and outreach programs go beyond technical
+                            training, cultivating socially responsible professionals who are ready to drive meaningful
+                            change.
+                        </p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
         <!-- About Section -->
         <section class="py-20 bg-gray-100">
@@ -299,12 +325,15 @@
         <!-- Call to Action -->
         <section class="py-20 bg-gradient-to-r from-primary to-blue-800 text-white text-center">
             <div class="container mx-auto px-4">
-                <h2 class="text-4xl font-bold mb-6">Begin Your Journey Today</h2>
+                <h2 class="text-4xl font-bold mb-2">Your Journey Starts With Purpose.</h2>
+                <h5 class="text-xl md:text-2xl text-primary-950 mb-6">
+                    Your Future Starts With HAITRAC.
+                </h5>
                 <p class="text-lg mb-8 max-w-2xl mx-auto opacity-90">Take the first step towards a rewarding career with
                     HAITRAC's industry-focused programs</p>
                 <button
-                    class="bg-white hover:bg-gray-100 text-primary font-medium py-3 px-8 rounded-lg transition duration-300 text-lg">Apply
-                    Now</button>
+                    class="bg-white hover:bg-gray-100 text-primary font-medium py-3 px-8 rounded-lg transition duration-300 text-lg">
+                    Start Your Journey Today</button>
             </div>
         </section>
 
