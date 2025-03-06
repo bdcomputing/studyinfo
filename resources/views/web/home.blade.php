@@ -15,10 +15,10 @@
                             Nursing, ICT, and Technical disciplines. Join us to develop practical skills for a successful
                             career.</p>
                         <div class="flex flex-wrap gap-5">
-                            <button
+                            <button onclick="window.location.href='{{ route('web.programs.all') }}'"
                                 class="bg-primary hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition duration-300">Explore
                                 Programs</button>
-                            <button
+                            <button onclick="window.location.href='{{ route('web.about') }}'"
                                 class="bg-transparent hover:bg-white hover:text-primary text-white font-medium py-3 px-6 rounded-lg border-2 border-white transition duration-300">Learn
                                 More</button>
                         </div>
@@ -32,10 +32,10 @@
         </section>
 
 
-        <div class="bg-white py-12 px-4 sm:px-6 lg:px-8">
+        <div class="bg-white py-20 px-4 sm:px-6 lg:px-8">
             <div class="container mx-auto">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6">
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6">
                         Why Choose HAITRAC?
                     </h2>
                     <p class="text-lg text-gray-600 max-w-2xl mx-auto">We provide a unique learning experience focused on
@@ -111,7 +111,7 @@
                             class="rounded-xl shadow-lg w-full">
                     </div>
                     <div class="md:w-1/2">
-                        <h2 class="text-4xl font-bold text-gray-800 mb-6">About HAITRAC</h2>
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6">About HAITRAC</h2>
                         <p class="text-gray-600 mb-6">Established with a vision to empower students through quality
                             education, HAITRAC offers programs in Nursing, ICT, and various technical disciplines. Our
                             mission is to bridge the skills gap in today's workforce by providing innovative, practical, and
@@ -123,7 +123,7 @@
                         <h3 class="text-xl font-bold mb-4">Our Core Values</h3>
                         <div class="space-y-4">
                             <div class="flex items-center space-x-3">
-                                <div class="w-5 h-5 rounded-full bg-primary-500 flex items-center justify-center">
+                                <div class="w-5 h-5 rounded-full bg-primary-400 flex items-center justify-center">
                                     <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor"
                                         viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -133,7 +133,7 @@
                                 <span class="text-gray-700 font-medium">Excellence in Education</span>
                             </div>
                             <div class="flex items-center space-x-3">
-                                <div class="w-5 h-5 rounded-full bg-secondary-500 flex items-center justify-center">
+                                <div class="w-5 h-5 rounded-full bg-primary-400 flex items-center justify-center">
                                     <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor"
                                         viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -143,7 +143,7 @@
                                 <span class="text-gray-700 font-medium">Innovation & Creativity</span>
                             </div>
                             <div class="flex items-center space-x-3">
-                                <div class="w-5 h-5 rounded-full bg-accent-500 flex items-center justify-center">
+                                <div class="w-5 h-5 rounded-full bg-primary-400 flex items-center justify-center">
                                     <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor"
                                         viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -153,7 +153,7 @@
                                 <span class="text-gray-700 font-medium">Practical Learning</span>
                             </div>
                             <div class="flex items-center space-x-3">
-                                <div class="w-5 h-5 rounded-full bg-red-500 flex items-center justify-center">
+                                <div class="w-5 h-5 rounded-full bg-primary-500 flex items-center justify-center">
                                     <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor"
                                         viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -170,9 +170,9 @@
 
         <!-- CEO's Message -->
         <section class="py-20 bg-white">
-            <div class="container mx-auto px-4">
+            <div class="container mx-auto">
                 <div class="flex flex-col-reverse md:flex-row items-center gap-12">
-                    <div class="md:w-1/2">
+                    <div class="md:w-1/2 px-24">
                         <h2 class="text-4xl font-bold text-gray-800 mb-6">CEO's Message</h2>
                         <p class="text-gray-600 mb-6 italic">"At HAITRAC, we are committed to equipping students with the
                             skills and knowledge needed to thrive in today's fast-evolving world. Our focus on practical,
@@ -182,7 +182,7 @@
                     </div>
                     <div class="md:w-1/2 flex justify-center mb-8 md:mb-0">
                         <img src="{{ asset('/assets/leadership/a1.png') }}" alt="HAITRAC CEO"
-                            class="rounded-3xl shadow-lg w-full max-w-md">
+                            class=" shadow-lg w-full max-w-md">
                     </div>
                 </div>
             </div>
@@ -192,7 +192,7 @@
         <section class="py-20 bg-gray-100">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl font-bold text-gray-800 mb-4">Our Programs</h2>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Programs</h2>
                     <p class="text-lg text-gray-600 max-w-2xl mx-auto">Discover our comprehensive range of courses designed
                         to prepare you for successful careers</p>
                 </div>

@@ -6,7 +6,7 @@
 @section('content')
     <div class="bg-gray-50 min-h-screen py-12">
         <div class="container mx-auto px-4">
-            <h1 class="text-4xl font-bold text-blue-800 mb-10 text-center">HAITRAC Blog</h1>
+            <h1 class="text-4xl font-bold text-primary-800 mb-10 text-center">HAITRAC Blog</h1>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <article class="bg-white shadow-lg rounded-lg overflow-hidden">
@@ -16,7 +16,7 @@
                             training and patient care.</p>
                         <div class="flex justify-between items-center">
                             <span class="text-sm text-gray-500">15 July 2025</span>
-                            <a href="#" class="text-blue-600 hover:underline">Read More</a>
+                            <a href="#" class="text-primary-600 hover:underline">Read More</a>
                         </div>
                     </div>
                 </article>
@@ -28,7 +28,7 @@
                             professional skill development.</p>
                         <div class="flex justify-between items-center">
                             <span class="text-sm text-gray-500">22 August 2025</span>
-                            <a href="#" class="text-blue-600 hover:underline">Read More</a>
+                            <a href="#" class="text-primary-600 hover:underline">Read More</a>
                         </div>
                     </div>
                 </article>
@@ -40,7 +40,7 @@
                             local communities.</p>
                         <div class="flex justify-between items-center">
                             <span class="text-sm text-gray-500">05 September 2025</span>
-                            <a href="#" class="text-blue-600 hover:underline">Read More</a>
+                            <a href="#" class="text-primary-600 hover:underline">Read More</a>
                         </div>
                     </div>
                 </article>

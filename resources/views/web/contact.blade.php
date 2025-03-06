@@ -154,7 +154,7 @@
             </div>
 
 
-            <section class=" text-accent-300">
+            <section class="">
                 <div class="container mx-auto py-10">
                     <div class="pb-5 px-4">
                         <p class="text-2xl font-semibold">How to Find Us</p>

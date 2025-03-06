@@ -6,13 +6,13 @@
 @section('content')
     <div class="bg-gray-50 min-h-screen py-12">
         <div class="container mx-auto px-4">
-            <h1 class="text-4xl font-bold text-blue-800 mb-10 text-center">Success Stories</h1>
+            <h1 class="text-4xl font-bold text-primary-800 mb-10 text-center">Success Stories</h1>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-white shadow-lg rounded-lg overflow-hidden">
                     <div class="p-6">
                         <div class="flex items-center mb-4">
-                            <div class="bg-blue-100 text-blue-800 p-2 rounded-full mr-4">
+                            <div class="bg-primary-100 text-primary-800 p-2 rounded-full mr-4">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

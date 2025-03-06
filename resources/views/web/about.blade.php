@@ -5,10 +5,12 @@
 @section('content')
     <div class="bg-gradient-to-br from-blue-50 to-white min-h-screen">
         <div class="container mx-auto px-4 py-16">
-            <div class="max-w-4xl mx-auto">
-                <h1 class="text-4xl md:text-5xl font-bold text-blue-900 mb-8 text-center">
-                    About HAITRAC: Empowering Futures Through Excellence
-                </h1>
+            <div class="w-full">
+                <div class="flex justify-center items-center ">
+                    <h1 class="max-w-xl text-2xl md:text-3xl font-bold text-blue-900 mb-8 text-center">
+                        About HAITRAC: Empowering Futures Through Excellence
+                    </h1>
+                </div>
 
                 <div class="bg-white shadow-2xl rounded-xl p-8 space-y-6">
                     <section class="mb-8">
