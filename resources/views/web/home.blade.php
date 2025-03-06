@@ -5,28 +5,28 @@
 @section('content')
     <main class="font-poppins bg-gray-100 text-gray-800">
         <!-- Hero Section -->
-        <section class="bg-gradient-to-r from-primary to-blue-800 text-white py-20">
+        <section class="bg-gradient-to-r from-primary to-blue-50 text-white md:min-h-[70vh] md:h-full flex items-center">
             <div class="container mx-auto px-4">
                 <div class="flex flex-col md:flex-row items-center gap-10">
-                    <div class="md:w-1/2 mb-10 md:mb-0">
-                        <h1 class="text-4xl md:text-5xl  leading-tight mb-6 font-extrabold">Shaping Tomorrow's
-                            Leaders Today</h1>
+                    <div class="md:w-1/2 mb-10 md:mb-0 text-blue-950  py-20 flex flex-col justify-center">
+                        <h1 class="text-4xl md:text-5xl  leading-tight mb-6 font-extrabold">
+                            Shaping Tomorrow's Leaders <br> Today!</h1>
                         <p class="text-lg mb-8 opacity-90 font-medium">At HAITRAC, we empower students through quality
                             education in
                             Nursing, ICT, and Technical disciplines. Join us to develop practical skills for a successful
                             career.</p>
                         <div class="flex flex-wrap gap-5">
                             <button onclick="window.location.href='{{ route('web.programs.all') }}'"
-                                class="bg-primary hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition duration-300">Explore
+                                class="bg-blue-950 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-full transition duration-300">Explore
                                 Programs</button>
                             <button onclick="window.location.href='{{ route('web.about') }}'"
-                                class="bg-transparent hover:bg-white hover:text-primary text-white font-medium py-3 px-6 rounded-lg border-2 border-white transition duration-300">Learn
+                                class="bg-transparent hover:bg-white hover:text-primary text-white font-medium py-3 px-6 rounded-full border-2 border-white transition duration-300">Learn
                                 More</button>
                         </div>
                     </div>
                     <div class="md:w-1/2 flex justify-center">
                         <img src="{{ asset('/assets/images/grad.jpg') }}" alt="HAITRAC Students"
-                            class="max-w-full animate-pulse">
+                            class="max-w-full  rounded-lg">
                     </div>
                 </div>
             </div>
