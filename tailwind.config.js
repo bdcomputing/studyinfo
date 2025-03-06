@@ -13,7 +13,8 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ["Figtree", ...defaultTheme.fontFamily.sans],
+                campton: ["Campton", "sans-serif"],
+                // sans: ["Figtree", ...defaultTheme.fontFamily.sans],
             },
             colors: {
                 primary: {

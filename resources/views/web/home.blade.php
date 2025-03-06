@@ -9,9 +9,10 @@
             <div class="container mx-auto px-4">
                 <div class="flex flex-col md:flex-row items-center gap-10">
                     <div class="md:w-1/2 mb-10 md:mb-0">
-                        <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Shaping Tomorrow's
+                        <h1 class="text-4xl md:text-5xl  leading-tight mb-6 font-extrabold">Shaping Tomorrow's
                             Leaders Today</h1>
-                        <p class="text-lg mb-8 opacity-90">At HAITRAC, we empower students through quality education in
+                        <p class="text-lg mb-8 opacity-90 font-medium">At HAITRAC, we empower students through quality
+                            education in
                             Nursing, ICT, and Technical disciplines. Join us to develop practical skills for a successful
                             career.</p>
                         <div class="flex flex-wrap gap-5">
@@ -38,7 +39,8 @@
                     <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6">
                         Why Choose HAITRAC?
                     </h2>
-                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">We provide a unique learning experience focused on
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto font-semibold">We provide a unique learning experience
+                        focused on
                         practical skills and industry demands</p>
                 </div>
 
@@ -52,7 +54,7 @@
                             </svg>
                             <h3 class="text-xl font-bold text-gray-900">Industry-Recognized Credentials</h3>
                         </div>
-                        <p class="text-gray-600">
+                        <p class="text-gray-600 font-medium">
                             Transform your future with our fully accredited programs. We don't just teach—we prepare you for
                             success. Our courses are rigorously validated by leading professional bodies, ensuring your
                             qualifications carry weight both locally and internationally.
@@ -68,14 +70,14 @@
                             </svg>
                             <h3 class="text-xl font-bold text-gray-900">Unparalleled Industry Connections</h3>
                         </div>
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-gray-600 mb-4 font-medium">
                             Your career starts here. We've forged strategic partnerships with top-tier hospitals,
                             cutting-edge IT companies, and innovative technical firms.
                         </p>
                         <ul class="list-disc list-inside text-gray-600 space-y-2">
-                            <li>Direct internship opportunities</li>
-                            <li>Mentorship from industry experts</li>
-                            <li>A seamless pathway to professional employment</li>
+                            <li class="font-regular">Direct internship opportunities</li>
+                            <li class="font-regular">Mentorship from industry experts</li>
+                            <li class="font-regular">A seamless pathway to professional employment</li>
                         </ul>
                     </div>
 
@@ -91,7 +93,7 @@
                             </svg>
                             <h3 class="text-xl font-bold text-gray-900">Beyond Skills: Making a Difference</h3>
                         </div>
-                        <p class="text-gray-600">
+                        <p class="text-gray-600 font-medium">
                             Education is more than learning—it's about creating impact. At HAITRAC, we're committed to
                             community empowerment. Our student-led projects and outreach programs go beyond technical
                             training, cultivating socially responsible professionals who are ready to drive meaningful
@@ -111,7 +113,7 @@
                             class="rounded-xl shadow-lg w-full">
                     </div>
                     <div class="md:w-1/2">
-                        <h2 class="text-2xl font-bold text-gray-800 mb-6">About HAITRAC</h2>
+                        <h2 class="text-2xl font-extrabold text-gray-800 mb-6">About HAITRAC</h2>
                         <p class="text-gray-600 mb-6">Established with a vision to empower students through quality
                             education, HAITRAC offers programs in Nursing, ICT, and various technical disciplines. Our
                             mission is to bridge the skills gap in today's workforce by providing innovative, practical, and
@@ -173,7 +175,7 @@
             <div class="container mx-auto">
                 <div class="flex flex-col-reverse md:flex-row items-center gap-12">
                     <div class="md:w-1/2 px-24">
-                        <h2 class="text-4xl font-bold text-gray-800 mb-6">CEO's Message</h2>
+                        <h2 class="text-4xl font-extrabold text-gray-800 mb-6">CEO's Message</h2>
                         <p class="text-gray-600 mb-6 italic">"At HAITRAC, we are committed to equipping students with the
                             skills and knowledge needed to thrive in today's fast-evolving world. Our focus on practical,
                             hands-on training ensures our graduates are job-ready and capable of making a meaningful impact
@@ -192,7 +194,7 @@
         <section class="py-20 bg-gray-100">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Programs</h2>
+                    <h2 class="text-3xl font-extrabold text-gray-800 mb-4">Our Programs</h2>
                     <p class="text-lg text-gray-600 max-w-2xl mx-auto">Discover our comprehensive range of courses designed
                         to prepare you for successful careers</p>
                 </div>
@@ -274,7 +276,8 @@
         <section class="py-20 bg-white">
             <div class="container mx-auto px-4">
                 <div class="text-center md:text-left items-start">
-                    <h2 class="text-4xl font-bold text-secondary-950">Our <span class="text-primary-600">Mission</span>
+                    <h2 class="text-4xl font-extrabold text-secondary-950">Our <span
+                            class="text-primary-600">Mission</span>
                     </h2>
                     <p class="text-lg text-secondary-600 max-w-5xl">To be a leading center of excellence in
                         education,

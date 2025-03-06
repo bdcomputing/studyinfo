@@ -4,7 +4,7 @@
             <img class="h-14 w-auto" src="{{ asset('/assets/logos/logo.png') }}" alt="HAITRAC Logo" />
             <div class="ml-3">
                 <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">HAITRAC</span>
-                <span class="block text-xs text-gray-600">Hue African Industrial Training Center</span>
+                <span class="block text-xs font-thin text-gray-600">Hue African Industrial Training Center</span>
             </div>
         </a>
         <button data-collapse-toggle="mega-menu-full-image" type="button"
@@ -45,6 +45,12 @@
                         class="block text-lg py-2 px-3 font-bold text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
                 </li>
             </ul>
+            <div class="flex items-center ml-5">
+                <a href="{{ route('web.apply') }}"
+                    class="hidden md:inline-flex items-center px-6 py-2 font-bold border border-transparent text-sm  rounded-full shadow-sm text-white bg-primary-500 hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                    Apply Now
+                </a>
+            </div>
         </div>
     </div>
     <div id="mega-menu-full-image-dropdown"
@@ -54,31 +60,31 @@
             <ul class="space-y-4" aria-labelledby="mega-menu-full-image-button">
                 <li>
                     <a href="{{ route('web.about.mission') }}"
-                        class="hover:underline text-md hover:text-blue-600 dark:hover:text-blue-500">
+                        class="hover:underline text-md font-medium hover:text-blue-600 dark:hover:text-blue-500">
                         Mission & Vision
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('web.about.faculty') }}"
-                        class="hover:underline text-md hover:text-blue-600 dark:hover:text-blue-500">
+                        class="hover:underline text-md font-medium hover:text-blue-600 dark:hover:text-blue-500">
                         Faculty
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('web.about.partnerships') }}"
-                        class="hover:underline text-md hover:text-blue-600 dark:hover:text-blue-500">
+                        class="hover:underline text-md font-medium hover:text-blue-600 dark:hover:text-blue-500">
                         Partnerships
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('web.about.success-stories') }}"
-                        class="hover:underline text-md hover:text-blue-600 dark:hover:text-blue-500">
+                        class="hover:underline text-md font-medium hover:text-blue-600 dark:hover:text-blue-500">
                         Success Stories
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('web.about.blog') }}"
-                        class="hover:underline text-md hover:text-blue-600 dark:hover:text-blue-500">
+                        class="hover:underline text-md font-medium hover:text-blue-600 dark:hover:text-blue-500">
                         Blog
                     </a>
                 </li>
@@ -86,31 +92,31 @@
             <ul class="space-y-4">
                 <li>
                     <a href="{{ route('web.about.careers') }}"
-                        class="hover:underline text-md hover:text-blue-600 dark:hover:text-blue-500">
+                        class="hover:underline text-md font-medium hover:text-blue-600 dark:hover:text-blue-500">
                         Careers
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('web.about.news') }}"
-                        class="hover:underline text-md hover:text-blue-600 dark:hover:text-blue-500">
+                        class="hover:underline text-md font-medium hover:text-blue-600 dark:hover:text-blue-500">
                         News
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('web.about.events') }}"
-                        class="hover:underline text-md hover:text-blue-600 dark:hover:text-blue-500">
+                        class="hover:underline text-md font-medium hover:text-blue-600 dark:hover:text-blue-500">
                         Events
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('web.about.gallery') }}"
-                        class="hover:underline text-md hover:text-blue-600 dark:hover:text-blue-500">
+                        class="hover:underline text-md font-medium hover:text-blue-600 dark:hover:text-blue-500">
                         Gallery
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('web.about.team') }}"
-                        class="block hover:underline text-md hover:text-blue-600 dark:hover:text-blue-500">
+                        class="block hover:underline text-md font-medium hover:text-blue-600 dark:hover:text-blue-500">
                         Our Team
                     </a>
                 </li>

@@ -6,10 +6,14 @@
     <div class="bg-gradient-to-br from-blue-100 to-white min-h-screen py-16">
         <div class="container mx-auto px-4">
             <div class="max-w-6xl mx-auto bg-white shadow-2xl rounded-xl p-8">
-                <h1 class="text-3xl md:text-4xl font-bold text-primary-900 mb-8 text-center">
-                    Application Form
-                </h1>
-
+                <div>
+                    <h1 class="text-2xl md:text-3xl font-extrabold text-primary-500 mb-3 text-left">
+                        Application Form
+                    </h1>
+                    <p class="text-gray-600 mb-8 text-left">
+                        Please fill in the form below to apply for admission to HAITRAC.
+                    </p>
+                </div>
                 <form class="space-y-6">
                     <div class="grid md:grid-cols-2 gap-5">
                         <div>
@@ -62,7 +66,8 @@
                     </div>
 
                     <div class="text-center">
-                        <button class="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition-colors">
+                        <button
+                            class="bg-primary-600 text-white px-8 py-3 rounded-full hover:bg-primary-700 transition-colors">
                             Submit Application
                         </button>
                     </div>

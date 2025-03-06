@@ -6,13 +6,13 @@
     <div class="bg-gradient-to-br from-blue-100 to-white min-h-screen">
         <div class="container mx-auto px-4 py-16">
             <div class="max-w-5xl mx-auto">
-                <h1 class="text-4xl md:text-5xl font-bold text-blue-900 mb-12 text-center">
+                <h1 class="text-4xl md:text-3xl font-bold text-primary-500 mb-12 text-center">
                     Your Journey Starts Here: Admissions at HAITRAC
                 </h1>
 
                 <div class="grid md:grid-cols-2 gap-8">
                     <div class="bg-white shadow-2xl rounded-xl p-8">
-                        <h2 class="text-2xl font-semibold text-blue-700 mb-6">Admission Requirements</h2>
+                        <h2 class="text-2xl font-semibold text-primary-600 mb-6">Admission Requirements</h2>
                         <ul class="space-y-4 text-gray-700">
                             <li class="flex items-center">
                                 <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor"
