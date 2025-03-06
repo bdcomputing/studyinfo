@@ -347,7 +347,7 @@
             <div class="container mx-auto px-4">
                 <div class="text-left mb-16">
                     <h2 class="text-3xl font-bold text-gray-800 mb-4">Recognition for Excellence</h2>
-                    <p class="text-md text-gray-600 max-w-4xl">HAITRAC has been recognized as a leading institution
+                    <p class="text-md text-gray-600 ">HAITRAC has been recognized as a leading institution
                         in Nursing, ICT, and technical courses, earning accolades from local education boards and industry
                         organizations.</p>
                 </div>

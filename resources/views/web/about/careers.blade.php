@@ -6,8 +6,12 @@
 @section('content')
     <div class="bg-gray-50 min-h-screen py-12">
         <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto">
-                <h1 class="text-4xl font-bold text-primary-800 mb-8 text-center">Career Opportunities at HAITRAC</h1>
+            <div class=" mx-auto">
+                <div class="mb-5">
+                    <h1 class="text-4xl font-bold text-primary-800 text-left">Career Opportunities at HAITRAC</h1>
+                    <p class="text-lg text-gray-600">Join our dynamic team and contribute to the future of higher education.
+                    </p>
+                </div>
 
                 <div class="bg-white shadow-lg rounded-lg p-8 mb-8">
                     <h2 class="text-2xl font-semibold text-gray-800 mb-4">Why Work with Us</h2>

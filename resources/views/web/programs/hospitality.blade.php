@@ -5,7 +5,7 @@
 @section('content')
     <div class="bg-gradient-to-br from-blue-100 to-white min-h-screen py-16">
         <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto">
+            <div class=" mx-auto">
                 <h1 class="text-4xl font-bold text-blue-900 mb-8 text-center">
                     Hospitality Management Programs
                 </h1>
