@@ -128,23 +128,23 @@
                 </div>
             </div>
         </div>
-        <div class="bg-white py-24 sm:py-32">
+        <div class="bg-blue-950 text-white py-24 sm:py-32">
             <div class="mx-auto max-w-7xl px-6 lg:px-8">
-                <p class="text-center text-2xl font-bold leading-8 text-gray-900 pb-10">Our statistics</p>
+                <p class="text-center text-2xl font-bold leading-8 pb-10">Our statistics</p>
                 <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
                     <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-                        <dt class="text-base/7 text-gray-600">Transactions every 24 hours</dt>
-                        <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">440
+                        <dt class="text-base/7 text-gray-400">Transactions every 24 hours</dt>
+                        <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">440
                         </dd>
                     </div>
                     <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-                        <dt class="text-base/7 text-gray-600">Assets under holding</dt>
-                        <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">$119
+                        <dt class="text-base/7 text-gray-400">Assets under holding</dt>
+                        <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">$119
                             trillion</dd>
                     </div>
                     <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-                        <dt class="text-base/7 text-gray-600">New users annually</dt>
-                        <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">46,000</dd>
+                        <dt class="text-base/7 text-gray-400">New users annually</dt>
+                        <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">46,000</dd>
                     </div>
                 </dl>
             </div>
@@ -432,7 +432,7 @@
         </section>
 
         <!-- Call to Action -->
-        <section class="py-20 bg-gradient-to-r from-primary to-blue-800 text-white text-center">
+        <section class="py-20 bg-blue-50 text-blue-950 text-center">
             <div class="container mx-auto px-4">
                 <h2 class="text-4xl font-bold mb-2">Your Journey Starts With Purpose.</h2>
                 <h5 class="text-xl md:text-2xl text-primary-950 mb-6">
@@ -441,7 +441,7 @@
                 <p class="text-lg mb-8 max-w-2xl mx-auto opacity-90">Take the first step towards a rewarding career with
                     HAITRAC's industry-focused programs</p>
                 <button
-                    class="bg-white hover:bg-gray-100 text-primary font-medium py-3 px-8 rounded-lg transition duration-300 text-lg">
+                    class="bg-blue-950 hover:bg-blue-900 text-primary-50 font-medium py-3 px-8 rounded-full transition duration-300 text-lg">
                     Start Your Journey Today</button>
             </div>
         </section>
