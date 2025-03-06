@@ -4,14 +4,19 @@
 @endsection
 
 @section('content')
-    <div class="bg-gradient-to-br from-primary-50 to-white min-h-screen py-16">
-        <div class="container mx-auto px-4">
-            <div class="max-w-7xl mx-auto">
-                <h1 class="text-4xl font-extrabold text-primary-800 mb-6 text-center">HAITRAC Blog</h1>
-                <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">Stay updated with the latest news, insights and
-                    stories from our vibrant academic community.</p>
+    <div class="w-full h-64 bg-cover bg-center mx-auto bg-black bg-opacity-50  relative"
+        style="background-image: url('{{ asset('/assets/images/blog.png') }}')">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="w-full h-full flex flex-col items-center justify-center container mx-auto relative px-5">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">HAITRAC Blog</h1>
+            <p class="text-white text-center max-w-2xl">Stay updated with the latest news, insights and stories from our
+                vibrant academic community.</p>
+        </div>
+    </div>
 
-                <!-- Category Filter Buttons -->
+    <div class="bg-gradient-to-br from-primary-50 to-white min-h-screen py-16">
+        <div class="container mx-auto px-5">
+            <div class="max-w-7xl mx-auto">
                 <div class="flex flex-wrap justify-center gap-4 mb-12">
                     <button onclick="filterBlogs('all')"
                         class="px-6 py-2 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium transition duration-300 filter-btn active"
