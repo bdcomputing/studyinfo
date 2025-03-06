@@ -6,7 +6,7 @@
 @section('content')
     <div class="bg-gray-50 min-h-screen py-12">
         <div class="container mx-auto px-4">
-            <h1 class="text-4xl font-bold text-blue-800 mb-10 text-center">Our Distinguished Faculty</h1>
+            <h1 class="text-4xl font-bold text-primary-800 mb-10 text-center">Our Distinguished Faculty</h1>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-white shadow-lg rounded-lg overflow-hidden transform transition hover:scale-105">
