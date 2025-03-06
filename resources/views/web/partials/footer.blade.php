@@ -141,7 +141,10 @@
         <div class="mt-12 pt-6 border-t border-blue-800">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <p class="text-sm text-blue-300">
-                    &copy; {{ date('Y') }} HAITRAC. All rights reserved.
+                    &copy; {{ date('Y') }} HAITRAC. All rights reserved. Powered by <a
+                        href="https://www.haitrac.com" class="text-primary-300 hover:text-white">BD Computing Limited
+                        &reg;
+                    </a>
                 </p>
                 <div class="mt-4 md:mt-0 flex space-x-6">
                     <a href="{{ route('web.bottom.privacy') }}" class="text-sm text-blue-300 hover:text-white">
