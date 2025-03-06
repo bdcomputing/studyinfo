@@ -11,6 +11,30 @@
                 <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">Stay updated with the latest news, insights and
                     stories from our vibrant academic community.</p>
 
+                <!-- Category Filter Buttons -->
+                <div class="flex flex-wrap justify-center gap-4 mb-12">
+                    <button onclick="filterBlogs('all')"
+                        class="px-6 py-2 rounded-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium transition duration-300 filter-btn active"
+                        data-category="all">
+                        All Posts
+                    </button>
+                    <button onclick="filterBlogs('Healthcare')"
+                        class="px-6 py-2 rounded-full bg-primary-100 hover:bg-primary-200 text-primary-800 font-medium transition duration-300 filter-btn"
+                        data-category="Healthcare">
+                        Healthcare
+                    </button>
+                    <button onclick="filterBlogs('Technology')"
+                        class="px-6 py-2 rounded-full bg-blue-100 hover:bg-blue-200 text-blue-800 font-medium transition duration-300 filter-btn"
+                        data-category="Technology">
+                        Technology
+                    </button>
+                    <button onclick="filterBlogs('Community')"
+                        class="px-6 py-2 rounded-full bg-green-100 hover:bg-green-200 text-green-800 font-medium transition duration-300 filter-btn"
+                        data-category="Community">
+                        Community
+                    </button>
+                </div>
+
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     @php
                         $blogs = [
@@ -85,7 +109,8 @@
 
                     @foreach ($blogs as $blog)
                         <article
-                            class="bg-white shadow-2xl rounded-xl overflow-hidden transition duration-300 hover:-translate-y-2">
+                            class="blog-card bg-white shadow-2xl rounded-xl overflow-hidden transition duration-300 hover:-translate-y-2"
+                            data-category="{{ $blog['category']['name'] }}">
                             <img src="{{ asset('/assets/images/' . $blog['image']) }}" alt="{{ $blog['alt'] }}"
                                 class="w-full h-56 object-cover">
                             <div class="p-6">
@@ -113,4 +138,31 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function filterBlogs(category) {
+            // Remove active class from all buttons
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Add active class to clicked button
+            document.querySelector(`[data-category="${category}"]`).classList.add('active');
+
+            // Show/hide blog cards based on category
+            document.querySelectorAll('.blog-card').forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+
+    <style>
+        .filter-btn.active {
+            @apply ring-2 ring-offset-2 ring-gray-500;
+        }
+    </style>
 @endsection
