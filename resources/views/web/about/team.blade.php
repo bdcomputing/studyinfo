@@ -3,11 +3,12 @@
     Team
 @endsection
 @section('content')
-    <div class="bg-gray-50 min-h-screen py-12">
+    <div class="bg-blue-950 min-h-screen py-12"
+        style="background-image: url('/assets/svg/bg-curvy-lines.svg'); background-size: cover;">
         <div class="container mx-auto px-4">
-            <h1 class="text-4xl font-bold text-primary-800 mb-10 text-center">Our Leadership Team</h1>
+            <h1 class="text-4xl font-bold text-primary-50 mb-10 text-center">Our Leadership Team</h1>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
                 <div class="bg-white shadow-lg rounded-lg overflow-hidden">
                     <img src="/api/placeholder/400/400" alt="Dr. Cheruiyot" class="w-full h-64 object-cover">
                     <div class="p-6 text-center">
