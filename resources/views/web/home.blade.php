@@ -3,9 +3,9 @@
     Homepage
 @endsection
 @section('content')
-    <main class="font-poppins bg-gray-100 text-gray-800">
+    <main class="min-h-screen bg-gray-100 text-gray-800">
         <!-- Hero Section -->
-        <section class="bg-primary md:min-h-[70vh] md:h-full flex items-center">
+        <section class="bg-primary md:min-h-[67vh] md:h-full flex items-center md:pb-5">
             <div class="pt-40 md:pt-0">
                 <div class="grid grid-cols-1  md:grid-cols-2 gap-8">
                     <div class="text-blue-950 md:pl-20 pb-5 md:pb-0 px-5 md:px-0  flex flex-col justify-center">
@@ -24,7 +24,7 @@
                                 More</button>
                         </div>
                     </div>
-                    <div class="md:min-h-[70vh] !h-full">
+                    <div class="md:min-h-[67vh] !h-full">
                         <img src="{{ asset('/assets/images/grad.jpg') }}" alt="HAITRAC Students"
                             class="w-full h-full object-cover md:rounded-bl-[50px]">
                     </div>
@@ -32,8 +32,33 @@
             </div>
         </section>
 
-
+        <div class="bg-white py-10">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <h2 class="text-center text-lg/8 font-semibold text-gray-900">
+                    Meet Our Esteemed Partners
+                </h2>
+                <div
+                    class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+                    <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+                        src="https://tailwindcss.com/plus-assets/img/logos/158x48/transistor-logo-gray-900.svg"
+                        alt="Transistor" width="158" height="48">
+                    <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+                        src="https://tailwindcss.com/plus-assets/img/logos/158x48/reform-logo-gray-900.svg" alt="Reform"
+                        width="158" height="48">
+                    <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+                        src="https://tailwindcss.com/plus-assets/img/logos/158x48/tuple-logo-gray-900.svg" alt="Tuple"
+                        width="158" height="48">
+                    <img class="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
+                        src="https://tailwindcss.com/plus-assets/img/logos/158x48/savvycal-logo-gray-900.svg" alt="SavvyCal"
+                        width="158" height="48">
+                    <img class="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
+                        src="https://tailwindcss.com/plus-assets/img/logos/158x48/statamic-logo-gray-900.svg" alt="Statamic"
+                        width="158" height="48">
+                </div>
+            </div>
+        </div>
         <div class="bg-white py-20 px-4 sm:px-6 lg:px-8">
+
             <div class="container mx-auto">
                 <div class="text-center mb-12">
                     <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6">
@@ -101,6 +126,27 @@
                         </p>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="bg-white py-24 sm:py-32">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <p class="text-center text-2xl font-bold leading-8 text-gray-900 pb-10">Our statistics</p>
+                <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
+                    <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                        <dt class="text-base/7 text-gray-600">Transactions every 24 hours</dt>
+                        <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">440
+                        </dd>
+                    </div>
+                    <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                        <dt class="text-base/7 text-gray-600">Assets under holding</dt>
+                        <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">$119
+                            trillion</dd>
+                    </div>
+                    <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                        <dt class="text-base/7 text-gray-600">New users annually</dt>
+                        <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">46,000</dd>
+                    </div>
+                </dl>
             </div>
         </div>
 
@@ -173,8 +219,8 @@
         <!-- CEO's Message -->
         <section class="py-20 bg-white">
             <div class="container mx-auto">
-                <div class="flex flex-col-reverse md:flex-row items-center gap-12">
-                    <div class="md:w-1/2 px-24">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div class="px-5 md:px-0 flex flex-col justify-center">
                         <h2 class="text-4xl font-extrabold text-gray-800 mb-6">CEO's Message</h2>
                         <p class="text-gray-600 mb-6 italic">"At HAITRAC, we are committed to equipping students with the
                             skills and knowledge needed to thrive in today's fast-evolving world. Our focus on practical,
@@ -182,13 +228,14 @@
                             in their respective fields."</p>
                         <h4 class="text-xl font-semibold text-primary">CEO, HAITRAC</h4>
                     </div>
-                    <div class="md:w-1/2 flex justify-center mb-8 md:mb-0">
+                    <div class="flex justify-center mb-8 md:mb-0">
                         <img src="{{ asset('/assets/leadership/a1.png') }}" alt="HAITRAC CEO"
                             class=" shadow-lg w-full max-w-md">
                     </div>
                 </div>
             </div>
         </section>
+
 
         <!-- Programs Section -->
         <section class="py-20 bg-gray-100">
@@ -339,8 +386,6 @@
             </div>
         </section>
 
-        <!-- Team Section -->
-        {{-- @include('web.about.team') --}}
 
         <!-- Recognition Section -->
         <section class="py-20 bg-gray-100">
@@ -353,7 +398,6 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Success Story 1: Nursing -->
                     <div
                         class="bg-white rounded-xl p-8 text-center transition duration-300 hover:scale-105 hover:shadow-lg">
                         <div class="text-4xl text-blue-600 mb-4">
@@ -364,7 +408,6 @@
                             European hospital, winning the "Rising Star in Healthcare" award.</p>
                     </div>
 
-                    <!-- Success Story 2: ICT -->
                     <div
                         class="bg-white rounded-xl p-8 text-center transition duration-300 hover:scale-105 hover:shadow-lg">
                         <div class="text-4xl text-green-600 mb-4">
@@ -375,7 +418,6 @@
                             gaining national recognition at the Kenya Tech Summit.</p>
                     </div>
 
-                    <!-- Success Story 3: Technical Fields -->
                     <div
                         class="bg-white rounded-xl p-8 text-center transition duration-300 hover:scale-105 hover:shadow-lg">
                         <div class="text-4xl text-purple-600 mb-4">
