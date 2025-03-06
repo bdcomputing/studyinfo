@@ -4,7 +4,7 @@
 @endsection
 
 @section('content')
-    <div class="w-full h-72 bg-cover bg-center mx-auto bg-black bg-opacity-50 mb-10 relative"
+    <div class="w-full h-72 bg-cover bg-center mx-auto bg-black bg-opacity-50 relative"
         style="background-image: url('{{ asset('/assets/images/gallery.png') }}')">
         <div class="absolute inset-0 bg-black bg-opacity-50"></div>
         <div class="w-full h-full flex flex-col items-center justify-center container mx-auto relative px-5">
@@ -76,6 +76,38 @@
                         practical
                         skill development across all our academic programs.
                     </p>
+                </div>
+
+                <!-- Pagination -->
+                <div class="flex justify-center items-center space-x-2 mt-12">
+                    <a href="#"
+                        class="px-4 py-2 rounded-full bg-white border border-gray-300 hover:bg-gray-50 text-gray-500">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </a>
+
+                    <a href="#" class="px-4 py-2 rounded-full bg-primary-600 text-white hover:bg-primary-700">1</a>
+                    <a href="#"
+                        class="px-4 py-2 rounded-full bg-white border border-gray-300 hover:bg-gray-50 text-gray-700">2</a>
+                    <a href="#"
+                        class="px-4 py-2 rounded-full bg-white border border-gray-300 hover:bg-gray-50 text-gray-700">3</a>
+
+                    <span class="px-4 py-2 text-gray-600">...</span>
+
+                    <a href="#"
+                        class="px-4 py-2 rounded-full bg-white border border-gray-300 hover:bg-gray-50 text-gray-700">8</a>
+                    <a href="#"
+                        class="px-4 py-2 rounded-full bg-white border border-gray-300 hover:bg-gray-50 text-gray-700">9</a>
+                    <a href="#"
+                        class="px-4 py-2 rounded-full bg-white border border-gray-300 hover:bg-gray-50 text-gray-700">10</a>
+
+                    <a href="#"
+                        class="px-4 py-2 rounded-full bg-white border border-gray-300 hover:bg-gray-50 text-gray-500">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>
