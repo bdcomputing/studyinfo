@@ -45,6 +45,37 @@
                         <p class="text-sm text-gray-500">Dedicated to student development and educational excellence</p>
                     </div>
                 </div>
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="/assets/leadership/a4.png" alt="Mr. Chirchir" class="w-full h-64 object-contain">
+                    <div class="p-6 text-center">
+                        <h2 class="text-xl font-semibold text-blue-950">Mr. Chirchir</h2>
+                        <p class="text-gray-600 mb-2">Board Member</p>
+                        <p class="text-sm text-gray-500">
+                            Seasoned educator with a passion for empowering students to achieve their full
+                            potential.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="/assets/leadership/a2.png" alt="Mrs. Cheplong" class="w-full h-64 object-contain">
+                    <div class="p-6 text-center">
+                        <h2 class="text-xl font-semibold text-blue-950">Mrs. Cheplong</h2>
+                        <p class="text-gray-600 mb-2">Board Member</p>
+                        <p class="text-sm text-gray-500">
+                            Mrs. Cheplong is a seasoned educator with a passion for empowering students to achieve their
+                            full
+                            potential.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="/api/placeholder/400/400" alt="Dr. Peter" class="w-full h-64 object-cover">
+                    <div class="p-6 text-center">
+                        <h2 class="text-xl font-semibold text-blue-950">Dr. Peter</h2>
+                        <p class="text-gray-600 mb-2">Board Member</p>
+                        <p class="text-sm text-gray-500">Expert in educational policy and strategic planning</p>
+                    </div>
+                </div>
             </div>
 
             <div class="mt-12 bg-white shadow-lg rounded-lg p-8">
