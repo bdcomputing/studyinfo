@@ -4,11 +4,14 @@
         <div class="flex justify-between h-16">
             <div class="flex">
                 <!-- Logo -->
-                <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
-                    </a>
-                </div>
+                <a href="{{ route('web.home') }}" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <img class="h-14 w-auto" src="{{ asset('/assets/logos/logo.png') }}" alt="HAITRAC Logo" />
+                    <div class="ml-3">
+                        <span class="self-center text-xl font-semibold whitespace-nowrap ">HAITRAC</span>
+                        <span class="block text-xs font-thin text-gray-600">Hue African Industrial Training
+                            Center</span>
+                    </div>
+                </a>
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
