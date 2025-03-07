@@ -61,12 +61,7 @@
                         About Us
                     </a>
                 </li>
-                <li>
-                    <a href="{{ route('web.about.faculty') }}"
-                        class="hover:underline text-md font-medium hover:text-blue-600 ">
-                        Faculty
-                    </a>
-                </li>
+
                 <li>
                     <a href="{{ route('web.about.partnerships') }}"
                         class="hover:underline text-md font-medium hover:text-blue-600 ">
@@ -80,6 +75,12 @@
                     </a>
                 </li>
                 <li>
+                    <a href="{{ route('web.about.careers') }}"
+                        class="hover:underline text-md font-medium hover:text-blue-600 ">
+                        Careers
+                    </a>
+                </li>
+                <li>
                     <a href="{{ route('web.about.blog') }}"
                         class="hover:underline text-md font-medium hover:text-blue-600 ">
                         Blog
@@ -87,12 +88,6 @@
                 </li>
             </ul>
             <ul class="space-y-4">
-                <li>
-                    <a href="{{ route('web.about.careers') }}"
-                        class="hover:underline text-md font-medium hover:text-blue-600 ">
-                        Careers
-                    </a>
-                </li>
                 <li>
                     <a href="{{ route('web.about.news') }}"
                         class="hover:underline text-md font-medium hover:text-blue-600 ">
@@ -124,7 +119,7 @@
                     your
                     journey with HAITRAC?</p>
                 <button type="button"
-                    class="inline-flex items-center px-4 py-2 text-sm font-bold text-center text-blue-700 bg-white rounded-lg hover:bg-blue-50 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                    class="inline-flex items-center px-5 py-2 text-sm font-bold text-center text-blue-700 bg-white rounded-full hover:bg-blue-50 focus:ring-4 focus:outline-none focus:ring-blue-300">
                     Apply Now
                     <svg class="w-3 h-3 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                         fill="none" viewBox="0 0 14 10">

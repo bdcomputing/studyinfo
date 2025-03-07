@@ -83,8 +83,6 @@
                                         <div class="space-y-3">
                                             <a href="{{ route('web.about.mission') }}"
                                                 class="block text-gray-600 hover:text-primary-600">Our Mission</a>
-                                            <a href="{{ route('web.about.faculty') }}"
-                                                class="block text-gray-600 hover:text-primary-600">Our Faculty</a>
                                             <a href="{{ route('web.about.team') }}"
                                                 class="block text-gray-600 hover:text-primary-600">Our Team</a>
                                         </div>
@@ -224,10 +222,6 @@
                     <a href="{{ route('web.about.mission') }}"
                         class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800">
                         Our Mission
-                    </a>
-                    <a href="{{ route('web.about.faculty') }}"
-                        class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800">
-                        Our Faculty
                     </a>
                     <a href="{{ route('web.about.success-stories') }}"
                         class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800">

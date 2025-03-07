@@ -115,6 +115,21 @@
                             @endforeach
                         </div>
                     </section>
+
+                    <section>
+                        <div class="mt-12 bg-white shadow-lg rounded-lg p-8">
+                            <h2 class="text-2xl font-semibold text-primary-500 mb-6">Our Faculty Commitment</h2>
+                            <p class="text-gray-600 leading-relaxed">
+                                At HAITRAC, our faculty comprises professionals with diverse backgrounds in Nursing, ICT,
+                                and technical
+                                fields. They bring a wealth of industry experience, combining academic expertise with
+                                practical
+                                insights. Our instructors are committed to providing students with hands-on training,
+                                mentorship, and
+                                innovative teaching methods that prepare them for real-world challenges.
+                            </p>
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>
