@@ -60,8 +60,8 @@
                                 <img src="{{ asset('/assets/images/' . $gallery['image']) }}" alt="{{ $gallery['title'] }}"
                                     class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                             </div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold text-gray-800 mb-2">{{ $gallery['title'] }}</h3>
+                            <div class="p-3">
+                                <h3 class="text-md font-bold text-gray-800 mb-1">{{ $gallery['title'] }}</h3>
                                 <p class="text-gray-600">{{ $gallery['description'] }}</p>
                             </div>
                         </div>
