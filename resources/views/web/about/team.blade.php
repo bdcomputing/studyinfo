@@ -9,7 +9,7 @@
             <div class="mb-12">
                 <h1 class="text-4xl md:text-5xl font-extrabold text-primary-50 mb-6 text-center">Our Leadership Team</h1>
                 <p class="text-lg text-primary-50/90 text-center max-w-4xl mx-auto leading-relaxed">
-                    The visionary leadership team behind HAITRAC comprises education and industry experts dedicated to
+                    The visionary leadership team behind STUDYINFO comprises education and industry experts dedicated to
                     bridging the skills gap and empowering students to succeed in their careers. Our leaders foster a
                     culture of innovation and excellence, ensuring our institution continues to thrive and grow.
                 </p>
@@ -82,7 +82,7 @@
             <div class="mt-16 bg-white shadow-lg rounded-lg p-8 hover:shadow-xl transition-shadow duration-300">
                 <h2 class="text-3xl font-bold text-blue-950 mb-6 text-center">Our Team's Vision</h2>
                 <p class="text-gray-600 text-center max-w-3xl mx-auto leading-relaxed">
-                    At HAITRAC, our leadership team is committed to transforming education through innovation, practical
+                    At STUDYINFO, our leadership team is committed to transforming education through innovation, practical
                     training, and a deep commitment to student success. We believe in empowering students to become leaders,
                     problem-solvers, and change-makers in their respective fields.
                 </p>

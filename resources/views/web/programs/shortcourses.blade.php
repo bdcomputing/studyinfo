@@ -36,7 +36,7 @@
 
                     @foreach ($courses as $course)
                         <div class="bg-white shadow-2xl rounded-xl p-6 text-center transform transition hover:scale-105">
-                            <svg class="w-16 h-16 mx-auto text-blue-600 mb-4" fill="none" stroke="currentColor"
+                            <svg class="w-16 h-16 mx-auto text-secondary mb-4" fill="none" stroke="currentColor"
                                 viewBox="0 0 24 24">
                                 {!! $course['icon'] !!}
                             </svg>
@@ -47,7 +47,7 @@
                                 Duration: {{ $course['duration'] }}
                             </p>
                             <a href="{{ route('web.apply') }}"
-                                class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">
+                                class="bg-secondary text-white px-6 py-2 rounded-full hover:bg-secondary-700 transition-colors">
                                 Enroll Now
                             </a>
                         </div>
@@ -55,7 +55,7 @@
                 </div>
 
                 <div class="mt-12 bg-white shadow-2xl rounded-xl p-8">
-                    <h2 class="text-2xl font-semibold text-blue-700 mb-6 text-center">
+                    <h2 class="text-2xl font-semibold text-secondary-700 mb-6 text-center">
                         Why Choose Our Short Courses?
                     </h2>
                     <div class="grid md:grid-cols-3 gap-6">

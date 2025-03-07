@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'HAITRAC') }} - @yield('title', 'Home')</title>
+    <title>{{ config('app.name', 'STUDYINFO') }} - @yield('title', 'Home')</title>
 
     <link rel="shortcut icon" href="{{ URL::asset('assets/logos/logo.png') }}" />
 
@@ -52,7 +52,7 @@
 
                 @if (session('info'))
                     <div x-data="{ show: true }" x-show="show" x-init="setTimeout(() => show = false, 4000)"
-                        class="bg-blue-100 border-l-4 border-blue-600 text-blue-700 p-4 mb-4 rounded shadow"
+                        class="bg-blue-100 border-l-4 border-secondary text-secondary-700 p-4 mb-4 rounded shadow"
                         role="alert">
                         <p>{{ session('info') }}</p>
                         <button @click="show = false" class="float-right">&times;</button>
@@ -88,7 +88,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'HAITRAC') }} - {{ $title ?? 'Hue African Industrial Training Center' }}</title>
+    <title>{{ config('app.name', 'STUDYINFO') }} - {{ $title ?? 'Hue African Industrial Training Center' }}</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">

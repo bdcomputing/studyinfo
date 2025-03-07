@@ -11,7 +11,7 @@
                 <article class="bg-white shadow-lg rounded-lg overflow-hidden">
                     <div class="p-6">
                         <h2 class="text-xl font-semibold text-gray-800 mb-4">Community Healthcare Initiative</h2>
-                        <p class="text-gray-600 mb-4">HAITRAC nursing students successfully launched a community healthcare
+                        <p class="text-gray-600 mb-4">STUDYINFO nursing students successfully launched a community healthcare
                             program, providing free medical checkups to over 5,000 residents in underserved areas.</p>
                         <div class="flex justify-between items-center">
                             <span class="text-sm text-gray-500">15 July 2025</span>
@@ -35,7 +35,7 @@
                 <article class="bg-white shadow-lg rounded-lg overflow-hidden">
                     <div class="p-6">
                         <h2 class="text-xl font-semibold text-gray-800 mb-4">International Recognition</h2>
-                        <p class="text-gray-600 mb-4">HAITRAC receives accolades from international education boards for
+                        <p class="text-gray-600 mb-4">STUDYINFO receives accolades from international education boards for
                             innovative training programs and student success rates.</p>
                         <div class="flex justify-between items-center">
                             <span class="text-sm text-gray-500">05 September 2025</span>
@@ -47,7 +47,7 @@
 
             <div class="mt-12 text-center">
                 <p class="text-gray-600 max-w-2xl mx-auto">
-                    Stay updated with the latest developments, achievements, and innovative initiatives from HAITRAC. Our
+                    Stay updated with the latest developments, achievements, and innovative initiatives from STUDYINFO. Our
                     commitment to excellence continues to drive positive change in education and community impact.
                 </p>
             </div>

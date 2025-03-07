@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Haitrac</title>
+    <title>SudyInfo</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -140,8 +140,8 @@
                     --color-blue-300: oklch(.809 .105 251.813);
                     --color-blue-400: oklch(.707 .165 254.624);
                     --color-blue-500: oklch(.623 .214 259.815);
-                    --color-blue-600: oklch(.546 .245 262.881);
-                    --color-blue-700: oklch(.488 .243 264.376);
+                    --color-secondary: oklch(.546 .245 262.881);
+                    --color-secondary-700: oklch(.488 .243 264.376);
                     --color-blue-800: oklch(.424 .199 265.638);
                     --color-blue-900: oklch(.379 .146 265.522);
                     --color-blue-950: oklch(.282 .091 267.935);
@@ -1608,7 +1608,7 @@
             </div>
             <div
                 class="bg-[#fff2f2] dark:bg-[#1D0002] relative lg:-ml-px -mb-px lg:mb-0 rounded-t-lg lg:rounded-t-none lg:rounded-r-lg aspect-[335/376] lg:aspect-auto w-full lg:w-[438px] shrink-0 overflow-hidden">
-                {{-- Haitrac Logo --}}
+                {{-- SudyInfo Logo --}}
                 <svg class="w-full text-[#F53003] dark:text-[#F61500] transition-all translate-y-0 opacity-100 max-w-none duration-750 starting:opacity-0 starting:translate-y-6"
                     viewBox="0 0 438 104" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M17.2036 -3H0V102.197H49.5189V86.7187H17.2036V-3Z" fill="currentColor" />

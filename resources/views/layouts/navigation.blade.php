@@ -5,9 +5,9 @@
             <div class="flex">
                 <!-- Logo -->
                 <a href="{{ route('web.home') }}" class="flex items-center space-x-3 rtl:space-x-reverse">
-                    <img class="h-14 w-auto" src="{{ asset('/assets/logos/logo.png') }}" alt="HAITRAC Logo" />
+                    <img class="h-14 w-auto" src="{{ asset('/assets/logos/logo.png') }}" alt="STUDYINFO Logo" />
                     <div class="ml-3">
-                        <span class="self-center text-xl font-semibold whitespace-nowrap ">HAITRAC</span>
+                        <span class="self-center text-xl font-semibold whitespace-nowrap ">STUDYINFO</span>
                         <span class="block text-xs font-thin text-gray-600">Hue African Industrial Training
                             Center</span>
                     </div>

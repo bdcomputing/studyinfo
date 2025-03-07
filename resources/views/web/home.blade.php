@@ -8,16 +8,16 @@
         <section class="bg-primary md:min-h-[67vh] md:h-full flex items-center md:pb-5">
             <div class="pt-40 md:pt-0">
                 <div class="grid grid-cols-1  md:grid-cols-2 gap-8">
-                    <div class="text-blue-950 md:pl-20 pb-5 md:pb-0 px-5 md:px-0  flex flex-col justify-center">
+                    <div class="text-primary-50 md:pl-20 pb-5 md:pb-0 px-5 md:px-0  flex flex-col justify-center">
                         <h1 class="text-4xl md:text-5xl  leading-tight mb-6 font-extrabold">
                             Shaping Tomorrow's Leaders Today!</h1>
-                        <p class="text-lg mb-8 opacity-90 font-medium">At HAITRAC, we empower students through quality
+                        <p class="text-lg mb-8 opacity-90 font-medium">At STUDYINFO, we empower students through quality
                             education in
                             Nursing, ICT, and Technical disciplines. Join us to develop practical skills for a successful
                             career.</p>
                         <div class="flex flex-wrap gap-5">
                             <button onclick="window.location.href='{{ route('web.programs.all') }}'"
-                                class="bg-blue-950 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-full transition duration-300">Explore
+                                class="bg-secondary hover:bg-secondary-500 text-white font-medium py-3 px-6 rounded-full transition duration-300">Explore
                                 Programs</button>
                             <button onclick="window.location.href='{{ route('web.about') }}'"
                                 class="bg-transparent hover:bg-white hover:text-primary text-white font-medium py-3 px-6 rounded-full border-2 border-white transition duration-300">Learn
@@ -25,7 +25,7 @@
                         </div>
                     </div>
                     <div class="md:min-h-[67vh] !h-full">
-                        <img src="{{ asset('/assets/images/grad.jpg') }}" alt="HAITRAC Students"
+                        <img src="{{ asset('/assets/images/grad.jpg') }}" alt="STUDYINFO Students"
                             class="w-full h-full object-cover md:rounded-bl-[50px]">
                     </div>
                 </div>
@@ -62,7 +62,7 @@
             <div class="container mx-auto">
                 <div class="text-center mb-12">
                     <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6">
-                        Why Choose HAITRAC?
+                        Why Choose STUDYINFO?
                     </h2>
                     <p class="text-lg text-gray-600 max-w-2xl mx-auto font-semibold">We provide a unique learning experience
                         focused on
@@ -73,7 +73,7 @@
                     {{-- Credential Section --}}
                     <div class="bg-white shadow-lg rounded-lg p-6 transform transition hover:scale-105 hover:shadow-xl">
                         <div class="flex items-center mb-4">
-                            <svg class="w-12 h-12 text-blue-600 mr-4" fill="currentColor" viewBox="0 0 20 20">
+                            <svg class="w-12 h-12 text-secondary mr-4" fill="currentColor" viewBox="0 0 20 20">
                                 <path
                                     d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-1.horizo ntal 0 5v-4.102l1.69-.725a1 1 0 000-1.838l-7-3-7 3a1 1 0 000 1.838l7 3z" />
                             </svg>
@@ -119,7 +119,7 @@
                             <h3 class="text-xl font-bold text-gray-900">Beyond Skills: Making a Difference</h3>
                         </div>
                         <p class="text-gray-600 font-medium">
-                            Education is more than learning—it's about creating impact. At HAITRAC, we're committed to
+                            Education is more than learning—it's about creating impact. At STUDYINFO, we're committed to
                             community empowerment. Our student-led projects and outreach programs go beyond technical
                             training, cultivating socially responsible professionals who are ready to drive meaningful
                             change.
@@ -155,16 +155,16 @@
             <div class="container mx-auto px-4">
                 <div class="flex flex-col md:flex-row items-center gap-12">
                     <div class="md:w-1/2">
-                        <img src="{{ asset('/assets/images/about.jpg') }}" alt="HAITRAC Campus"
+                        <img src="{{ asset('/assets/images/about.jpg') }}" alt="STUDYINFO Campus"
                             class="rounded-xl shadow-lg w-full">
                     </div>
                     <div class="md:w-1/2">
-                        <h2 class="text-2xl font-extrabold text-gray-800 mb-6">About HAITRAC</h2>
+                        <h2 class="text-2xl font-extrabold text-gray-800 mb-6">About STUDYINFO</h2>
                         <p class="text-gray-600 mb-6">Established with a vision to empower students through quality
-                            education, HAITRAC offers programs in Nursing, ICT, and various technical disciplines. Our
+                            education, STUDYINFO offers programs in Nursing, ICT, and various technical disciplines. Our
                             mission is to bridge the skills gap in today's workforce by providing innovative, practical, and
                             industry-aligned training.</p>
-                        <p class="text-gray-600 mb-6">At HAITRAC, our teaching approach combines theoretical instruction
+                        <p class="text-gray-600 mb-6">At STUDYINFO, our teaching approach combines theoretical instruction
                             with practical experience. Our state-of-the-art facilities and experienced faculty ensure
                             students gain hands-on expertise to excel in their careers.</p>
 
@@ -222,14 +222,14 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                     <div class="px-5 md:px-0 flex flex-col justify-center">
                         <h2 class="text-4xl font-extrabold text-gray-800 mb-6">CEO's Message</h2>
-                        <p class="text-gray-600 mb-6 italic">"At HAITRAC, we are committed to equipping students with the
+                        <p class="text-gray-600 mb-6 italic">"At STUDYINFO, we are committed to equipping students with the
                             skills and knowledge needed to thrive in today's fast-evolving world. Our focus on practical,
                             hands-on training ensures our graduates are job-ready and capable of making a meaningful impact
                             in their respective fields."</p>
-                        <h4 class="text-xl font-semibold text-primary">CEO, HAITRAC</h4>
+                        <h4 class="text-xl font-semibold text-primary">CEO, STUDYINFO</h4>
                     </div>
                     <div class="flex justify-center mb-8 md:mb-0">
-                        <img src="{{ asset('/assets/leadership/a1.png') }}" alt="HAITRAC CEO"
+                        <img src="{{ asset('/assets/leadership/a1.png') }}" alt="STUDYINFO CEO"
                             class=" shadow-lg w-full max-w-md">
                     </div>
                 </div>
@@ -336,10 +336,9 @@
         <section class="py-20 bg-white">
             <div class="container mx-auto px-4">
                 <div class="text-center md:text-left items-start">
-                    <h2 class="text-4xl font-extrabold text-secondary-950">Our <span
-                            class="text-primary-600">Mission</span>
+                    <h2 class="text-4xl font-extrabold text-primary">Our Mission
                     </h2>
-                    <p class="text-lg text-secondary-600 max-w-5xl">To be a leading center of excellence in
+                    <p class="text-lg text-accent-900 max-w-5xl">To be a leading center of excellence in
                         education,
                         recognized for producing globally competent and socially responsible professionals who shape the
                         future of healthcare, technology, and technical fields.</p>
@@ -349,7 +348,7 @@
                     <div class="bg-white rounded-3xl p-5 md:p-10 transition duration-300 shadow-xl hover:shadow-2xl ">
 
                         <h3 class="text-xl font-bold text-gray-800 mb-4">Our Commitment</h3>
-                        <p class="text-gray-600">At HAITRAC, we are deeply committed to transforming education by providing
+                        <p class="text-gray-600">At STUDYINFO, we are deeply committed to transforming education by providing
                             practical, industry-aligned training that equips students with the skills and knowledge needed
                             to excel in healthcare, technology, and technical fields.</p>
                     </div>
@@ -358,7 +357,7 @@
 
                         <h3 class="text-xl font-bold text-gray-800 mb-4">The Impact</h3>
                         <p class="text-gray-600">Through strategic partnerships, community initiatives, and hands-on
-                            training, HAITRAC creates meaningful opportunities for students to develop career-critical
+                            training, STUDYINFO creates meaningful opportunities for students to develop career-critical
                             skills and make significant contributions to society.</p>
                     </div>
                 </div>
@@ -367,7 +366,7 @@
                     <div class="bg-white rounded-3xl p-5 md:p-10 transition duration-300 shadow-xl hover:shadow-2xl">
 
                         <h3 class="text-xl font-bold text-gray-800 mb-4">The Importance</h3>
-                        <p class="text-gray-600">HAITRAC recognizes education as a powerful tool for individual and
+                        <p class="text-gray-600">STUDYINFO recognizes education as a powerful tool for individual and
                             community transformation, focusing on developing professionals who can address real-world
                             challenges with expertise and social responsibility.</p>
                     </div>
@@ -395,7 +394,7 @@
             <div class="container mx-auto px-4">
                 <div class="text-left mb-16">
                     <h2 class="text-3xl font-bold text-gray-800 mb-4">Recognition for Excellence</h2>
-                    <p class="text-md text-gray-600 ">HAITRAC has been recognized as a leading institution
+                    <p class="text-md text-gray-600 ">STUDYINFO has been recognized as a leading institution
                         in Nursing, ICT, and technical courses, earning accolades from local education boards and industry
                         organizations.</p>
                 </div>
@@ -403,7 +402,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div
                         class="bg-white rounded-xl p-8 text-center transition duration-300 hover:scale-105 hover:shadow-lg">
-                        <div class="text-4xl text-blue-600 mb-4">
+                        <div class="text-4xl text-secondary mb-4">
                             <i class="fas fa-user-md"></i>
                         </div>
                         <h3 class="font-semibold text-gray-800 mb-5 text-2xl">Nursing Excellence</h3>
@@ -439,10 +438,10 @@
             <div class="container mx-auto px-4">
                 <h2 class="text-4xl font-extrabold mb-2">Your Journey Starts With Purpose.</h2>
                 <h5 class="text-xl md:text-2xl font-semibold text-primary-600 mb-6">
-                    Your Future Starts With HAITRAC.
+                    Your Future Starts With STUDYINFO.
                 </h5>
                 <p class="text-lg mb-8 max-w-2xl mx-auto opacity-90">Take the first step towards a rewarding career with
-                    HAITRAC's industry-focused programs</p>
+                    STUDYINFO's industry-focused programs</p>
                 <button
                     class="bg-blue-950 hover:bg-blue-900 text-primary-50 font-medium py-3 px-8 rounded-full transition duration-300 text-lg">
                     Start Your Journey Today</button>

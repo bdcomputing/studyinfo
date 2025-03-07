@@ -11,7 +11,7 @@
                         Application Form
                     </h1>
                     <p class="text-gray-600 mb-8 text-left">
-                        Please fill in the form below to apply for admission to HAITRAC.
+                        Please fill in the form below to apply for admission to STUDYINFO.
                     </p>
                 </div>
                 <form class="space-y-6">

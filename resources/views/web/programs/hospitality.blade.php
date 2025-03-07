@@ -12,7 +12,7 @@
 
                 <div class="grid md:grid-cols-2 gap-8">
                     <div class="bg-white shadow-2xl rounded-xl p-8">
-                        <h2 class="text-2xl font-semibold text-blue-700 mb-4">
+                        <h2 class="text-2xl font-semibold text-secondary-700 mb-4">
                             Program Highlights
                         </h2>
                         <ul class="space-y-4 text-gray-700">
@@ -52,7 +52,7 @@
                     </div>
 
                     <div class="bg-white shadow-2xl rounded-xl p-8">
-                        <h2 class="text-2xl font-semibold text-blue-700 mb-4">
+                        <h2 class="text-2xl font-semibold text-secondary-700 mb-4">
                             Career Opportunities
                         </h2>
                         <ul class="space-y-4 text-gray-700">
@@ -94,7 +94,7 @@
 
                 <div class="text-center mt-12">
                     <a href="{{ route('web.apply') }}"
-                        class="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition-colors text-lg font-semibold">
+                        class="bg-secondary text-white px-8 py-3 rounded-full hover:bg-secondary-700 transition-colors text-lg font-semibold">
                         Apply Now
                     </a>
                 </div>

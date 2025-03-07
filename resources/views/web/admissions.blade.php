@@ -7,7 +7,7 @@
         <div class="container mx-auto px-4 py-16">
             <div class="max-w-5xl mx-auto">
                 <h1 class="text-4xl md:text-5xl font-bold text-primary-500 mb-12 text-center">
-                    Your Journey Starts Here: Admissions at HAITRAC
+                    Your Journey Starts Here: Admissions at STUDYINFO
                 </h1>
 
                 <div class="grid md:grid-cols-2 gap-8">
@@ -42,7 +42,7 @@
                     </div>
 
                     <div class="bg-white shadow-2xl rounded-xl p-8 hover:shadow-3xl transition-shadow duration-300">
-                        <h2 class="text-2xl font-semibold text-blue-700 mb-6">Application Process</h2>
+                        <h2 class="text-2xl font-semibold text-secondary-700 mb-6">Application Process</h2>
                         <ol class="border-l-4 border-blue-500 space-y-4 pl-4">
                             <li class="pb-4 border-b hover:border-blue-300 transition-colors">
                                 <div class="font-semibold text-blue-800">1. Online Application</div>
@@ -68,7 +68,7 @@
 
                 <div class="mt-12 text-center">
                     <a href="{{ route('web.apply') }}"
-                        class="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 text-lg font-semibold inline-flex items-center">
+                        class="bg-secondary text-white px-8 py-3 rounded-full hover:bg-secondary-700 transform hover:scale-105 transition-all duration-300 text-lg font-semibold inline-flex items-center">
                         Start Your Application
                         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

@@ -14,9 +14,9 @@
                     @php
                         $faqs = [
                             [
-                                'question' => 'What programs does HAITRAC offer?',
+                                'question' => 'What programs does STUDYINFO offer?',
                                 'answer' =>
-                                    'HAITRAC offers programs in Nursing, ICT, Mechanical Engineering, and various short courses designed to meet industry needs.',
+                                    'STUDYINFO offers programs in Nursing, ICT, Mechanical Engineering, and various short courses designed to meet industry needs.',
                             ],
                             [
                                 'question' => 'Are your programs accredited?',
@@ -36,12 +36,12 @@
                             <button @click="open = !open"
                                 class="w-full text-left p-6 flex justify-between items-center hover:bg-blue-50 transition-colors">
                                 <span class="text-xl font-semibold text-blue-800">{{ $faq['question'] }}</span>
-                                <svg x-show="!open" class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor"
+                                <svg x-show="!open" class="w-6 h-6 text-secondary" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                 </svg>
-                                <svg x-show="open" class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor"
+                                <svg x-show="open" class="w-6 h-6 text-secondary" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>

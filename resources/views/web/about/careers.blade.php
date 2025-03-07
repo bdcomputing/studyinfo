@@ -8,7 +8,7 @@
         <div class="container mx-auto px-4">
             <div class=" mx-auto">
                 <div class="mb-5">
-                    <h1 class="text-4xl font-bold text-primary-800 text-left">Career Opportunities at HAITRAC</h1>
+                    <h1 class="text-4xl font-bold text-primary-800 text-left">Career Opportunities at STUDYINFO</h1>
                     <p class="text-lg text-gray-600">Join our dynamic team and contribute to the future of higher education.
                     </p>
                 </div>

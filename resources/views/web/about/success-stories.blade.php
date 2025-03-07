@@ -21,7 +21,7 @@
                             </div>
                             <h2 class="text-xl font-semibold text-gray-800">Valerie Cherunya</h2>
                         </div>
-                        <p class="text-gray-600 mb-4">Graduated from HAITRAC's Nursing program in 2022 and secured a
+                        <p class="text-gray-600 mb-4">Graduated from STUDYINFO's Nursing program in 2022 and secured a
                             position at a leading hospital in Europe. Earned the "Rising Star in Healthcare" award within
                             her first year of practice.</p>
                         <div class="text-sm text-gray-500">Nursing Graduate | Healthcare Professional</div>
@@ -70,7 +70,7 @@
 
             <div class="mt-12 text-center">
                 <p class="text-gray-600 max-w-2xl mx-auto">
-                    These success stories demonstrate HAITRAC's commitment to providing practical, industry-aligned
+                    These success stories demonstrate STUDYINFO's commitment to providing practical, industry-aligned
                     education that empowers students to excel in their chosen fields and make meaningful contributions to
                     society.
                 </p>

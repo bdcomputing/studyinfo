@@ -8,7 +8,7 @@
         style="background-image: url('{{ asset('/assets/images/blog.png') }}')">
         <div class="absolute inset-0 bg-black bg-opacity-50"></div>
         <div class="w-full h-full flex flex-col items-center justify-center container mx-auto relative px-5">
-            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">HAITRAC Blog</h1>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">STUDYINFO Blog</h1>
             <p class="text-white text-center max-w-2xl">Stay updated with the latest news, insights and stories from our
                 vibrant academic community.</p>
         </div>

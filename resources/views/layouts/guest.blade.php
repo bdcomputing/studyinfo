@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Haitrac') }}</title>
+    <title>{{ config('app.name', 'SudyInfo') }}</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -20,9 +20,9 @@
     <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100 dark:bg-gray-900">
 
         <a href="{{ route('web.home') }}" class="flex items-center space-x-3 rtl:space-x-reverse">
-            <img class="h-14 w-auto" src="{{ asset('/assets/logos/logo.png') }}" alt="HAITRAC Logo" />
+            <img class="h-14 w-auto" src="{{ asset('/assets/logos/logo.png') }}" alt="STUDYINFO Logo" />
             <div class="ml-3">
-                <span class="self-center text-xl font-semibold whitespace-nowrap ">HAITRAC</span>
+                <span class="self-center text-xl font-semibold whitespace-nowrap ">STUDYINFO</span>
                 <span class="block text-xs font-thin text-gray-600">Hue African Industrial Training Center</span>
             </div>
         </a>

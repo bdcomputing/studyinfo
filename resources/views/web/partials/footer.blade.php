@@ -1,17 +1,17 @@
-<div class="bg-blue-900 text-white pt-12 pb-6">
+<div class="bg-primary text-white pt-12 pb-6">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
             <!-- Logo and About -->
             <div class="col-span-1 md:col-span-1">
                 <div class="flex items-center mb-4">
-                    <img class="h-20 w-auto mr-2" src="{{ asset('/assets/logos/logo.png') }}" alt="HAITRAC Logo">
+                    <img class="h-20 w-auto mr-2" src="{{ asset('/assets/logos/logo.png') }}" alt="STUDYINFO Logo">
                     <div class="flex flex-col">
-                        <span class="font-bold text-lg leading-tight">HAITRAC</span>
+                        <span class="font-bold text-lg leading-tight">STUDYINFO</span>
                         <span class="text-xs leading-tight text-blue-200">Excellence in Education</span>
                     </div>
                 </div>
                 <p class="text-blue-200 text-sm mb-4">
-                    Hue African Industrial Training Center (HAITRAC) provides quality education and practical training
+                    Hue African Industrial Training Center (STUDYINFO) provides quality education and practical training
                     in Nursing, ICT, Engineering, and more.
                 </p>
                 <div class="flex space-x-4">
@@ -99,7 +99,7 @@
                                 d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                         </svg>
                         <p class="text-blue-200 text-sm">
-                            HAITRAC Campus, Eldoret<br>
+                            STUDYINFO Campus, Eldoret<br>
                             P.O. Box 12345-00100<br>
                             Kenya
                         </p>
@@ -129,7 +129,7 @@
 
                     <div class="pt-4">
                         <a href="{{ route('web.apply') }}"
-                            class="inline-block px-5 py-3 text-sm font-medium text-white bg-yellow-600 rounded-md hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 focus:ring-offset-blue-900">
+                            class="inline-block px-5 py-3 text-sm font-medium text-white bg-secondary rounded-md hover:bg-secondary-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 focus:ring-offset-blue-900">
                             Apply Now
                         </a>
                     </div>
@@ -141,7 +141,7 @@
         <div class="mt-12 pt-6 border-t border-blue-800">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <p class="text-sm text-blue-300">
-                    &copy; {{ date('Y') }} HAITRAC. All rights reserved. Powered by <a
+                    &copy; {{ date('Y') }} STUDYINFO. All rights reserved. Powered by <a
                         href="https://www.haitrac.com" class="text-primary-300 hover:text-white">BD Computing Limited
                         &reg;
                     </a>

@@ -9,20 +9,20 @@
                 <div class="flex justify-center items-center ">
                     <h1
                         class="max-w-2xl text-3xl md:text-4xl font-extrabold text-secondary-700 mb-12 text-center justify-center leading-tight">
-                        About HAITRAC: Empowering Futures Through Excellence in Education
+                        About STUDYINFO: Empowering Futures Through Excellence in Education
                     </h1>
                 </div>
                 <div class=" p-10 space-y-12 w-full mx-auto">
                     <section>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                             <div class="flex justify-center items-center">
-                                <img src="{{ asset('assets/images/about.jpg') }}" alt="HAITRAC"
+                                <img src="{{ asset('assets/images/about.jpg') }}" alt="STUDYINFO"
                                     class="w-full h-full object-cover">
                             </div>
                             <div>
                                 <h2 class="text-2xl font-bold text-primary-800 mb-6">Our Story</h2>
                                 <p class="text-gray-700 leading-relaxed text-lg">
-                                    HAITRAC was established with a visionary mission to transform education by providing
+                                    STUDYINFO was established with a visionary mission to transform education by providing
                                     practical,
                                     industry-aligned training in Nursing, ICT, and technical disciplines. Our commitment
                                     lies in
@@ -35,7 +35,7 @@
                     </section>
 
                     <section class="py-20">
-                        <h2 class="text-2xl text-center justify-center font-bold text-primary-800 mb-6">Why Choose HAITRAC?
+                        <h2 class="text-2xl text-center justify-center font-bold text-primary-800 mb-6">Why Choose STUDYINFO?
                         </h2>
                         <div class="grid md:grid-cols-4 gap-8 pt-10">
                             <div class="transition-all duration-300 justify-center items-center text-center">
@@ -120,7 +120,7 @@
                         <div class="mt-12 bg-white shadow-lg rounded-lg p-8">
                             <h2 class="text-2xl font-semibold text-primary-500 mb-6">Our Faculty Commitment</h2>
                             <p class="text-gray-600 leading-relaxed">
-                                At HAITRAC, our faculty comprises professionals with diverse backgrounds in Nursing, ICT,
+                                At STUDYINFO, our faculty comprises professionals with diverse backgrounds in Nursing, ICT,
                                 and technical
                                 fields. They bring a wealth of industry experience, combining academic expertise with
                                 practical
