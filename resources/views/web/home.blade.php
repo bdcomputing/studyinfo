@@ -3,42 +3,69 @@
     Homepage
 @endsection
 @section('content')
-    <main class="font-poppins bg-gray-100 text-gray-800">
+    <main class="min-h-screen bg-gray-100 text-gray-800">
         <!-- Hero Section -->
-        <section class="bg-gradient-to-r from-primary to-blue-800 text-white py-20">
-            <div class="container mx-auto px-4">
-                <div class="flex flex-col md:flex-row items-center gap-10">
-                    <div class="md:w-1/2 mb-10 md:mb-0">
-                        <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Shaping Tomorrow's
-                            Leaders Today</h1>
-                        <p class="text-lg mb-8 opacity-90">At HAITRAC, we empower students through quality education in
+        <section class="bg-primary md:min-h-[67vh] md:h-full flex items-center md:pb-5">
+            <div class="pt-40 md:pt-0">
+                <div class="grid grid-cols-1  md:grid-cols-2 gap-8">
+                    <div class="text-blue-950 md:pl-20 pb-5 md:pb-0 px-5 md:px-0  flex flex-col justify-center">
+                        <h1 class="text-4xl md:text-5xl  leading-tight mb-6 font-extrabold">
+                            Shaping Tomorrow's Leaders Today!</h1>
+                        <p class="text-lg mb-8 opacity-90 font-medium">At HAITRAC, we empower students through quality
+                            education in
                             Nursing, ICT, and Technical disciplines. Join us to develop practical skills for a successful
                             career.</p>
                         <div class="flex flex-wrap gap-5">
                             <button onclick="window.location.href='{{ route('web.programs.all') }}'"
-                                class="bg-primary hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition duration-300">Explore
+                                class="bg-blue-950 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-full transition duration-300">Explore
                                 Programs</button>
                             <button onclick="window.location.href='{{ route('web.about') }}'"
-                                class="bg-transparent hover:bg-white hover:text-primary text-white font-medium py-3 px-6 rounded-lg border-2 border-white transition duration-300">Learn
+                                class="bg-transparent hover:bg-white hover:text-primary text-white font-medium py-3 px-6 rounded-full border-2 border-white transition duration-300">Learn
                                 More</button>
                         </div>
                     </div>
-                    <div class="md:w-1/2 flex justify-center">
+                    <div class="md:min-h-[67vh] !h-full">
                         <img src="{{ asset('/assets/images/grad.jpg') }}" alt="HAITRAC Students"
-                            class="max-w-full animate-pulse">
+                            class="w-full h-full object-cover md:rounded-bl-[50px]">
                     </div>
                 </div>
             </div>
         </section>
 
-
+        <div class="bg-white py-20">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <h2 class="text-center text-lg/8 font-semibold text-gray-900">
+                    Meet Our Esteemed Partners
+                </h2>
+                <div
+                    class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+                    <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+                        src="https://tailwindcss.com/plus-assets/img/logos/158x48/transistor-logo-gray-900.svg"
+                        alt="Transistor" width="158" height="48">
+                    <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+                        src="https://tailwindcss.com/plus-assets/img/logos/158x48/reform-logo-gray-900.svg" alt="Reform"
+                        width="158" height="48">
+                    <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+                        src="https://tailwindcss.com/plus-assets/img/logos/158x48/tuple-logo-gray-900.svg" alt="Tuple"
+                        width="158" height="48">
+                    <img class="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
+                        src="https://tailwindcss.com/plus-assets/img/logos/158x48/savvycal-logo-gray-900.svg" alt="SavvyCal"
+                        width="158" height="48">
+                    <img class="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
+                        src="https://tailwindcss.com/plus-assets/img/logos/158x48/statamic-logo-gray-900.svg" alt="Statamic"
+                        width="158" height="48">
+                </div>
+            </div>
+        </div>
         <div class="bg-white py-20 px-4 sm:px-6 lg:px-8">
+
             <div class="container mx-auto">
                 <div class="text-center mb-12">
                     <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6">
                         Why Choose HAITRAC?
                     </h2>
-                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">We provide a unique learning experience focused on
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto font-semibold">We provide a unique learning experience
+                        focused on
                         practical skills and industry demands</p>
                 </div>
 
@@ -52,7 +79,7 @@
                             </svg>
                             <h3 class="text-xl font-bold text-gray-900">Industry-Recognized Credentials</h3>
                         </div>
-                        <p class="text-gray-600">
+                        <p class="text-gray-600 font-medium">
                             Transform your future with our fully accredited programs. We don't just teach—we prepare you for
                             success. Our courses are rigorously validated by leading professional bodies, ensuring your
                             qualifications carry weight both locally and internationally.
@@ -68,14 +95,14 @@
                             </svg>
                             <h3 class="text-xl font-bold text-gray-900">Unparalleled Industry Connections</h3>
                         </div>
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-gray-600 mb-4 font-medium">
                             Your career starts here. We've forged strategic partnerships with top-tier hospitals,
                             cutting-edge IT companies, and innovative technical firms.
                         </p>
                         <ul class="list-disc list-inside text-gray-600 space-y-2">
-                            <li>Direct internship opportunities</li>
-                            <li>Mentorship from industry experts</li>
-                            <li>A seamless pathway to professional employment</li>
+                            <li class="font-regular">Direct internship opportunities</li>
+                            <li class="font-regular">Mentorship from industry experts</li>
+                            <li class="font-regular">A seamless pathway to professional employment</li>
                         </ul>
                     </div>
 
@@ -91,7 +118,7 @@
                             </svg>
                             <h3 class="text-xl font-bold text-gray-900">Beyond Skills: Making a Difference</h3>
                         </div>
-                        <p class="text-gray-600">
+                        <p class="text-gray-600 font-medium">
                             Education is more than learning—it's about creating impact. At HAITRAC, we're committed to
                             community empowerment. Our student-led projects and outreach programs go beyond technical
                             training, cultivating socially responsible professionals who are ready to drive meaningful
@@ -99,6 +126,27 @@
                         </p>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="bg-blue-950 text-white py-24 sm:py-32">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <p class="text-center text-2xl font-bold leading-8 pb-10">Our statistics</p>
+                <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
+                    <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                        <dt class="text-base/7 text-gray-400">Transactions every 24 hours</dt>
+                        <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">440
+                        </dd>
+                    </div>
+                    <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                        <dt class="text-base/7 text-gray-400">Assets under holding</dt>
+                        <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">$119
+                            trillion</dd>
+                    </div>
+                    <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+                        <dt class="text-base/7 text-gray-400">New users annually</dt>
+                        <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">46,000</dd>
+                    </div>
+                </dl>
             </div>
         </div>
 
@@ -111,7 +159,7 @@
                             class="rounded-xl shadow-lg w-full">
                     </div>
                     <div class="md:w-1/2">
-                        <h2 class="text-2xl font-bold text-gray-800 mb-6">About HAITRAC</h2>
+                        <h2 class="text-2xl font-extrabold text-gray-800 mb-6">About HAITRAC</h2>
                         <p class="text-gray-600 mb-6">Established with a vision to empower students through quality
                             education, HAITRAC offers programs in Nursing, ICT, and various technical disciplines. Our
                             mission is to bridge the skills gap in today's workforce by providing innovative, practical, and
@@ -171,16 +219,16 @@
         <!-- CEO's Message -->
         <section class="py-20 bg-white">
             <div class="container mx-auto">
-                <div class="flex flex-col-reverse md:flex-row items-center gap-12">
-                    <div class="md:w-1/2 px-24">
-                        <h2 class="text-4xl font-bold text-gray-800 mb-6">CEO's Message</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div class="px-5 md:px-0 flex flex-col justify-center">
+                        <h2 class="text-4xl font-extrabold text-gray-800 mb-6">CEO's Message</h2>
                         <p class="text-gray-600 mb-6 italic">"At HAITRAC, we are committed to equipping students with the
                             skills and knowledge needed to thrive in today's fast-evolving world. Our focus on practical,
                             hands-on training ensures our graduates are job-ready and capable of making a meaningful impact
                             in their respective fields."</p>
                         <h4 class="text-xl font-semibold text-primary">CEO, HAITRAC</h4>
                     </div>
-                    <div class="md:w-1/2 flex justify-center mb-8 md:mb-0">
+                    <div class="flex justify-center mb-8 md:mb-0">
                         <img src="{{ asset('/assets/leadership/a1.png') }}" alt="HAITRAC CEO"
                             class=" shadow-lg w-full max-w-md">
                     </div>
@@ -188,11 +236,12 @@
             </div>
         </section>
 
+
         <!-- Programs Section -->
         <section class="py-20 bg-gray-100">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Programs</h2>
+                    <h2 class="text-3xl font-extrabold text-gray-800 mb-4">Our Programs</h2>
                     <p class="text-lg text-gray-600 max-w-2xl mx-auto">Discover our comprehensive range of courses designed
                         to prepare you for successful careers</p>
                 </div>
@@ -201,13 +250,17 @@
                     <!-- Program 1 -->
                     <div
                         class="bg-white rounded-xl overflow-hidden shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-xl">
-                        <div class="h-48 overflow-hidden">
+                        <div class="h-48 overflow-hidden cursor-pointer"
+                            onclick="window.location.href='{{ route('web.programs.nursing') }}'">
                             <img src="{{ asset('/assets/images/nursing.jpg') }}" alt="Nursing Program"
                                 class="w-full h-full object-cover transition duration-300 hover:scale-110">
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-800 mb-3">Nursing</h3>
-                            <p class="text-gray-600 mb-6">Comprehensive training in medical care, patient management, and
+                            <h3 class="text-xl font-bold text-gray-800 mb-3 cursor-pointer"
+                                onclick="window.location.href='{{ route('web.programs.nursing') }}'">Nursing</h3>
+                            <p class="text-gray-600 mb-6 cursor-pointer"
+                                onclick="window.location.href='{{ route('web.programs.nursing') }}'">Comprehensive training
+                                in medical care, patient management, and
                                 healthcare practices.</p>
                             <div class="flex items-center justify-between pt-4 border-t border-gray-200">
                                 <div class="flex items-center text-gray-500">
@@ -224,13 +277,18 @@
                     <!-- Program 2 -->
                     <div
                         class="bg-white rounded-xl overflow-hidden shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-xl">
-                        <div class="h-48 overflow-hidden">
+                        <div class="h-48 overflow-hidden cursor-pointer"
+                            onclick="window.location.href='{{ route('web.programs.ict') }}'">
                             <img src="{{ asset('/assets/images/ict-program.jpg') }}" alt="ICT Program"
                                 class="w-full h-full object-cover transition duration-300 hover:scale-110">
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-800 mb-3">Information & Communication Technology</h3>
-                            <p class="text-gray-600 mb-6">Modern IT skills including programming, networking, and systems
+                            <h3 class="text-xl font-bold text-gray-800 mb-3 cursor-pointer"
+                                onclick="window.location.href='{{ route('web.programs.ict') }}'">Information &
+                                Communication Technology</h3>
+                            <p class="text-gray-600 mb-6 cursor-pointer"
+                                onclick="window.location.href='{{ route('web.programs.ict') }}'">Modern IT skills
+                                including programming, networking, and systems
                                 administration.</p>
                             <div class="flex items-center justify-between pt-4 border-t border-gray-200">
                                 <div class="flex items-center text-gray-500">
@@ -247,13 +305,18 @@
                     <!-- Program 3 -->
                     <div
                         class="bg-white rounded-xl overflow-hidden shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-xl">
-                        <div class="h-48 overflow-hidden">
+                        <div class="h-48 overflow-hidden cursor-pointer"
+                            onclick="window.location.href='{{ route('web.programs.mechEngineering') }}'">
                             <img src="{{ asset('/assets/images/technical-program.jpg') }}" alt="Technical Program"
                                 class="w-full h-full object-cover transition duration-300 hover:scale-110">
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-800 mb-3">Technical Disciplines</h3>
-                            <p class="text-gray-600 mb-6">Specialized training in various technical fields like engineering
+                            <h3 class="text-xl font-bold text-gray-800 mb-3 cursor-pointer"
+                                onclick="window.location.href='{{ route('web.programs.mechEngineering') }}'">Technical
+                                Disciplines</h3>
+                            <p class="text-gray-600 mb-6 cursor-pointer"
+                                onclick="window.location.href='{{ route('web.programs.mechEngineering') }}'">Specialized
+                                training in various technical fields like engineering
                                 and automation.</p>
                             <div class="flex items-center justify-between pt-4 border-t border-gray-200">
                                 <div class="flex items-center text-gray-500">
@@ -270,11 +333,11 @@
             </div>
         </section>
 
-        <!-- Vision & Mission -->
         <section class="py-20 bg-white">
             <div class="container mx-auto px-4">
                 <div class="text-center md:text-left items-start">
-                    <h2 class="text-4xl font-bold text-secondary-950">Our <span class="text-primary-600">Mission</span>
+                    <h2 class="text-4xl font-extrabold text-secondary-950">Our <span
+                            class="text-primary-600">Mission</span>
                     </h2>
                     <p class="text-lg text-secondary-600 max-w-5xl">To be a leading center of excellence in
                         education,
@@ -283,9 +346,7 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5 pt-10">
-                    <!-- Mission -->
-                    <div
-                        class="bg-white rounded-3xl p-5 md:p-10 transition duration-300 hover:shadow-lg border border-secondary-100">
+                    <div class="bg-white rounded-3xl p-5 md:p-10 transition duration-300 shadow-xl hover:shadow-2xl ">
 
                         <h3 class="text-xl font-bold text-gray-800 mb-4">Our Commitment</h3>
                         <p class="text-gray-600">At HAITRAC, we are deeply committed to transforming education by providing
@@ -293,9 +354,7 @@
                             to excel in healthcare, technology, and technical fields.</p>
                     </div>
 
-                    <!-- Vision -->
-                    <div
-                        class="bg-white rounded-2xl p-5 md:p-10 transition duration-300 hover:shadow-lg border border-secondary-100">
+                    <div class="bg-white rounded-2xl p-5 md:p-10 transition duration-300 shadow-xl hover:shadow-2xl">
 
                         <h3 class="text-xl font-bold text-gray-800 mb-4">The Impact</h3>
                         <p class="text-gray-600">Through strategic partnerships, community initiatives, and hands-on
@@ -305,27 +364,21 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-5 pt-5">
-                    <!-- Vision -->
-                    <div
-                        class="bg-white rounded-3xl p-5 md:p-10 transition duration-300 hover:shadow-lg border border-secondary-100">
+                    <div class="bg-white rounded-3xl p-5 md:p-10 transition duration-300 shadow-xl hover:shadow-2xl">
 
                         <h3 class="text-xl font-bold text-gray-800 mb-4">The Importance</h3>
                         <p class="text-gray-600">HAITRAC recognizes education as a powerful tool for individual and
                             community transformation, focusing on developing professionals who can address real-world
                             challenges with expertise and social responsibility.</p>
                     </div>
-                    <!-- Vision -->
-                    <div
-                        class="bg-white rounded-3xl p-5 md:p-10 transition duration-300 hover:shadow-lg border border-secondary-100">
+                    <div class="bg-white rounded-3xl p-5 md:p-10 transition duration-300 shadow-xl hover:shadow-2xl">
 
                         <h3 class="text-xl font-bold text-gray-800 mb-4">Our Resolve</h3>
                         <p class="text-gray-600">We are dedicated to bridging the skills gap by delivering innovative,
                             practical, and transformative education that empowers students to become leaders,
                             problem-solvers, and change-makers in their respective industries.</p>
                     </div>
-                    <!-- Vision -->
-                    <div
-                        class="bg-white rounded-3xl p-5 md:p-10 transition duration-300 hover:shadow-lg border border-secondary-100">
+                    <div class="bg-white rounded-3xl p-5 md:p-10 transition duration-300 shadow-xl hover:shadow-2xl">
 
                         <h3 class="text-xl font-bold text-gray-800 mb-4">Our Vision</h3>
                         <p class="text-gray-600"> To empower individuals with knowledge, skills, and practical experience
@@ -336,21 +389,18 @@
             </div>
         </section>
 
-        <!-- Team Section -->
-        {{-- @include('web.about.team') --}}
 
         <!-- Recognition Section -->
         <section class="py-20 bg-gray-100">
             <div class="container mx-auto px-4">
                 <div class="text-left mb-16">
                     <h2 class="text-3xl font-bold text-gray-800 mb-4">Recognition for Excellence</h2>
-                    <p class="text-md text-gray-600 max-w-4xl">HAITRAC has been recognized as a leading institution
+                    <p class="text-md text-gray-600 ">HAITRAC has been recognized as a leading institution
                         in Nursing, ICT, and technical courses, earning accolades from local education boards and industry
                         organizations.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Success Story 1: Nursing -->
                     <div
                         class="bg-white rounded-xl p-8 text-center transition duration-300 hover:scale-105 hover:shadow-lg">
                         <div class="text-4xl text-blue-600 mb-4">
@@ -361,7 +411,6 @@
                             European hospital, winning the "Rising Star in Healthcare" award.</p>
                     </div>
 
-                    <!-- Success Story 2: ICT -->
                     <div
                         class="bg-white rounded-xl p-8 text-center transition duration-300 hover:scale-105 hover:shadow-lg">
                         <div class="text-4xl text-green-600 mb-4">
@@ -372,7 +421,6 @@
                             gaining national recognition at the Kenya Tech Summit.</p>
                     </div>
 
-                    <!-- Success Story 3: Technical Fields -->
                     <div
                         class="bg-white rounded-xl p-8 text-center transition duration-300 hover:scale-105 hover:shadow-lg">
                         <div class="text-4xl text-purple-600 mb-4">
@@ -387,16 +435,16 @@
         </section>
 
         <!-- Call to Action -->
-        <section class="py-20 bg-gradient-to-r from-primary to-blue-800 text-white text-center">
+        <section class="py-20 bg-blue-50 text-blue-950 text-center">
             <div class="container mx-auto px-4">
-                <h2 class="text-4xl font-bold mb-2">Your Journey Starts With Purpose.</h2>
-                <h5 class="text-xl md:text-2xl text-primary-950 mb-6">
+                <h2 class="text-4xl font-extrabold mb-2">Your Journey Starts With Purpose.</h2>
+                <h5 class="text-xl md:text-2xl font-semibold text-primary-600 mb-6">
                     Your Future Starts With HAITRAC.
                 </h5>
                 <p class="text-lg mb-8 max-w-2xl mx-auto opacity-90">Take the first step towards a rewarding career with
                     HAITRAC's industry-focused programs</p>
                 <button
-                    class="bg-white hover:bg-gray-100 text-primary font-medium py-3 px-8 rounded-lg transition duration-300 text-lg">
+                    class="bg-blue-950 hover:bg-blue-900 text-primary-50 font-medium py-3 px-8 rounded-full transition duration-300 text-lg">
                     Start Your Journey Today</button>
             </div>
         </section>

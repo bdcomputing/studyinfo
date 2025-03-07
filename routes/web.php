@@ -29,7 +29,6 @@ Route::prefix('courses')->name('web.programs.')->group(function () {
 // About Routes
 Route::prefix('about-us')->name('web.about.')->group(function () {
     Route::get('/mission', [WebController::class, 'mission'])->name('mission');
-    Route::get('/faculty', [WebController::class, 'faculty'])->name('faculty');
     Route::get('/partnerships', [WebController::class, 'partnership'])->name('partnerships');
     Route::get('/success', [WebController::class, 'success'])->name('success-stories');
     Route::get('/careers', [WebController::class, 'careers'])->name('careers');

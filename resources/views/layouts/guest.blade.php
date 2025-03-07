@@ -18,11 +18,14 @@
 
 <body class="font-sans text-gray-900 antialiased">
     <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100 dark:bg-gray-900">
-        <div>
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </div>
+
+        <a href="{{ route('web.home') }}" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img class="h-14 w-auto" src="{{ asset('/assets/logos/logo.png') }}" alt="HAITRAC Logo" />
+            <div class="ml-3">
+                <span class="self-center text-xl font-semibold whitespace-nowrap ">HAITRAC</span>
+                <span class="block text-xs font-thin text-gray-600">Hue African Industrial Training Center</span>
+            </div>
+        </a>
 
         <div
             class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white dark:bg-gray-800 shadow-md overflow-hidden sm:rounded-lg">

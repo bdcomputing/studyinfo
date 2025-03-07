@@ -74,11 +74,6 @@ class WebController extends Controller
     }
 
     // About
-    public function faculty()
-    {
-        return view('web.about.faculty');
-    }
-
     public function mission()
     {
         return view('web.about.mission');

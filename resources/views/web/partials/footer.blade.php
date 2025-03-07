@@ -99,7 +99,7 @@
                                 d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                         </svg>
                         <p class="text-blue-200 text-sm">
-                            HAITRAC Campus, Nairobi<br>
+                            HAITRAC Campus, Eldoret<br>
                             P.O. Box 12345-00100<br>
                             Kenya
                         </p>
@@ -112,7 +112,7 @@
                                 d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                         </svg>
                         <p class="text-blue-200 text-sm">
-                            +254 700 123 456
+                            +254 799 965 066
                         </p>
                     </div>
 
@@ -123,7 +123,7 @@
                                 d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg>
                         <p class="text-blue-200 text-sm">
-                            info@haitrac.edu
+                            info@haitrac.com
                         </p>
                     </div>
 
@@ -141,7 +141,10 @@
         <div class="mt-12 pt-6 border-t border-blue-800">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <p class="text-sm text-blue-300">
-                    &copy; {{ date('Y') }} HAITRAC. All rights reserved.
+                    &copy; {{ date('Y') }} HAITRAC. All rights reserved. Powered by <a
+                        href="https://www.haitrac.com" class="text-primary-300 hover:text-white">BD Computing Limited
+                        &reg;
+                    </a>
                 </p>
                 <div class="mt-4 md:mt-0 flex space-x-6">
                     <a href="{{ route('web.bottom.privacy') }}" class="text-sm text-blue-300 hover:text-white">
