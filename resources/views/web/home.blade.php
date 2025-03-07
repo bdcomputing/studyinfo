@@ -250,13 +250,17 @@
                     <!-- Program 1 -->
                     <div
                         class="bg-white rounded-xl overflow-hidden shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-xl">
-                        <div class="h-48 overflow-hidden">
+                        <div class="h-48 overflow-hidden cursor-pointer"
+                            onclick="window.location.href='{{ route('web.programs.nursing') }}'">
                             <img src="{{ asset('/assets/images/nursing.jpg') }}" alt="Nursing Program"
                                 class="w-full h-full object-cover transition duration-300 hover:scale-110">
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-800 mb-3">Nursing</h3>
-                            <p class="text-gray-600 mb-6">Comprehensive training in medical care, patient management, and
+                            <h3 class="text-xl font-bold text-gray-800 mb-3 cursor-pointer"
+                                onclick="window.location.href='{{ route('web.programs.nursing') }}'">Nursing</h3>
+                            <p class="text-gray-600 mb-6 cursor-pointer"
+                                onclick="window.location.href='{{ route('web.programs.nursing') }}'">Comprehensive training
+                                in medical care, patient management, and
                                 healthcare practices.</p>
                             <div class="flex items-center justify-between pt-4 border-t border-gray-200">
                                 <div class="flex items-center text-gray-500">
@@ -273,13 +277,18 @@
                     <!-- Program 2 -->
                     <div
                         class="bg-white rounded-xl overflow-hidden shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-xl">
-                        <div class="h-48 overflow-hidden">
+                        <div class="h-48 overflow-hidden cursor-pointer"
+                            onclick="window.location.href='{{ route('web.programs.ict') }}'">
                             <img src="{{ asset('/assets/images/ict-program.jpg') }}" alt="ICT Program"
                                 class="w-full h-full object-cover transition duration-300 hover:scale-110">
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-800 mb-3">Information & Communication Technology</h3>
-                            <p class="text-gray-600 mb-6">Modern IT skills including programming, networking, and systems
+                            <h3 class="text-xl font-bold text-gray-800 mb-3 cursor-pointer"
+                                onclick="window.location.href='{{ route('web.programs.ict') }}'">Information &
+                                Communication Technology</h3>
+                            <p class="text-gray-600 mb-6 cursor-pointer"
+                                onclick="window.location.href='{{ route('web.programs.ict') }}'">Modern IT skills
+                                including programming, networking, and systems
                                 administration.</p>
                             <div class="flex items-center justify-between pt-4 border-t border-gray-200">
                                 <div class="flex items-center text-gray-500">
@@ -296,13 +305,18 @@
                     <!-- Program 3 -->
                     <div
                         class="bg-white rounded-xl overflow-hidden shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-xl">
-                        <div class="h-48 overflow-hidden">
+                        <div class="h-48 overflow-hidden cursor-pointer"
+                            onclick="window.location.href='{{ route('web.programs.mechEngineering') }}'">
                             <img src="{{ asset('/assets/images/technical-program.jpg') }}" alt="Technical Program"
                                 class="w-full h-full object-cover transition duration-300 hover:scale-110">
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-800 mb-3">Technical Disciplines</h3>
-                            <p class="text-gray-600 mb-6">Specialized training in various technical fields like engineering
+                            <h3 class="text-xl font-bold text-gray-800 mb-3 cursor-pointer"
+                                onclick="window.location.href='{{ route('web.programs.mechEngineering') }}'">Technical
+                                Disciplines</h3>
+                            <p class="text-gray-600 mb-6 cursor-pointer"
+                                onclick="window.location.href='{{ route('web.programs.mechEngineering') }}'">Specialized
+                                training in various technical fields like engineering
                                 and automation.</p>
                             <div class="flex items-center justify-between pt-4 border-t border-gray-200">
                                 <div class="flex items-center text-gray-500">
@@ -319,7 +333,6 @@
             </div>
         </section>
 
-        <!-- Vision & Mission -->
         <section class="py-20 bg-white">
             <div class="container mx-auto px-4">
                 <div class="text-center md:text-left items-start">
@@ -333,9 +346,7 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5 pt-10">
-                    <!-- Mission -->
-                    <div
-                        class="bg-white rounded-3xl p-5 md:p-10 transition duration-300 hover:shadow-lg border border-secondary-100">
+                    <div class="bg-white rounded-3xl p-5 md:p-10 transition duration-300 shadow-xl hover:shadow-2xl ">
 
                         <h3 class="text-xl font-bold text-gray-800 mb-4">Our Commitment</h3>
                         <p class="text-gray-600">At HAITRAC, we are deeply committed to transforming education by providing
@@ -343,9 +354,7 @@
                             to excel in healthcare, technology, and technical fields.</p>
                     </div>
 
-                    <!-- Vision -->
-                    <div
-                        class="bg-white rounded-2xl p-5 md:p-10 transition duration-300 hover:shadow-lg border border-secondary-100">
+                    <div class="bg-white rounded-2xl p-5 md:p-10 transition duration-300 shadow-xl hover:shadow-2xl">
 
                         <h3 class="text-xl font-bold text-gray-800 mb-4">The Impact</h3>
                         <p class="text-gray-600">Through strategic partnerships, community initiatives, and hands-on
@@ -355,27 +364,21 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-5 pt-5">
-                    <!-- Vision -->
-                    <div
-                        class="bg-white rounded-3xl p-5 md:p-10 transition duration-300 hover:shadow-lg border border-secondary-100">
+                    <div class="bg-white rounded-3xl p-5 md:p-10 transition duration-300 shadow-xl hover:shadow-2xl">
 
                         <h3 class="text-xl font-bold text-gray-800 mb-4">The Importance</h3>
                         <p class="text-gray-600">HAITRAC recognizes education as a powerful tool for individual and
                             community transformation, focusing on developing professionals who can address real-world
                             challenges with expertise and social responsibility.</p>
                     </div>
-                    <!-- Vision -->
-                    <div
-                        class="bg-white rounded-3xl p-5 md:p-10 transition duration-300 hover:shadow-lg border border-secondary-100">
+                    <div class="bg-white rounded-3xl p-5 md:p-10 transition duration-300 shadow-xl hover:shadow-2xl">
 
                         <h3 class="text-xl font-bold text-gray-800 mb-4">Our Resolve</h3>
                         <p class="text-gray-600">We are dedicated to bridging the skills gap by delivering innovative,
                             practical, and transformative education that empowers students to become leaders,
                             problem-solvers, and change-makers in their respective industries.</p>
                     </div>
-                    <!-- Vision -->
-                    <div
-                        class="bg-white rounded-3xl p-5 md:p-10 transition duration-300 hover:shadow-lg border border-secondary-100">
+                    <div class="bg-white rounded-3xl p-5 md:p-10 transition duration-300 shadow-xl hover:shadow-2xl">
 
                         <h3 class="text-xl font-bold text-gray-800 mb-4">Our Vision</h3>
                         <p class="text-gray-600"> To empower individuals with knowledge, skills, and practical experience
@@ -434,8 +437,8 @@
         <!-- Call to Action -->
         <section class="py-20 bg-blue-50 text-blue-950 text-center">
             <div class="container mx-auto px-4">
-                <h2 class="text-4xl font-bold mb-2">Your Journey Starts With Purpose.</h2>
-                <h5 class="text-xl md:text-2xl text-primary-950 mb-6">
+                <h2 class="text-4xl font-extrabold mb-2">Your Journey Starts With Purpose.</h2>
+                <h5 class="text-xl md:text-2xl font-semibold text-primary-600 mb-6">
                     Your Future Starts With HAITRAC.
                 </h5>
                 <p class="text-lg mb-8 max-w-2xl mx-auto opacity-90">Take the first step towards a rewarding career with
