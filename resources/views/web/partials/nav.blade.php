@@ -27,7 +27,7 @@
                 <li>
                     <button id="mega-menu-full-cta-image-button" data-collapse-toggle="mega-menu-full-image-dropdown"
                         class="flex text-lg items-center font-bold justify-between w-full py-2 px-3  text-gray-900 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0">
-                        About us
+                        About
                         <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                             fill="none" viewBox="0 0 10 6">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -57,9 +57,8 @@
         <div class="grid max-w-screen-2xl px-0 py-5 mx-auto text-sm text-gray-500  md:grid-cols-3 md:px-6">
             <ul class="space-y-4" aria-labelledby="mega-menu-full-image-button">
                 <li>
-                    <a href="{{ route('web.about.mission') }}"
-                        class="hover:underline text-md font-medium hover:text-blue-600 ">
-                        Mission & Vision
+                    <a href="{{ route('web.about') }}" class="hover:underline text-md font-medium hover:text-blue-600 ">
+                        About Us
                     </a>
                 </li>
                 <li>
