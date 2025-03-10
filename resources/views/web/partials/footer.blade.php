@@ -4,11 +4,8 @@
             <!-- Logo and About -->
             <div class="col-span-1 md:col-span-1">
                 <div class="flex items-center mb-4">
-                    <img class="h-20 w-auto mr-2" src="{{ asset('/assets/logos/logo.png') }}" alt="STUDYINFO Logo">
-                    <div class="flex flex-col">
-                        <span class="font-bold text-lg leading-tight">STUDYINFO</span>
-                        <span class="text-xs leading-tight text-blue-200">Excellence in Education</span>
-                    </div>
+                    <img class="size-20 w-auto  bg-white rounded-l-full" src="{{ asset('/assets/logos/logo.png') }}" alt="STUDYINFO Logo">
+
                 </div>
                 <p class="text-blue-200 text-sm mb-4">
                     Hue African Industrial Training Center (STUDYINFO) provides quality education and practical training
@@ -51,40 +48,19 @@
                 <ul class="space-y-2">
                     <li><a href="{{ route('web.about') }}" class="text-blue-200 hover:text-white text-sm">About Us</a>
                     </li>
-                    <li><a href="{{ route('web.programs.all') }}" class="text-blue-200 hover:text-white text-sm">Our
-                            Courses</a></li>
-                    <li><a href="{{ route('web.about.success-stories') }}"
+
+                    <li><a href="#"
                             class="text-blue-200 hover:text-white text-sm">Success
                             Stories</a></li>
-                    <li><a href="{{ route('web.about.events') }}"
+                    <li><a href="#"
                             class="text-blue-200 hover:text-white text-sm">Events</a></li>
-                    <li><a href="{{ route('web.about.blog') }}" class="text-blue-200 hover:text-white text-sm">Blog</a>
+                    <li><a href="#" class="text-blue-200 hover:text-white text-sm">Blog</a>
                     </li>
                     <li><a href="{{ route('web.faqs') }}" class="text-blue-200 hover:text-white text-sm">FAQs</a></li>
                 </ul>
             </div>
 
-            <!-- Programs -->
-            <div class="col-span-1">
-                <h3 class="text-lg font-medium mb-4">Our Programs</h3>
-                <ul class="space-y-2">
-                    <li><a href="{{ route('web.programs.nursing') }}"
-                            class="text-blue-200 hover:text-white text-sm">Nursing</a></li>
-                    <li><a href="{{ route('web.programs.ict') }}" class="text-blue-200 hover:text-white text-sm">ICT &
-                            Software Development</a></li>
-                    <li><a href="{{ route('web.programs.mechEngineering') }}"
-                            class="text-blue-200 hover:text-white text-sm">Mechanical
-                            Engineering</a></li>
-                    <li><a href="{{ route('web.programs.hospitality') }}"
-                            class="text-blue-200 hover:text-white text-sm">Hospitality
-                            Management</a></li>
-                    <li><a href="{{ route('web.programs.business') }}"
-                            class="text-blue-200 hover:text-white text-sm">Business
-                            Administration</a></li>
-                    <li><a href="{{ route('web.programs.shortcourses') }}"
-                            class="text-blue-200 hover:text-white text-sm">Short Courses</a></li>
-                </ul>
-            </div>
+
 
             <!-- Contact Information -->
             <div class="col-span-1">
@@ -112,7 +88,7 @@
                                 d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                         </svg>
                         <p class="text-blue-200 text-sm">
-                            +254 799 965 066
+                            +254 741 551 733
                         </p>
                     </div>
 
@@ -123,12 +99,12 @@
                                 d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg>
                         <p class="text-blue-200 text-sm">
-                            info@haitrac.com
+                            inquiries@studyinfo.ke
                         </p>
                     </div>
 
                     <div class="pt-4">
-                        <a href="{{ route('web.apply') }}"
+                        <a href="#"
                             class="inline-block px-5 py-3 text-sm font-medium text-white bg-secondary rounded-md hover:bg-secondary-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 focus:ring-offset-blue-900">
                             Apply Now
                         </a>
@@ -138,7 +114,7 @@
         </div>
 
         <!-- Bottom Footer -->
-        <div class="mt-12 pt-6 border-t border-blue-800">
+        <div class="mt-12 pt-6 ">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <p class="text-sm text-blue-300">
                     &copy; {{ date('Y') }} STUDYINFO. All rights reserved. Powered by <a
