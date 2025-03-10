@@ -16,20 +16,25 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="font-sans text-gray-900 antialiased">
-    <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100 dark:bg-gray-900">
+<body class="font-sans text-primary antialiased">
+    <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100  p-2">
 
-        <a href="{{ route('web.home') }}" class="flex items-center space-x-3 rtl:space-x-reverse">
-            <img class="h-14 w-auto" src="{{ asset('/assets/logos/logo.png') }}" alt="STUDYINFO Logo" />
-            <div class="ml-3">
-                <span class="self-center text-xl font-semibold whitespace-nowrap ">STUDYINFO</span>
-                <span class="block text-xs font-thin text-gray-600">Hue African Industrial Training Center</span>
+
+
+        <div class="flex flex-col w-full md:w-1/2 xl:w-2/5 2xl:w-2/5 3xl:w-1/3 mx-auto p-8 md:p-10 2xl:p-12 3xl:p-14 bg-[#ffffff] rounded-2xl shadow-xl">
+            <div class="flex flex-row gap-3 pb-4">
+                <div>
+                    <img class="h-12 md:h-14 w-auto" src="{{ asset('/assets/logos/logo.png') }}" alt="STUDYINFO Logo" />
+                </div>
+                <!---->
+                <h1 class="text-2xl md:text-3xl font-bold  text-primary my-auto">StudyInfo</h1>
+
             </div>
-        </a>
 
-        <div
-            class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white dark:bg-gray-800 shadow-md overflow-hidden sm:rounded-lg">
+            <!---->
             {{ $slot }}
+
+
         </div>
     </div>
 </body>
