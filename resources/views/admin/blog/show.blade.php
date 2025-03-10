@@ -72,7 +72,7 @@
 
                         <h4 class="text-lg font-semibold text-gray-900 mb-2">Content</h4>
                         <div class="text-gray-600">
-                            {!! nl2br(e($blog->content)) !!}
+                            {!! $blog->content !!}
                         </div>
                     </div>
                 </div>
