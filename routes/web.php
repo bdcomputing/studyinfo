@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\WebController;
 use Illuminate\Support\Facades\Route;
@@ -15,16 +16,16 @@ Route::get('/faqs', [WebController::class, 'faq'])->name('web.faqs');
 Route::get('/admissions', [WebController::class, 'admissions'])->name('web.admissions');
 
 
-// Bllog
+// Blog
+Route::get("/blog", [BlogController::class, "list"])->name('web.blog');
 
 // Bottom (Footer Links)
 Route::get('/privacy-policy', [WebController::class, 'privacy'])->name('web.bottom.privacy');
 Route::get('/terms-of-service', [WebController::class, 'terms'])->name('web.bottom.terms');
 Route::get('/cookie-policy', [WebController::class, 'cookie'])->name('web.bottom.cookie');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
