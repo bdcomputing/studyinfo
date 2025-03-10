@@ -122,7 +122,7 @@
                 </li>
 
                 <li>
-                    <a href="{{route('web.blog')}}"
+                    <a href="{{route('web.blog.index')}}"
                         class="block text-lg py-2 px-3 font-bold text-primary border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-secondary-700 md:p-0">Blog</a>
                 </li>
 

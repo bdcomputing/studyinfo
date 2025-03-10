@@ -9,7 +9,7 @@ Homepage
 
 
     <!-- Hero Section -->
-    <section class=" bg-[url(`{{asset('/assets/images/header.webp')}}`)] md:min-h-[74vh] md:h-full flex items-center md:pb-5 ">
+    <section class=" bg-primary md:min-h-[74vh] md:h-full flex items-center md:pb-5 ">
         <div class="grid grid-cols-1  md:grid-cols-2 gap-8">
             <div class="text-primary-50 py-20 md:py-0 md:pl-20 pb-5 md:pb-0 px-5 md:px-0  flex flex-col justify-center">
                 <h1 class="text-3xl md:text-5xl  mb-6 font-extrabold leading-loose">

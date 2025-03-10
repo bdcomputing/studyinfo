@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 
@@ -12,31 +13,31 @@ class BlogController extends Controller
      */
     public function index(): View
     {
-        return view("web.blog.list-blogs");
+        $blogs = Blog::where('is_published', true)
+            ->orderBy('publish_date', 'desc')
+            ->get();
+
+        return view('web.blog.index', compact('blogs'));
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Display the specified blog.
      */
-    public function create()
+    public function show($slug)
     {
-        //
-    }
+        $blog = Blog::where('slug', $slug)
+            ->where('is_published', true)
+            ->firstOrFail();
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+        // Get related blogs in the same category
+        $relatedBlogs = Blog::where('category', $blog->category)
+            ->where('id', '!=', $blog->id)
+            ->where('is_published', true)
+            ->orderBy('publish_date', 'desc')
+            ->limit(3)
+            ->get();
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
+        return view('web.blog.single', compact('blog', 'relatedBlogs'));
     }
 
     /**
