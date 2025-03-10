@@ -3,12 +3,17 @@
 Contact
 @endsection
 @section('content')
+
 <div class="bg-gray-50 min-h-screen py-12">
     <div class="container mx-auto px-4">
         <div class="grid md:grid-cols-2 gap-12">
-            <div class="bg-white shadow-lg rounded-lg p-8">
-                <p class="text-primary-950">Get in Touch</p>
-                <h1 class="text-4xl font-bold text-secondary-800 mb-6">Let's Chat, Reach Out </br> to Us</h1>
+            <div class="bg-white p-8">
+                <p class="py-5 font-bold text-xl md:text-2xl text-primary">Let’s Make Your Study Abroad Dream a Reality!</p>
+
+                <h1 class="text-sm md:text-base text-accent-800 mb-6">
+                    Have questions about studying abroad? Our team is here to
+                    help with everything from university selection to visa processing.
+                    Reach out to us today!</h1>
 
                 <form>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -61,9 +66,9 @@ Contact
                                 class="bg-gray-50 focus:border-primary-600 focus:ring-primary-600 border border-gray-200 text-primary text-sm rounded-lg block w-full p-2.5  "
                                 formControlName="remember" />
                         </div>
-                        <label for="remember" class="ms-2 text-sm font-medium text-primary dark:text-gray-300">
+                        <label for="remember" class="ms-2 text-sm font-medium text-primary ">
                             I agree with the
-                            <a href="#" class="text-primary-950 hover:underline dark:text-primary-500">terms and
+                            <a href="#" class="text-primary-500 hover:underline ">terms and
                                 conditions</a>.
                         </label>
                     </div>
@@ -71,7 +76,7 @@ Contact
 
                     <div class="flex items-center justify-between w-full">
                         <button
-                            class="bg-primary-600 hover:bg-primary-700 text-white font-bold py-2 px-4 rounded w-full focus:outline-none focus:shadow-outline"
+                            class="bg-primary hover:bg-primary-900 text-white font-bold py-2 px-4 rounded w-full focus:outline-none focus:shadow-outline"
                             type="button">
                             Send Message
                         </button>
@@ -87,7 +92,7 @@ Contact
                     <div class="space-y-4">
                         <div class="flex items-center bg-white shadow-lg rounded-lg p-5">
                             <div class="h-12 w-12 bg-primary-100 rounded-full flex items-center justify-center mr-4">
-                                <svg class="w-6 h-6 text-primary-500" fill="none" stroke="currentColor"
+                                <svg class="w-6 h-6 text-primary-900" fill="none" stroke="currentColor"
                                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">

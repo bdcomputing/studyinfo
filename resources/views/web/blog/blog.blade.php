@@ -4,7 +4,9 @@
 Blog
 @endsection
 @section('content')
-<section>
-    <p>Blog Detail</p>
+<section class="bg-white">
+    <div class="container mx-auto">
+        <p>Blog Detail</p>
+    </div>
 </section>
 @endsection

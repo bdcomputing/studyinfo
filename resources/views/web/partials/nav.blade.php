@@ -131,8 +131,8 @@
                         class="block text-lg py-2 px-3 font-bold text-primary border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-secondary-700 md:p-0">Contact</a>
                 </li>
                 <li>
-                    <a href="{{ route('web.contact') }}"
-                        class="block text-lg py-2 px-3 font-bold text-primary border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-secondary-700 md:p-0">Contact</a>
+                    <a href="{{ route('web.about') }}"
+                        class="block text-lg py-2 px-3 font-bold text-primary border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-secondary-700 md:p-0">About</a>
                 </li>
             </ul>
             <div class="flex items-center ml-5">
