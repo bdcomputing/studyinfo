@@ -28,22 +28,24 @@ $blogs = collect([
 @endphp
 
 @section('content')
-<div class="container">
-    <h1>Blog List</h1>
-    @if($blogs->count())
-    <ul>
-        @foreach($blogs as $blog)
-        <li>
-            <h2><a href="">{{ $blog->title }}</a></h2>
-            <p>{{ Str::limit($blog->content, 150) }}</p>
-            <small>Published on {{ $blog->created_at->format('M d, Y') }}</small>
-        </li>
-        @endforeach
-    </ul>
-    @else
-    <p>No blogs available.</p>
-    @endif
-</div>
-<
+<section class="bg-white">
+    <div class="container mx-auto">
+        <h1>Blog List</h1>
+        @if($blogs->count())
+        <ul>
+            @foreach($blogs as $blog)
+            <li>
+                <h2><a href="">{{ $blog->title }}</a></h2>
+                <p>{{ Str::limit($blog->content, 150) }}</p>
+                <small>Published on {{ $blog->created_at->format('M d, Y') }}</small>
+            </li>
+            @endforeach
+        </ul>
+        @else
+        <p>No blogs available.</p>
+        @endif
+    </div>
+</section>
 
-    @endsection
+
+@endsection
