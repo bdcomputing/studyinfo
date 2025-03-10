@@ -17,7 +17,10 @@ Route::get('/admissions', [WebController::class, 'admissions'])->name('web.admis
 
 
 // Blog
-Route::get("/blog", [BlogController::class, "index"])->name('web.blog');
+Route::name('web.blog.')->group(function () {
+    Route::get("/blog", [BlogController::class, "index"])->name('index');
+    Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('single');
+});
 
 // Bottom (Footer Links)
 Route::get('/privacy-policy', [WebController::class, 'privacy'])->name('web.bottom.privacy');
