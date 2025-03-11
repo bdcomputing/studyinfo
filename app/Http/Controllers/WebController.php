@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Event;
 use Illuminate\Http\Request;
 
 class WebController extends Controller
@@ -9,7 +10,8 @@ class WebController extends Controller
 
     public function index()
     {
-        return view('web.home');
+        $events = Event::all();
+        return view('web.home', compact("events"));
     }
 
     public function about()
