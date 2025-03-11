@@ -5,9 +5,6 @@ Homepage
 @section('content')
 
 <main class="min-h-screen  text-gray-800">
-
-
-
     <!-- Hero Section -->
     <section class=" bg-primary md:min-h-[74vh] md:h-full flex items-center md:pb-5 ">
         <div class="grid grid-cols-1  md:grid-cols-2 gap-8">
@@ -129,26 +126,17 @@ Homepage
                 [
                 'title' => 'Student Counselling',
                 'description' => 'We provide comprehensive career counseling and university placement services, guiding students to select suitable academic paths and securing admissions to top-tier international institutions.',
-                'svg' => '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-12">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
-                </svg>
-                ',
+                'icon' => 'bi-people',
                 ],
                 [
                 'title' => 'Visa Counselling',
                 'description' => 'We facilitate visa processing and passport application, ensuring a smooth and efficient experience by assisting with documentation, application submission, and providing guidance throughout the entire process.',
-                'svg' => '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-12">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m20.893 13.393-1.135-1.135a2.252 2.252 0 0 1-.421-.585l-1.08-2.16a.414.414 0 0 0-.663-.107.827.827 0 0 1-.812.21l-1.273-.363a.89.89 0 0 0-.738 1.595l.587.39c.59.395.674 1.23.172 1.732l-.2.2c-.212.212-.33.498-.33.796v.41c0 .409-.11.809-.32 1.158l-1.315 2.191a2.11 2.11 0 0 1-1.81 1.025 1.055 1.055 0 0 1-1.055-1.055v-1.172c0-.92-.56-1.747-1.414-2.089l-.655-.261a2.25 2.25 0 0 1-1.383-2.46l.007-.042a2.25 2.25 0 0 1 .29-.787l.09-.15a2.25 2.25 0 0 1 2.37-1.048l1.178.236a1.125 1.125 0 0 0 1.302-.795l.208-.73a1.125 1.125 0 0 0-.578-1.315l-.665-.332-.091.091a2.25 2.25 0 0 1-1.591.659h-.18c-.249 0-.487.1-.662.274a.931.931 0 0 1-1.458-1.137l1.411-2.353a2.25 2.25 0 0 0 .286-.76m11.928 9.869A9 9 0 0 0 8.965 3.525m11.928 9.868A9 9 0 1 1 8.965 3.525" />
-                </svg>
-                '
+                'icon' => 'bi-passport'
                 ],
                 [
                 'title' => 'IELTS Training & Embassy Prep',
                 'description' => 'We offer tailored international standards IELTS training and embassy preparation services to equip students with the skills and confidence needed to excel in their language exams and secure successful university applications and visa interviews.',
-                'svg' => '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-12">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z" />
-                </svg>
-                '
+                'icon' => 'bi-newspaper'
                 ],
 
 
@@ -163,7 +151,7 @@ Homepage
                     <div class="md:p-5  w-full bg-white/90 space-y-3">
                         <p class="font-bold text-primary">{{$service['title']}}</p>
                         <div class="flex justify-center p-5">
-                            {!!$service['svg']!!}
+                            <i class="bi {{$service['icon']}} text-secondary text-5xl"></i>
                         </div>
                         <p class="line-clamp-2 text-sm">{{$service['description']}}</p>
                         <div class="py-t">
@@ -289,12 +277,12 @@ Homepage
 
             <section class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 lg:grid-cols-2 xl:grid-cols-3">
                 <div class="p-8 border rounded-lg ">
-                    <p class="leading-loose text-gray-600 ">
+                    <blockquote class="leading-loose text-gray-600 border-l-4 rounded-l border-gray-300 pl-3">
                         "Studying at MIT was a dream I never thought possible. With StudyInfo’s guidance,
                         I secured a scholarship, adjusted to campus life, and even interned at Google.
                         Today, I work at Microsoft, and I owe a huge part of my success to my study abroad journey.
                         If you’re thinking about studying overseas—do it! It will change your life!"
-                    </p>
+                    </blockquote>
 
                     <div class="flex items-center mt-8 -mx-2">
                         <img class="object-cover mx-2 rounded-full w-14 shrink-0 h-14 ring-4 ring-gray-300 dark:ring-gray-700" src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="">
@@ -307,12 +295,12 @@ Homepage
                 </div>
 
                 <div class="p-8 border rounded-lg ">
-                    <p class="leading-loose text-gray-600 ">
+                    <blockquote class="leading-loose text-gray-600 border-l-4 rounded-l border-gray-300 pl-3">
                         "I was passionate about medicine, but financial challenges almost stopped me.
                         StudyInfo helped me apply for a full scholarship at Oxford, and my life completely transformed.
                         Today, I’m a practicing neurosurgeon, and I mentor students just like me.
                         If you’re doubting yourself, remember—there’s always a way!"
-                    </p>
+                    </blockquote>
 
                     <div class="flex items-center mt-8 -mx-2">
                         <img class="object-cover mx-2 rounded-full w-14 shrink-0 h-14 ring-4 ring-gray-300 dark:ring-gray-700" src="https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" alt="">
@@ -325,11 +313,12 @@ Homepage
                 </div>
 
                 <div class="p-8 border rounded-lg ">
-                    <p class="leading-loose text-gray-600 ">
+                    <blockquote class="leading-loose text-gray-600 border-l-4 rounded-l border-gray-300 pl-3">
                         "I was hesitant to move to France because of the language barrier, but with StudyInfo’s support, I took an
                         intensive French course and fully immersed myself in the culture. Now, I lead global marketing campaigns, and I
                         owe my confidence and success to my study abroad experience!"
-                    </p>
+                    </blockquote>
+
 
                     <div class="flex items-center mt-8 -mx-2">
                         <img class="object-cover mx-2 rounded-full w-14 shrink-0 h-14 ring-4 ring-gray-300 dark:ring-gray-700" src="https://images.unsplash.com/photo-1488508872907-592763824245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="">
@@ -347,16 +336,36 @@ Homepage
     <section class="p-5">
         <div class="container mx-auto md:p-5 ">
             <h1 class="text-2xl font-semibold text-center text-primary capitalize lg:text-3xl ">
-                Study Abroad Events
+                Upcoming Study Abroad Events
             </h1>
+            <p class="py-3 max-w-3xl mx-auto">Stay informed about our latest study abroad events, webinars, and workshops! Whether you're looking for scholarship opportunities, visa guidance, or networking with alumni, we've got something for you.</p>
+            <div class="p-5 grid grid-cols-1 md:grid-cols-3 gap-5">
+                @forelse($events as $event)
+                <div class="bg-white group relative border border-accent-100  hover:shadow-lg rounded-xl max-w-sm">
+                    <div class="overflow-hidden rounded-xl ">
+                        <img src="{{ asset('storage/' . $event->image) }}" class="transition-transform duration-500 group-hover:scale-105 overflow-hidden rounded-t-xl max-h-30 overflow-y-hidden object-cover w-full" alt="{{$event->title}}">
+                    </div>
+                    <div class="p-5 bottom-0 absolute z-50 w-full bg-white/90">
+                        <p class="font-bold text-primary">{{$event->description}}</p>
+                        <div class="py-3">
+                            <p>Date: {{ $event->formatted_date }}</p>
+                            <p>Time: {{ $event->formatted_time }}</p>
+                        </div>
+                        <a href="{{ route('web.events.show', $event->id) }}" class="p-1  md:text-sm  bg-secondy hover:underline  text-secondary">Read More</a>
+                    </div>
+                </div>
+                @empty
+                @endforelse
+            </div>
         </div>
     </section>
 
     <section class="bg-gray-50  lg:py-12 lg:flex lg:justify-center">
         <div
             class="overflow-hidden bg-white  border border-gray-100 lg:flex container mx-auto lg:shadow-md lg:rounded-xl">
-            <div class="lg:w-1/2">
-                <div class="h-64 bg-cover lg:h-full" style="background-image:url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80')"></div>
+            <div class="lg:w-1/2 h-80 overflow-hidden ">
+                <img src="{{ asset('/assets/images/cover.webp') }}" class="object-contain object-center w-full" alt="">
+                <!-- <div class="h-64 bg-cover lg:h-full" style="background-image:url(`{{ asset('/assets/images/cover.webp') }}`)"></div> -->
             </div>
 
             <div class="max-w-xl px-6 py-12 lg:max-w-5xl lg:w-1/2">
@@ -364,10 +373,8 @@ Homepage
                     Start your Journey <span class="text-secondary">Today</span>
                 </h2>
 
-                <p class="mt-4 text-gray-600 ">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Quidem modi reprehenderit vitae exercitationem aliquid dolores ullam temporibus enim expedita aperiam
-                    mollitia iure consectetur dicta tenetur, porro consequuntur saepe accusantium consequatur.
+                <p class="mt-4 text-gray-600 font-bold">
+                    Are you ready to fly and pursue your dreams? Reach us today and we will make that happen for you!
                 </p>
 
                 <div class="inline-flex w-full mt-6 sm:w-auto">
