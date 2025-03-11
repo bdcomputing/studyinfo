@@ -276,6 +276,82 @@ Homepage
         </div>
     </section>
 
+    <section class="bg-white ">
+        <div class="container px-6 py-10 mx-auto">
+            <h1 class="text-2xl font-semibold text-center text-primary capitalize lg:text-3xl ">
+                Inspiring Journeys of Students Who <span class="text-secondary ">Made It Big</span>
+            </h1>
+
+            <p class="max-w-2xl mx-auto mt-6 text-center text-gray-600 ">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo incidunt ex placeat modi magni quia error
+                alias, adipisci rem similique, at omnis eligendi optio eos harum.
+            </p>
+
+            <section class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 lg:grid-cols-2 xl:grid-cols-3">
+                <div class="p-8 border rounded-lg ">
+                    <p class="leading-loose text-gray-600 ">
+                        "Studying at MIT was a dream I never thought possible. With StudyInfo’s guidance,
+                        I secured a scholarship, adjusted to campus life, and even interned at Google.
+                        Today, I work at Microsoft, and I owe a huge part of my success to my study abroad journey.
+                        If you’re thinking about studying overseas—do it! It will change your life!"
+                    </p>
+
+                    <div class="flex items-center mt-8 -mx-2">
+                        <img class="object-cover mx-2 rounded-full w-14 shrink-0 h-14 ring-4 ring-gray-300 dark:ring-gray-700" src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="">
+
+                        <div class="mx-2">
+                            <h1 class="font-semibold text-gray-800 ">Robert</h1>
+                            <span class="text-sm text-gray-500">CTO, Robert Consultency</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-8 border rounded-lg ">
+                    <p class="leading-loose text-gray-600 ">
+                        "I was passionate about medicine, but financial challenges almost stopped me.
+                        StudyInfo helped me apply for a full scholarship at Oxford, and my life completely transformed.
+                        Today, I’m a practicing neurosurgeon, and I mentor students just like me.
+                        If you’re doubting yourself, remember—there’s always a way!"
+                    </p>
+
+                    <div class="flex items-center mt-8 -mx-2">
+                        <img class="object-cover mx-2 rounded-full w-14 shrink-0 h-14 ring-4 ring-gray-300 dark:ring-gray-700" src="https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" alt="">
+
+                        <div class="mx-2">
+                            <h1 class="font-semibold text-gray-800 ">Jeny Doe</h1>
+                            <span class="text-sm text-gray-500">CEO, Jeny Consultency</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-8 border rounded-lg ">
+                    <p class="leading-loose text-gray-600 ">
+                        "I was hesitant to move to France because of the language barrier, but with StudyInfo’s support, I took an
+                        intensive French course and fully immersed myself in the culture. Now, I lead global marketing campaigns, and I
+                        owe my confidence and success to my study abroad experience!"
+                    </p>
+
+                    <div class="flex items-center mt-8 -mx-2">
+                        <img class="object-cover mx-2 rounded-full w-14 shrink-0 h-14 ring-4 ring-gray-300 dark:ring-gray-700" src="https://images.unsplash.com/photo-1488508872907-592763824245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="">
+
+                        <div class="mx-2">
+                            <h1 class="font-semibold text-gray-800 ">Ema Watson </h1>
+                            <span class="text-sm text-gray-500">Marketing Manager at Stech</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <section class="p-5">
+        <div class="container mx-auto md:p-5 ">
+            <h1 class="text-2xl font-semibold text-center text-primary capitalize lg:text-3xl ">
+                Study Abroad Events
+            </h1>
+        </div>
+    </section>
+
     <section class="bg-gray-50  lg:py-12 lg:flex lg:justify-center">
         <div
             class="overflow-hidden bg-white  border border-gray-100 lg:flex container mx-auto lg:shadow-md lg:rounded-xl">
@@ -303,191 +379,6 @@ Homepage
     </section>
 
 
-    <!-- About Section -->
-    <section class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="md:w-1/2">
-                    <img src="{{ asset('/assets/images/about.jpg') }}" alt="STUDYINFO Campus"
-                        class="rounded-xl shadow-lg w-full">
-                </div>
-                <div class="md:w-1/2">
-                    <h2 class="text-2xl font-extrabold text-gray-800 mb-6">About STUDYINFO</h2>
-                    <p class="text-gray-600 mb-6">Established with a vision to empower students through quality
-                        education, STUDYINFO offers programs in Nursing, ICT, and various technical disciplines. Our
-                        mission is to bridge the skills gap in today's workforce by providing innovative, practical, and
-                        industry-aligned training.</p>
-                    <p class="text-gray-600 mb-6">At STUDYINFO, our teaching approach combines theoretical instruction
-                        with practical experience. Our state-of-the-art facilities and experienced faculty ensure
-                        students gain hands-on expertise to excel in their careers.</p>
-
-                    <h3 class="text-xl font-bold mb-4">Our Core Values</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-center space-x-3">
-                            <div class="w-5 h-5 rounded-full bg-primary-400 flex items-center justify-center">
-                                <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
-                                </svg>
-                            </div>
-                            <span class="text-gray-700 font-medium">Excellence in Education</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-5 h-5 rounded-full bg-primary-400 flex items-center justify-center">
-                                <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
-                                </svg>
-                            </div>
-                            <span class="text-gray-700 font-medium">Innovation & Creativity</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-5 h-5 rounded-full bg-primary-400 flex items-center justify-center">
-                                <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
-                                </svg>
-                            </div>
-                            <span class="text-gray-700 font-medium">Practical Learning</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="w-5 h-5 rounded-full bg-primary-500 flex items-center justify-center">
-                                <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
-                                </svg>
-                            </div>
-                            <span class="text-gray-700 font-medium">Industry Relevance</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-
-
-
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center md:text-left items-start">
-                <h2 class="text-4xl font-extrabold text-primary">Our Mission
-                </h2>
-                <p class="text-lg text-accent-900 max-w-5xl">To be a leading center of excellence in
-                    education,
-                    recognized for producing globally competent and socially responsible professionals who shape the
-                    future of healthcare, technology, and technical fields.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 pt-10">
-                <div class="bg-white rounded-3xl p-5 md:p-10 transition duration-300 shadow-xl hover:shadow-2xl ">
-
-                    <h3 class="text-xl font-bold text-gray-800 mb-4">Our Commitment</h3>
-                    <p class="text-gray-600">At STUDYINFO, we are deeply committed to transforming education by providing
-                        practical, industry-aligned training that equips students with the skills and knowledge needed
-                        to excel in healthcare, technology, and technical fields.</p>
-                </div>
-
-                <div class="bg-white rounded-2xl p-5 md:p-10 transition duration-300 shadow-xl hover:shadow-2xl">
-
-                    <h3 class="text-xl font-bold text-gray-800 mb-4">The Impact</h3>
-                    <p class="text-gray-600">Through strategic partnerships, community initiatives, and hands-on
-                        training, STUDYINFO creates meaningful opportunities for students to develop career-critical
-                        skills and make significant contributions to society.</p>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-5 pt-5">
-                <div class="bg-white rounded-3xl p-5 md:p-10 transition duration-300 shadow-xl hover:shadow-2xl">
-
-                    <h3 class="text-xl font-bold text-gray-800 mb-4">The Importance</h3>
-                    <p class="text-gray-600">STUDYINFO recognizes education as a powerful tool for individual and
-                        community transformation, focusing on developing professionals who can address real-world
-                        challenges with expertise and social responsibility.</p>
-                </div>
-                <div class="bg-white rounded-3xl p-5 md:p-10 transition duration-300 shadow-xl hover:shadow-2xl">
-
-                    <h3 class="text-xl font-bold text-gray-800 mb-4">Our Resolve</h3>
-                    <p class="text-gray-600">We are dedicated to bridging the skills gap by delivering innovative,
-                        practical, and transformative education that empowers students to become leaders,
-                        problem-solvers, and change-makers in their respective industries.</p>
-                </div>
-                <div class="bg-white rounded-3xl p-5 md:p-10 transition duration-300 shadow-xl hover:shadow-2xl">
-
-                    <h3 class="text-xl font-bold text-gray-800 mb-4">Our Vision</h3>
-                    <p class="text-gray-600"> To empower individuals with knowledge, skills, and practical experience
-                        through innovative education in Nursing, ICT, and technical disciplines, fostering a generation
-                        of professionals who drive change and make a positive impact in their communities.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Recognition Section -->
-    <section class="py-20 bg-gray-100">
-        <div class="container mx-auto px-4">
-            <div class="text-left mb-16">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">Recognition for Excellence</h2>
-                <p class="text-md text-gray-600 ">STUDYINFO has been recognized as a leading institution
-                    in Nursing, ICT, and technical courses, earning accolades from local education boards and industry
-                    organizations.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div
-                    class="bg-white rounded-xl p-8 text-center transition duration-300 hover:scale-105 hover:shadow-lg">
-                    <div class="text-4xl text-secondary mb-4">
-                        <i class="fas fa-user-md"></i>
-                    </div>
-                    <h3 class="font-semibold text-gray-800 mb-5 text-2xl">Nursing Excellence</h3>
-                    <p class="text-md text-gray-600">Valerie Cherunya graduated and secured a position at a leading
-                        European hospital, winning the "Rising Star in Healthcare" award.</p>
-                </div>
-
-                <div
-                    class="bg-white rounded-xl p-8 text-center transition duration-300 hover:scale-105 hover:shadow-lg">
-                    <div class="text-4xl text-green-600 mb-4">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3 class="font-semibold text-gray-800 mb-5 text-2xl">ICT Innovation</h3>
-                    <p class="text-md text-gray-600">Edwin developed a mobile app simplifying government services,
-                        gaining national recognition at the Kenya Tech Summit.</p>
-                </div>
-
-                <div
-                    class="bg-white rounded-xl p-8 text-center transition duration-300 hover:scale-105 hover:shadow-lg">
-                    <div class="text-4xl text-purple-600 mb-4">
-                        <i class="fas fa-industry"></i>
-                    </div>
-                    <h3 class="font-semibold text-gray-800 mb-5 text-2xl">Technical Leadership</h3>
-                    <p class="text-md text-gray-600">Hosea became the first woman to lead a technical team at a
-                        manufacturing firm in Finland, driving innovation.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="py-20 bg-blue-50 text-blue-950 text-center">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-extrabold mb-2">Your Journey Starts With Purpose.</h2>
-            <h5 class="text-xl md:text-2xl font-semibold text-primary-600 mb-6">
-                Your Future Starts With STUDYINFO.
-            </h5>
-            <p class="text-lg mb-8 max-w-2xl mx-auto opacity-90">Take the first step towards a rewarding career with
-                STUDYINFO's industry-focused programs</p>
-            <button
-                class="bg-blue-950 hover:bg-blue-900 text-primary-50 font-medium py-3 px-8 rounded-full transition duration-300 text-lg">
-                Start Your Journey Today</button>
-        </div>
-    </section>
 
     <script>
         // Smooth scrolling for anchor links
