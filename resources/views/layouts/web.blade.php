@@ -64,6 +64,11 @@
             @yield('content')
         </main>
 
+        <!-- Whatsapp Icon -->
+        <div class="size-10 md:size-16 flex justify-center items-center bg-green-600 rounded-full fixed z-[9999] bottom-5 md:bottom-10 right-5 md:right-10 p-3">
+            <a target="_blank" href="https://wa.me/+254712123456?text=hello%20StudyInfo"><i class="bi bi-whatsapp text-white text-xl md:text-3xl"></i></a>
+        </div>
+
         <!-- Footer -->
         @include('web.partials.footer')
     </div>
