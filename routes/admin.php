@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\admin\AdminBlogController;
 use App\Http\Controllers\admin\AdminController;
+use App\Http\Controllers\admin\AdminDestinationController;
 use App\Http\Controllers\admin\AdminEventController;
 use Illuminate\Support\Facades\Route;
 
@@ -29,4 +30,15 @@ Route::name("admin.")->middleware("auth")->prefix("admin")->group(function () {
     Route::get('events/{event}/registrations', [AdminEventController::class, 'registrations'])->name('events.registrations');
 
     Route::patch('registrations/{registration}/status', [AdminEventController::class, 'updateRegistrationStatus'])->name('registrations.updateStatus');
+
+    // Destinations
+    Route::name("destinations.")->group(function () {
+        Route::get("destinations", [AdminDestinationController::class, "index"])->name("index");
+        Route::get("destination", [AdminDestinationController::class, "create"])->name("create");
+        Route::post("destination", [AdminDestinationController::class, "store"])->name("store");
+        Route::get("destination/{destination}", [AdminDestinationController::class, "show"])->name("show");
+        Route::get("destination/{destination}/edit", [AdminDestinationController::class, "edit"])->name("edit");
+        Route::put("destination/{destination}", [AdminDestinationController::class, "update"])->name("update");
+        Route::delete("destination/{destination}", [AdminDestinationController::class, "destroy"])->name("destroy");
+    });
 });
