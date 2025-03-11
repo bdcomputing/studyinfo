@@ -39,8 +39,8 @@
         <x-primary-button class="bg-primary">
             {{ __('Log in') }}
         </x-primary-button>
-        <div class="text-sm py-5 font-light text-[#6B7280] ">Don't have an accout yet? <a href="{{ route('register') }}" class="font-medium  hover:underline">Sign Up</a>
-        </div>
+        <!-- <div class="text-sm py-5 font-light text-[#6B7280] ">Don't have an accout yet? <a href="" class="font-medium  hover:underline">Sign Up</a>
+        </div> -->
     </form>
     <div class="relative flex py-8 items-center">
         <div class="grow border-t border-[1px] border-gray-200"></div> <span class="shrink mx-4 font-medium text-gray-500">OR</span>
