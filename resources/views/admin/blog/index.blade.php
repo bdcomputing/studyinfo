@@ -129,13 +129,15 @@
                                     </td>
                                 </tr>
                                 @endforelse
-
                             </tbody>
+
                         </table>
+                        {{$blogs->links("pagination")}}
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
 
 </x-app-layout>

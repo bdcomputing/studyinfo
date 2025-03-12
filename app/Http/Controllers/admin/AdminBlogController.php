@@ -18,7 +18,7 @@ class AdminBlogController extends Controller
      */
     public function index(): View
     {
-        $blogs = Blog::all();
+        $blogs = Blog::query()->paginate(10);
         return view('admin.blog.index', ["blogs" => $blogs]);
     }
 
@@ -119,7 +119,7 @@ class AdminBlogController extends Controller
 
         // Update slug if title has changed
         if ($request->title !== $blog->title) {
-            $data['slug'] = Str::slug($request->title);
+            $data['slug'] = Str::slug($request->title) . "-" . time();
         }
 
         // Set published status
