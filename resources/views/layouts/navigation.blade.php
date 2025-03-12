@@ -98,6 +98,9 @@
             <x-responsive-nav-link :href="route('admin.events.index')" :active="request()->routeIs('admin.events.index')">
                 {{ __('Events') }}
             </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('admin.destinations.index')" :active="request()->routeIs('admin.destinations.index')">
+                {{ __('Destinations') }}
+            </x-responsive-nav-link>
         </div>
 
         <!-- Responsive Settings Options -->

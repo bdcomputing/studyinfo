@@ -19,55 +19,53 @@
                         </a>
                     </div>
 
-                    <form action="{{ route('admin.blog.update', $blog) }}" method="POST"
+                    <form action="{{ route('admin.destinations.update', $destination) }}" method="POST"
                         enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div class="col-span-2">
-                                <label for="title" class="block text-sm font-medium text-gray-700">Title</label>
-                                <input type="text" name="title" id="title"
-                                    value="{{ old('title', $blog->title) }}" required
+                                <label for="name" class="block text-sm font-medium text-gray-700">Destination Name</label>
+                                <input type="text" name="name" id="name"
+                                    value="{{ old('name', $destination->name) }}" required
                                     class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500">
-                                @error('title')
+                                @error('name')
                                 <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
                                 @enderror
                             </div>
 
                             <div>
-                                <label for="category" class="block text-sm font-medium text-gray-700">Category</label>
-                                <select name="category" id="category" required
-                                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500">
-                                    @foreach ($categories as $category)
-                                    <option value="{{ $category }}"
-                                        {{ old('category', $blog->category) == $category ? 'selected' : '' }}>
-                                        {{ $category }}
-                                    </option>
-                                    @endforeach
-                                </select>
-                                @error('category')
-                                <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
+                                <label for="country"
+                                    class="block text-sm font-medium text-gray-700 ">Country</label>
+                                <input name="country" id="country" value="{{ old('country', $destination->country) }}" required
+                                    class="mt-1 block w-full rounded-md border-gray-300    shadow-sm focus:border-primary-500 focus:ring-primary-500" />
+
+                                @error('country')
+                                <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
                                 @enderror
                             </div>
 
                             <div>
-                                <label for="publish_date" class="block text-sm font-medium text-gray-700">Publish
-                                    Date</label>
-                                <input type="date" name="publish_date" id="publish_date"
-                                    value="{{ old('publish_date', $blog->publish_date->format('Y-m-d')) }}" required
-                                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500">
-                                @error('publish_date')
-                                <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
+                                <label for="study_cost"
+                                    class="block text-sm font-medium text-gray-700 ">Study
+                                    Cost</label>
+                                <input type="number" name="study_cost" id="publish_date"
+                                    value="{{ old('study_cost',$destination->study_cost) }}" required
+                                    class="mt-1 block w-full rounded-md border-gray-300    shadow-sm focus:border-primary-500 focus:ring-primary-500">
+                                @error('study_cost')
+                                <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
                                 @enderror
                             </div>
+
+
 
                             <div class="col-span-2">
                                 <label for="image" class="block text-sm font-medium text-gray-700">Blog
                                     Image</label>
                                 <div class="mt-2 mb-4">
-                                    <img src="{{ asset('storage/images/blog/' . $blog->image) }}"
-                                        alt="{{ $blog->title }}" class="h-40 w-auto object-cover rounded-md">
+                                    <img src="{{ asset('storage/images/destinations/' . $destination->image) }}"
+                                        alt="{{ $destination->title }}" class="h-40 w-auto object-cover rounded-md">
                                 </div>
                                 <input type="file" name="image" id="image"
                                     class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500">
@@ -79,45 +77,39 @@
                             </div>
 
                             <div class="col-span-2">
-                                <label for="description" class="block text-sm font-medium text-gray-700">Short
+                                <label for="description" class="block text-sm font-medium text-gray-700">Destination
                                     Description</label>
                                 <textarea name="description" id="description" rows="3" required
-                                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500">{{ old('description', $blog->description) }}</textarea>
-                                <p class="mt-1 text-sm text-gray-500">A brief summary of the blog
-                                    post (shown in listings).</p>
+                                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500">{{ old('description', $destination->description) }}</textarea>
+                                <p class="mt-1 text-sm text-gray-500">A brief summary of the destination.</p>
                                 @error('description')
                                 <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
                                 @enderror
                             </div>
 
-                            <div class="col-span-2">
-                                <label for="content" class="block text-sm font-medium text-gray-700">Content</label>
-                                <div class="!h-40 rounded-md " id="editor" style="height: 300px;">{!! $blog->content !!}</div>
-                                <textarea name="content" id="content" rows="10" required
-                                    class="mt-1 hidden w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500">{{ old('content', $blog->content) }}</textarea>
-                                @error('content')
-                                <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
-                                @enderror
-                            </div>
+
 
                             <div class="col-span-2">
                                 <div class="flex items-start">
                                     <div class="flex items-center h-5">
-                                        <input type="checkbox" name="is_published" id="is_published" value="1"
-                                            {{ old('is_published', $blog->is_published) ? 'checked' : '' }}
-                                            class="rounded border-gray-300 text-primary-600 shadow-sm focus:border-primary-500 focus:ring-primary-500  ">
+                                        <input type="checkbox" name="is_popular" id="is_popular" value="1"
+                                            {{ old('is_published', $destination->is_popular) ? 'checked' : '' }}
+                                            class="rounded border-gray-300 text-primary-600 shadow-sm focus:border-primary-500 focus:ring-primary-500">
                                     </div>
                                     <div class="ml-3 text-sm">
-                                        <label for="is_published" class="font-medium text-gray-700">Published</label>
+                                        <label for="is_popular"
+                                            class="font-medium text-gray-700 ">Is destination Popolar</label>
                                     </div>
                                 </div>
+                                <p class="text-xs p-2 text-gray-400">Popular destination will appear in homepage</p>
                             </div>
                         </div>
+
 
                         <div class="mt-6">
                             <button type="submit"
                                 class="w-full inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-primary hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
-                                Update Blog Post
+                                Update Destination
                             </button>
                         </div>
                     </form>

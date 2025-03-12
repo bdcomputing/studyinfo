@@ -18,7 +18,7 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->string('image')->nullable();
             $table->string('country');
-            $table->string('study_cost')->nullable();
+            $table->integer('study_cost')->nullable();
             $table->boolean('is_popular')->default(false);
             $table->timestamps();
         });
