@@ -4,6 +4,7 @@ use App\Http\Controllers\admin\AdminBlogController;
 use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\admin\AdminDestinationController;
 use App\Http\Controllers\admin\AdminEventController;
+use App\Http\Controllers\admin\AdminMessagesController;
 use App\Http\Controllers\admin\AdminUsersController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use Illuminate\Support\Facades\Route;
@@ -48,5 +49,13 @@ Route::name("admin.")->middleware("auth")->prefix("admin")->group(function () {
         Route::get("users", [AdminUsersController::class, "index"])->name("index");
         Route::get('user', [RegisteredUserController::class, 'create'])->name('create');
         Route::post('user', [RegisteredUserController::class, 'store'])->name("store");
+    });
+
+    // Messages
+
+    Route::name("messages.")->middleware(['admin'])->group(function () {
+        Route::get("messages", [AdminMessagesController::class, "index"])->name("index");
+        Route::get("message/{message}", [AdminMessagesController::class, "show"])->name("show");
+        Route::delete("messages/{message}", [AdminMessagesController::class, "destroy"])->name("destroy");
     });
 });

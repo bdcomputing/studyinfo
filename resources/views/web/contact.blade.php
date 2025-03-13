@@ -15,41 +15,46 @@ Contact
                     help with everything from university selection to visa processing.
                     Reach out to us today!</h1>
 
-                <form>
+                <form method="POST" action="{{route('web.messages.store')}}">
+                    @csrf
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                         <div class="mb-4">
-                            <label class="block font-medium  text-gray-600 text-sm pb-2" for="firstName">
+                            <label class="block font-medium  text-gray-600 text-sm pb-2" for="first_name">
                                 First Name
                             </label>
-                            <input
+                            <input value="{{old('first_name')}}"
                                 class="bg-gray-50 focus:border-primary-600 focus:ring-primary-600 border border-gray-200 text-primary text-sm rounded-lg block w-full p-2.5  "
-                                id="firstName" type="text" placeholder="First Name">
+                                name="first_name" type="text" placeholder="First Name">
+                            <x-input-error :messages="$errors->get('first_name')" class="mt-2" />
                         </div>
                         <div class="mb-4">
-                            <label class="block font-medium  text-gray-600 text-sm pb-2" for="lastName">
+                            <label class="block font-medium  text-gray-600 text-sm pb-2" for="last_name">
                                 Last Name
                             </label>
-                            <input
+                            <input value="{{old('last_name')}}"
                                 class="bg-gray-50 focus:border-primary-600 focus:ring-primary-600 border border-gray-200 text-primary text-sm rounded-lg block w-full p-2.5  "
-                                id="lastName" type="text" placeholder="Last Name">
+                                name="last_name" type="text" placeholder="Last Name">
+                            <x-input-error :messages="$errors->get('last_name')" class="mt-2" />
                         </div>
                     </div>
                     <div class="mb-4">
                         <label class="block font-medium  text-gray-600 text-sm pb-2" for="phone">
                             Phone Number
                         </label>
-                        <input
+                        <input value="{{old('phone')}}"
                             class="bg-gray-50 focus:border-primary-600 focus:ring-primary-600 border border-gray-200 text-primary text-sm rounded-lg block w-full p-2.5  "
-                            id="phone" type="text" placeholder="Phone Number">
+                            name="phone" type="text" placeholder="Phone Number">
+                        <x-input-error :messages="$errors->get('phone')" class="mt-2" />
                     </div>
 
                     <div class="mb-4">
                         <label class="block font-medium  text-gray-600 text-sm pb-2" for="email">
                             Email Address
                         </label>
-                        <input
+                        <input value="{{old('email')}}"
                             class="bg-gray-50 focus:border-primary-600 focus:ring-primary-600 border border-gray-200 text-primary text-sm rounded-lg block w-full p-2.5  "
-                            id="email" type="email" placeholder="your.email@example.com">
+                            name="email" type="email" placeholder="your.email@example.com">
+                        <x-input-error :messages="$errors->get('email')" class="mt-2" />
                     </div>
                     <div class="mb-4">
                         <label class="block font-medium  text-gray-600 text-sm pb-2" for="message">
@@ -57,27 +62,28 @@ Contact
                         </label>
                         <textarea
                             class="bg-gray-50 focus:border-primary-600 focus:ring-primary-600 border border-gray-200 text-primary text-sm rounded-lg block w-full p-2.5  "
-                            id="message" rows="7" placeholder="Your message"></textarea>
+                            name="message" rows="7" placeholder="Your message">{{old('message')}}</textarea>
+                        <x-input-error :messages="$errors->get('message')" class="mt-2" />
                     </div>
 
                     <div class="flex items-start py-6">
                         <div class="flex items-center h-5">
-                            <input id="remember" type="checkbox"
-                                class="bg-gray-50 focus:border-primary-600 focus:ring-primary-600 border border-gray-200 text-primary text-sm rounded-lg block w-full p-2.5  "
-                                formControlName="remember" />
+                            <input name="agree_terms" type="checkbox" value="1" {{ old('agree_terms') ? 'checked' : '' }}
+                                class="bg-gray-50 focus:border-primary-600 focus:ring-primary-600 border border-gray-200 text-primary text-sm rounded-lg block w-full p-2.5  " />
                         </div>
-                        <label for="remember" class="ms-2 text-sm font-medium text-primary ">
+                        <label for="agree_terms" class="ms-2 text-sm font-medium text-primary ">
                             I agree with the
                             <a href="#" class="text-primary-500 hover:underline ">terms and
                                 conditions</a>.
                         </label>
                     </div>
+                    <x-input-error :messages="$errors->get('agree_terms')" class="mb-2" />
 
 
                     <div class="flex items-center justify-between w-full">
                         <button
                             class="bg-primary hover:bg-primary-900 text-white font-bold py-2 px-4 rounded w-full focus:outline-none focus:shadow-outline"
-                            type="button">
+                            type="submit">
                             Send Message
                         </button>
                     </div>

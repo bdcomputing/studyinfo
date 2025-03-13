@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\MessagesController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\WebController;
 use Illuminate\Support\Facades\Auth;
@@ -27,11 +28,18 @@ Route::name('web.blog.')->group(function () {
     Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('single');
 });
 
+// Events
 Route::name("web.events.")->group(function () {
     Route::get("events", [EventController::class, "index"])->name("index");
     Route::get("event/{event}", [EventController::class, "show"])->name("show");
     Route::get("event/{event}/register", [EventController::class, "register"])->name("event-register");
     Route::post("event/{event}/register", [EventController::class, "storeRegistration"])->name("storeRegistration");
+});
+
+// Messages
+Route::name("web.messages.")->group(function () {
+    Route::post("message", [MessagesController::class, "store"])->name("store");
+    Route::get("success", [MessagesController::class, "success"])->name("success");
 });
 
 // Bottom (Footer Links)
