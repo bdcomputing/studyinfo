@@ -4,9 +4,9 @@ Homepage
 @endsection
 @section('content')
 
-<main class="min-h-screen  text-gray-800">
+<main class="min-h-screen  text-gray-800 ">
     <!-- Hero Section -->
-    <section class=" bg-primary md:min-h-[74vh] md:h-full flex items-center md:pb-5 ">
+    <section class=" relative  bg-primary md:h-[74vh] md:min-h-[74vh] z-0 ">
         <div class="grid grid-cols-1  md:grid-cols-2 gap-8">
             <div class="text-primary-50 py-20 md:py-0 md:pl-20 pb-5 md:pb-0 px-5 md:px-0  flex flex-col justify-center">
                 <h1 class="text-3xl md:text-5xl  mb-6 font-extrabold leading-loose">
@@ -20,11 +20,17 @@ Homepage
                         Programs</a>
                 </div>
             </div>
-            <div class="md:min-h-[67vh] !h-full p-3 ">
-                <img src="{{ asset('/assets/images/cover.webp') }}" alt="STUDYINFO Students"
-                    class="w-full h-full object-cover rounded-xl md:rounded-none md:rounded-bl-[50px]">
+            <div class="md:h-[74vh] bg-gradient-to-t md:bg-transparent from-white/90 via-white-40 to-transparent md:min-h-[74vh] overflow-hidden ">
+                <img src="{{ asset('/assets/images/hero3.webp') }}" alt="STUDYINFO Students"
+                    class=" w-full hidden md:block   object-contain ">
+                <img src="{{ asset('/assets/images/hero.webp') }}" alt="STUDYINFO Students"
+                    class=" w-full  md:hidden   object-contain ">
             </div>
         </div>
+        <!-- <div class=" absolute h-full  top-0 w-full bg-primary flex justify-end -z-10">
+            <img src="{{ asset('/assets/images/hero3.png') }}" class="h-full" alt="">
+        </div> -->
+
     </section>
 
     <div class="bg-white py-10">

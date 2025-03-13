@@ -23,7 +23,7 @@
         @endif
     </div>
 
-    <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-around">
+    <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between px-8">
         <div>
             <p class="text-sm text-green-500 leading-5 dark:text-gray-400">
                 {!! __('Showing') !!}
@@ -45,11 +45,11 @@
                 {{-- Previous Page Link --}}
                 @if ($paginator->onFirstPage())
 
-                <a class="px-2 bg-primary/50 flex rounded-full items-center justify-center" aria-label="{{ __('pagination.previous') }}">
+                <a class="px-1.5 bg-primary/50 flex rounded-full items-center justify-center" aria-label="{{ __('pagination.previous') }}">
                     <i class="bi bi-chevron-left font-bold text-gray-200"></i>
                 </a>
                 @else
-                <a href="{{ $paginator->previousPageUrl() }}" rel="prev" class="px-2 bg-primary flex rounded-full items-center justify-center" aria-label="{{ __('pagination.previous') }}">
+                <a href="{{ $paginator->previousPageUrl() }}" rel="prev" class="px-1.5 bg-primary flex rounded-full items-center justify-center" aria-label="{{ __('pagination.previous') }}">
                     <i class="bi bi-chevron-left font-bold text-white"></i>
                 </a>
                 @endif
@@ -59,7 +59,7 @@
                 {{-- "Three Dots" Separator --}}
                 @if (is_string($element))
                 <span aria-disabled="true">
-                    <span class="relative inline-flex items-center px-4 py-2  text-sm font-medium text-gray-700 bg-white border border-gray-300 cursor-default leading-5">{{ $element }}</span>
+                    <span class="relative inline-flex items-center px-2 py-1.5  text-sm font-medium text-gray-700 bg-white border border-gray-300 cursor-default leading-5">{{ $element }}</span>
                 </span>
                 @endif
 
@@ -67,11 +67,11 @@
                 @if (is_array($element))
                 @foreach ($element as $page => $url)
                 @if ($page == $paginator->currentPage())
-                <a class="px-2 py-1 border-2 border-primary rounded size-8 flex items-center justify-center text-primary font-bold " aria-current="page">
+                <a class="px-2 py-1 border-2 border-primary rounded size-6 flex items-center justify-center text-primary font-bold " aria-current="page">
                     {{ $page }}
                 </a>
                 @else
-                <a href="{{ $url }}" class=" px-2 py-1 bg-primary rounded size-8 flex items-center justify-center text-white font-bold" aria-label=" {{ __('Go to page :page', ['page' => $page]) }}">
+                <a href="{{ $url }}" class=" px-2 py-1 bg-primary rounded size-6 flex items-center justify-center text-white font-bold" aria-label=" {{ __('Go to page :page', ['page' => $page]) }}">
                     {{ $page }}
                 </a>
                 @endif
@@ -81,12 +81,12 @@
 
                 {{-- Next Page Link --}}
                 @if ($paginator->hasMorePages())
-                <a href="{{ $paginator->nextPageUrl() }}" rel="next" class="px-2 bg-primary flex rounded-full items-center justify-center" aria-label="{{ __('pagination.next') }}">
+                <a href="{{ $paginator->nextPageUrl() }}" rel="next" class="px-1.5 bg-primary flex rounded-full items-center justify-center" aria-label="{{ __('pagination.next') }}">
                     <i class="bi bi-chevron-right font-bold text-white"></i>
 
                 </a>
                 @else
-                <a class="px-2 bg-primary/50 flex rounded-full items-center justify-center" aria-label="{{ __('pagination.next') }}">
+                <a class="px-1.5 bg-primary/50 flex rounded-full items-center justify-center" aria-label="{{ __('pagination.next') }}">
                     <i class="bi bi-chevron-right font-bold text-gray-200"></i>
                 </a>
                 @endif
