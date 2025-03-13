@@ -20,11 +20,9 @@ Homepage
                         Programs</a>
                 </div>
             </div>
-            <div class="md:h-[74vh] bg-gradient-to-t md:bg-transparent from-white/90 via-white-40 to-transparent md:min-h-[74vh] overflow-hidden ">
-                <img src="{{ asset('/assets/images/hero3.webp') }}" alt="STUDYINFO Students"
-                    class=" w-full hidden md:block   object-contain ">
-                <img src="{{ asset('/assets/images/hero.webp') }}" alt="STUDYINFO Students"
-                    class=" w-full  md:hidden   object-contain ">
+            <div class="md:h-[74vh] xs:bg-gradient-to-t md:bg-gradient-to-r bg-gradient-to-t sm:bg-transparent md:bg-transparent from-white/90 md:from-primary via-white-40 to-transparent md:min-h-[74vh] overflow-hidden">
+                <img src="{{ asset('/assets/images/hero3.webp') }}" alt="STUDYINFO Students" class="w-full hidden md:block h-full object-cover object-left">
+                <img src="{{ asset('/assets/images/hero.webp') }}" alt="STUDYINFO Students" class="w-full md:hidden object-contain">
             </div>
         </div>
         <!-- <div class=" absolute h-full  top-0 w-full bg-primary flex justify-end -z-10">
@@ -66,7 +64,7 @@ Homepage
                     <p class="text-sm md:text-base">We have been guiding students through every step from program choice to visa application, including scholarship to achieve their study abroad dreams.</p>
                 </div>
                 <div class=" md:p-5 py-5 grid grid-cols-2 gap-2 md:gap-5">
-                    <div class=" flex gap-2 justify-around items-center  rounded-xl bg-white border border-accent-100 hover:shadow p-5 min-h-40">
+                    <div class=" flex gap-2 justify-around items-center  rounded-xl bg-white border border-accent-100 hover:shadow-xl p-5 min-h-40">
                         <div class="flex">
                             <div class="space-y-2">
                                 <p class="font-extrabold text-2xl md:text-3xl">10+</p>
