@@ -14,7 +14,6 @@ class EventController extends Controller
             ->where('event_date', '>=', now()->toDateString())
             ->orderBy('event_date')
             ->get();
-
         return view('web.events.index', compact('events'));
     }
 

@@ -5,17 +5,12 @@ Events
 
 @section('content')
 <div class="bg-white min-h-screen">
-    {{-- Hero Section --}}
-    <div class="w-full h-52 bg-cover bg-center mx-auto bg-black bg-opacity-50 mb-10 relative"
-        style="background-image: url('{{ asset('/assets/images/event.png') }}')">
-        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-        <div class="w-full h-full flex items-center container mx-auto relative px-5">
-            <h1 class="text-4xl md:text-5xl font-extrabold text-white">Upcoming Events & Workshops</h1>
-        </div>
-    </div>
 
     {{-- Events Grid --}}
-    <div class="container mx-auto px-5">
+    <div class="container mx-auto px-5 py-10">
+        <div class="p-5">
+            <p class="font-bold text-xl md:text-2xl">Our Upcoming Events</p>
+        </div>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 py-10">
             @forelse ($events as $event)
             <div
