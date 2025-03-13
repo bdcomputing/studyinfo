@@ -7,18 +7,19 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 
-class AdminUserSeeder extends Seeder
+class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
+
         User::create([
-            "name" => "Admin",
-            "email" => "chumbabenard10@gmail.com",
-            "password" => Hash::make('9b4u$4rDjVt3pTQ'),
-            "is_admin" => true,
+            "name" => "Benard Chumba",
+            "email" => "chumba@gmail.com",
+            "password" => Hash::make('P@ssword123'),
+            "is_admin" => false,
         ]);
     }
 }
