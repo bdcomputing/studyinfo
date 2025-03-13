@@ -22,7 +22,11 @@
     ];
     @endphp
     <div class="grid md:grid-cols-12  container gap-x-8 items-center mx-auto p-4">
-        <div class="flex gap-3 items-center col-span-2">
+        <div class="flex gap-3 items-center col-span-2 justify-between">
+            <a href="{{ route('web.home') }}" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img class="h-14 w-auto" src="{{ asset('/assets/logos/logo.png') }}" alt="STUDYINFO Logo" />
+
+            </a>
             <button data-collapse-toggle="mega-menu-full-image" type="button"
                 class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none  "
                 aria-controls="mega-menu-full-image" aria-expanded="false">
@@ -33,10 +37,7 @@
                         d="M1 1h15M1 7h15M1 13h15" />
                 </svg>
             </button>
-            <a href="{{ route('web.home') }}" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img class="h-14 w-auto" src="{{ asset('/assets/logos/logo.png') }}" alt="STUDYINFO Logo" />
 
-            </a>
 
         </div>
         <div id="mega-menu-full-image" class="items-center justify-between hidden w-full md:flex md:w-auto col-span-8">

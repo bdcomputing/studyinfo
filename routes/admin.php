@@ -4,6 +4,8 @@ use App\Http\Controllers\admin\AdminBlogController;
 use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\admin\AdminDestinationController;
 use App\Http\Controllers\admin\AdminEventController;
+use App\Http\Controllers\admin\AdminUsersController;
+use App\Http\Controllers\Auth\RegisteredUserController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -40,5 +42,11 @@ Route::name("admin.")->middleware("auth")->prefix("admin")->group(function () {
         Route::get("destination/{destination}/edit", [AdminDestinationController::class, "edit"])->name("edit");
         Route::put("destination/{destination}", [AdminDestinationController::class, "update"])->name("update");
         Route::delete("destination/{destination}", [AdminDestinationController::class, "destroy"])->name("destroy");
+    });
+    // Users 
+    Route::name("users.")->middleware(['admin'])->group(function () {
+        Route::get("users", [AdminUsersController::class, "index"])->name("index");
+        Route::get('user', [RegisteredUserController::class, 'create'])->name('create');
+        Route::post('user', [RegisteredUserController::class, 'store'])->name("store");
     });
 });
