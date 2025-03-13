@@ -32,7 +32,7 @@ Route::name("admin.")->middleware("auth")->prefix("admin")->group(function () {
     Route::patch('registrations/{registration}/status', [AdminEventController::class, 'updateRegistrationStatus'])->name('registrations.updateStatus');
 
     // Destinations
-    Route::name("destinations.")->group(function () {
+    Route::name("destinations.")->middleware(['admin'])->group(function () {
         Route::get("destinations", [AdminDestinationController::class, "index"])->name("index");
         Route::get("destination", [AdminDestinationController::class, "create"])->name("create");
         Route::post("destination", [AdminDestinationController::class, "store"])->name("store");
