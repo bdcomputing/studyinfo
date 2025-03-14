@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Continent;
 use App\Models\Destination;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -16,7 +17,7 @@ class AdminDestinationController extends Controller
      */
     public function index(): View
     {
-        $destinations = Destination::all();
+        $destinations = Destination::query()->paginate(20);
         return view("admin.destinations.index", compact("destinations"));
     }
 
@@ -25,7 +26,8 @@ class AdminDestinationController extends Controller
      */
     public function create(): View
     {
-        return view("admin.destinations.create");
+        $continents = Continent::all();
+        return view("admin.destinations.create", compact("continents"));
     }
 
     /**
@@ -39,18 +41,27 @@ class AdminDestinationController extends Controller
             'name' => 'required|string|max:255',
             'description' => 'required|string',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'country' => 'required|string',
-            'study_cost' => 'required|integer|min:1',
+            'currency' => 'sometimes|string',
+            'continent_id' => "required|string",
+            'cost_of_living' => 'sometimes|integer|min:1',
             'is_popuar' => 'sometimes|boolean'
         ]);
-        $data = $request->except('image');
+        $data = $request->except(['image', "flag"]);
         if ($request->hasFile('image')) {
             $image = $request->file('image');
             $imageName = time() . $image->getClientOriginalExtension();
 
             // Store file in storage
             Storage::disk('public')->put('images/destinations/' . $imageName, file_get_contents($image));
-            $data['image'] = $imageName;
+            $data['image_url'] = $imageName;
+        }
+        if ($request->hasFile('flag')) {
+            $flag = $request->file('flag');
+            $flagName = time() . $flag->getClientOriginalExtension();
+
+            // Store file in storage
+            Storage::disk('public')->put('images/flags/' . $flagName, file_get_contents($flag));
+            $data['flag_url'] = $flagName;
         }
         $data['slug'] = Str::slug($request->name) . '-' . time();
         Destination::create($data);
@@ -70,7 +81,8 @@ class AdminDestinationController extends Controller
      */
     public function edit(Destination $destination)
     {
-        return view("admin.destinations.edit", compact("destination"));
+        $continents = Continent::all();
+        return view("admin.destinations.edit", compact("destination", "continents"));
     }
 
     /**
@@ -83,34 +95,45 @@ class AdminDestinationController extends Controller
             'name' => 'required|string|max:255',
             'description' => 'required|string',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'country' => 'required|string',
-            'study_cost' => 'required|integer|min:1',
+            'currency' => 'sometimes|string',
+            'continent_id' => "required|string",
+            'cost_of_living' => 'sometimes|integer|min:1',
             'is_popuar' => 'sometimes|boolean'
         ]);
-        $data = $request->except('image');
+        $data = $request->except('image', 'flag');
 
         if ($request->hasFile('image')) {
             // Delete old image
-            if ($destination->image) {
-                Storage::delete('images/blog/' . $destination->image);
+            if ($destination->image_url) {
+                Storage::delete($destination->image_url);
             }
             // Store New Image
             $image = $request->file('image');
-            $imageName = time() . '.' . $image->getClientOriginalExtension();
-            Storage::disk('public')->put('images/destinations/' . $imageName, file_get_contents($image));
-            $data['image'] = $imageName;
-
-            // Update slug if it has changed
-            if ($request->name !== $destination->name) {
-                $data['slug'] = Str::slug($request->name) . '-' . time();
-            }
-            // Set popular status
-            $data['is_popular'] = $request->has('is_popolar');
-
-            $destination->update($data);
-            return redirect()->route('admin.destinations.index')
-                ->with('success', 'Destination updated successfully.');
+            $imageName = 'images/destinations/' . time() . '.' . $image->getClientOriginalExtension();
+            Storage::disk('public')->put($imageName, file_get_contents($image));
+            $data['image_url'] = $imageName;
         };
+        if ($request->hasFile('flag')) {
+            // Delete old flag
+            if ($destination->flag_url) {
+                Storage::delete($destination->flag_url);
+            }
+            // Store New Image
+            $flag = $request->file('flag');
+            $flagName = 'images/flags/' . time() . '.' . $flag->getClientOriginalExtension();
+            Storage::disk('public')->put($flagName, file_get_contents($flag));
+            $data['flag_url'] = $flagName;
+        };
+        // Update slug if it has changed
+        if ($request->name !== $destination->name) {
+            $data['slug'] = Str::slug($request->name) . '-' . time();
+        }
+        // Set popular status
+        $data['is_popular'] = $request->has('is_popolar');
+
+        $destination->update($data);
+        return redirect()->route('admin.destinations.index')
+            ->with('success', 'Destination updated successfully.');
     }
 
     /**
