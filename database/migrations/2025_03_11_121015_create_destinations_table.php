@@ -13,13 +13,18 @@ return new class extends Migration
     {
         Schema::create('destinations', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('slug')->unique();
-            $table->text('description')->nullable();
-            $table->string('image')->nullable();
-            $table->string('country');
-            $table->integer('study_cost')->nullable();
-            $table->boolean('is_popular')->default(false);
+            $table->string('name')->unique();  //e.g. United Kingdom
+            $table->string("slug")->unique();                // Destination name (e.g., USA, UK)
+            $table->text('description')->nullable();       // Brief description
+            $table->string('cost_of_living')->nullable();  // Cost of living info
+            $table->string('language')->nullable();        // Language spoken
+            $table->text('visa_requirements')->nullable(); // Visa requirements
+            $table->string('best_for')->nullable();        // Example: "Engineering", "Budget"
+            $table->string('image_url')->nullable();
+            $table->string("currency")->nullable();
+            $table->foreignId("continent_id")->constrained("continents", "id");
+            $table->string("flag_url")->nullable();
+            $table->boolean("is_popular")->default(false);      // URL for destination image
             $table->timestamps();
         });
     }
