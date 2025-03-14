@@ -7,6 +7,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'SudyInfo') }}</title>
     <link rel="shortcut icon" href="{{ URL::asset('assets/logos/logo.png') }}" />
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
 
 
     <!-- Scripts -->
@@ -24,6 +26,8 @@
             {{ $slot }}
         </main>
     </div>
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
 </body>
 
 </html>
