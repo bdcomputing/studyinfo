@@ -67,7 +67,7 @@ Route::name("admin.")->middleware("auth")->prefix("admin")->group(function () {
         Route::get("university", [AdminUniversityController::class, "create"])->name("create");
         Route::post("university", [AdminUniversityController::class, "store"])->name("store");
         Route::get("university/{university}", [AdminUniversityController::class, "show"])->name("show");
-        Route::put("university/{university}/edit", [AdminUniversityController::class, "edit"])->name("edit");
+        Route::get("university/{university}/edit", [AdminUniversityController::class, "edit"])->name("edit");
         Route::put("university/{university}", [AdminUniversityController::class, "update"])->name("update");
         Route::delete("university/{university}", [AdminUniversityController::class, "destroy"])->name("destroy");
     });

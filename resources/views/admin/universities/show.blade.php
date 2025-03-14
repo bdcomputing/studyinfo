@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('View Destination') }}
+            {{ __('View University') }}
         </h2>
     </x-slot>
 
@@ -9,15 +9,19 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white  overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6">
-                    <div class="flex justify-between items-center mb-6">
-                        <h3 class="text-2xl font-bold text-gray-900">{{ $destination->name }}</h3>
+                    <div class="flex justify-between items-center  mb-6">
+                        <div class="p-5 flex gap-5 items-center">
+                            <img src="{{ asset('storage/' . $university->logo_url) }}" alt="{{ $university->name }}"
+                                class=" size-16 object-cover rounded-md">
+                            <h3 class="text-2xl font-bold text-gray-900">{{ $university->name }}</h3>
+                        </div>
                         <div class="flex space-x-4">
 
-                            <a href="{{ route('admin.destinations.edit', $destination) }}"
+                            <a href="{{ route('admin.universities.edit', $university) }}"
                                 class="px-6 py-2 bg-primary-500 text-white rounded-full hover:bg-primary-600 transition">
                                 Edit
                             </a>
-                            <a href="{{ route('admin.destinations.index') }}"
+                            <a href="{{ route('admin.universities.index') }}"
                                 class="px-4 py-2 bg-gray-500 text-white rounded-full hover:bg-gray-600 transition">
                                 Back to List
                             </a>
@@ -25,7 +29,7 @@
                     </div>
 
                     <div class="mb-6">
-                        <img src="{{ asset('storage/images/destinations/' . $destination->image) }}" alt="{{ $destination->name }}"
+                        <img src="{{ asset('storage/' . $university->image_url) }}" alt="{{ $university->name }}"
                             class="w-full h-[450px] object-cover rounded-lg">
                     </div>
 
@@ -33,16 +37,22 @@
                         <div class="flex items-center">
                             <span class="text-gray-600 mr-2">Country:</span>
                             <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">
-                                {{ $destination->country }}
+                                {{ $university->destination->name }}
                             </span>
                         </div>
                         <div class="flex items-center">
-                            <span class="text-gray-600 mr-2">Status:</span>
-                            @if ($destination->is_popular)
+                            <span class="text-gray-600 mr-2">City:</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">
+                                {{ $university->city }}
+                            </span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-gray-600 mr-2">Type:</span>
+                            @if ($university->type ==='Public')
                             <span
-                                class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Popular</span>
+                                class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Public</span>
                             @else
-                            <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Not Popular</span>
+                            <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Private</span>
                             @endif
                         </div>
 
@@ -50,11 +60,11 @@
 
                     <div class="prose max-w-none">
                         <h4 class="text-lg font-semibold text-gray-900 mb-2">Description</h4>
-                        <p class="text-gray-600 mb-6">{{ $destination->description }}</p>
+                        <p class="text-gray-600 mb-6">{{ $university->description }}</p>
 
-                        <h4 class="text-lg font-semibold text-gray-900 mb-2">Study Cost</h4>
+                        <h4 class="text-lg font-semibold text-gray-900 mb-2">Tuition fee</h4>
                         <div class="text-gray-600">
-                            USD {{$destination->study_cost }}
+                            {{$university->destination->currency}} {{$university->tuition_fee }}
                         </div>
                     </div>
                 </div>

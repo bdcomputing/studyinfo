@@ -1,58 +1,59 @@
 <x-app-layout>
 
-
-
-    <!-- 'name',
-    'description',
-    'image',
-    'country',
-    'study_cost',
-    'is_popular' -->
-
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white  overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-primary ">
                     <div class="py-5">
-                        <p class="text-lg md:text-xl">Create Destination</p>
+                        <p class="text-lg md:text-xl">Edit University</p>
                     </div>
-                    <form id="form" action="{{ route('admin.destinations.store') }}" method="POST" enctype="multipart/form-data">
+                    <form id="form" action="{{ route('admin.universities.update',$university) }}" method="POST" enctype="multipart/form-data">
                         @csrf
+                        @method('PUT')
 
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pb-5">
                             <div class="">
                                 <label for="name"
-                                    class="block text-sm font-medium text-gray-700 ">Name <span class="text-red-500">*</span></label>
-                                <input type="text" name="name" id="title" value="{{ old('name') }}" required
+                                    class="block text-sm font-medium text-gray-700 ">University Name <span class="text-red-500">*</span></label>
+                                <input type="text" name="name" id="title" value="{{ old('name',$university->name) }}" required
                                     class="mt-1 block w-full rounded-md border-gray-300    shadow-sm focus:border-primary-500 focus:ring-primary-500">
                                 @error('name')
                                 <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
                                 @enderror
                             </div>
                             <div class="">
-                                <label for="name"
-                                    class="block text-sm font-medium text-gray-700 ">Continent<span class="text-red-500">*</span></label>
-                                <select name="continent_id" class="rounded-md border-gray-600">
-                                    <option class="p-3">Select Continent</option>
-                                    @forelse($continents as $continent)
-                                    <option value="{{$continent->id}}">{{$continent->name}}</option>
+                                <label for="destination"
+                                    class="block text-sm font-medium text-gray-700 ">Destination<span class="text-red-500">*</span></label>
+                                <select name="destination_id" class="rounded-md w-full border-gray-600">
+                                    <option class="p-3">Select Destination</option>
+                                    @forelse($destinations as $destination)
+                                    <option {{old('destination_id',$university->destination_id) === $destination->id ? 'selected' : '' }} value="{{$destination->id}}">{{$destination->name}}</option>
                                     @empty
-                                    <span>No continents to select</span>
+                                    <span>No destinations to select</span>
                                     @endforelse
                                 </select>
                                 <!-- <input type="text" name="name" id="title" value="{{ old('name') }}" required
                                     class="mt-1 block w-full rounded-md border-gray-300    shadow-sm focus:border-primary-500 focus:ring-primary-500"> -->
-                                @error('name')
+                                @error('destination_id')
                                 <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
                                 @enderror
                             </div>
 
                             <div class="">
-                                <label for="currency"
-                                    class="block text-sm font-medium text-gray-700 required">Currency <span class="text-red-500">*</span></label>
-                                <input type="text" name="currency" id="title" value="{{ old('currency') }}" required
+                                <label for="ranking"
+                                    class="block text-sm font-medium text-gray-700 required">Ranking <span class="text-red-500">*</span></label>
+                                <input type="number" name="ranking" id="title" value="{{ old('ranking',$university->ranking) }}" required
                                     class="mt-1 block w-full rounded-md border-gray-300    shadow-sm focus:border-primary-500 focus:ring-primary-500">
-                                @error('currency')
+                                @error('ranking')
+                                <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
+                                @enderror
+                            </div>
+                            <div class="">
+                                <label for="city"
+                                    class="block text-sm font-medium text-gray-700 required">City <span class="text-red-500">*</span></label>
+                                <input type="text" name="city" id="city" value="{{ old('city',$university->city) }}" required
+                                    class="mt-1 block w-full rounded-md border-gray-300    shadow-sm focus:border-primary-500 focus:ring-primary-500">
+                                @error('city')
                                 <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
                                 @enderror
                             </div>
@@ -60,46 +61,62 @@
 
                             <div class="col-span-2">
                                 <label for="description"
-                                    class="block required text-sm font-medium text-gray-700 ">Destination
+                                    class="block required text-sm font-medium text-gray-700 ">University
                                     Description<span class="text-red-500">*</span></label>
                                 <textarea name="description" id="description" rows="3" required
-                                    class="mt-1 block w-full rounded-md border-gray-300    shadow-sm focus:border-primary-500 focus:ring-primary-500">{{ old('description') }}</textarea>
-                                <p class="mt-1 text-sm text-gray-500 ">A brief description of the destination</p>
+                                    class="mt-1 block w-full rounded-md border-gray-300    shadow-sm focus:border-primary-500 focus:ring-primary-500">{{ old('description',$university->description) }}</textarea>
+                                <p class="mt-1 text-sm text-gray-500 ">A brief description of the university</p>
                                 @error('description')
                                 <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
                                 @enderror
                             </div>
-                            <div class="col-span-2 !relative">
-                                <label for="visa_requirements"
-                                    class="block text-sm font-medium text-gray-700 ">
-                                    Visa Requirements</label>
-                                <textarea name="visa_requirements" id="visa_requirements" rows="3" required
-                                    class="mt-1 block w-full rounded-md border-gray-300    shadow-sm focus:border-primary-500 focus:ring-primary-500">{{ old('visa_requirements') }}</textarea>
-                                <p class="mt-1 text-sm text-gray-500 ">Destination visa requirements</p>
-                                @error('visa_requirements')
-                                <p class="mt-1 text-sm text-red-600 py-3">{{ $message }}</p>
-                                @enderror
-                            </div>
 
-                            <div class="mt-5">
-                                <label for="language"
-                                    class="block text-sm font-medium text-gray-700 ">Language</label>
-                                <input name="language" id="language" required
+
+                            <div class="">
+                                <label for="website_url"
+                                    class="block text-sm font-medium text-gray-700 ">Website URL</label>
+                                <input type="url" name="website_url" id="website_url" value="{{old('website_url',$university->website_url)}}" required
                                     class="mt-1 block w-full rounded-md border-gray-300    shadow-sm focus:border-primary-500 focus:ring-primary-500" />
 
-                                @error('language')
+                                @error('website_url')
                                 <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
                                 @enderror
                             </div>
 
+                            <div class="">
+                                <label for="contact_email"
+                                    class="block text-sm font-medium text-gray-700 ">Contact Email</label>
+                                <input type="email" name="contact_email" id="contact_email" required value="{{old('contact_email',$university->contact_email)}}"
+                                    class="mt-1 block w-full rounded-md border-gray-300    shadow-sm focus:border-primary-500 focus:ring-primary-500" />
+
+                                @error('contact_email')
+                                <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
+                                @enderror
+                            </div>
+
+                            <div class="">
+                                <label for="type"
+                                    class="block text-sm font-medium text-gray-700 ">Type</label>
+                                <select name="type" class="w-full border-gray-400 rounded-md" id="">
+                                    <option class="">Select Type</option>
+                                    <option {{old('type',$university->type) ==='Public'? 'selected' :'' }} value="Public">Public</option>
+                                    <option {{old('type',$university->type) ==='Private'? 'selected' :'' }} value="Private">Private</option>
+                                </select>
+
+                                @error('type')
+                                <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
+                                @enderror
+                            </div>
+
+
                             <div>
-                                <label for="cost_of_living"
-                                    class="block text-sm font-medium text-gray-700 ">Average
-                                    Cost of Living</label>
-                                <input type="number" name="cost_of_living" id="publish_date"
-                                    value="{{ old('cost_of_living') }}" required
+                                <label for="tuition_fee"
+                                    class="block text-sm font-medium text-gray-700 ">Tuition Fee</label>
+                                <input type="number" name="tuition_fee" id="publish_date"
+                                    value="{{ old('tuition_fee',$university->tuition_fee) }}" required
                                     class="mt-1 block w-full rounded-md border-gray-300    shadow-sm focus:border-primary-500 focus:ring-primary-500">
-                                @error('cost_of_living')
+                                <p class="mt-1 text-sm text-gray-400">Tuition fee in country of origin currency</p>
+                                @error('tuition_fee')
                                 <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
                                 @enderror
                             </div>
@@ -113,20 +130,26 @@
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                         </svg>
-                                        Destination Image <span class="text-red-500">*</span>
+                                        University Image <span class="text-red-500">*</span>
                                     </span>
                                 </label>
                                 <div
                                     class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300  border-dashed rounded-lg">
                                     <div class="space-y-1 text-center">
-                                        <input type="file" name="image" id="image" required
-                                            class="mt-1 block w-full text-sm text-gray-500 
+                                        <div class="flex items-center gap-4">
+                                            <img src="{{ asset('storage/' . $university->image_url) }}" class="object-cover size-20 rounded-md" alt="">
+
+                                            <div>
+                                                <input type="file" name="image" id="image"
+                                                    class="mt-1 block w-full text-sm text-gray-500  self-center
                                             file:mr-4 file:py-2 file:px-4
                                             file:rounded-md file:border-0
                                             file:text-sm file:font-semibold
                                             file:bg-primary-50 file:text-primary-700
                                             hover:file:bg-primary-100
                                             ">
+                                            </div>
+                                        </div>
                                         <p class="text-xs text-gray-500 ">
                                             PNG, JPG, GIF up to 2MB. Recommended size: 800x450px
                                         </p>
@@ -145,50 +168,44 @@
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                         </svg>
-                                        Destination Flag <span class="text-red-500">*</span>
+                                        University Logo <span class="text-red-500">*</span>
                                     </span>
                                 </label>
                                 <div
                                     class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300  border-dashed rounded-lg">
                                     <div class="space-y-1 text-center">
-                                        <input type="file" name="flag" id=" flag" required
-                                            class="mt-1 block w-full text-sm text-gray-500 
+                                        <div class="flex items-center gap-4">
+                                            <img src="{{ asset('storage/' . $university->logo_url) }}" class="size-20 object-cover rounded-md" alt="">
+
+                                            <div>
+                                                <input type="file" name="logo" id="logo"
+                                                    class="mt-1 block w-full text-sm text-gray-500  self-center
                                             file:mr-4 file:py-2 file:px-4
                                             file:rounded-md file:border-0
                                             file:text-sm file:font-semibold
                                             file:bg-primary-50 file:text-primary-700
                                             hover:file:bg-primary-100
                                             ">
+                                            </div>
+                                        </div>
+
                                         <p class="text-xs text-gray-500 ">
                                             PNG, JPG, GIF up to 2MB. Recommended size: 800x450px
                                         </p>
                                     </div>
                                 </div>
-                                @error('flag')
+                                @error('logo')
                                 <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
                                 @enderror
                             </div>
 
-                            <div class="col-span-2">
-                                <div class="flex items-start">
-                                    <div class="flex items-center h-5">
-                                        <input type="checkbox" name="is_popular" id="is_popular" value="1"
-                                            {{ old('is_popular') ? 'checked' : '' }}
-                                            class="rounded border-gray-300 text-primary-600 shadow-sm focus:border-primary-500 focus:ring-primary-500">
-                                    </div>
-                                    <div class="ml-3 text-sm">
-                                        <label for="is_popular"
-                                            class="font-medium text-gray-700 ">Is Destination Popolar</label>
-                                    </div>
-                                </div>
-                                <p class="text-xs p-2 text-gray-400">Popular destination will appear in homepage</p>
-                            </div>
+
                         </div>
 
-                        <div class="mt-6">
+                        <div class="py-5">
                             <button type="submit"
                                 class="w-full inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-primary hover:bg-primary-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
-                                Create Destination
+                                Update University
                             </button>
                         </div>
                     </form>

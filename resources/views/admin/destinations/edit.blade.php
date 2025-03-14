@@ -124,7 +124,7 @@
                                 <div
                                     class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300  border-dashed rounded-lg">
                                     <div class="space-y-1 text-center">
-                                        <input type="file" name="image" id="image" required
+                                        <input type="file" name="image" id="image"
                                             class="mt-1 block w-full text-sm text-gray-500 
                                             file:mr-4 file:py-2 file:px-4
                                             file:rounded-md file:border-0
@@ -156,7 +156,7 @@
                                 <div
                                     class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300  border-dashed rounded-lg">
                                     <div class="space-y-1 text-center">
-                                        <input type="file" name="flag" id=" flag" required
+                                        <input type="file" name="flag" id=" flag"
                                             class="mt-1 block w-full text-sm text-gray-500 
                                             file:mr-4 file:py-2 file:px-4
                                             file:rounded-md file:border-0
@@ -178,7 +178,7 @@
                                 <div class="flex items-start">
                                     <div class="flex items-center h-5">
                                         <input type="checkbox" name="is_popular" id="is_popular" value="1"
-                                            {{ old('is_popular',$destination->is_popolar) ? 'checked' : '' }}
+                                            {{ old('is_popular',$destination->is_popular) ? 'checked' : '' }}
                                             class="rounded border-gray-300 text-primary-600 shadow-sm focus:border-primary-500 focus:ring-primary-500">
                                     </div>
                                     <div class="ml-3 text-sm">

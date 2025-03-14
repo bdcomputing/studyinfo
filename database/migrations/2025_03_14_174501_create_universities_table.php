@@ -13,13 +13,15 @@ return new class extends Migration
     {
         Schema::create('universities', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('name')->unique();
+            $table->text("description");
             $table->foreignId('destination_id')->constrained('destinations')->onDelete('cascade');
-            $table->string('city')->nullable();
+            $table->string('city');
             $table->integer('ranking')->nullable();
             $table->enum('type', ['Public', 'Private']);
-            $table->string('website_url')->nullable();
-            $table->decimal('tuition_fee', 10, 2)->nullable();
+            $table->string('website_url');
+            $table->string("contact_email");
+            $table->decimal('tuition_fee', 10, 2);
             $table->text('admission_requirements')->nullable();
             $table->text('student_life')->nullable();
             $table->string('image_url')->nullable();

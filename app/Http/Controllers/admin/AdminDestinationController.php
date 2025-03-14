@@ -40,6 +40,7 @@ class AdminDestinationController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'required|string',
+            'visa_requirements' => 'sometimes|string',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
             'currency' => 'sometimes|string',
             'continent_id' => "required|string",
@@ -57,7 +58,7 @@ class AdminDestinationController extends Controller
         }
         if ($request->hasFile('flag')) {
             $flag = $request->file('flag');
-            $flagName = 'images/flags/' . time() . $flag->getClientOriginalExtension();
+            $flagName = 'images/destinations/flags/' . time() . $flag->getClientOriginalExtension();
 
             // Store file in storage
             Storage::disk('public')->put($flagName, file_get_contents($flag));
@@ -94,7 +95,7 @@ class AdminDestinationController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'required|string',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image' => 'sometimes|image|mimes:jpeg,png,jpg,gif|max:2048',
             'currency' => 'sometimes|string',
             'continent_id' => "required|string",
             'cost_of_living' => 'sometimes|integer|min:1',
@@ -120,7 +121,7 @@ class AdminDestinationController extends Controller
             }
             // Store New Image
             $flag = $request->file('flag');
-            $flagName = 'images/flags/' . time() . '.' . $flag->getClientOriginalExtension();
+            $flagName = 'images/destinations/flags/' . time() . '.' . $flag->getClientOriginalExtension();
             Storage::disk('public')->put($flagName, file_get_contents($flag));
             $data['flag_url'] = $flagName;
         };
@@ -129,7 +130,7 @@ class AdminDestinationController extends Controller
             $data['slug'] = Str::slug($request->name) . '-' . time();
         }
         // Set popular status
-        $data['is_popular'] = $request->has('is_popolar');
+        $data['is_popular'] = $request->has('is_popular');
 
         $destination->update($data);
         return redirect()->route('admin.destinations.index')
