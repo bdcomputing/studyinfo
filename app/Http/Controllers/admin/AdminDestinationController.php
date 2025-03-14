@@ -49,18 +49,18 @@ class AdminDestinationController extends Controller
         $data = $request->except(['image', "flag"]);
         if ($request->hasFile('image')) {
             $image = $request->file('image');
-            $imageName = time() . $image->getClientOriginalExtension();
+            $imageName = 'images/destinations/' . time() . $image->getClientOriginalExtension();
 
             // Store file in storage
-            Storage::disk('public')->put('images/destinations/' . $imageName, file_get_contents($image));
+            Storage::disk('public')->put($imageName, file_get_contents($image));
             $data['image_url'] = $imageName;
         }
         if ($request->hasFile('flag')) {
             $flag = $request->file('flag');
-            $flagName = time() . $flag->getClientOriginalExtension();
+            $flagName = 'images/flags/' . time() . $flag->getClientOriginalExtension();
 
             // Store file in storage
-            Storage::disk('public')->put('images/flags/' . $flagName, file_get_contents($flag));
+            Storage::disk('public')->put($flagName, file_get_contents($flag));
             $data['flag_url'] = $flagName;
         }
         $data['slug'] = Str::slug($request->name) . '-' . time();
