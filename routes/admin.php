@@ -5,6 +5,8 @@ use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\admin\AdminDestinationController;
 use App\Http\Controllers\admin\AdminEventController;
 use App\Http\Controllers\admin\AdminMessagesController;
+use App\Http\Controllers\admin\AdminProgramController;
+use App\Http\Controllers\admin\AdminUniversityController;
 use App\Http\Controllers\admin\AdminUsersController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use Illuminate\Support\Facades\Route;
@@ -57,5 +59,27 @@ Route::name("admin.")->middleware("auth")->prefix("admin")->group(function () {
         Route::get("messages", [AdminMessagesController::class, "index"])->name("index");
         Route::get("message/{message}", [AdminMessagesController::class, "show"])->name("show");
         Route::delete("messages/{message}", [AdminMessagesController::class, "destroy"])->name("destroy");
+    });
+
+    // Universities
+    Route::name("universities.")->middleware(['admin'])->group(function () {
+        Route::get("universities", [AdminUniversityController::class, "index"])->name("index");
+        Route::get("university", [AdminUniversityController::class, "create"])->name("create");
+        Route::post("university", [AdminUniversityController::class, "store"])->name("store");
+        Route::get("university/{university}", [AdminUniversityController::class, "show"])->name("show");
+        Route::put("university/{university}/edit", [AdminUniversityController::class, "edit"])->name("edit");
+        Route::put("university/{university}", [AdminUniversityController::class, "update"])->name("update");
+        Route::delete("university/{university}", [AdminUniversityController::class, "destroy"])->name("destroy");
+    });
+
+    // Programs
+    Route::name("programs.")->middleware(['admin'])->group(function () {
+        Route::get("programs", [AdminProgramController::class, "index"])->name('index');
+        Route::get("program", [AdminProgramController::class, "create"])->name('create');
+        Route::post("program", [AdminProgramController::class, "store"])->name('store');
+        Route::get("program/{program}", [AdminProgramController::class, "show"])->name('show');
+        Route::get("program/{program}/edit", [AdminProgramController::class, "edit"])->name('edit');
+        Route::put("program/{program}", [AdminProgramController::class, "update"])->name('update');
+        Route::delete("program/{program}", [AdminProgramController::class, "destroy"])->name('destroy');
     });
 });
