@@ -30,4 +30,20 @@ class University extends Model
     {
         return $this->belongsTo(Destination::class);
     }
+
+    public function programs()
+    {
+        return $this->hasMany(Program::class);
+    }
+
+    public function scopeFilter($query, $filter)
+    {
+        return $query->when(isset($filter['search']), function ($query) use ($filter) {
+            $query->where("name", "like", '%' . $filter['search'] . '%')
+                ->orWhere("city", "like", '%' . $filter['search'] . '%')
+                ->orWhereHas("destination", function ($q) use ($filter) { // Related table filter
+                    $q->where("name", "like", '%' . $filter['search'] . '%');
+                });
+        });
+    }
 }

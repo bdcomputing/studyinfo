@@ -54,7 +54,7 @@ class AdminUniversityController extends Controller
 
         if ($request->hasFile('image')) {
             $image = $request->file('image');
-            $imageName = 'images/universities/' . time() . $image->getClientOriginalExtension();
+            $imageName = 'images/universities/' . time() . "." . $image->getClientOriginalExtension();
 
             // store image in storage
             Storage::disk("public")->put($imageName, file_get_contents($image));
@@ -63,7 +63,7 @@ class AdminUniversityController extends Controller
 
         if ($request->hasFile('logo')) {
             $logo = $request->file('logo');
-            $logoName = "images/universities/logos" . time() . $logo->getClientOriginalExtension();
+            $logoName = "images/universities/logos/" . time() . "." . $logo->getClientOriginalExtension();
 
             // store Logo in storage
             Storage::disk('public')->put($logoName, file_get_contents($logo));
@@ -119,7 +119,7 @@ class AdminUniversityController extends Controller
                 Storage::disk('public')->delete($university->image_url);
             }
             $image = $request->file('image');
-            $imageName = 'images/universities/' . time() . $image->getClientOriginalExtension();
+            $imageName = 'images/universities/' . time() . "." . $image->getClientOriginalExtension();
 
             // store image in storage
             Storage::disk("public")->put($imageName, file_get_contents($image));
@@ -131,7 +131,7 @@ class AdminUniversityController extends Controller
                 Storage::disk('public')->delete($university->logo_url);
             }
             $logo = $request->file('logo');
-            $logoName = "images/universities/logos" . time() . $logo->getClientOriginalExtension();
+            $logoName = "images/universities/logos/" . time() . "." . $logo->getClientOriginalExtension();
 
             // store Logo in storage
             Storage::disk('public')->put($logoName, file_get_contents($logo));
