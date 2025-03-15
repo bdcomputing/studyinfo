@@ -8,30 +8,31 @@ class Program extends Model
 {
     //
     protected $fillable = [
-        'name',
-        'description',
-        "field_of_study",
-        'degree_type', // Degree, Masters, Doctorate
-        'duration',  //Months or Years
-        'tution_fee',
-        'entry_requirements',
         'university_id',
-        'country_id',
-        'is_popular'
+        'name',
+        "level",
+        'description',
+        'duration',  //Months or Years
+        "intake_period",
+        "mode_of_study",
+        "field_of_study",
+        "language_of_instruction",
+        'program_fee',
+        'application_deadline',
+        'requirements',
+        'career_prospects'
 
     ];
 
     protected $casts = [
-        'is_popular' => 'boolean',
+        'university_id' => 'integer',
+        'duration' => 'integer',
+        'program_fee' => 'float',
+        'application_deadline' => 'date'
     ];
 
     public function university()
     {
         return $this->belongsTo(University::class);
-    }
-
-    public function country()
-    {
-        return $this->belongsTo(Country::class);
     }
 }
