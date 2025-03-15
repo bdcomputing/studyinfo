@@ -136,7 +136,7 @@
                                             <div class="p-3 mx-auto text-primary py-5  rounded-full ">
                                                 <i class="bi bi-database-exclamation text-7xl"></i>
                                             </div>
-                                            <h1 class="mt-3 text-lg text-gray-800 text-center ">No blogs found</h1>
+                                            <h1 class="mt-3 text-lg text-gray-800 text-center ">No Events found</h1>
                                             <div class="flex items-center my-4 sm:mx-auto gap-x-3">
 
 
