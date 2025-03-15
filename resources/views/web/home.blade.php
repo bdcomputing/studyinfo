@@ -7,20 +7,20 @@ Homepage
 <main class="min-h-screen  text-gray-800 ">
     <!-- Hero Section -->
     <section class="relative bg-primary md:h-[74vh] md:min-h-[74vh] z-0">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div class="text-primary-50 py-20 md:py-0 md:pl-20 pb-5 md:pb-0 px-5 md:px-0 flex flex-col justify-center">
-                <h1 class="text-3xl md:text-5xl mb-6 font-extrabold leading-loose">
-                    Your Global Future Starts Here – Study Abroad with Confidence!
+                <h1 class="text-3xl md:text-5xl mb-6 font-extrabold leading-loose tracking-wide text-secondary-100 md:w-max bg-clip-text">
+                    Your Global Future Starts Here <br class="md:block hidden">Study Abroad with Confidence!
                 </h1>
-                <p class="text-lg mb-8 opacity-90 font-semibold">
+                <p class="text-lg mb-8 opacity-90">
                     Find your dream university, apply for scholarships, and get visa assistance -
                     <span class="text-secondary">all in one place.</span>
                 </p>
                 <div class="flex flex-wrap gap-5">
-                    <a href="#" class="bg-secondary hover:bg-secondary-500 text-white font-medium py-3 px-6 rounded-full transition duration-300">
+                    <a href="#" class="bg-gradient-to-r from-secondary  to-secondary/30  hover:bg-secondary-500 text-white font-medium py-3 px-6 rounded-full transition duration-300">
                         Talk to Expert
                     </a>
-                    <a href="{{ route('web.about') }}" class="bg-transparent hover:bg-secondary hover:text-primary text-white font-medium py-3 px-6 rounded-full border-2 border-secondary transition duration-300">
+                    <a href="{{ route('web.about') }}" class="bg-transparent  hover:bg-secondary hover:text-primary text-white font-medium py-3 px-6 rounded-full border-2 border-secondary transition duration-300">
                         Programs
                     </a>
                 </div>
@@ -57,12 +57,12 @@ Homepage
             </div>
         </div>
     </div>
-    <section class="py-10 p-5 bg-gray-50">
+    <section class="py-20 p-5 bg-gray-50">
         <div class="grid container md:p-5 mx-auto grid-cols-1 md:grid-cols-2">
             <div class="">
-                <div class="space-y-3">
+                <div class="space-y-5">
                     <p class="text-primary font-bold md:text-2xl">We are StudyInfo</p>
-                    <p class="text-sm md:text-base">We have been guiding students through every step from program choice to visa application, including scholarship to achieve their study abroad dreams.</p>
+                    <p class="">We have been guiding students through every step from program choice to visa application, including scholarship to achieve their study abroad dreams.</p>
                 </div>
                 <div class=" md:p-5 py-5 grid grid-cols-2 gap-2 md:gap-5">
                     <div class=" flex gap-2 justify-around items-center  rounded-xl bg-white border border-accent-100 hover:shadow-xl p-5 min-h-40">
@@ -94,7 +94,7 @@ Homepage
 
                         </div>
                     </div>
-                    <div class=" flex gap-2 md:gap-5 items-center justify-around p-5 rounded-xl col-span-2 min-h-40 bg-white border border-accent-100 hover:shadow">
+                    <div class=" flex gap-2 md:gap-5 w-max gap-x-8 items-center justify-around p-5 rounded-xl col-span-2 min-h-40 bg-white border border-accent-100 hover:shadow">
 
                         <div class="flex items-center">
                             <div class="space-y-2">
@@ -117,9 +117,9 @@ Homepage
         </div>
     </section>
     <section class=" bg-white p-5">
-        <div class="container mx-auto py-10">
-            <div class="text-center mb-12">
-                <h2 class="text-2xl md:text-3xl font-extrabold text-primary  mb-6">
+        <div class="container mx-auto py-20">
+            <div class="text-center text-mb-12">
+                <h2 class="text-2xl md:text-3xl font-extrabold text-primary mb-6">
                     Services for Students
                 </h2>
             </div>
@@ -154,12 +154,12 @@ Homepage
                 <div class="bg-white p-5  border border-accent-100 hover:shadow hover:border-secondary-200 rounded-xl max-w-sm">
 
                     <div class="md:p-5  w-full bg-white/90 space-y-3">
-                        <p class="font-bold text-primary">{{$service['title']}}</p>
                         <div class="flex justify-center p-5">
                             <i class="bi {{$service['icon']}} text-secondary text-5xl"></i>
                         </div>
-                        <p class="line-clamp-2 text-sm">{{$service['description']}}</p>
-                        <div class="py-t">
+                        <p class="font-bold text-primary">{{$service['title']}}</p>
+                        <p class="line-clamp-2 ">{{$service['description']}}</p>
+                        <div class="pt-5">
                             <button class="p-3 py-1.5 rounded-md bg-primary text-sm text-white">View Details</button>
                         </div>
                     </div>
@@ -169,9 +169,9 @@ Homepage
             </div>
         </div>
     </section>
-    <section class="bg-gray-50 p-5">
+    <section class=" bg-gradient-to-b from-secondary-50/20 via-secondary-200 to-secondary-50/20 p-5">
         <div class="container mx-auto md:p-5">
-            <div class="text-center mb-12">
+            <div class="text-center md:py-20">
                 <h2 class="text-2xl md:text-3xl font-extrabold text-primary  mb-6">
                     How we work
                 </h2>
@@ -181,7 +181,7 @@ Homepage
                     <span class=" bg-secondary text-white  py-1 px-3 rounded-full">Step 1</span>
                     <div class="py-3 space-y-3">
                         <p class="font-bold text-base md:text-xl">Consult</p>
-                        <p class="text-sm md:text-base">Connect with expert to assess your educational goals and visa requirements</p>
+                        <p class="">Connect with expert to assess your educational goals and visa requirements</p>
                     </div>
 
                 </div>
@@ -205,11 +205,11 @@ Homepage
     <section class="bg-white py-20 px-4 sm:px-6 lg:px-8">
 
         <div class="container mx-auto">
-            <div class="text-center mb-12">
+            <div class="text-center md:py-20">
                 <h2 class="text-2xl md:text-3xl font-extrabold text-primary mb-6">
                     Choose Your Study Destination
                 </h2>
-                <p class="md:text-lg text-gray-600 max-w-2xl mx-auto font-bold">
+                <p class="md:text-lg text-gray-600 mb-6 max-w-2xl mx-auto font-bold">
                     Featured Destinations
                 </p>
             </div>
@@ -254,11 +254,11 @@ Homepage
 
                 {{-- Credential Section --}}
                 @foreach ($destinations as $destination)
-                <div class="bg-white group relative border border-accent-100  hover:shadow-lg rounded-xl max-w-sm">
+                <div class="bg-white group relative border border-accent-100 shadow-sm  hover:shadow-lg rounded-xl max-w-sm">
                     <div class="overflow-hidden rounded-xl">
                         <img src="{{$destination['image']}}" class="transition-transform duration-500 group-hover:scale-105 overflow-hidden rounded-t-xl max-h-30 overflow-y-hidden object-cover  w-full" alt="">
                     </div>
-                    <div class="p-5 bottom-0 absolute z-50 w-full bg-white/90">
+                    <div class="p-5 bottom-0 absolute z-50 w-full bg-gradient-to-t from-secondary-50 via-white to-transparent">
                         <p class="font-bold text-primary">Study in {{$destination['destination']}}</p>
                         <button class="p-1  md:text-sm py-2 bg-secondy hover:underline  text-secondary">Read More</button>
                     </div>
@@ -270,7 +270,7 @@ Homepage
     </section>
 
     <section class="bg-white ">
-        <div class="container px-6 py-10 mx-auto">
+        <div class="container px-6 py-20 mx-auto">
             <h1 class="text-2xl font-semibold text-center text-primary capitalize lg:text-3xl ">
                 Inspiring Journeys of Students Who <span class="text-secondary ">Made It Big</span>
             </h1>
@@ -282,7 +282,7 @@ Homepage
 
             <section class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 lg:grid-cols-2 xl:grid-cols-3">
                 <div class="p-8 border rounded-lg ">
-                    <blockquote class="leading-loose text-gray-600 border-l-4 rounded-l border-gray-300 pl-3">
+                    <blockquote class="leading-loose text-gray-600  rounded-l  pl-3">
                         "Studying at MIT was a dream I never thought possible. With StudyInfo’s guidance,
                         I secured a scholarship, adjusted to campus life, and even interned at Google.
                         Today, I work at Microsoft, and I owe a huge part of my success to my study abroad journey.
@@ -290,7 +290,7 @@ Homepage
                     </blockquote>
 
                     <div class="flex items-center mt-8 -mx-2">
-                        <img class="object-cover mx-2 rounded-full w-14 shrink-0 h-14 ring-4 ring-gray-300 dark:ring-gray-700" src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="">
+                        <img class="object-cover mx-2 rounded-full w-14 shrink-0 h-14 ring-4 ring-primary " src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="">
 
                         <div class="mx-2">
                             <h1 class="font-semibold text-gray-800 ">Robert</h1>
@@ -300,7 +300,7 @@ Homepage
                 </div>
 
                 <div class="p-8 border rounded-lg ">
-                    <blockquote class="leading-loose text-gray-600 border-l-4 rounded-l border-gray-300 pl-3">
+                    <blockquote class="leading-loose text-gray-600  rounded-l  pl-3">
                         "I was passionate about medicine, but financial challenges almost stopped me.
                         StudyInfo helped me apply for a full scholarship at Oxford, and my life completely transformed.
                         Today, I’m a practicing neurosurgeon, and I mentor students just like me.
@@ -308,7 +308,7 @@ Homepage
                     </blockquote>
 
                     <div class="flex items-center mt-8 -mx-2">
-                        <img class="object-cover mx-2 rounded-full w-14 shrink-0 h-14 ring-4 ring-gray-300 dark:ring-gray-700" src="https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" alt="">
+                        <img class="object-cover mx-2 rounded-full w-14 shrink-0 h-14 ring-4 ring-primary " src="https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" alt="">
 
                         <div class="mx-2">
                             <h1 class="font-semibold text-gray-800 ">Jeny Doe</h1>
@@ -318,7 +318,7 @@ Homepage
                 </div>
 
                 <div class="p-8 border rounded-lg ">
-                    <blockquote class="leading-loose text-gray-600 border-l-4 rounded-l border-gray-300 pl-3">
+                    <blockquote class="leading-loose text-gray-600  rounded-l  pl-3">
                         "I was hesitant to move to France because of the language barrier, but with StudyInfo’s support, I took an
                         intensive French course and fully immersed myself in the culture. Now, I lead global marketing campaigns, and I
                         owe my confidence and success to my study abroad experience!"
@@ -326,7 +326,7 @@ Homepage
 
 
                     <div class="flex items-center mt-8 -mx-2">
-                        <img class="object-cover mx-2 rounded-full w-14 shrink-0 h-14 ring-4 ring-gray-300 dark:ring-gray-700" src="https://images.unsplash.com/photo-1488508872907-592763824245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="">
+                        <img class="object-cover mx-2 rounded-full w-14 shrink-0 h-14 ring-4 ring-primary " src="https://images.unsplash.com/photo-1488508872907-592763824245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="">
 
                         <div class="mx-2">
                             <h1 class="font-semibold text-gray-800 ">Ema Watson </h1>

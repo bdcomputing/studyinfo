@@ -10,7 +10,7 @@ Contact
             <div class="bg-white p-8">
                 <p class="py-5 font-bold text-xl md:text-2xl text-primary">Let’s Make Your Study Abroad Dream a Reality!</p>
 
-                <h1 class="text-sm md:text-base text-accent-800 mb-6">
+                <h1 class=" md:text-base text-accent-800 mb-6">
                     Have questions about studying abroad? Our team is here to
                     help with everything from university selection to visa processing.
                     Reach out to us today!</h1>
@@ -19,49 +19,49 @@ Contact
                     @csrf
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                         <div class="mb-4">
-                            <label class="block font-medium  text-gray-600 text-sm pb-2" for="first_name">
+                            <label class="block font-medium  text-gray-600  pb-2" for="first_name">
                                 First Name
                             </label>
                             <input value="{{old('first_name')}}"
-                                class="bg-gray-50 focus:border-primary-600 focus:ring-primary-600 border border-gray-200 text-primary text-sm rounded-lg block w-full p-2.5  "
+                                class="bg-gray-50 focus:border-primary-600 focus:ring-primary-600 border border-gray-200 text-primary  rounded-lg block w-full p-2.5  "
                                 name="first_name" type="text" placeholder="First Name">
                             <x-input-error :messages="$errors->get('first_name')" class="mt-2" />
                         </div>
                         <div class="mb-4">
-                            <label class="block font-medium  text-gray-600 text-sm pb-2" for="last_name">
+                            <label class="block font-medium  text-gray-600  pb-2" for="last_name">
                                 Last Name
                             </label>
                             <input value="{{old('last_name')}}"
-                                class="bg-gray-50 focus:border-primary-600 focus:ring-primary-600 border border-gray-200 text-primary text-sm rounded-lg block w-full p-2.5  "
+                                class="bg-gray-50 focus:border-primary-600 focus:ring-primary-600 border border-gray-200 text-primary  rounded-lg block w-full p-2.5  "
                                 name="last_name" type="text" placeholder="Last Name">
                             <x-input-error :messages="$errors->get('last_name')" class="mt-2" />
                         </div>
                     </div>
                     <div class="mb-4">
-                        <label class="block font-medium  text-gray-600 text-sm pb-2" for="phone">
+                        <label class="block font-medium  text-gray-600  pb-2" for="phone">
                             Phone Number
                         </label>
                         <input value="{{old('phone')}}"
-                            class="bg-gray-50 focus:border-primary-600 focus:ring-primary-600 border border-gray-200 text-primary text-sm rounded-lg block w-full p-2.5  "
+                            class="bg-gray-50 focus:border-primary-600 focus:ring-primary-600 border border-gray-200 text-primary  rounded-lg block w-full p-2.5  "
                             name="phone" type="text" placeholder="Phone Number">
                         <x-input-error :messages="$errors->get('phone')" class="mt-2" />
                     </div>
 
                     <div class="mb-4">
-                        <label class="block font-medium  text-gray-600 text-sm pb-2" for="email">
+                        <label class="block font-medium  text-gray-600  pb-2" for="email">
                             Email Address
                         </label>
                         <input value="{{old('email')}}"
-                            class="bg-gray-50 focus:border-primary-600 focus:ring-primary-600 border border-gray-200 text-primary text-sm rounded-lg block w-full p-2.5  "
+                            class="bg-gray-50 focus:border-primary-600 focus:ring-primary-600 border border-gray-200 text-primary  rounded-lg block w-full p-2.5  "
                             name="email" type="email" placeholder="your.email@example.com">
                         <x-input-error :messages="$errors->get('email')" class="mt-2" />
                     </div>
                     <div class="mb-4">
-                        <label class="block font-medium  text-gray-600 text-sm pb-2" for="message">
+                        <label class="block font-medium  text-gray-600  pb-2" for="message">
                             Message
                         </label>
                         <textarea
-                            class="bg-gray-50 focus:border-primary-600 focus:ring-primary-600 border border-gray-200 text-primary text-sm rounded-lg block w-full p-2.5  "
+                            class="bg-gray-50 focus:border-primary-600 focus:ring-primary-600 border border-gray-200 text-primary  rounded-lg block w-full p-2.5  "
                             name="message" rows="7" placeholder="Your message">{{old('message')}}</textarea>
                         <x-input-error :messages="$errors->get('message')" class="mt-2" />
                     </div>
@@ -69,9 +69,9 @@ Contact
                     <div class="flex items-start py-6">
                         <div class="flex items-center h-5">
                             <input name="agree_terms" type="checkbox" value="1" {{ old('agree_terms') ? 'checked' : '' }}
-                                class="bg-gray-50 focus:border-primary-600 focus:ring-primary-600 border border-gray-200 text-primary text-sm rounded-lg block w-full p-2.5  " />
+                                class="bg-gray-50 focus:border-primary-600 focus:ring-primary-600 border border-gray-200 text-primary  rounded-lg block w-full p-2.5  " />
                         </div>
-                        <label for="agree_terms" class="ms-2 text-sm font-medium text-primary ">
+                        <label for="agree_terms" class="ms-2  font-medium text-primary ">
                             I agree with the
                             <a href="#" class="text-primary-500 hover:underline ">terms and
                                 conditions</a>.
@@ -82,7 +82,7 @@ Contact
 
                     <div class="flex items-center justify-between w-full">
                         <button
-                            class="bg-primary hover:bg-primary-900 text-white font-bold py-2 px-4 rounded w-full focus:outline-none focus:shadow-outline"
+                            class="bg-primary hover:bg-primary-900 text-white font-bold py-2 px-4 rounded h-full w-full focus:outline-none focus:shadow-outline"
                             type="submit">
                             Send Message
                         </button>
@@ -92,7 +92,7 @@ Contact
 
             <div>
                 <div class="rounded-lg pb-5">
-                    <img class="object-fit w-full h-96 rounded-3xl" src="/assets/images/contact.png" alt="">
+                    <img class="object-cover w-full h-96 rounded-3xl" src="/assets/images/contact.png" alt="">
                 </div>
                 <div class="bg-white rounded-3xl p-8">
                     <div class="">
@@ -100,19 +100,19 @@ Contact
                             <div class="flex items-center gap-3">
                                 <i class="bi bi-geo-alt text-2xl"></i> Address
                             </div>
-                            <p class="text-gray-600 text-sm">Daima Towers, Uganda Rd, ELDORET</p>
+                            <p class="text-gray-600 ">Daima Towers, Uganda Rd, ELDORET</p>
                         </div>
                         <div class="space-y-3 rounded-lg p-5">
                             <div class="flex items-center gap-3">
                                 <i class="bi bi-telephone text-2xl"></i> Phone
                             </div>
-                            <p class="text-gray-600 text-sm">+254 799 965 066</p>
+                            <p class="text-gray-600 ">+254 799 965 066</p>
                         </div>
                         <div class="space-y-3 rounded-lg p-5">
                             <div class="flex items-center gap-3">
                                 <i class="bi bi-envelope-at text-2xl"></i> Email
                             </div>
-                            <p class="text-gray-600 text-sm">info@haitrac.com</p>
+                            <p class="text-gray-600 ">info@haitrac.com</p>
                         </div>
 
                     </div>
@@ -143,7 +143,7 @@ Contact
             <div class="container mx-auto py-10">
                 <div class="pb-5 px-4">
                     <p class="text-2xl font-semibold">How to Find Us</p>
-                    <p class="text-sm">
+                    <p class="">
                         Use the map below to locate our offices
                     </p>
                 </div>
