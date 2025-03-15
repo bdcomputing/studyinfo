@@ -44,14 +44,14 @@
             <ul class="flex flex-col mt-4 md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse">
                 <li>
                     <a href="{{ route('web.home') }}"
-                        class="block py-2 px-3 text-lg font-bold text-primary border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-secondary-700 md:p-0"
+                        class="block py-2 px-3 text-lg  text-primary border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-secondary-700 md:p-0"
                         aria-current="page">Home</a>
                 </li>
 
                 <li class="">
                     <div x-data="{ open: false }" class="" @mouseleave="open = false">
                         <button @mouseover="open = true"
-                            class="flex text-lg items-center font-bold justify-between w-full py-2 px-3  text-primary border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-secondary md:p-0">
+                            class="flex text-lg items-center  justify-between w-full py-2 px-3  text-primary border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-secondary md:p-0">
                             Destinations
                             <i x-show="!open" class="bi bi-chevron-down ml-2 text-sm"></i>
                             <i x-show="open" class="bi bi-chevron-up ml-2 text-sm"></i>
@@ -127,21 +127,21 @@
 
                 <li>
                     <a href="{{route('web.blog.index')}}"
-                        class="block text-lg py-2 px-3 font-bold text-primary border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-secondary-700 md:p-0">Blog</a>
+                        class="block text-lg py-2 px-3  text-primary border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-secondary-700 md:p-0">Blog</a>
                 </li>
 
                 <li>
                     <a href="{{route('web.events.index')}}"
-                        class="block text-lg py-2 px-3 font-bold text-primary border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-secondary-700 md:p-0">Events</a>
+                        class="block text-lg py-2 px-3  text-primary border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-secondary-700 md:p-0">Events</a>
                 </li>
 
                 <li>
                     <a href="{{ route('web.contact') }}"
-                        class="block text-lg py-2 px-3 font-bold text-primary border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-secondary-700 md:p-0">Contact</a>
+                        class="block text-lg py-2 px-3  text-primary border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-secondary-700 md:p-0">Contact</a>
                 </li>
                 <li>
                     <a href="{{ route('web.about') }}"
-                        class="block text-lg py-2 px-3 font-bold text-primary border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-secondary-700 md:p-0">About</a>
+                        class="block text-lg py-2 px-3  text-primary border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-secondary-700 md:p-0">About</a>
                 </li>
             </ul>
 

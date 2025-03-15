@@ -6,18 +6,23 @@ Homepage
 
 <main class="min-h-screen  text-gray-800 ">
     <!-- Hero Section -->
-    <section class=" relative  bg-primary md:h-[74vh] md:min-h-[74vh] z-0 ">
-        <div class="grid grid-cols-1  md:grid-cols-2 gap-8">
-            <div class="text-primary-50 py-20 md:py-0 md:pl-20 pb-5 md:pb-0 px-5 md:px-0  flex flex-col justify-center">
-                <h1 class="text-3xl md:text-5xl  mb-6 font-extrabold leading-loose">
-                    Your Global Future Starts Here – Study Abroad with Confidence!</h1>
-                <p class="text-lg mb-8 opacity-90 font-semibold">Find your dream university, apply for scholarships, and get visa assistance - <span class="text-secondary">all in one place.</span></p>
+    <section class="relative bg-primary md:h-[74vh] md:min-h-[74vh] z-0">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="text-primary-50 py-20 md:py-0 md:pl-20 pb-5 md:pb-0 px-5 md:px-0 flex flex-col justify-center">
+                <h1 class="text-3xl md:text-5xl mb-6 font-extrabold leading-loose">
+                    Your Global Future Starts Here – Study Abroad with Confidence!
+                </h1>
+                <p class="text-lg mb-8 opacity-90 font-semibold">
+                    Find your dream university, apply for scholarships, and get visa assistance -
+                    <span class="text-secondary">all in one place.</span>
+                </p>
                 <div class="flex flex-wrap gap-5">
-                    <a href="#"
-                        class="bg-secondary hover:bg-secondary-500 text-white font-medium py-3 px-6 rounded-full transition duration-300">Talk to Expert</a>
-                    <a href="{{ route('web.about') }}"
-                        class="bg-transparent hover:bg-secondary hover:text-primary text-white font-medium py-3 px-6 rounded-full border-2 border-secondary transition duration-300">
-                        Programs</a>
+                    <a href="#" class="bg-secondary hover:bg-secondary-500 text-white font-medium py-3 px-6 rounded-full transition duration-300">
+                        Talk to Expert
+                    </a>
+                    <a href="{{ route('web.about') }}" class="bg-transparent hover:bg-secondary hover:text-primary text-white font-medium py-3 px-6 rounded-full border-2 border-secondary transition duration-300">
+                        Programs
+                    </a>
                 </div>
             </div>
             <div class="md:h-[74vh] xs:bg-gradient-to-t md:bg-gradient-to-r bg-gradient-to-t sm:bg-transparent md:bg-transparent from-white/90 md:from-primary via-white-40 to-transparent md:min-h-[74vh] overflow-hidden">
@@ -25,16 +30,12 @@ Homepage
                 <img src="{{ asset('/assets/images/hero.webp') }}" alt="STUDYINFO Students" class="w-full md:hidden object-contain">
             </div>
         </div>
-        <!-- <div class=" absolute h-full  top-0 w-full bg-primary flex justify-end -z-10">
-            <img src="{{ asset('/assets/images/hero3.png') }}" class="h-full" alt="">
-        </div> -->
-
     </section>
 
     <div class="bg-white py-10">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <h2 class="text-center text-lg/8 font-bold text-primary">
-                Meet Our Esteemed Partners
+                Our Partner Institutions
             </h2>
             <div
                 class="mx-auto mt-5 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">

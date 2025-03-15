@@ -44,9 +44,9 @@
                                         </button>
                                     </th>
 
+                                    <th scope="col" class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 ">University</th>
                                     <th scope="col" class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 ">Duration</th>
                                     <th scope="col" class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 ">Intake Period</th>
-                                    <th scope="col" class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 ">Field of Study</th>
                                     <th scope="col" class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 ">Mode of Study</th>
                                     <th scope="col" class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 ">Program Fee</th>
                                     <th scope="col" class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 ">Actions</th>
@@ -81,6 +81,10 @@
                                     </td>
                                     <td
                                         class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">
+                                        {{ $program->university->name}}
+                                    </td>
+                                    <td
+                                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">
                                         {{ $program->duration ." Months"}}
                                     </td>
 
@@ -92,9 +96,7 @@
                                         </span>
                                     </td>
 
-                                    <td class="px-6 py-4 whitespace-nowrap">
-                                        {{$program->field_of_study}}
-                                    </td>
+
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         {{$program->mode_of_study}}
                                     </td>

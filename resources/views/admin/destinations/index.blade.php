@@ -21,7 +21,7 @@
 
                                     <th scope="col" class="px-12 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 ">
                                         <button class="flex items-center gap-x-2">
-                                            <span>Destination</span>
+                                            <span>Country</span>
 
 
                                         </button>
@@ -29,13 +29,14 @@
 
                                     <th scope="col" class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 ">
                                         <button class="flex items-center gap-x-2">
-                                            <span>Country</span>
+                                            <span>Language</span>
 
                                         </button>
                                     </th>
 
                                     <th scope="col" class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 ">Currency</th>
 
+                                    <th scope="col" class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 ">Cost of Living</th>
                                     <th scope="col" class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 ">Status</th>
 
                                     <th scope="col" class="relative py-3.5 px-4">
@@ -66,13 +67,22 @@
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <span
                                             class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800 dark:bg-blue-200 ">
-                                            {{ $destination->country }}
+                                            {{ $destination->language}}
                                         </span>
                                     </td>
+
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span
+                                            class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800 dark:bg-blue-200 ">
+                                            {{ $destination->currency }}
+                                        </span>
+                                    </td>
+
+
                                     <td
                                         class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">
 
-                                        {{ $destination->study_cost }} USD
+                                        {{ $destination->cost_of_living }} {{$destination->currency}}
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         @if ($destination->is_popular)

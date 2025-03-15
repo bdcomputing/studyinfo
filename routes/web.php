@@ -4,6 +4,8 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\MessagesController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProgramsController;
+use App\Http\Controllers\UniversityController;
 use App\Http\Controllers\WebController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -40,6 +42,19 @@ Route::name("web.events.")->group(function () {
 Route::name("web.messages.")->group(function () {
     Route::post("message", [MessagesController::class, "store"])->name("store");
     Route::get("success", [MessagesController::class, "success"])->name("success");
+});
+
+
+// Programs
+
+Route::name("web.programs.")->group(function () {
+    Route::get("programs", [ProgramsController::class, "index"])->name("index");
+});
+
+
+// Universities
+Route::name("web.universities.")->group(function () {
+    Route::get("universities", [UniversityController::class, "index"])->name("index");
 });
 
 // Bottom (Footer Links)

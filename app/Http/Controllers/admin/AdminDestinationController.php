@@ -50,7 +50,7 @@ class AdminDestinationController extends Controller
         $data = $request->except(['image', "flag"]);
         if ($request->hasFile('image')) {
             $image = $request->file('image');
-            $imageName = 'images/destinations/' . time() . $image->getClientOriginalExtension();
+            $imageName = 'images/destinations/' . time() . "." . $image->getClientOriginalExtension();
 
             // Store file in storage
             Storage::disk('public')->put($imageName, file_get_contents($image));
@@ -58,7 +58,7 @@ class AdminDestinationController extends Controller
         }
         if ($request->hasFile('flag')) {
             $flag = $request->file('flag');
-            $flagName = 'images/destinations/flags/' . time() . $flag->getClientOriginalExtension();
+            $flagName = 'images/destinations/flags/' . time() . "." . $flag->getClientOriginalExtension();
 
             // Store file in storage
             Storage::disk('public')->put($flagName, file_get_contents($flag));
