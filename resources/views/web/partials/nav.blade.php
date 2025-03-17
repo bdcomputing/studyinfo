@@ -1,26 +1,4 @@
 <nav class="relative top-0 left-0 right-0 z-50 bg-white shadow">
-    @php
-    $destinations = [
-    ["region"=>"Africa","country"=>"Kenya"],
-    ["region"=>"Africa","country"=>"Malawi"],
-    ["region"=>"Africa","country"=>"Uganda"],
-    ["region"=>"Africa","country"=>"Egypt"],
-    ["region"=>"Africa","country"=>"Nigeria"],
-    ["region"=>"Africa","country"=>"Morocco"],
-    ["region"=>"Europe","country"=>"United Kingdom"],
-    ["region"=>"Europe","country"=>"Germany"],
-    ["region"=>"Europe","country"=>"Italy"],
-    ["region"=>"Europe","country"=>"Spain"],
-    ["region"=>"Asia","country"=>"India"],
-    ["region"=>"Asia","country"=>"Malaysia"],
-    ["region"=>"Asia","country"=>"Singapore"],
-    ["region"=>"Asia","country"=>"South Korea"],
-    ["region"=>"Asia","country"=>"Turkey"],
-    ["region"=>"Asia","country"=>"Philippines"],
-    ["region"=>"Oceania","country"=>"Australia"],
-    ["region"=>"Oceania","country"=>"New Zealand"],
-    ];
-    @endphp
     <div class="grid md:grid-cols-12  container gap-x-8 items-center mx-auto p-4">
         <div class="flex gap-3 items-center col-span-2 justify-between">
             <a href="{{ route('web.home') }}" class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -60,63 +38,21 @@
                             <div class="bg-white">
                                 <div class="container mx-auto p-5">
                                     <div class="grid max-w-screen-2xl px-0 py-5 mx-auto mt-5  text-sm text-gray-500  md:grid-cols-4 md:px-6">
-                                        <ul class="space-y-4">
-                                            <p class="text-lg font-bold">Africa</p>
+                                        @foreach($continents as $continent)
+                                        <ul class="space-y-1">
+                                            <p class="text-lg font-bold"><a href="{{ route('web.universities.index',['continent'=>$continent->name]) }} ">{{$continent->name}}</a></p>
                                             @foreach ($destinations as $destination)
-                                            @if($destination['region']==="Africa")
+                                            @if($destination->continent->name===$continent->name)
                                             <li>
-                                                <a href="#"
+                                                <a href="{{ route('web.universities.index',['country'=>$destination->name]) }}"
                                                     class="hover:underline text-sm font-medium hover:text-secondary ">
-                                                    {{$destination['country']}}
+                                                    {{$destination->name}}
                                                 </a>
                                             </li>
                                             @endif
-
                                             @endforeach
                                         </ul>
-                                        <ul class="space-y-4">
-                                            <p class="text-lg font-bold">Asia</p>
-                                            @foreach ($destinations as $destination)
-                                            @if($destination['region']==="Asia")
-                                            <li>
-                                                <a href="#"
-                                                    class="hover:underline text-sm font-medium hover:text-secondary ">
-                                                    {{$destination['country']}}
-                                                </a>
-                                            </li>
-                                            @endif
-
-                                            @endforeach
-                                        </ul>
-                                        <ul class="space-y-4">
-                                            <p class="text-lg font-bold">Europe</p>
-                                            @foreach ($destinations as $destination)
-                                            @if($destination['region']==="Europe")
-                                            <li>
-                                                <a href="#"
-                                                    class="hover:underline text-sm font-medium hover:text-secondary ">
-                                                    {{$destination['country']}}
-                                                </a>
-                                            </li>
-                                            @endif
-
-                                            @endforeach
-                                        </ul>
-                                        <ul class="space-y-4">
-                                            <p class="text-lg font-bold">Oceania</p>
-                                            @foreach ($destinations as $destination)
-                                            @if($destination['region']==="Oceania")
-                                            <li>
-                                                <a href="#"
-                                                    class="hover:underline text-sm font-medium hover:text-secondary ">
-                                                    {{$destination['country']}}
-                                                </a>
-                                            </li>
-                                            @endif
-
-                                            @endforeach
-                                        </ul>
-
+                                        @endforeach
 
                                     </div>
                                 </div>
