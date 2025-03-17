@@ -16,15 +16,17 @@
 </head>
 
 <body class="font-sans antialiased">
-    <div class="min-h-screen bg-gray-100 ">
+    <div class="  bg-gray-100 ">
         @include('layouts.navigation')
 
-
-
         <!-- Page Content -->
-        <main>
-            {{ $slot }}
-        </main>
+        <div class="flex  h-screen">
+
+            @include('layouts.sidebar')
+            <main class="h-[100dvh]">
+                {{ $slot }}
+            </main>
+        </div>
     </div>
     <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 
