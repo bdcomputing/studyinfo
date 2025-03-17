@@ -49,12 +49,14 @@ Route::name("web.messages.")->group(function () {
 
 Route::name("web.programs.")->group(function () {
     Route::get("programs", [ProgramsController::class, "index"])->name("index");
+    Route::get("program/{program}", [ProgramsController::class, "show"])->name("show");
 });
 
 
 // Universities
 Route::name("web.universities.")->group(function () {
     Route::get("universities", [UniversityController::class, "index"])->name("index");
+    Route::get("uiversity/{university}", [UniversityController::class, "show"])->name("show");
 });
 
 // Bottom (Footer Links)
@@ -65,11 +67,7 @@ Route::get('/cookie-policy', [WebController::class, 'cookie'])->name('web.bottom
 
 
 
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
+
 
 require __DIR__ . '/auth.php';
 require __DIR__ . '/admin.php';
