@@ -71,6 +71,17 @@
                                 @enderror
                             </div>
 
+                            <div class="col-span-2 pb-16">
+                                <label for="content"
+                                    class="block pb-3 required text-sm font-medium text-gray-700 ">University
+                                    Details<span class="text-red-500">*</span></label>
+                                <textarea name="content" id="content" rows="3" required
+                                    class="mt-1 editor block w-full rounded-md border-gray-300    shadow-sm focus:border-primary-500 focus:ring-primary-500">{{ old('content',$university->content) }}</textarea>
+                                @error('content')
+                                <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
+                                @enderror
+                            </div>
+
 
                             <div class="">
                                 <label for="website_url"
@@ -203,7 +214,8 @@
                         </div>
 
                         <div class="py-5">
-                            <button type="submit"
+                            <button type="sub            automatic_uploads: false,
+mit"
                                 class="w-full inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-primary hover:bg-primary-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
                                 Update University
                             </button>
@@ -213,30 +225,16 @@
             </div>
         </div>
     </div>
-
+    <!-- Tinymce -->
+    <script src="{{ asset('assets/tinymce/tinymce.min.js') }}"></script>
     <script>
-        const quill = new Quill('#editor', {
-            theme: 'snow', // Use the Snow theme
-            modules: {
-                toolbar: [
-                    [{
-                        'header': [1, 2, 3, false]
-                    }],
-                    ['bold', 'italic', 'underline', 'strike'],
-                    [{
-                        'list': 'ordered'
-                    }, {
-                        'list': 'bullet'
-                    }],
-                    ['clean']
-                ]
-            }
+        tinymce.init({
+            selector: '.editor',
+            height: 400,
+            toolbar: 'undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat ',
+            content_css: '{{ asset("tinymce/skins/content/default/content.min.css") }}',
+            branding: false,
+            promotion: false,
         });
-
-        const form = document.querySelector('#form');
-        form.onsubmit = function() {
-            const content = document.querySelector('#content');
-            content.value = quill.root.innerHTML; // Get the HTML content from Quill
-        };
     </script>
 </x-app-layout>

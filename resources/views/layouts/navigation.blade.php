@@ -9,28 +9,7 @@
 
                 </a>
 
-                <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('admin.dashboard')" :active="request()->routeIs('admin.dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('admin.blog')" :active="request()->routeIs('admin.blog')">
-                        {{ __('Blog') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('admin.events.index')" :active="request()->routeIs('admin.events.index')">
-                        {{ __('Events') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('admin.destinations.index')" :active="request()->routeIs('admin.destinations.index')">
-                        {{ __('Destinations') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('admin.universities.index')" :active="request()->routeIs('admin.universities.index')">
-                        {{ __('Universities') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('admin.programs.index')" :active="request()->routeIs('admin.programs.index')">
-                        {{ __('Programs') }}
-                    </x-nav-link>
 
-                </div>
             </div>
 
             <!-- Settings Dropdown -->
@@ -53,7 +32,9 @@
                     </x-slot>
 
                     <x-slot name="content">
-                        <x-dropdown-link :href="route('profile.edit')">
+                        <x-dropdown-link :href="route('admin.profile.edit')">
+                            <i class="bi bi-person mr-2"></i>
+
                             {{ __('Profile') }}
                         </x-dropdown-link>
 
@@ -64,6 +45,7 @@
                             <x-dropdown-link :href="route('logout')"
                                 onclick="event.preventDefault();
                                                 this.closest('form').submit();">
+                                <i class="bi bi-power mr-2"></i>
                                 {{ __('Log Out') }}
                             </x-dropdown-link>
                         </form>
@@ -117,7 +99,7 @@
             </div>
 
             <div class="mt-3 space-y-1">
-                <x-responsive-nav-link :href="route('profile.edit')">
+                <x-responsive-nav-link :href="route('admin.profile.edit')">
                     {{ __('Profile') }}
                 </x-responsive-nav-link>
 

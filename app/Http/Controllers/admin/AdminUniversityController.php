@@ -44,6 +44,7 @@ class AdminUniversityController extends Controller
             "ranking" => "sometimes|numeric|min:1",
             "type" => "required|string",
             "description" => "required|string",
+            "content" => "required|string",
             "website_url" => "required|string",
             "contact_email" => "required|email",
             "tuition_fee" => "required|integer|min:1",
@@ -98,6 +99,7 @@ class AdminUniversityController extends Controller
      */
     public function update(Request $request, University $university)
     {
+        // dd($request->all());
         //
         $request->validate([
             "name" => "required|string",
@@ -106,6 +108,7 @@ class AdminUniversityController extends Controller
             "ranking" => "sometimes|numeric|min:1",
             "type" => "required|string",
             "description" => "required|string",
+            "content" => "required|string",
             "website_url" => "required|string",
             "contact_email" => "required|email",
             "tuition_fee" => "required|integer|min:1",

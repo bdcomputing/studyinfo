@@ -1,8 +1,8 @@
 <x-app-layout>
     <section class="p-5">
-        <div class="container mx-auto">
+        <div>
             <div class="md:p-5 ">
-                <div class="md:p-5 bg -white">
+                <div class="md:py-5 ">
                     <div class="flex p-5  justify-between w-full  ">
                         <p class="text-lg md:text-xl font-bold">Destination List</p>
                         <a href="{{route('admin.destinations.create')}}" class="rounded-lg cursor-pointer bg-primary self-end text-white  px-3 py-1.5">New Destination</a>

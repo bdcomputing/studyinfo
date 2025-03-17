@@ -28,4 +28,15 @@ class Destination extends Model
         'is_popular' => 'boolean',
         "continent_id" => 'integer',
     ];
+
+    public function universities()
+    {
+        return $this->hasMany(University::class);
+    }
+
+
+    public function continent()
+    {
+        return $this->belongsTo(Continent::class);
+    }
 }

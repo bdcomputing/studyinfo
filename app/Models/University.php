@@ -14,6 +14,7 @@ class University extends Model
         "ranking",
         "type",
         "description",
+        "content",
         "website_url",
         "contact_email",
         "tuition_fee",

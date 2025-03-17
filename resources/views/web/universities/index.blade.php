@@ -30,7 +30,9 @@ Universities
                 <div class=" space-y-5 p-5 md:px-0">
                     <div class="flex gap-x-3 items-center">
                         <img class="object-cover size-8 ring-2 ring-primary rounded-full" src="{{ asset('storage/' . $university->logo_url) }}" alt="{{$university->destination->name}}">
-                        <p class="font-bold text-lg md:text-xl text-secondary">{{$university->name}}</p>
+                        <a href="{{route('web.universities.show', $university)}}">
+                            <p class="font-bold text-lg md:text-xl text-secondary">{{$university->name}}</p>
+                        </a>
                     </div>
 
                     <div class="flex gap-2 items-center ">
@@ -61,8 +63,8 @@ Universities
                 </div>
             </div>
             @empty
-            <div class="p-5 bg-gray-100 rounded-md">
-                <p class="p-5">No universities yet!</p>
+            <div class="p-5  rounded-md">
+                <p class="p-5">No universities found!</p>
 
             </div>
             @endforelse

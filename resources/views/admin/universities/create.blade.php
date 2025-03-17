@@ -78,6 +78,18 @@
                                 <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
                                 @enderror
                             </div>
+                            <div class="col-span-2">
+                                <label for="content"
+                                    class="block required text-sm font-medium text-gray-700 ">University
+                                    content<span class="text-red-500">*</span></label>
+                                <div id="editor"></div>
+                                <textarea name="content" id="content" rows="3" required
+                                    class="mt-1 block w-full rounded-md border-gray-300    shadow-sm focus:border-primary-500 focus:ring-primary-500">{{ old('content') }}</textarea>
+                                <p class="mt-1 text-sm text-gray-500 ">University Details</p>
+                                @error('content')
+                                <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
+                                @enderror
+                            </div>
 
 
                             <div class="">

@@ -35,4 +35,14 @@ class Program extends Model
     {
         return $this->belongsTo(University::class);
     }
+
+    public function scopeFilter($query, $filter)
+    {
+        return $query->when(isset($filter['search']), function ($query) use ($filter) {
+            $query->where("name", "like", '%' . $filter['search'] . '%')
+                ->orWhereHas("university", function ($q) use ($filter) { // Related table filter
+                    $q->where("name", "like", '%' . $filter['search'] . '%');
+                });
+        });
+    }
 }

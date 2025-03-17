@@ -1,4 +1,4 @@
-<aside class="flex flex-col w-52 px-5 py-8 overflow-y-auto   ">
+<aside class="flex flex-col w-52 px-5 py-8 overflow-y-hidden  bg-white  ">
 
     <!-- Navigation Links -->
 
@@ -8,7 +8,7 @@
 
             <div class="flex flex-col gap-5">
                 <x-nav-link :href="route('admin.dashboard')" :active="request()->routeIs('admin.dashboard')">
-                    <i class="bi bi-speedometer2 mr-2"></i>
+                    <i class="bi bi-grid mr-2"></i>
                     {{ __('Dashboard') }}
                 </x-nav-link>
 
@@ -42,8 +42,8 @@
 
 
 
-            <div class="space-y-3 ">
-                <label class="px-3 text-xs text-gray-500 uppercase ">Customization</label>
+            <div class="space-y-3 pt-5 ">
+                <label class="px-2 text-xs text-gray-500 uppercase ">Customization</label>
 
                 <div>
                     <x-nav-link>

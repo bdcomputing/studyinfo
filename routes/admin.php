@@ -9,11 +9,19 @@ use App\Http\Controllers\admin\AdminProgramController;
 use App\Http\Controllers\admin\AdminUniversityController;
 use App\Http\Controllers\admin\AdminUsersController;
 use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 
 Route::name("admin.")->middleware("auth")->prefix("admin")->group(function () {
     Route::get('dashboard', [AdminController::class, "dashboard"])->name("dashboard");
+
+    // Profile
+    Route::name("profile.")->group(function () {
+        Route::get('/profile', [ProfileController::class, 'edit'])->name('edit');
+        Route::patch('/profile', [ProfileController::class, 'update'])->name('update');
+        Route::delete('/profile', [ProfileController::class, 'destroy'])->name('destroy');
+    });
 
     // Admin Blog
     Route::get('blogs', [AdminBlogController::class, "index"])->name("blog");

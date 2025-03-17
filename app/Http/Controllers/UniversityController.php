@@ -43,9 +43,10 @@ class UniversityController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(University $university)
     {
         //
+        return view("web.universities.show", compact("university"));
     }
 
     /**

@@ -10,10 +10,10 @@ class ProgramsController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
         //
-        $programs = Program::query()->paginate(20);
+        $programs = Program::query()->filter($request->only(['search']))->paginate(20);
         return view("web.programs.index", compact("programs"));
     }
 
@@ -36,9 +36,10 @@ class ProgramsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Program $program)
     {
         //
+        return view("web.programs.show", compact("program"));
     }
 
     /**
