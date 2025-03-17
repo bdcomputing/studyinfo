@@ -32,13 +32,18 @@
                     </div>
                     <div class="absolute bottom-0 flex items-end gap-5 left-0 p-2 w-full bg-gradient-to-t h-20 from-white via-white/90 to-transparent">
                         <img class="object-cover size-8 bottom-2 right-2 rounded-full" src="{{ asset('storage/' . $program->university->destination->flag_url) }}" alt="{{ $program->name }}">
-                        <p class="text-primary font-bold">{{ $program->university->name }}</p>
+
+                        <p class="text-primary font-bold">
+                            {{ $program->university->name }}
+                        </p>
                     </div>
                 </div>
                 <div class="flex flex-col justify-between px-5 md:px-0  py-5">
                     <div class="space-y-3">
                         <div class="flex gap-x-3 items-center">
-                            <p class="font-bold text-secondary text-lg md:text-xl">{{ $program->name }}</p>
+                            <a href="{{route('web.programs.show',$program)}}">
+                                <p class="font-bold text-secondary text-lg md:text-xl">{{ $program->name }}</p>
+                            </a>
                         </div>
                         <div class="flex flex-col gap-2  text-gray-700">
                             <p>Field of Study: {{ $program->field_of_study }}</p>
@@ -69,7 +74,7 @@
             </div>
             @empty
             <div class="p-5 bg-gray-100 rounded-md">
-                <p class="p-5">No programs yet!</p>
+                <p class="p-5">No programs found!</p>
             </div>
             @endforelse
             <div>
