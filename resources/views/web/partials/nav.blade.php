@@ -1,4 +1,4 @@
-<nav class="relative top-0 left-0 right-0 z-50 bg-white shadow">
+<nav class="relative top-0 left-0 right-0 z-50 bg-primary-100">
     <div class="grid md:grid-cols-12  container gap-x-8 items-center mx-auto p-4">
         <div class="flex gap-3 items-center col-span-2 justify-between">
             <a href="{{ route('web.home') }}" class="flex items-center space-x-3 rtl:space-x-reverse">

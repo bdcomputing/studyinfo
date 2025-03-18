@@ -95,9 +95,9 @@
                                     class="block text-sm font-medium text-gray-700 ">Mode of Study<span class="text-red-500">*</span></label>
                                 <select name="mode_of_study" class="rounded-md w-full mt-1 border-gray-300 active:border-gray-300">
                                     <option class="">Select Mode of Study</option>
-                                    <option value="Full-time">Full-time</option>
-                                    <option value="Part-time">Part-time</option>
-                                    <option value="Online">Online</option>
+                                    <option value="on-campus">On Campus</option>
+                                    <option value="online">Online</option>
+                                    <option value="hybrid">Hybrid</option>
                                 </select>
                                 @error('mode_of_study')
                                 <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>

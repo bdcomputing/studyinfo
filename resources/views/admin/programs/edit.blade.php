@@ -96,10 +96,12 @@
                                     class="block text-sm font-medium text-gray-700 ">Mode of Study<span class="text-red-500">*</span></label>
                                 <select name="mode_of_study" class="rounded-md w-full mt-1 border-gray-300 active:border-gray-300">
                                     <option class="">Select Mode of Study</option>
-                                    <option {{old('mode_of_study',$program->mode_of_study)==='Full-time'?'selected':''}} value="Full-time">Full-time</option>
-                                    <option {{old('mode_of_study',$program->mode_of_study)==='Part-time'?'selected':''}} value="Part-time">Part-time</option>
-                                    <option {{old('mode_of_study',$program->mode_of_study)==='Online'?'selected':''}} value="Online">Online</option>
-                                    <option {{old('mode_of_study',$program->mode_of_study)==='Hybrid'?'selected':''}} value="Hybrid">Hybrid</option>
+                                    <option value="on-campus">On Campus</option>
+                                    <option value="online">Online</option>
+                                    <option value="hybrid">Hybrid</option>
+                                    <option {{old('mode_of_study',$program->mode_of_study)==='on-campus'?'selected':''}} value="on-campus">On Campus</option>
+                                    <option {{old('mode_of_study',$program->mode_of_study)==='online'?'selected':''}} value="online">Onine</option>
+                                    <option {{old('mode_of_study',$program->mode_of_study)==='hybrid'?'selected':''}} value="hybrid">Hybrid</option>
                                 </select>
                                 @error('mode_of_study')
                                 <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>

@@ -8,10 +8,61 @@ Universities
         <h1 class=" text-primary-900 font-bold text-xl md:text-2xl px-5">Explore Universities</h1>
     </div>
     <div class="p-5 container mx-auto flex justify-center">
-        <form method="get">
-            <div class="flex gap-x-3">
+        <form method="get" class="w-full flex flex-col items-center">
+            <div class="flex gap-x-3 items-center pb-3">
                 <input value="{{ request('search') }}" name="search" type="search" class="md:min-w-96 rounded-lg border-gray-300 placeholder:text-gray-400 placeholder:text-center" placeholder="Search university">
                 <button onclick="filterUniversity()" class="bg-gradient-to-r from-accent to-secondary  size-10 rounded-lg text-white"><i class="bi bi-search text-xl"></i></button>
+            </div>
+            <div>
+                <p class="py-3 font-bold text-lg">Filters</p>
+            </div>
+            <div class="py-3 grid grid-cols-2 md:grid-cols-5 items-center gap-3  w-full">
+                <div>
+                    <label class="text-gray-500 " for="">Study level</label>
+                    <select name="study_level" class="w-full rounded-md border-primary-200 active:border-primary-400 focus:border-primary-400">
+                        <option class="text-gray-600 appearance-none" value="all">All</option>
+                        <option class="text-gray-600 appearance-none" value="">One</option>
+                        <option class="text-gray-600 appearance-none" value="">One</option>
+                        <option class="text-gray-600 appearance-none" value="">One</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="text-gray-500 " for="">Study Destination</label>
+                    <select name="destination" class="w-full rounded-md border-primary-200 active:border-primary-400 focus:border-primary-400">
+                        <option class="text-gray-600 appearance-none" value="all">All</option>
+                        <option class="text-gray-600 appearance-none" value="">One</option>
+                        <option class="text-gray-600 appearance-none" value="">One</option>
+                        <option class="text-gray-600 appearance-none" value="">One</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="text-gray-500 " for="">Learning Mode</label>
+                    <select name="mode" class="w-full rounded-md border-primary-200 active:border-primary-400 focus:border-primary-400">
+                        <option class="text-gray-600 appearance-none" value="all">All</option>
+                        <option class="text-gray-600 appearance-none" value="online">Online</option>
+                        <option class="text-gray-600 appearance-none" value="on-campus">On Campus</option>
+                        <option class="text-gray-600 appearance-none" value="hybrid">Hybrid</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="text-gray-500 " for="">Graduate level</label>
+                    <select name="study_level" class="w-full rounded-md border-primary-200 active:border-primary-400 focus:border-primary-400">
+                        <option class="text-gray-600 appearance-none" value="all">All</option>
+                        <option class="text-gray-600 appearance-none" value="">One</option>
+                        <option class="text-gray-600 appearance-none" value="">One</option>
+                        <option class="text-gray-600 appearance-none" value="">One</option>
+                    </select>
+                </div>
+
+
+
+
+                <div class="flex md:self-end gap-5 col-span-2 md:col-span-1 justify-center  ">
+                    <p></p>
+                    <button type="submit" class="p-2 px-4 text-white rounded-lg bg-primary" value="">Apply</button>
+                    <button type="reset" class="p-2 px-2 text-white rounded-lg bg-accent" value="">Reset Filters</button>
+                </div>
+
             </div>
         </form>
     </div>
@@ -58,6 +109,11 @@ Universities
                         <i class="bi bi-mortarboard text-xl text-secondary"></i>
                         <p class="text-gray-600">Programs Available:</p>
                         <p class="text-sm">{{$university->programs_count}}</p>
+                    </div>
+                    <div class="flex gap-2 items-center ">
+                        <i class="bi bi-coin text-xl text-secondary"></i>
+                        <p class="text-gray-600">Tuition fee</p>
+                        <p class="text-sm">{{$university->tuition_fee}}</p>
                     </div>
 
                 </div>

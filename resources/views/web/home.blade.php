@@ -6,30 +6,31 @@ Homepage
 
 <main class="min-h-screen  text-gray-800 ">
     <!-- Hero Section -->
-    <section class="relative bg-primary md:h-[74vh] md:min-h-[74vh] z-0">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <div class="text-primary-50 py-20 md:py-0 md:pl-20 pb-5 md:pb-0 px-5 md:px-0 flex flex-col justify-center">
-                <h1 class="text-3xl md:text-5xl mb-6 font-extrabold leading-loose tracking-wide text-secondary-100 md:w-max bg-clip-text">
+    <section class="relative bg-primary-100  md:h-[75dvh] z-0">
+        <div class="container mx-auto h-full grid grid-cols-1 md:grid-cols-2 md:gap-10">
+            <div class="text-primary z-40 py-20 md:py-0 md:pl-20 pb-5 md:pb-0 px-5 md:px-0 flex flex-col justify-center">
+                <h1 class="text-3xl md:text-5xl  mb-6 font-extrabold leading-loose tracking-wide text-transparent md:w-max bg-gradient-to-r from-secondary to-accent-700 bg-clip-text">
                     Your Global Future Starts Here <br class="md:block hidden">Study Abroad with Confidence!
                 </h1>
-                <p class="text-lg mb-8 opacity-90">
+                <p class="text-lg mb-8 opacity-90 font-semibold">
                     Find your dream university, apply for scholarships, and get visa assistance -
                     <span class="text-secondary">all in one place.</span>
                 </p>
                 <div class="flex flex-wrap gap-5">
-                    <a href="#" class="bg-gradient-to-r from-secondary  to-secondary/30  hover:bg-secondary-500 text-white font-medium py-3 px-6 rounded-full transition duration-300">
+                    <a href="#" class="bg-gradient-to-br from-secondary  via-secondary/50 to-secondary   hover:bg-secondary-500 text-white font-medium py-3 px-6 rounded-full transition duration-300">
                         Talk to Expert
                     </a>
-                    <a href="{{ route('web.about') }}" class="bg-transparent  hover:bg-secondary hover:text-primary text-white font-medium py-3 px-6 rounded-full border-2 border-secondary transition duration-300">
+                    <a href="{{ route('web.about') }}" class="bg-transparent  hover:bg-secondary  text-secondary font-medium py-3 px-6 rounded-full border-2 border-secondary/80 transition-all duration-500">
                         Programs
                     </a>
                 </div>
             </div>
-            <div class="md:h-[74vh] xs:bg-gradient-to-t md:bg-gradient-to-r bg-gradient-to-t sm:bg-transparent md:bg-transparent from-white/90 md:from-primary via-white-40 to-transparent md:min-h-[74vh] overflow-hidden">
-                <img src="{{ asset('/assets/images/hero3.webp') }}" alt="STUDYINFO Students" class="w-full hidden md:block h-full object-cover object-left">
-                <img src="{{ asset('/assets/images/hero.webp') }}" alt="STUDYINFO Students" class="w-full md:hidden object-contain">
+            <div class="h-full  overflow-y-hidden relative z-50">
+                <!-- <img src="{{ asset('/assets/images/hero3.webp') }}" alt="STUDYINFO Students" class="w-full hidden md:block h-full object-cover object-left"> -->
+                <img src="{{ asset('/assets/images/hero.webp') }}" alt="STUDYINFO Students" class=" md:h-full w-full object-cover object-top  ">
             </div>
         </div>
+        <!-- <div class="absolute top-0 left-0 z-10  bg-white/20 blur-sm h-full w-full"></div> -->
     </section>
 
     <div class="bg-white py-10">
@@ -57,7 +58,7 @@ Homepage
             </div>
         </div>
     </div>
-    <section class="py-20 p-5 bg-gray-50">
+    <section class="py-20 p-5">
         <div class="grid container md:p-5 mx-auto grid-cols-1 md:grid-cols-2">
             <div class="">
                 <div class="space-y-5">
@@ -116,7 +117,7 @@ Homepage
             </div>
         </div>
     </section>
-    <section class=" bg-white p-5">
+    <section class="bg-primary-50 p-5">
         <div class="container mx-auto py-20">
             <div class="text-center text-mb-12">
                 <h2 class="text-2xl md:text-3xl font-extrabold text-primary mb-6">

@@ -1,4 +1,4 @@
-<div class="bg-primary-50  pt-12 pb-6">
+<div class="bg-primary-100  pt-12 pb-6">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Logo and About -->
@@ -104,13 +104,13 @@
                     </a>
                 </p>
                 <div class="mt-4 md:mt-0 flex space-x-6">
-                    <a href="{{ route('web.bottom.privacy') }}" class="text-sm text-white hover:underline">
+                    <a href="{{ route('web.bottom.privacy') }}" class="text-sm text-primary hover:underline">
                         Privacy Policy
                     </a>
-                    <a href="{{ route('web.bottom.terms') }}" class="text-sm text-white hover:underline">
+                    <a href="{{ route('web.bottom.terms') }}" class="text-sm text-primary hover:underline">
                         Terms of Service
                     </a>
-                    <a href="{{ route('web.bottom.cookie') }}" class="text-sm text-white hover:underline">
+                    <a href="{{ route('web.bottom.cookie') }}" class="text-sm text-primary hover:underline">
                         Cookie Policy
                     </a>
                 </div>

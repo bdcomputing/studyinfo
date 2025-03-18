@@ -19,7 +19,7 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->string('duration')->nullable();
             $table->enum('intake_period', ['Fall', 'Spring', 'Summer', 'Year-round']);
-            $table->enum('mode_of_study', ['Full-time', 'Part-time', 'Online']);
+            $table->enum('mode_of_study', ['on-campus', 'hybrid', 'online']);
             $table->string('field_of_study');
             $table->string('language_of_instruction')->nullable();
             $table->decimal('program_fee', 10, 2)->nullable();

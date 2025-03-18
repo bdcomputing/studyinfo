@@ -39,4 +39,9 @@ class Destination extends Model
     {
         return $this->belongsTo(Continent::class);
     }
+
+    public function cities()
+    {
+        return $this->hasMany(City::class);
+    }
 }

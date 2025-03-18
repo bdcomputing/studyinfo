@@ -37,6 +37,11 @@
 
                     {{ __('Programs') }}
                 </x-nav-link>
+                <x-nav-link :href="route('admin.scholarships.index')" :active="request()->routeIs('admin.scholarships.index')">
+                    <i class="bi bi-coin mr-2"></i>
+
+                    {{ __('Scholarships') }}
+                </x-nav-link>
             </div>
 
 
