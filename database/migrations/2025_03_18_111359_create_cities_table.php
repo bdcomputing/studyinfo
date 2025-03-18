@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('timezone')->nullable(); // City timezone
             $table->integer('population')->nullable(); // Optional: City population
             $table->timestamps();
+            $table->unique(["destination_id", "name"]);
         });
     }
 

@@ -9,6 +9,7 @@ use App\Http\Controllers\admin\AdminProgramController;
 use App\Http\Controllers\admin\AdminScholarshipController;
 use App\Http\Controllers\admin\AdminUniversityController;
 use App\Http\Controllers\admin\AdminUsersController;
+use App\Http\Controllers\AdminCityController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -101,5 +102,17 @@ Route::name("admin.")->middleware("auth")->prefix("admin")->group(function () {
         Route::get("scholarship/{scholarship}/edit", [AdminScholarshipController::class, "edit"])->name("edit");
         Route::put("scholarship/{scholarship}", [AdminScholarshipController::class, "update"])->name("update");
         Route::delete("scholarship/{scholarship}", [AdminScholarshipController::class, "destroy"])->name("destroy");
+    });
+
+    // Cities
+
+    Route::name("cities.")->group(function () {
+        Route::get("cities", [AdminCityController::class, "index"])->name("index");
+        Route::get("city", [AdminCityController::class, "create"])->name("create");
+        Route::post("city", [AdminCityController::class, "store"])->name("store");
+        Route::get("city/{city}", [AdminCityController::class, "show"])->name("show");
+        Route::get("city/{city}/edit", [AdminCityController::class, "edit"])->name("edit");
+        Route::put("city/{city}", [AdminCityController::class, "update"])->name("update");
+        Route::delete("city/{city}", [AdminCityController::class, "destroy"])->name("destroy");
     });
 });
