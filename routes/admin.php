@@ -6,6 +6,7 @@ use App\Http\Controllers\admin\AdminDestinationController;
 use App\Http\Controllers\admin\AdminEventController;
 use App\Http\Controllers\admin\AdminMessagesController;
 use App\Http\Controllers\admin\AdminProgramController;
+use App\Http\Controllers\admin\AdminScholarshipController;
 use App\Http\Controllers\admin\AdminUniversityController;
 use App\Http\Controllers\admin\AdminUsersController;
 use App\Http\Controllers\Auth\RegisteredUserController;
@@ -89,5 +90,16 @@ Route::name("admin.")->middleware("auth")->prefix("admin")->group(function () {
         Route::get("program/{program}/edit", [AdminProgramController::class, "edit"])->name('edit');
         Route::put("program/{program}", [AdminProgramController::class, "update"])->name('update');
         Route::delete("program/{program}", [AdminProgramController::class, "destroy"])->name('destroy');
+    });
+
+    // Scholarships
+    Route::name("scholarships.")->group(function () {
+        Route::get("scholarships", [AdminScholarshipController::class, "index"])->name("index");
+        Route::get("scholarship", [AdminScholarshipController::class, "create"])->name("create");
+        Route::post("scholarship", [AdminScholarshipController::class, "store"])->name("store");
+        Route::get("scholarship/{scholarship}", [AdminScholarshipController::class, "show"])->name("show");
+        Route::get("scholarship/{scholarship}/edit", [AdminScholarshipController::class, "edit"])->name("edit");
+        Route::put("scholarship/{scholarship}", [AdminScholarshipController::class, "update"])->name("update");
+        Route::delete("scholarship/{scholarship}", [AdminScholarshipController::class, "destroy"])->name("destroy");
     });
 });
