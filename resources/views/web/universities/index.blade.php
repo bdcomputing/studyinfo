@@ -14,31 +14,30 @@ Universities
                 <button onclick="filterUniversity()" class="bg-gradient-to-r from-accent to-secondary  size-10 rounded-lg text-white"><i class="bi bi-search text-xl"></i></button>
             </div>
             <div>
-                <p class="py-3 font-bold text-lg">Filters</p>
+                <p class="py-3 font-bold text-gray-600 text-lg">Filters</p>
             </div>
             <div class="py-3 grid grid-cols-2 md:grid-cols-5 items-center gap-3  w-full">
                 <div>
-                    <label class="text-gray-500 " for="">Study level</label>
-                    <select name="study_level" class="w-full rounded-md border-primary-200 active:border-primary-400 focus:border-primary-400">
-                        <option class="text-gray-600 appearance-none" value="all">All</option>
-                        <option class="text-gray-600 appearance-none" value="">One</option>
-                        <option class="text-gray-600 appearance-none" value="">One</option>
-                        <option class="text-gray-600 appearance-none" value="">One</option>
+                    <label class="text-gray-500 " for="">Type</label>
+                    <select name="type" class="w-full rounded-md border-primary-200 active:border-primary-400 focus:border-primary-400">
+                        <option class="text-gray-600 appearance-none" value="">All</option>
+                        <option class="text-gray-600 appearance-none" {{request('type')==='Public' ? 'selected' :''}} value="Public">Public</option>
+                        <option class="text-gray-600 appearance-none" {{request('type')==='Private' ? 'selected' :''}} value="Private">Private</option>
                     </select>
                 </div>
                 <div>
                     <label class="text-gray-500 " for="">Study Destination</label>
                     <select name="destination" class="w-full rounded-md border-primary-200 active:border-primary-400 focus:border-primary-400">
-                        <option class="text-gray-600 appearance-none" value="all">All</option>
-                        <option class="text-gray-600 appearance-none" value="">One</option>
-                        <option class="text-gray-600 appearance-none" value="">One</option>
-                        <option class="text-gray-600 appearance-none" value="">One</option>
+                        <option class="text-gray-600 appearance-none" value="">All</option>
+                        @foreach($destinations as $destination)
+                        <option {{request('destination')===$destination->name ? 'selected' :''}} class="text-gray-600 appearance-none" value="{{$destination->name}}">{{$destination->name}}</option>
+                        @endforeach
                     </select>
                 </div>
                 <div>
-                    <label class="text-gray-500 " for="">Learning Mode</label>
-                    <select name="mode" class="w-full rounded-md border-primary-200 active:border-primary-400 focus:border-primary-400">
-                        <option class="text-gray-600 appearance-none" value="all">All</option>
+                    <label class="text-gray-500 " for="">City</label>
+                    <select name="city" class="w-full rounded-md border-primary-200 active:border-primary-400 focus:border-primary-400">
+                        <option class="text-gray-600 appearance-none" value="">All</option>
                         <option class="text-gray-600 appearance-none" value="online">Online</option>
                         <option class="text-gray-600 appearance-none" value="on-campus">On Campus</option>
                         <option class="text-gray-600 appearance-none" value="hybrid">Hybrid</option>
@@ -47,7 +46,7 @@ Universities
                 <div>
                     <label class="text-gray-500 " for="">Graduate level</label>
                     <select name="study_level" class="w-full rounded-md border-primary-200 active:border-primary-400 focus:border-primary-400">
-                        <option class="text-gray-600 appearance-none" value="all">All</option>
+                        <option class="text-gray-600 appearance-none" value="">All</option>
                         <option class="text-gray-600 appearance-none" value="">One</option>
                         <option class="text-gray-600 appearance-none" value="">One</option>
                         <option class="text-gray-600 appearance-none" value="">One</option>
@@ -113,7 +112,7 @@ Universities
                     <div class="flex gap-2 items-center ">
                         <i class="bi bi-coin text-xl text-secondary"></i>
                         <p class="text-gray-600">Tuition fee</p>
-                        <p class="text-sm">{{$university->tuition_fee}}</p>
+                        <p class="text-sm">{{$university->tuition_fee}} {{$university->destination->currency}}</p>
                     </div>
 
                 </div>

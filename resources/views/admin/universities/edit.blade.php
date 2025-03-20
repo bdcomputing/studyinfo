@@ -25,7 +25,7 @@
                                 <label for="destination"
                                     class="block text-sm font-medium text-gray-700 ">Destination<span class="text-red-500">*</span></label>
                                 <select name="destination_id" class="rounded-md w-full border-gray-600">
-                                    <option class="p-3">Select Destination</option>
+                                    <option value="" class="p-3">Select Destination</option>
                                     @forelse($destinations as $destination)
                                     <option {{old('destination_id',$university->destination_id) === $destination->id ? 'selected' : '' }} value="{{$destination->id}}">{{$destination->name}}</option>
                                     @empty
@@ -109,7 +109,7 @@
                                 <label for="type"
                                     class="block text-sm font-medium text-gray-700 ">Type</label>
                                 <select name="type" class="w-full border-gray-400 rounded-md" id="">
-                                    <option class="">Select Type</option>
+                                    <option class="" value="">Select Type</option>
                                     <option {{old('type',$university->type) ==='Public'? 'selected' :'' }} value="Public">Public</option>
                                     <option {{old('type',$university->type) ==='Private'? 'selected' :'' }} value="Private">Private</option>
                                 </select>
@@ -229,7 +229,7 @@ mit"
     <script src="{{ asset('assets/tinymce/tinymce.min.js') }}"></script>
     <script>
         tinymce.init({
-            selector: '.editor',
+            selector: 'textarea.editor',
             height: 400,
             toolbar: 'undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat ',
             content_css: '{{ asset("tinymce/skins/content/default/content.min.css") }}',

@@ -25,9 +25,9 @@
                                 <label for="university_id"
                                     class="block text-sm font-medium text-gray-700 ">University<span class="text-red-500">*</span></label>
                                 <select name="university_id" class="rounded-md w-full mt-1 border-gray-300 active:border-gray-300 focus:border-gray-300">
-                                    <option class="p-3">Select University</option>
+                                    <option class="p-3" value="">Select University</option>
                                     @forelse($universities as $university)
-                                    <option {{old('university_id',$program->university_id) === $university->id ? 'selected' : '' }} value="{{$university->id}}">{{$university->name}}</option>
+                                    <option {{old('university_id',$university->id) === $university->id ? 'selected' : '' }} value="{{$university->id}}">{{$university->name}}</option>
                                     @empty
                                     <span>No universities to select</span>
                                     @endforelse
@@ -43,12 +43,12 @@
                                 <label for="level"
                                     class="block text-sm font-medium text-gray-700 ">Level<span class="text-red-500">*</span></label>
                                 <select name="level" class="rounded-md w-full mt-1 border-gray-300 active:border-gray-300 focus:border-gray-300">
-                                    <option class="p-3">Select Level</option>
-                                    <option {{old('level',$program->level)==='Undergraduate'?'selected':''}} value="Undergraduate">Undergraduate</option>
-                                    <option {{old('level',$program->level)==='Graduate'?'selected':''}} value="Graduate">Graduate</option>
-                                    <option {{old('level',$program->level)==='PhD'?'selected':''}} value="PhD">PhD</option>
-                                    <option {{old('level',$program->level)==='Short Course'?'selected':''}} value="Short Course">Short Course</option>
-                                    <option {{old('level',$program->level)==='Language Course'?'selected':''}} value="Language Course">Language Course</option>
+                                    <option class="p-3" value="">Select Level</option>
+                                    <option {{$program->level ==='Undergraduate' ?'selected' :''}} value="Undergraduate">Undergraduate</option>
+                                    <option {{$program->level ==='Graduate' ?'selected' :''}} value="Graduate">Graduate</option>
+                                    <option {{$program->level ==='PhD' ?'selected' :''}} value="PhD">PhD</option>
+                                    <option {{$program->level ==='Short Course' ?'selected' :''}} value="Short Course">Short Course</option>
+                                    <option {{$program->level ==='Language Course' ?'selected' :''}} value="Language Course">Language Course</option>
                                 </select>
                                 @error('level')
                                 <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
@@ -76,15 +76,27 @@
                                 @enderror
                             </div>
 
+                            <div class="col-span-2">
+                                <label for="detail"
+                                    class="block required text-sm font-medium text-gray-700 ">Program
+                                    Details<span class="text-red-500">*</span></label>
+                                <textarea name="detail" id="detail" rows="3" required
+                                    class="mt-1 block w-full rounded-md border-gray-300    shadow-sm focus:border-primary focus:ring-primary">{{ old('detail',$program->detail) }}</textarea>
+                                <p class="mt-1 text-sm text-gray-500 ">Program details</p>
+                                @error('detail')
+                                <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
+                                @enderror
+                            </div>
+
                             <div class="">
                                 <label for="intake_period"
                                     class="block text-sm font-medium text-gray-700 ">Intake Period<span class="text-red-500">*</span></label>
                                 <select name="intake_period" class="rounded-md w-full mt-1 border-gray-300 active:border-gray-300">
-                                    <option class="">Select Intake Period</option>
-                                    <option {{old('intake_period',$program->intake_period) ==='Fall' ? 'selected':''}} value="Fall">Fall</option>
-                                    <option {{old('intake_period',$program->intake_period) ==='Spring' ? 'selected':''}} value="Spring">Spring</option>
-                                    <option {{old('intake_period',$program->intake_period) ==='Summer' ? 'selected':''}} value="Summer">Summer</option>
-                                    <option {{old('intake_period',$program->intake_period) ==='Year-round' ? 'selected':''}} value="Year-round">Year-round</option>
+                                    <option class="" value="">Select Intake Period</option>
+                                    <option {{$program->intake_period==='Fall' ? 'selected':''}} value="Fall">Fall</option>
+                                    <option {{$program->intake_period==='Spring' ? 'selected':''}} value="Spring">Spring</option>
+                                    <option {{$program->intake_period==='Summer' ? 'selected':''}} value="Summer">Summer</option>
+                                    <option {{$program->intake_period==='Year-round' ? 'selected':''}} value="Year-round">Year-round</option>
                                 </select>
                                 @error('intake_period')
                                 <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
@@ -95,13 +107,10 @@
                                 <label for="mode_of_study"
                                     class="block text-sm font-medium text-gray-700 ">Mode of Study<span class="text-red-500">*</span></label>
                                 <select name="mode_of_study" class="rounded-md w-full mt-1 border-gray-300 active:border-gray-300">
-                                    <option class="">Select Mode of Study</option>
-                                    <option value="on-campus">On Campus</option>
-                                    <option value="online">Online</option>
-                                    <option value="hybrid">Hybrid</option>
-                                    <option {{old('mode_of_study',$program->mode_of_study)==='on-campus'?'selected':''}} value="on-campus">On Campus</option>
-                                    <option {{old('mode_of_study',$program->mode_of_study)==='online'?'selected':''}} value="online">Onine</option>
-                                    <option {{old('mode_of_study',$program->mode_of_study)==='hybrid'?'selected':''}} value="hybrid">Hybrid</option>
+                                    <option value="" class="">Select Mode of Study</option>
+                                    <option {{$program->mode_of_study==='on-campus' ? 'selected':''}} value="on-campus">On Campus</option>
+                                    <option {{$program->mode_of_study==='online' ? 'selected':''}} value="online">Online</option>
+                                    <option {{$program->mode_of_study==='hybrid' ? 'selected':''}} value="hybrid">Hybrid</option>
                                 </select>
                                 @error('mode_of_study')
                                 <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
@@ -144,7 +153,7 @@
                             <div class="">
                                 <label for="application_deadline"
                                     class="block text-sm font-medium text-gray-700 ">Application Deadline</label>
-                                <input type="date" name="application_deadline" id="application_deadline" required value="{{old('application_deadline',$program->application_deadline)}}"
+                                <input type="date" name="application_deadline" id="application_deadline" required value="{{old('application_deadline',$program->application_deadline->format('Y-m-d'))}}"
                                     class="mt-1 block w-full rounded-md border-gray-300    shadow-sm focus:border-primary focus:ring-primary" />
 
                                 @error('application_deadline')
@@ -152,27 +161,33 @@
                                 @enderror
                             </div>
 
-                            <div class="col-span-2">
-                                <label for="requirements"
-                                    class="block required text-sm font-medium text-gray-700 ">Program
-                                    Requirements<span class="text-red-500">*</span></label>
-                                <textarea name="requirements" id="requirements" rows="3" required
-                                    class="mt-1 block w-full rounded-md border-gray-300    shadow-sm focus:border-primary focus:ring-primary">{{ old('requirements',$program->requirements) }}</textarea>
-                                <p class="mt-1 text-sm text-gray-500 ">Program requirements details</p>
-                                @error('requirements')
-                                <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
-                                @enderror
+                            <div class="col-span-1">
+                                <div class="flex items-start">
+                                    <div class="flex items-center h-5">
+                                        <input type="checkbox" name="is_popular" id="is_popular" value="1"
+                                            {{ old('is_popular',$program->is_popular) ? 'checked' : '' }}
+                                            class="rounded border-gray-300 text-primary shadow-sm focus:border-primary focus:ring-primary">
+                                    </div>
+                                    <div class="ml-3 text-sm">
+                                        <label for="is_popular"
+                                            class="font-medium text-gray-700 ">Is Program Popolar</label>
+                                    </div>
+                                </div>
+                                <p class="text-xs p-2 text-gray-400">Popular universities will appear in homepage</p>
                             </div>
-                            <div class="col-span-2">
-                                <label for="career_prospects"
-                                    class="block required text-sm font-medium text-gray-700 ">Program
-                                    Career Prospects<span class="text-red-500">*</span></label>
-                                <textarea name="career_prospects" id="career_prospects" rows="3" required
-                                    class="mt-1 block w-full rounded-md border-gray-300    shadow-sm focus:border-primary focus:ring-primary">{{ old('career_prospects',$program->career_prospects ) }}</textarea>
-                                <p class="mt-1 text-sm text-gray-500 ">A detail of program career prospects</p>
-                                @error('career_prospects')
-                                <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
-                                @enderror
+                            <div class="col-span-1">
+                                <div class="flex items-start">
+                                    <div class="flex items-center h-5">
+                                        <input type="checkbox" name="has_scholarship" id="has_scholarship" value="1"
+                                            {{ old('has_scholarship',$program->has_scholarship) ? 'checked' : '' }}
+                                            class="rounded border-gray-300 text-primary shadow-sm focus:border-primary focus:ring-primary">
+                                    </div>
+                                    <div class="ml-3 text-sm">
+                                        <label for="has_scholarship"
+                                            class="font-medium text-gray-700 ">Program has Scholarship</label>
+                                    </div>
+                                </div>
+                                <p class="text-xs p-2 text-gray-400">Popular universities will appear in homepage</p>
                             </div>
 
 

@@ -10,22 +10,23 @@ class University extends Model
     protected $fillable = [
         "name",
         "destination_id",
-        "city",
+        "city_id",
         "ranking",
         "type",
         "description",
-        "content",
+        "detail",
         "website_url",
         "contact_email",
         "tuition_fee",
-        "admission_requirements",
-        "student_life",
+        "is_popular",
         "image_url",
         "logo_url"
     ];
     protected $casts = [
         "destination_id" => 'integer',
-        "tuition_fee" => "integer"
+        "city_id" => 'integer',
+        "tuition_fee" => "integer",
+        "is_popular" => "boolean"
     ];
     public function destination()
     {
@@ -37,14 +38,21 @@ class University extends Model
         return $this->hasMany(Program::class);
     }
 
+    public function city()
+    {
+        return $this->belongsTo(City::class);
+    }
+
     public function scopeFilter($query, $filter)
     {
-        return $query->when(isset($filter['search']), function ($query) use ($filter) {
-            $query->where("name", "like", '%' . $filter['search'] . '%')
-                ->orWhere("city", "like", '%' . $filter['search'] . '%')
-                ->orWhereHas("destination", function ($q) use ($filter) { // Related table filter
-                    $q->where("name", "like", '%' . $filter['search'] . '%');
+        return $query
+            ->when($filter["search"] ?? null, fn($q, $search) => $q->where("name", "LIKE", "%$search%"))
+            ->when($filter["type"] ?? null, fn($q, $type) => $q->where("type", $type))
+            ->when($filter["destination"] ?? null, function ($q, $destination) {
+                $q->whereHas("destination", function ($subQuery) use ($destination) {
+                    $subQuery->where('name', $destination);
                 });
-        });
+            });
+        // ->when($filter["city"] ?? null, fn($q, $city) => $q->where("city", $city));
     }
 }

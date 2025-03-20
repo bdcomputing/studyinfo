@@ -24,15 +24,13 @@
                                 <label for="university_id"
                                     class="block text-sm font-medium text-gray-700 ">University<span class="text-red-500">*</span></label>
                                 <select name="university_id" class="rounded-md w-full mt-1 border-gray-300 active:border-gray-300 focus:border-gray-300">
-                                    <option class="p-3">Select University</option>
+                                    <option class="p-3" value="">Select University</option>
                                     @forelse($universities as $university)
                                     <option {{old('university_id') === $university->id ? 'selected' : '' }} value="{{$university->id}}">{{$university->name}}</option>
                                     @empty
                                     <span>No universities to select</span>
                                     @endforelse
                                 </select>
-                                <!-- <input type="text" name="name" id="title" value="{{ old('name') }}" required
-                                    class="mt-1 block w-full rounded-md border-gray-300    shadow-sm focus:border-primary focus:ring-primary-500"> -->
                                 @error('university_id')
                                 <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
                                 @enderror
@@ -42,7 +40,7 @@
                                 <label for="level"
                                     class="block text-sm font-medium text-gray-700 ">Level<span class="text-red-500">*</span></label>
                                 <select name="level" class="rounded-md w-full mt-1 border-gray-300 active:border-gray-300 focus:border-gray-300">
-                                    <option class="p-3">Select Level</option>
+                                    <option class="p-3" value="">Select Level</option>
                                     <option value="Undergraduate">Undergraduate</option>
                                     <option value="Graduate">Graduate</option>
                                     <option value="PhD">PhD</option>
@@ -75,11 +73,23 @@
                                 @enderror
                             </div>
 
+                            <div class="col-span-2">
+                                <label for="detail"
+                                    class="block required text-sm font-medium text-gray-700 ">Program
+                                    Details<span class="text-red-500">*</span></label>
+                                <textarea name="detail" id="detail" rows="3" required
+                                    class="mt-1 block w-full rounded-md border-gray-300    shadow-sm focus:border-primary focus:ring-primary">{{ old('detail') }}</textarea>
+                                <p class="mt-1 text-sm text-gray-500 ">Program details</p>
+                                @error('detail')
+                                <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
+                                @enderror
+                            </div>
+
                             <div class="">
                                 <label for="intake_period"
                                     class="block text-sm font-medium text-gray-700 ">Intake Period<span class="text-red-500">*</span></label>
                                 <select name="intake_period" class="rounded-md w-full mt-1 border-gray-300 active:border-gray-300">
-                                    <option class="">Select Intake Period</option>
+                                    <option class="" value="">Select Intake Period</option>
                                     <option value="Fall">Fall</option>
                                     <option value="Spring">Spring</option>
                                     <option value="Summer">Summer</option>
@@ -94,7 +104,7 @@
                                 <label for="mode_of_study"
                                     class="block text-sm font-medium text-gray-700 ">Mode of Study<span class="text-red-500">*</span></label>
                                 <select name="mode_of_study" class="rounded-md w-full mt-1 border-gray-300 active:border-gray-300">
-                                    <option class="">Select Mode of Study</option>
+                                    <option class="" value="">Select Mode of Study</option>
                                     <option value="on-campus">On Campus</option>
                                     <option value="online">Online</option>
                                     <option value="hybrid">Hybrid</option>
@@ -149,26 +159,18 @@
                             </div>
 
                             <div class="col-span-2">
-                                <label for="requirements"
-                                    class="block required text-sm font-medium text-gray-700 ">Program
-                                    Requirements<span class="text-red-500">*</span></label>
-                                <textarea name="requirements" id="requirements" rows="3" required
-                                    class="mt-1 block w-full rounded-md border-gray-300    shadow-sm focus:border-primary focus:ring-primary">{{ old('requirements') }}</textarea>
-                                <p class="mt-1 text-sm text-gray-500 ">Program requirements details</p>
-                                @error('requirements')
-                                <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
-                                @enderror
-                            </div>
-                            <div class="col-span-2">
-                                <label for="career_prospects"
-                                    class="block required text-sm font-medium text-gray-700 ">Program
-                                    Career Prospects<span class="text-red-500">*</span></label>
-                                <textarea name="career_prospects" id="career_prospects" rows="3" required
-                                    class="mt-1 block w-full rounded-md border-gray-300    shadow-sm focus:border-primary focus:ring-primary">{{ old('career_prospects') }}</textarea>
-                                <p class="mt-1 text-sm text-gray-500 ">A detail of program career prospects</p>
-                                @error('career_prospects')
-                                <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
-                                @enderror
+                                <div class="flex items-start">
+                                    <div class="flex items-center h-5">
+                                        <input type="checkbox" name="is_popular" id="is_popular" value="1"
+                                            {{ old('is_popular') ? 'checked' : '' }}
+                                            class="rounded border-gray-300 text-primary-600 shadow-sm focus:border-primary-500 focus:ring-primary-500">
+                                    </div>
+                                    <div class="ml-3 text-sm">
+                                        <label for="is_popular"
+                                            class="font-medium text-gray-700 ">Is Program Popolar</label>
+                                    </div>
+                                </div>
+                                <p class="text-xs p-2 text-gray-400">Popular universities will appear in homepage</p>
                             </div>
 
 
@@ -187,29 +189,5 @@
         </div>
     </div>
 
-    <script>
-        const quill = new Quill('#editor', {
-            theme: 'snow', // Use the Snow theme
-            modules: {
-                toolbar: [
-                    [{
-                        'header': [1, 2, 3, false]
-                    }],
-                    ['bold', 'italic', 'underline', 'strike'],
-                    [{
-                        'list': 'ordered'
-                    }, {
-                        'list': 'bullet'
-                    }],
-                    ['clean']
-                ]
-            }
-        });
 
-        const form = document.querySelector('#form');
-        form.onsubmit = function() {
-            const content = document.querySelector('#content');
-            content.value = quill.root.innerHTML; // Get the HTML content from Quill
-        };
-    </script>
 </x-app-layout>

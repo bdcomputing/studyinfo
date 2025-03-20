@@ -15,7 +15,7 @@ class Destination extends Model
         'cost_of_living',
         'language',
         'image',
-        'visa_requirements',
+        'detail',
         'country',
         "currency",
         'image_url',

@@ -20,7 +20,7 @@ Homepage
                     <a href="#" class="bg-gradient-to-br from-secondary  via-secondary/50 to-secondary   hover:bg-secondary-500 text-white font-medium py-3 px-6 rounded-full transition duration-300">
                         Talk to Expert
                     </a>
-                    <a href="{{ route('web.about') }}" class="bg-transparent  hover:bg-secondary  text-secondary font-medium py-3 px-6 rounded-full border-2 border-secondary/80 transition-all duration-500">
+                    <a href="{{ route('web.programs.index') }}" class="bg-transparent hover:bg-gradient-to-br from-secondary  via-secondary/50 to-secondary    text-secondary hover:text-white font-medium py-3 px-6 rounded-full border-2 border-secondary/80">
                         Programs
                     </a>
                 </div>

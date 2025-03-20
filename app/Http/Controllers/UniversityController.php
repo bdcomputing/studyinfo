@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Destination;
 use App\Models\University;
 use Illuminate\Http\Request;
 
@@ -13,15 +14,11 @@ class UniversityController extends Controller
     public function index(Request $request)
     {
         //
-        $universities = [];
-        if ($request->has("search")) {
+        $destinations = Destination::all();
+        $universities = University::query()->filter($request->only(['search', "city", 'type', "destination"]))->withCount("programs")->paginate(20);
 
-            $universities = University::query()->filter($request->only(['search']))->withCount("programs")->paginate(20);
-        } else {
 
-            $universities = University::query()->with(["destination"])->withCount("programs")->paginate(20);
-        }
-        return view("web.universities.index", compact("universities"));
+        return view("web.universities.index", compact("universities", "destinations"));
     }
 
     /**

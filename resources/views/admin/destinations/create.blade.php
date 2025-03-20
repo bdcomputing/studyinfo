@@ -70,13 +70,13 @@
                                 @enderror
                             </div>
                             <div class="col-span-2 !relative">
-                                <label for="visa_requirements"
+                                <label for="detail"
                                     class="block text-sm font-medium text-gray-700 ">
-                                    Visa Requirements</label>
-                                <textarea name="visa_requirements" id="visa_requirements" rows="3" required
-                                    class="mt-1 block w-full rounded-md border-gray-300    shadow-sm focus:border-primary-500 focus:ring-primary-500">{{ old('visa_requirements') }}</textarea>
-                                <p class="mt-1 text-sm text-gray-500 ">Destination visa requirements</p>
-                                @error('visa_requirements')
+                                    Destination Details</label>
+                                <textarea name="detail" id="detail" rows="3" required
+                                    class="mt-1 block w-full rounded-md border-gray-300    shadow-sm focus:border-primary-500 focus:ring-primary-500">{{ old('detail') }}</textarea>
+                                <p class="mt-1 text-sm text-gray-500 ">Destination details</p>
+                                @error('detail')
                                 <p class="mt-1 text-sm text-red-600 py-3">{{ $message }}</p>
                                 @enderror
                             </div>

@@ -9,18 +9,24 @@
         <div class="container mx-auto sm:px-6 lg:px-8">
             <div class=" overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6">
-                    <div class="flex p-5  justify-between w-full  ">
-                        <p class="text-lg md:text-xl font-bold">University List</p>
-                        <a href="{{route('admin.universities.create')}}" class="rounded-lg cursor-pointer bg-primary self-end text-white  px-3 py-1.5">Add University</a>
-                    </div>
+
                     @if (session('success'))
                     <div class="mb-4 p-4 text-sm text-green-700 bg-green-100 rounded-lg">
                         {{ session('success') }}
                     </div>
                     @endif
-                    <div class="overflow-hidden border border-gray-200  md:rounded-lg">
-                        <table class="min-w-full divide-y divide-gray-200 ">
-                            <thead class="bg-gray-50">
+                    <div class="overflow-hidden  border-gray-200  md:rounded-lg">
+                        <table class="min-w-full divide-y">
+                            <div class="bg-gray-50 h-20">
+                                <div class="flex p-5  justify-between w-full  ">
+                                    <p class="text-lg md:text-xl font-bold">University List</p>
+                                    <div>
+                                        <input type="search" name="" placeholder="search" class=" border-gray-200 py-1.5 focus:border-gray-400 rounded-xl placeholder:text-gray-400" id="">
+                                    </div>
+                                    <a href="{{route('admin.universities.create')}}" class="rounded-lg cursor-pointer bg-primary self-end text-white  px-3 py-1.5">Add University</a>
+                                </div>
+                            </div>
+                            <thead class="bg-gray-50 ">
                                 <tr>
                                     <th scope="col" class="py-3.5 px-4 w-max text-sm font-normal text-left rtl:text-right text-gray-500 ">
                                         <div class="flex items-center gap-x-3">
@@ -88,7 +94,7 @@
                                     </td>
                                     <td
                                         class="px-6 py-4 whitespace-nowrap text-sm text-gray-600 ">
-                                        {{ $university->city }}
+                                        {{ $university->city->name }}
                                     </td>
 
                                     <td class="px-6 py-4 whitespace-nowrap font-bold">

@@ -12,15 +12,16 @@ class Program extends Model
         'name',
         "level",
         'description',
-        'duration',  //Months or Years
+        'detail',
+        'duration',  //Months
         "intake_period",
         "mode_of_study",
         "field_of_study",
         "language_of_instruction",
         'program_fee',
         'application_deadline',
-        'requirements',
-        'career_prospects'
+        "is_popular",
+        "has_scholarship",
 
     ];
 
@@ -28,7 +29,9 @@ class Program extends Model
         'university_id' => 'integer',
         'duration' => 'integer',
         'program_fee' => 'float',
-        'application_deadline' => 'date'
+        'application_deadline' => 'date',
+        "is_popular" => 'boolean',
+        "has_scholarship" => 'boolean',
     ];
 
     public function university()

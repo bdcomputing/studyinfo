@@ -47,8 +47,8 @@ class AdminProgramController extends Controller
             "language_of_instruction" => "required|string",
             'program_fee' => "required|numeric",
             'application_deadline' => "required|date",
-            'requirements' => "sometimes|string",
-            'career_prospects' => "sometimes|string"
+            'is_popular' => "sometimes|boolean",
+            'has_scholarship' => "sometimes|boolean",
         ]);
         $data = $request->all();
         // dd($data);
@@ -92,8 +92,8 @@ class AdminProgramController extends Controller
             "language_of_instruction" => "required|string",
             'program_fee' => "required|numeric",
             'application_deadline' => "required|date",
-            'requirements' => "sometimes|string",
-            'career_prospects' => "sometimes|string"
+            'is_popular' => "sometimes|boolean",
+            'has_scholarship' => "sometimes|boolean",
         ]);
 
         $data = $request->all();

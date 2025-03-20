@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\City;
 use App\Models\Continent;
 use App\Models\Destination;
 use Illuminate\Http\Request;
@@ -18,6 +19,7 @@ class AdminDestinationController extends Controller
     public function index(): View
     {
         $destinations = Destination::query()->paginate(20);
+
         return view("admin.destinations.index", compact("destinations"));
     }
 
@@ -40,7 +42,7 @@ class AdminDestinationController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'required|string',
-            'visa_requirements' => 'sometimes|string',
+            'detail' => 'required|string',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
             'currency' => 'sometimes|string',
             'continent_id' => "required|string",
@@ -95,6 +97,7 @@ class AdminDestinationController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'required|string',
+            'detail' => 'sometimes|string',
             'image' => 'sometimes|image|mimes:jpeg,png,jpg,gif|max:2048',
             'currency' => 'sometimes|string',
             'continent_id' => "required|string",

@@ -14,15 +14,15 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="font-sans antialiased">
-    <div class="  bg-gray-100 ">
-        @include('layouts.navigation')
+<body class="font-sans antialiased overflow-y-hidden">
+    <div class="  bg-gray-100 min-h-screen">
 
         <!-- Page Content -->
-        <div class="flex  h-screen">
+        <div x-data="{ open: false }" class="flex 3xl:container mx-auto h-screen w-full">
 
             @include('layouts.sidebar')
-            <main class="h-[100dvh]  w-full ">
+            <main class="h-[100dvh]  w-full overflow-y-scroll ">
+                @include('layouts.navigation')
                 {{ $slot }}
             </main>
         </div>

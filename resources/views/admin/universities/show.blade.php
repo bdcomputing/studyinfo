@@ -18,11 +18,11 @@
                         <div class="flex space-x-4">
 
                             <a href="{{ route('admin.universities.edit', $university) }}"
-                                class="px-6 py-2 bg-primary-500 text-white rounded-full hover:bg-primary-600 transition">
+                                class="px-6 py-1.5 bg-primary text-white rounded-xl hover:bg-primary-900 transition">
                                 Edit
                             </a>
                             <a href="{{ route('admin.universities.index') }}"
-                                class="px-4 py-2 bg-gray-500 text-white rounded-full hover:bg-gray-600 transition">
+                                class="px-4 py-1.5 bg-accent text-white rounded-xl hover:bg-accent-900 transition">
                                 Back to List
                             </a>
                         </div>
@@ -59,8 +59,11 @@
                     </div>
 
                     <div class="prose max-w-none">
-                        <h4 class="text-lg font-semibold text-gray-900 mb-2">Description</h4>
+                        <h4 class="text-lg font-semibold text-gray-900 mb-2">Overview</h4>
                         <p class="text-gray-600 mb-6">{{ $university->description }}</p>
+                        <div class="prose">
+                            {!!$university->content!!}
+                        </div>
 
                         <h4 class="text-lg font-semibold text-gray-900 mb-2">Tuition fee</h4>
                         <div class="text-gray-600">

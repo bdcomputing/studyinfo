@@ -33,7 +33,7 @@
                                 <label for="destination"
                                     class="block text-sm font-medium text-gray-700 ">Destination<span class="text-red-500">*</span></label>
                                 <select name="destination_id" class="rounded-md w-full border-gray-600">
-                                    <option class="p-3">Select Destination</option>
+                                    <option class="p-3" value="">Select Destination</option>
                                     @forelse($destinations as $destination)
                                     <option {{old('destination_id') === $destination->id ? 'selected' : '' }} value="{{$destination->id}}">{{$destination->name}}</option>
                                     @empty
@@ -58,10 +58,18 @@
                             </div>
                             <div class="">
                                 <label for="city"
-                                    class="block text-sm font-medium text-gray-700 required">City <span class="text-red-500">*</span></label>
-                                <input type="text" name="city" id="city" value="{{ old('city') }}" required
-                                    class="mt-1 block w-full rounded-md border-gray-300    shadow-sm focus:border-primary-500 focus:ring-primary-500">
-                                @error('city')
+                                    class="block text-sm font-medium text-gray-700 ">City<span class="text-red-500">*</span></label>
+                                <select name="city_id" class="rounded-md w-full border-gray-600">
+                                    <option class="p-3" value="">Select City</option>
+                                    @forelse($cities as $city)
+                                    <option {{old('city_id') === $city->id ? 'selected' : '' }} value="{{$city->id}}">{{$city->name}}</option>
+                                    @empty
+                                    <span>No City to select</span>
+                                    @endforelse
+                                </select>
+                                <!-- <input type="text" name="name" id="title" value="{{ old('name') }}" required
+                                    class="mt-1 block w-full rounded-md border-gray-300    shadow-sm focus:border-primary-500 focus:ring-primary-500"> -->
+                                @error('city_id')
                                 <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
                                 @enderror
                             </div>
@@ -79,14 +87,14 @@
                                 @enderror
                             </div>
                             <div class="col-span-2">
-                                <label for="content"
+                                <label for="detail"
                                     class="block required text-sm font-medium text-gray-700 ">University
-                                    content<span class="text-red-500">*</span></label>
+                                    Details<span class="text-red-500">*</span></label>
                                 <div id="editor"></div>
-                                <textarea name="content" id="content" rows="3" required
-                                    class="mt-1 block w-full rounded-md border-gray-300    shadow-sm focus:border-primary-500 focus:ring-primary-500">{{ old('content') }}</textarea>
+                                <textarea name="detail" id="detail" rows="3"
+                                    class="mt-1 editor block w-full rounded-md border-gray-300    shadow-sm focus:border-primary-500 focus:ring-primary-500">{{ old('detail') }}</textarea>
                                 <p class="mt-1 text-sm text-gray-500 ">University Details</p>
-                                @error('content')
+                                @error('detail')
                                 <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
                                 @enderror
                             </div>
@@ -206,6 +214,21 @@
                                 @enderror
                             </div>
 
+                            <div class="col-span-2">
+                                <div class="flex items-start">
+                                    <div class="flex items-center h-5">
+                                        <input type="checkbox" name="is_popular" id="is_popular" value="1"
+                                            {{ old('is_popular') ? 'checked' : '' }}
+                                            class="rounded border-gray-300 text-primary-600 shadow-sm focus:border-primary-500 focus:ring-primary-500">
+                                    </div>
+                                    <div class="ml-3 text-sm">
+                                        <label for="is_popular"
+                                            class="font-medium text-gray-700 ">Is University Popolar</label>
+                                    </div>
+                                </div>
+                                <p class="text-xs p-2 text-gray-400">Popular universities will appear in homepage</p>
+                            </div>
+
 
                         </div>
 
@@ -221,29 +244,16 @@
         </div>
     </div>
 
+    <!-- Tinymce -->
+    <script src="{{ asset('assets/tinymce/tinymce.min.js') }}"></script>
     <script>
-        const quill = new Quill('#editor', {
-            theme: 'snow', // Use the Snow theme
-            modules: {
-                toolbar: [
-                    [{
-                        'header': [1, 2, 3, false]
-                    }],
-                    ['bold', 'italic', 'underline', 'strike'],
-                    [{
-                        'list': 'ordered'
-                    }, {
-                        'list': 'bullet'
-                    }],
-                    ['clean']
-                ]
-            }
+        tinymce.init({
+            selector: 'textarea.editor',
+            height: 400,
+            toolbar: 'undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat ',
+            content_css: '{{ asset("tinymce/skins/content/default/content.min.css") }}',
+            branding: false,
+            promotion: false,
         });
-
-        const form = document.querySelector('#form');
-        form.onsubmit = function() {
-            const content = document.querySelector('#content');
-            content.value = quill.root.innerHTML; // Get the HTML content from Quill
-        };
     </script>
 </x-app-layout>

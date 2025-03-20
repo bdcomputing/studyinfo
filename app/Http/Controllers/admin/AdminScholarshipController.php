@@ -37,11 +37,11 @@ class AdminScholarshipController extends Controller
         //
         $request->validate([
             "name" => "string:required",
-            "description" => "required:string",
+            "description" => "required|string",
             "amount" => "required:numeric",
-            "eligibility_criteria" => "required:string",
+            "eligibility_criteria" => "required|string",
             "application_deadline" => "required:date",
-            "university_id" => "required:string",
+            "university_id" => "required|string",
         ]);
 
         $data = $request->all();
@@ -76,11 +76,11 @@ class AdminScholarshipController extends Controller
         //
         $request->validate([
             "name" => "string:required",
-            "description" => "required:string",
+            "description" => "required|string",
             "amount" => "required:numeric",
-            "eligibility_criteria" => "required:string",
+            "eligibility_criteria" => "required|string",
             "application_deadline" => "required:date",
-            "university_id" => "required:string",
+            "university_id" => "required|string",
         ]);
         $data = $request->all();
         $scholarship->update($data);

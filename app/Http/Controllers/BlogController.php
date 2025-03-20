@@ -16,7 +16,7 @@ class BlogController extends Controller
         $blogs = Blog::where('is_published', true)
             ->orderBy('publish_date', 'desc')
             ->get();
-        $categories = ["Scholarships & Financial Aid ", "Visa & Immigration", "Study Destinations", "Admission & Application Tips", "University Guides"];
+        $categories = Blog::select('category')->distinct()->pluck('category');
 
         return view('web.blog.index', compact('blogs', 'categories'));
     }

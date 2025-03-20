@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100 ">
+<nav class="bg-white border-b border-gray-100 sticky top-0 ">
     <!-- Primary Navigation Menu -->
     <div class="container  mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
@@ -8,11 +8,8 @@
                     <img class="h-14 w-auto" src="{{ asset('/assets/logos/logo.png') }}" alt="STUDYINFO Logo" />
 
                 </a>
-
-
             </div>
 
-            <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ms-6">
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
@@ -69,51 +66,4 @@
         </div>
     </div>
 
-    <!-- Responsive Navigation Menu -->
-    <div :class="{ 'block': open , 'hidden': !open }" class="hidden sm:hidden  absolute bg-primary-900 top-0 z-50 h-[100dvh] transition-all duration-500 px-5">
-        <div class="py-5">
-            <div class="p-5">
-                <p class="text-lg">StudyInfo</p>
-            </div>
-        </div>
-        <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('admin.dashboard')" :active="request()->routeIs('admin.dashboard')">
-                {{ __('Dashboard') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('admin.blog')" :active="request()->routeIs('admin.blog')">
-                {{ __('Blog') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('admin.events.index')" :active="request()->routeIs('admin.events.index')">
-                {{ __('Events') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('admin.destinations.index')" :active="request()->routeIs('admin.destinations.index')">
-                {{ __('Destinations') }}
-            </x-responsive-nav-link>
-        </div>
-
-        <!-- Responsive Settings Options -->
-        <div class="pt-4 pb-1 border-t border-gray-200 ">
-            <div class="px-4">
-                <div class="font-medium text-base text-gray-800 ">{{ Auth::user()->name }}</div>
-                <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
-            </div>
-
-            <div class="mt-3 space-y-1">
-                <x-responsive-nav-link :href="route('admin.profile.edit')">
-                    {{ __('Profile') }}
-                </x-responsive-nav-link>
-
-                <!-- Authentication -->
-                <form method="POST" action="{{ route('logout') }}">
-                    @csrf
-
-                    <x-responsive-nav-link :href="route('logout')"
-                        onclick="event.preventDefault();
-                                        this.closest('form').submit();">
-                        {{ __('Log Out') }}
-                    </x-responsive-nav-link>
-                </form>
-            </div>
-        </div>
-    </div>
 </nav>

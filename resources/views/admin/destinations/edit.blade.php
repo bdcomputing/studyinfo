@@ -24,7 +24,7 @@
                         @method('PUT')
 
 
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="md:grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div class="">
                                 <label for="name"
                                     class="block text-sm font-medium text-gray-700 ">Name <span class="text-red-500">*</span></label>
@@ -75,13 +75,13 @@
                                 @enderror
                             </div>
                             <div class="col-span-2 py-5 !relative">
-                                <label for="visa_requirements'"
+                                <label for="detail"
                                     class="block text-sm font-medium text-gray-700 ">
-                                    Visa Requirements</label>
-                                <textarea name="visa_requirements" id="visa_requirements" rows="3" required
-                                    class="mt-1   w-full rounded-md border-gray-300    shadow-sm focus:border-primary-500 focus:ring-primary-500">{{ old('visa_requirements',$destination->visa_requirements) }}</textarea>
-                                <p class="mt-1 text-sm text-gray-500 ">Destination visa requirements</p>
-                                @error('visa_requirements')
+                                    Destination Details</label>
+                                <textarea name="detail" id="detail" rows="3" required
+                                    class="mt-1   w-full rounded-md border-gray-300    shadow-sm focus:border-primary-500 focus:ring-primary-500">{{ old('detail',$destination->detail) }}</textarea>
+                                <p class="mt-1 text-sm text-gray-500 ">Destination details</p>
+                                @error('detail')
                                 <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
                                 @enderror
                             </div>
@@ -109,6 +109,7 @@
                                 @enderror
                             </div>
 
+
                             <div class="">
                                 <label for="image"
                                     class="block text-sm font-medium text-gray-700 ">
@@ -124,14 +125,20 @@
                                 <div
                                     class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300  border-dashed rounded-lg">
                                     <div class="space-y-1 text-center">
-                                        <input type="file" name="image" id="image"
-                                            class="mt-1 block w-full text-sm text-gray-500 
+                                        <div class="flex items-center gap-4">
+                                            <img src="{{ asset('storage/' . $destination->image_url) }}" class="object-cover size-20 rounded-md" alt="">
+
+                                            <div>
+                                                <input type="file" name="image" id="image"
+                                                    class="mt-1 block w-full text-sm text-gray-500  self-center
                                             file:mr-4 file:py-2 file:px-4
                                             file:rounded-md file:border-0
                                             file:text-sm file:font-semibold
                                             file:bg-primary-50 file:text-primary-700
                                             hover:file:bg-primary-100
                                             ">
+                                            </div>
+                                        </div>
                                         <p class="text-xs text-gray-500 ">
                                             PNG, JPG, GIF up to 2MB. Recommended size: 800x450px
                                         </p>
@@ -150,26 +157,33 @@
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                         </svg>
-                                        Destination Flag <span class="text-red-500">*</span>
+                                        Destination flag <span class="text-red-500">*</span>
                                     </span>
                                 </label>
                                 <div
                                     class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300  border-dashed rounded-lg">
                                     <div class="space-y-1 text-center">
-                                        <input type="file" name="flag" id=" flag"
-                                            class="mt-1 block w-full text-sm text-gray-500 
+                                        <div class="flex items-center gap-4">
+                                            <img src="{{ asset('storage/' . $destination->flag_url) }}" class="size-20 object-cover rounded-md" alt="">
+
+                                            <div>
+                                                <input type="file" name="flag" id="flag"
+                                                    class="mt-1 block w-full text-sm text-gray-500  self-center
                                             file:mr-4 file:py-2 file:px-4
                                             file:rounded-md file:border-0
                                             file:text-sm file:font-semibold
                                             file:bg-primary-50 file:text-primary-700
                                             hover:file:bg-primary-100
                                             ">
+                                            </div>
+                                        </div>
+
                                         <p class="text-xs text-gray-500 ">
                                             PNG, JPG, GIF up to 2MB. Recommended size: 800x450px
                                         </p>
                                     </div>
                                 </div>
-                                @error('flag')
+                                @error('logo')
                                 <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
                                 @enderror
                             </div>
