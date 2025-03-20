@@ -1,4 +1,4 @@
-<aside :class="{'-translate-x-full md:translate-x-0 ':!open}" class="flex md:translate-x-0 flex-col min-h-screen min-w-max w-3/4 lg:w-64 transition-transform duration-300 overflow-y-hidden top-0 z-20 absolute left-0 md:relative bg-white shadow md:shadow-none">
+<aside x-cloak :class="{'-translate-x-full md:translate-x-0 ':!open}" class="flex md:translate-x-0 flex-col min-h-screen min-w-max w-3/4 lg:w-64 transition-transform duration-300 overflow-y-hidden top-0 z-20 absolute left-0 md:relative bg-white shadow md:shadow-none">
 
     <!-- Navigation Links -->
     <div class="flex flex-col justify-between flex-1 p-5 pt-20">

@@ -15,13 +15,16 @@
 </head>
 
 <body class="font-sans antialiased overflow-y-hidden">
-    <div class="  bg-gray-100 min-h-screen">
+    <div class="bg-gray-100 min-h-screen">
 
         <!-- Page Content -->
         <div x-data="{ open: false }" class="flex 3xl:container mx-auto h-screen w-full">
 
             @include('layouts.sidebar')
             <main class="h-[100dvh]  w-full overflow-y-scroll ">
+                <x-notification />
+
+
                 @include('layouts.navigation')
                 {{ $slot }}
             </main>

@@ -14,7 +14,7 @@ Universities
                 <button onclick="filterUniversity()" class="bg-gradient-to-r from-accent to-secondary  size-10 rounded-lg text-white"><i class="bi bi-search text-xl"></i></button>
             </div>
             <div>
-                <p class="py-3 font-bold text-gray-600 text-lg">Filters</p>
+                <p class="py-3 font-bold text-gray-600 text-lg"><i class="bi bi-filter"></i>Filters {{ count(array_filter(request()->query())) }}</p>
             </div>
             <div class="py-3 grid grid-cols-2 md:grid-cols-5 items-center gap-3  w-full">
                 <div>
@@ -59,7 +59,7 @@ Universities
                 <div class="flex md:self-end gap-5 col-span-2 md:col-span-1 justify-center  ">
                     <p></p>
                     <button type="submit" class="p-2 px-4 text-white rounded-lg bg-primary" value="">Apply</button>
-                    <button type="reset" class="p-2 px-2 text-white rounded-lg bg-accent" value="">Reset Filters</button>
+                    <a href="{{ url()->current() }}" class="p-2 px-2 text-white rounded-lg bg-accent" value="">Reset Filters</a>
                 </div>
 
             </div>
