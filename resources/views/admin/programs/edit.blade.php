@@ -187,7 +187,7 @@
                                             class="font-medium text-gray-700 ">Program has Scholarship</label>
                                     </div>
                                 </div>
-                                <p class="text-xs p-2 text-gray-400">Popular universities will appear in homepage</p>
+                                <p class="text-xs p-2 text-gray-400">Check if program has scholarship</p>
                             </div>
 
 
@@ -197,7 +197,7 @@
                         <div class="py-5">
                             <button type="submit"
                                 class="w-full inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-primary hover:bg-primary-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
-                                Add Program
+                                Update Program
                             </button>
                         </div>
                     </form>

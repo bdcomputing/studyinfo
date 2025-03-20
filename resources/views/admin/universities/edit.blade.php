@@ -50,10 +50,18 @@
                             </div>
                             <div class="">
                                 <label for="city"
-                                    class="block text-sm font-medium text-gray-700 required">City <span class="text-red-500">*</span></label>
-                                <input type="text" name="city" id="city" value="{{ old('city',$university->city) }}" required
-                                    class="mt-1 block w-full rounded-md border-gray-300    shadow-sm focus:border-primary-500 focus:ring-primary-500">
-                                @error('city')
+                                    class="block text-sm font-medium text-gray-700 ">City<span class="text-red-500">*</span></label>
+                                <select name="city_id" class="rounded-md w-full border-gray-600">
+                                    <option class="p-3" value="">Select City</option>
+                                    @forelse($cities as $city)
+                                    <option {{old('city_id',$university->city->id) === $city->id ? 'selected' : '' }} value="{{$city->id}}">{{$city->name}}</option>
+                                    @empty
+                                    <span>No City to select</span>
+                                    @endforelse
+                                </select>
+                                <!-- <input type="text" name="name" id="title" value="{{ old('name') }}" required
+                                    class="mt-1 block w-full rounded-md border-gray-300    shadow-sm focus:border-primary-500 focus:ring-primary-500"> -->
+                                @error('city_id')
                                 <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
                                 @enderror
                             </div>

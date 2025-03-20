@@ -43,7 +43,7 @@
                         <div class="flex items-center">
                             <span class="text-gray-600 mr-2">City:</span>
                             <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">
-                                {{ $university->city }}
+                                {{ $university->city->name }}
                             </span>
                         </div>
                         <div class="flex items-center">
@@ -62,7 +62,7 @@
                         <h4 class="text-lg font-semibold text-gray-900 mb-2">Overview</h4>
                         <p class="text-gray-600 mb-6">{{ $university->description }}</p>
                         <div class="prose">
-                            {!!$university->content!!}
+                            {!!$university->detail!!}
                         </div>
 
                         <h4 class="text-lg font-semibold text-gray-900 mb-2">Tuition fee</h4>

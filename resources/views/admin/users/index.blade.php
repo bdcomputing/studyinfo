@@ -7,7 +7,7 @@
 
     <div class="py-12">
         <div class="container mx-auto sm:px-6 lg:px-8">
-            <div class=" overflow-hidden shadow-sm sm:rounded-lg">
+            <div class=" overflow-hidden z-0">
                 <div class="p-6">
                     <div class="flex p-5  justify-between w-full  ">
                         <p class="text-lg md:text-xl font-bold">Users List</p>
@@ -18,8 +18,8 @@
                         {{ session('success') }}
                     </div>
                     @endif
-                    <div class="overflow-hidden border border-gray-200  md:rounded-lg">
-                        <table class="min-w-full divide-y divide-gray-200 ">
+                    <div class="overflow-hidden pb-20 border border-gray-200 bg-white  md:rounded-lg">
+                        <table class="min-w-full divide-y divide-gray-200  ">
                             <thead class="bg-gray-50">
                                 <tr>
                                     <th scope="col" class="py-3.5 px-4 w-max text-sm font-normal text-left rtl:text-right text-gray-500 ">
@@ -59,7 +59,7 @@
 
 
                                 @forelse ($users as $user)
-                                <tr>
+                                <tr class="z-0 divide-y">
                                     <td class="px-4 py-4 text-sm font-medium text-gray-700 whitespace-nowrap">
                                         <div class="inline-flex items-center gap-x-3">
                                             <input type="checkbox" class="text-blue-500 border-gray-300 rounded   ">
@@ -108,20 +108,13 @@
                                         </span>
                                         @endif
                                     </td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium space-x-2">
-                                        <a href="{{ route('admin.events.edit', $user->id) }}"
-                                            class="text-primary-600 hover:text-primary-900">Edit</a>
-                                        <a href="{{ route('admin.events.show', $user->id) }}"
-                                            class="text-blue-600 hover:text-blue-900">View</a>
-                                        <form action="{{ route('admin.events.destroy', $user->id) }}"
-                                            method="POST" class="inline-block"
-                                            onsubmit="return confirm('Are you sure you want to delete this event?')">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit" class="text-red-600 hover:text-red-900">
-                                                Delete
-                                            </button>
-                                        </form>
+                                    <td x-data="{open:false}" class="px-6 py-4 whitespace-nowrap text-sm font-medium space-x-2 relative z-0">
+                                        <button @click="open=true" class="p-1 rounded-md bg-gray-100"><i class="bi bi-three-dots-vertical"></i></button>
+                                        <div @click.outside="open=false" :class="{'hidden':!open}" class=" bg-green-200 p-2 absolute top-0 left-0 flex gap-0.5 flex-col z-[99999] rounded-lg">
+                                            <a href="" class="px-2 bg-gray-50">Edit</a>
+                                            <a href="" class="px-2 bg-gray-50">View</a>
+                                            <a href="" class="px-2 bg-gray-50">Delete</a>
+                                        </div>
                                     </td>
                                 </tr>
                                 @empty
@@ -135,7 +128,7 @@
                                             <div class="flex items-center my-4 sm:mx-auto gap-x-3">
 
 
-                                                <a href="{{route('admin.events.create')}}" class="flex cursor-pointer items-center justify-center w-1/2 px-5 py-2 text-sm tracking-wide text-white transition-colors duration-200 bg-primary rounded-lg shrink-0 sm:w-auto gap-x-2 hover:bg-primary-900">
+                                                <a href="{{route('admin.users.create')}}" class="flex cursor-pointer items-center justify-center w-1/2 px-5 py-2 text-sm tracking-wide text-white transition-colors duration-200 bg-primary rounded-lg shrink-0 sm:w-auto gap-x-2 hover:bg-primary-900">
                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                                                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                                                     </svg>

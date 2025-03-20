@@ -158,7 +158,7 @@
                                 @enderror
                             </div>
 
-                            <div class="col-span-2">
+                            <div class="">
                                 <div class="flex items-start">
                                     <div class="flex items-center h-5">
                                         <input type="checkbox" name="is_popular" id="is_popular" value="1"
@@ -171,6 +171,20 @@
                                     </div>
                                 </div>
                                 <p class="text-xs p-2 text-gray-400">Popular universities will appear in homepage</p>
+                            </div>
+                            <div class="">
+                                <div class="flex items-start">
+                                    <div class="flex items-center h-5">
+                                        <input type="checkbox" name="has_scholarship" id="has_scholarship" value="1"
+                                            {{ old('has_scholarship') ? 'checked' : '' }}
+                                            class="rounded border-gray-300 text-primary-600 shadow-sm focus:border-primary-500 focus:ring-primary-500">
+                                    </div>
+                                    <div class="ml-3 text-sm">
+                                        <label for="has_scholarship"
+                                            class="font-medium text-gray-700 ">Program has Scholarship</label>
+                                    </div>
+                                </div>
+                                <p class="text-xs p-2 text-gray-400">Check if program has scholarship</p>
                             </div>
 
 

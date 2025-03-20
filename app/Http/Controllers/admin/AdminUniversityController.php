@@ -92,8 +92,9 @@ class AdminUniversityController extends Controller
     public function edit(University $university)
     {
         // 
+        $cities = City::all();
         $destinations = Destination::query()->get(['id', 'name']);
-        return view("admin.universities.edit", compact("university", "destinations"));
+        return view("admin.universities.edit", compact("university", "destinations", "cities"));
     }
 
     /**
