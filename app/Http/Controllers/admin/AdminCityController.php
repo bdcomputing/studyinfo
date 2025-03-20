@@ -1,8 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\admin;
+
+use App\Http\Controllers\Controller;
 
 use App\Models\City;
+use App\Models\Destination;
 use Illuminate\Http\Request;
 
 class AdminCityController extends Controller
@@ -24,7 +27,8 @@ class AdminCityController extends Controller
     public function create()
     {
         //
-        return view("admin.cities.create");
+        $countries  = Destination::all();
+        return view("admin.cities.create", compact("countries"));
     }
 
     /**
@@ -34,12 +38,11 @@ class AdminCityController extends Controller
     {
         //
         $request->validate([
-            "name" => "required:string",
-            "destination_id" => "required:string",
-            "state" => "sometimes:string",
-            "timezone" => "required:string",
-            "population" => "sometimes:numeric",
+            "name" => "required|string",
+            "destination_id" => "required|string",
+
         ]);
+
 
         $data = $request->all();
         City::create($data);
@@ -61,7 +64,8 @@ class AdminCityController extends Controller
     public function edit(City $city)
     {
         //
-        return view("admin.cities.edit");
+        $countries  = Destination::all();
+        return view("admin.cities.edit", compact("countries", "city"));
     }
 
     /**
@@ -71,11 +75,9 @@ class AdminCityController extends Controller
     {
         //
         $request->validate([
-            "name" => "required:string",
-            "destination_id" => "required:string",
-            "state" => "sometimes:string",
-            "timezone" => "required:string",
-            "population" => "sometimes:numeric",
+            "name" => "required|string|min:3",
+            "destination_id" => "required|exists:destination_id",
+
         ]);
 
         $data = $request->all();

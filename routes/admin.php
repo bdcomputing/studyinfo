@@ -9,7 +9,7 @@ use App\Http\Controllers\admin\AdminProgramController;
 use App\Http\Controllers\admin\AdminScholarshipController;
 use App\Http\Controllers\admin\AdminUniversityController;
 use App\Http\Controllers\admin\AdminUsersController;
-use App\Http\Controllers\AdminCityController;
+use App\Http\Controllers\admin\AdminCityController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;

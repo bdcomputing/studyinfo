@@ -15,7 +15,7 @@
                                     <th scope="col" class="py-3.5 px-4 w-max text-sm font-normal text-left rtl:text-right text-gray-500 ">
                                         <div class="flex items-center gap-x-3">
                                             <input type="checkbox" class="text-blue-500 border-gray-300 rounded   ">
-                                            Flag
+                                            City Name
                                         </div>
                                     </th>
 
@@ -29,19 +29,12 @@
 
                                     <th scope="col" class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 ">
                                         <button class="flex items-center gap-x-2">
-                                            <span>Language</span>
+                                            <span>Actions</span>
 
                                         </button>
                                     </th>
 
-                                    <th scope="col" class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 ">Currency</th>
 
-                                    <th scope="col" class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 ">Cost of Living</th>
-                                    <th scope="col" class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 ">Status</th>
-
-                                    <th scope="col" class="relative py-3.5 px-4">
-                                        <span class="sr-only">Edit</span>
-                                    </th>
                                 </tr>
                             </thead>
                             <tbody class="bg-white divide-y divide-gray-200  ">
@@ -52,51 +45,22 @@
                                             <input type="checkbox" class="text-blue-500 border-gray-300 rounded   ">
 
                                             <div class="flex items-center gap-x-2">
-                                                <img class="object-cover w-10 h-10 rounded-full" src="{{ asset('storage/' . $city->flag_url) }}" alt="{{$city->name}}">
+                                                <h2 class="text-sm font-normal text-gray-600">{{$city->name}} </h2>
 
 
                                             </div>
                                         </div>
                                     </td>
+
+
+
                                     <td class="px-12 py-4 text-sm font-medium text-gray-700 whitespace-nowrap">
                                         <div class="inline-flex items-center px-3 py-1">
 
-                                            <h2 class="text-sm font-normal text-gray-600">{{$city->name}} </h2>
+                                            <h2 class="text-sm font-normal text-gray-600">{{$city->destination->name}} </h2>
                                         </div>
                                     </td>
-                                    <td class="px-6 py-4 whitespace-nowrap">
-                                        <span
-                                            class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800 dark:bg-blue-200 ">
-                                            {{ $city->language}}
-                                        </span>
-                                    </td>
 
-                                    <td class="px-6 py-4 whitespace-nowrap">
-                                        <span
-                                            class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800 dark:bg-blue-200 ">
-                                            {{ $city->currency }}
-                                        </span>
-                                    </td>
-
-
-                                    <td
-                                        class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">
-
-                                        {{ $city->cost_of_living }} {{$city->currency}}
-                                    </td>
-                                    <td class="px-6 py-4 whitespace-nowrap">
-                                        @if ($city->is_popular)
-                                        <span
-                                            class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800 ">
-                                            Popular
-                                        </span>
-                                        @else
-                                        <span
-                                            class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800 dark:bg-red-200 ">
-                                            Not Popular
-                                        </span>
-                                        @endif
-                                    </td>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm font-medium space-x-2">
                                         <a href="{{ route('admin.cities.show', $city) }}"
                                             class="text-blue-800 hover:text-gray-900 hover:underline dark:text-gray-400 dark:hover:text-gray-300">

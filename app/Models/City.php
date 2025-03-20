@@ -19,7 +19,7 @@ class City extends Model
     ];
 
     protected $casts = [
-        "destination_id" => "numeric",
+        "destination_id" => "integer",
     ];
 
     public function destination()
