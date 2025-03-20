@@ -37,14 +37,14 @@
                         <div x-show="open" x-transition class=" absolute left-0 w-screen bg-transparent  shadow-md py-5">
                             <div class="bg-white">
                                 <div class="container mx-auto p-5">
-                                    <div class="grid max-w-screen-2xl px-0 py-5 mx-auto mt-5  text-sm text-gray-500  md:grid-cols-4 md:px-6">
+                                    <div class="grid max-w-screen-2xl px-0 gap-5 mx-auto mt-5  text-sm text-gray-500  md:grid-cols-4 md:px-6">
                                         @foreach($continents as $continent)
-                                        <ul class="space-y-1">
+                                        <ul class="space-y-3">
                                             <p class="text-lg font-bold"><a href="{{ route('web.universities.index',['continent'=>$continent->name]) }} ">{{$continent->name}}</a></p>
                                             @foreach ($destinations as $destination)
                                             @if($destination->continent->name===$continent->name)
                                             <li>
-                                                <a href="{{ route('web.universities.index',['country'=>$destination->name]) }}"
+                                                <a href="{{ route('web.universities.index',['destination'=>$destination->name]) }}"
                                                     class="hover:underline text-sm font-medium hover:text-secondary ">
                                                     {{$destination->name}}
                                                 </a>

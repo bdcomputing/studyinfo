@@ -80,12 +80,12 @@
                             </div>
 
                             <div class="col-span-2 pb-16">
-                                <label for="content"
+                                <label for="detail"
                                     class="block pb-3 required text-sm font-medium text-gray-700 ">University
                                     Details<span class="text-red-500">*</span></label>
-                                <textarea name="content" id="content" rows="3" required
-                                    class="mt-1 editor block w-full rounded-md border-gray-300    shadow-sm focus:border-primary-500 focus:ring-primary-500">{{ old('content',$university->content) }}</textarea>
-                                @error('content')
+                                <textarea name="detail" id="detail" rows="3" required
+                                    class="mt-1 editor block w-full rounded-md border-gray-300    shadow-sm focus:border-primary-500 focus:ring-primary-500">{{ old('detail',$university->detail) }}</textarea>
+                                @error('detail')
                                 <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
                                 @enderror
                             </div>
@@ -219,6 +219,20 @@
                             </div>
 
 
+                        </div>
+                        <div class="col-span-2">
+                            <div class="flex items-start">
+                                <div class="flex items-center h-5">
+                                    <input type="checkbox" name="is_popular" id="is_popular" value="1"
+                                        {{ old('is_popular',$university->is_popular) ? 'checked' : '' }}
+                                        class="rounded border-gray-300 text-primary-600 shadow-sm focus:border-primary-500 focus:ring-primary-500">
+                                </div>
+                                <div class="ml-3 text-sm">
+                                    <label for="is_popular"
+                                        class="font-medium text-gray-700 ">Is University Popolar</label>
+                                </div>
+                            </div>
+                            <p class="text-xs p-2 text-gray-400">Popular universities will appear in homepage</p>
                         </div>
 
                         <div class="py-5">

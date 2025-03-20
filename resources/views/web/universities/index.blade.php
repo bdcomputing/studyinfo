@@ -14,15 +14,21 @@ Universities
                 <button onclick="filterUniversity()" class="bg-gradient-to-r from-accent to-secondary  size-10 rounded-lg text-white"><i class="bi bi-search text-xl"></i></button>
             </div>
             <div>
-                <p class="py-3 font-bold text-gray-600 text-lg"><i class="bi bi-filter"></i>Filters {{ count(array_filter(request()->query())) }}</p>
+                <div class="py-3 flex gap-1 relative font-bold text-gray-600 text-lg">
+                    <i class="bi bi-sliders "></i>
+                    Filters
+                    <span class="text-xs absollute text-secondary bg-red-300 h-max rounded-full px-1 top-0">{{ count(array_filter(request()->query())) }}</span>
+                </div>
             </div>
             <div class="py-3 grid grid-cols-2 md:grid-cols-5 items-center gap-3  w-full">
+
                 <div>
-                    <label class="text-gray-500 " for="">Type</label>
-                    <select name="type" class="w-full rounded-md border-primary-200 active:border-primary-400 focus:border-primary-400">
+                    <label class="text-gray-500 " for="">Continent</label>
+                    <select name="continent" class="w-full rounded-md border-primary-200 active:border-primary-400 focus:border-primary-400">
                         <option class="text-gray-600 appearance-none" value="">All</option>
-                        <option class="text-gray-600 appearance-none" {{request('type')==='Public' ? 'selected' :''}} value="Public">Public</option>
-                        <option class="text-gray-600 appearance-none" {{request('type')==='Private' ? 'selected' :''}} value="Private">Private</option>
+                        @foreach($continents as $continent)
+                        <option {{request('continent')===$continent->name ? 'selected' :''}} class="text-gray-600 appearance-none" value="{{$continent->name}}">{{$continent->name}}</option>
+                        @endforeach
                     </select>
                 </div>
                 <div>
@@ -35,14 +41,14 @@ Universities
                     </select>
                 </div>
                 <div>
-                    <label class="text-gray-500 " for="">City</label>
-                    <select name="city" class="w-full rounded-md border-primary-200 active:border-primary-400 focus:border-primary-400">
+                    <label class="text-gray-500 " for="">Type</label>
+                    <select name="type" class="w-full rounded-md border-primary-200 active:border-primary-400 focus:border-primary-400">
                         <option class="text-gray-600 appearance-none" value="">All</option>
-                        <option class="text-gray-600 appearance-none" value="online">Online</option>
-                        <option class="text-gray-600 appearance-none" value="on-campus">On Campus</option>
-                        <option class="text-gray-600 appearance-none" value="hybrid">Hybrid</option>
+                        <option class="text-gray-600 appearance-none" {{request('type')==='Public' ? 'selected' :''}} value="Public">Public</option>
+                        <option class="text-gray-600 appearance-none" {{request('type')==='Private' ? 'selected' :''}} value="Private">Private</option>
                     </select>
                 </div>
+
                 <div>
                     <label class="text-gray-500 " for="">Graduate level</label>
                     <select name="study_level" class="w-full rounded-md border-primary-200 active:border-primary-400 focus:border-primary-400">
@@ -58,8 +64,8 @@ Universities
 
                 <div class="flex md:self-end gap-5 col-span-2 md:col-span-1 justify-center  ">
                     <p></p>
-                    <button type="submit" class="p-2 px-4 text-white rounded-lg bg-primary" value="">Apply</button>
-                    <a href="{{ url()->current() }}" class="p-2 px-2 text-white rounded-lg bg-accent" value="">Reset Filters</a>
+                    <button type="submit" class="py-1.5 px-4 text-white rounded-lg bg-primary" value="">Apply</button>
+                    <a href="{{ url()->current() }}" class="py-1.5 px-2 text-white rounded-lg bg-accent" value="">Reset Filters</a>
                 </div>
 
             </div>
@@ -73,9 +79,12 @@ Universities
             <div class="university-card border border-gray-200  hover:shadow rounded-md md:grid md:grid-cols-2 gap-y-5 md:gap-5 w-full">
                 <div class="w-full relative">
                     <img class="object-cover  w-full h-full  rounded-l-md" src="{{ asset('storage/' . $university->image_url) }}" alt="{{$university->name}}">
-                    @if($university->ranking <=5)
-                        <span class="bg-secondary text-white absolute top-2 left-2 p-1 text-xs md:text-sm rounded-lg font-semibold">Top Ranked</span>
-                        @endif
+                    @if($university->is_popular)
+                    <span class="bg-secondary text-white absolute top-2 left-2 p-1 text-xs  rounded-lg font-semibold">
+                        <i class="bi bi-fire"></i>
+                        Popular
+                    </span>
+                    @endif
                 </div>
                 <div class=" space-y-5 p-5 md:px-0">
                     <div class="flex gap-x-3 items-center">
@@ -88,7 +97,7 @@ Universities
                     <div class="flex gap-2 items-center ">
                         <img class="object-cover size-6 rounded-full" src="{{ asset('storage/' . $university->destination->flag_url) }}" alt="{{$university->destination->name}}">
                         <div class="flex gap-1">
-                            <p class=" text-gray-600">{{$university->city}},</p>
+                            <p class=" text-gray-600">{{$university->city->name}},</p>
                             <p class=" text-gray-600">{{$university->destination->name}}</p>
                         </div>
                     </div>

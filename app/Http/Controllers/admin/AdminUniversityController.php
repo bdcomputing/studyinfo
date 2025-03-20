@@ -102,16 +102,15 @@ class AdminUniversityController extends Controller
      */
     public function update(Request $request, University $university)
     {
-        dd($request->all());
         //
         $request->validate([
             "name" => "required|string",
             "destination_id" => "required|string",
-            "city" => "required|string",
+            "city_id" => "required|string",
             "ranking" => "sometimes|numeric|min:1",
             "type" => "required|string",
             "description" => "required|string",
-            "content" => "required|string",
+            "detail" => "sometimes|string",
             "website_url" => "required|string",
             "contact_email" => "required|email",
             "tuition_fee" => "required|integer|min:1",

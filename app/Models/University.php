@@ -52,7 +52,19 @@ class University extends Model
                 $q->whereHas("destination", function ($subQuery) use ($destination) {
                     $subQuery->where('name', $destination);
                 });
-            });
-        // ->when($filter["city"] ?? null, fn($q, $city) => $q->where("city", $city));
+            })
+            ->when($filter["destination"] ?? null, function ($q, $destination) {
+                $q->whereHas("destination", function ($subQuery) use ($destination) {
+                    $subQuery->where('name', $destination);
+                });
+            })
+            ->when(
+                $filter["continent"] ?? null,
+                function ($q, $continent) {
+                    $q->whereHas("destination", function ($subQuery) use ($continent) {
+                        $subQuery->whereHas("continent", fn($qr) => $qr->where('name', $continent));
+                    });
+                }
+            );
     }
 }

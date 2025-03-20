@@ -22,10 +22,11 @@
                     {{$university->description}}
                 </div>
                 <div class="py-5 prose">
-                    {!! $university->content !!}
+                    {!! $university->detail !!}
                 </div>
                 <div class="py-5">
                     <p>Website: {{$university->website_url}}</p>
+                    <p>Email: {{$university->contact_email}}</p>
                 </div>
             </div>
         </div>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Continent;
 use App\Models\Destination;
 use App\Models\University;
 use Illuminate\Http\Request;
@@ -15,10 +16,11 @@ class UniversityController extends Controller
     {
         //
         $destinations = Destination::all();
-        $universities = University::query()->filter($request->only(['search', "city", 'type', "destination"]))->withCount("programs")->paginate(20);
+        $continents = Continent::all();
+        $universities = University::query()->filter($request->only(['search', "continent", 'type', "destination"]))->withCount("programs")->paginate(20);
 
 
-        return view("web.universities.index", compact("universities", "destinations"));
+        return view("web.universities.index", compact("universities", "destinations", "continents"));
     }
 
     /**

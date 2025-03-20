@@ -14,7 +14,11 @@
                 <button onclick="filterUniversity()" class="bg-gradient-to-r from-accent to-secondary  size-10 rounded-lg text-white"><i class="bi bi-search text-xl"></i></button>
             </div>
             <div>
-                <p class="py-3 font-bold text-gray-600 text-lg">Filters</p>
+                <div class="py-3 flex gap-1 relative font-bold text-gray-600 text-lg">
+                    <i class="bi bi-sliders "></i>
+                    Filters
+                    <span class="text-xs absollute text-secondary bg-red-300 h-max rounded-full px-1 top-0">{{ count(array_filter(request()->query())) }}</span>
+                </div>
             </div>
             <div class="py-3 grid grid-cols-2 md:grid-cols-5 items-center gap-3  w-full">
                 <div>

@@ -10,11 +10,7 @@
             <div class=" overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6">
 
-                    @if (session('success'))
-                    <div class="mb-4 p-4 text-sm text-green-700 bg-green-100 rounded-lg">
-                        {{ session('success') }}
-                    </div>
-                    @endif
+
                     <div class="overflow-hidden  border-gray-200  md:rounded-lg">
                         <table class="min-w-full divide-y">
                             <div class="bg-gray-50 h-20">
