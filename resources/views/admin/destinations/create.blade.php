@@ -33,7 +33,7 @@
                                 <label for="name"
                                     class="block text-sm font-medium text-gray-700 ">Continent<span class="text-red-500">*</span></label>
                                 <select name="continent_id" class="rounded-md border-gray-600">
-                                    <option class="p-3">Select Continent</option>
+                                    <option value="" class="p-3">Select Continent</option>
                                     @forelse($continents as $continent)
                                     <option value="{{$continent->id}}">{{$continent->name}}</option>
                                     @empty
