@@ -11,8 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->boolean('is_admin')->default(false);
+        Schema::create('cities', function (Blueprint $table) {
+            $table->id();
+            $table->string("name");
+            $table->foreignId('destination_id')->constrained()->onDelete('cascade');
+            $table->timestamps();
+            $table->unique(["destination_id", "name"]);
         });
     }
 
@@ -21,8 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('is_admin');
-        });
+        Schema::dropIfExists('cities');
     }
 };

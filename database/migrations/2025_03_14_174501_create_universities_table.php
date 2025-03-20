@@ -15,17 +15,17 @@ return new class extends Migration
             $table->id();
             $table->string('name')->unique();
             $table->text("description");
+            $table->text("detail");
             $table->foreignId('destination_id')->constrained('destinations')->onDelete('cascade');
-            $table->string('city');
+            $table->foreignId('city_id')->constrained('cities')->onDelete('cascade');
             $table->integer('ranking')->nullable();
             $table->enum('type', ['Public', 'Private']);
             $table->string('website_url');
             $table->string("contact_email");
             $table->decimal('tuition_fee', 10, 2);
-            $table->text('admission_requirements')->nullable();
-            $table->text('student_life')->nullable();
             $table->string('image_url')->nullable();
             $table->string('logo_url')->nullable();
+            $table->boolean("is_popular")->default(false);
             $table->timestamps();
         });
     }

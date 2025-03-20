@@ -17,15 +17,16 @@ return new class extends Migration
             $table->string('name');
             $table->enum('level', ['Undergraduate', 'Graduate', 'PhD', 'Short Course', 'Language Course']);
             $table->text('description')->nullable();
+            $table->text("detail");
             $table->string('duration')->nullable();
             $table->enum('intake_period', ['Fall', 'Spring', 'Summer', 'Year-round']);
             $table->enum('mode_of_study', ['on-campus', 'hybrid', 'online']);
             $table->string('field_of_study');
-            $table->string('language_of_instruction')->nullable();
-            $table->decimal('program_fee', 10, 2)->nullable();
-            $table->date('application_deadline')->nullable();
-            $table->text('requirements')->nullable();
-            $table->text('career_prospects')->nullable();
+            $table->string('language_of_instruction');
+            $table->decimal('program_fee', 10, 2);
+            $table->date('application_deadline');
+            $table->boolean("is_popular");
+            $table->boolean("has_scholarship");
             $table->timestamps();
         });
     }
