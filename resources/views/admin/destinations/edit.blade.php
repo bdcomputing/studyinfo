@@ -217,31 +217,4 @@
             </div>
         </div>
     </div>
-    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-
-    <script>
-        const quill = new Quill('#visa-requirements-editor', {
-            theme: 'snow', // Use the Snow theme
-            modules: {
-                toolbar: [
-                    [{
-                        'header': [1, 2, 3, false]
-                    }],
-                    ['bold', 'italic', 'underline', 'strike'],
-                    [{
-                        'list': 'ordered'
-                    }, {
-                        'list': 'bullet'
-                    }],
-                    ['clean']
-                ]
-            }
-        });
-
-        const form = document.querySelector('#form');
-        form.onsubmit = function() {
-            const content = document.querySelector('#visa_requirements');
-            content.value = quill.root.innerHTML; // Get the HTML content from Quill
-        };
-    </script>
 </x-app-layout>

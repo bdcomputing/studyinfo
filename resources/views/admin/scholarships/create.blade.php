@@ -96,17 +96,4 @@
             </div>
         </div>
     </div>
-
-    <script src="{{ asset('assets/tinymce/tinymce.min.js') }}"></script>
-    <script>
-        tinymce.init({
-            selector: 'textarea.editorr',
-            height: 300,
-            toolbar: 'undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat ',
-            plugins: "typography anchor autocorrect",
-            content_css: '{{ asset("tinymce/skins/content/default/content.min.css") }}',
-            branding: false,
-            promotion: false,
-        });
-    </script>
 </x-app-layout>

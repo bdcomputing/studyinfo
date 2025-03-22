@@ -247,16 +247,4 @@ mit"
             </div>
         </div>
     </div>
-    <!-- Tinymce -->
-    <script src="{{ asset('assets/tinymce/tinymce.min.js') }}"></script>
-    <script>
-        tinymce.init({
-            selector: 'textarea.editor',
-            height: 400,
-            toolbar: 'undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat ',
-            content_css: '{{ asset("tinymce/skins/content/default/content.min.css") }}',
-            branding: false,
-            promotion: false,
-        });
-    </script>
 </x-app-layout>
