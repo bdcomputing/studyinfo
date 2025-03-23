@@ -112,7 +112,7 @@ Contact
                             <div class="flex items-center gap-3">
                                 <i class="bi bi-envelope-at text-2xl"></i> Email
                             </div>
-                            <p class="text-gray-600 ">info@haitrac.com</p>
+                            <p class="text-gray-600 ">info@stufyinfo.com</p>
                         </div>
 
                     </div>
