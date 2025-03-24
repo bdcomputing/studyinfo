@@ -85,7 +85,7 @@
             </div>
 
             <!-- Image -->
-            <div class="relative z-50 h-full bg-red-500">
+            <div class="relative z-50 h-full">
                 <img src="{{ asset('/assets/images/hero.webp') }}" alt="STUDYINFO Students"
                     class="w-full h-full object-cover object-top rounded-lg ">
             </div>
