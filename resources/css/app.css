@@ -1,10 +1,9 @@
 @import "../../public/assets/fonts/ProductSans/fonts.css";
-/* @import 'node_modules/swiper/swiper'; */
-/* @import 'node_modules/swiper/modules/navigation/navigation'; */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 @import "bootstrap-icons/font/bootstrap-icons.css";
 
 * {
-    font-family: "Product Sans", sans-serif;
+    font-family: "Quicksand", sans-serif;
 }
 
 @tailwind base;

@@ -21,7 +21,7 @@
     @stack('styles')
 </head>
 
-<body class="font-sans antialiased overflow-x-hidden ">
+<body class="font-sans antialiased overflow-x-hidden text-gray-600 ">
     <div class="min-h-screen flex flex-col">
         <!-- Navigation Bar -->
         <header class="sticky top-0 z-[1000]">

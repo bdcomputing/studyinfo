@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'SudyInfo') }}</title>
+    <title>{{ config('app.name', 'StudyInfo') }}</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -17,17 +17,17 @@
 </head>
 
 <body class="font-sans text-primary antialiased">
-    <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100  p-2">
+    <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-primary-50  p-2">
 
 
 
-        <div class="flex flex-col w-full md:w-1/2 xl:w-2/5 2xl:w-2/5 3xl:w-1/3 mx-auto p-8 md:p-10 2xl:p-12 3xl:p-14 bg-[#ffffff] rounded-2xl shadow-xl">
-            <div class="flex flex-row gap-3 pb-4">
+        <div class="flex flex-col  bg-white p-5  ">
+            <div class="flex flex-row gap-3 items-center justify-center pb-4">
                 <div>
                     <img class="h-12 md:h-14 w-auto" src="{{ asset('/assets/logos/logo.png') }}" alt="STUDYINFO Logo" />
                 </div>
                 <!---->
-                <h1 class="text-2xl md:text-3xl font-bold  text-primary my-auto">StudyInfo</h1>
+                <h1 class="text-lg md:text-xl font-bold  text-primary my-auto">StudyInfo</h1>
 
             </div>
 
