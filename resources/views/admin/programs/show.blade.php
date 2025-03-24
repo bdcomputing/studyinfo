@@ -28,7 +28,7 @@
                     </div>
 
                     <div class="mb-6">
-                        <img src="{{ asset('storage/' . $program->university->image_url) }}" alt="{{ $program->name }}"
+                        <img src="{{ $program->university->image_url }}" alt="{{ $program->name }}"
                             class="w-full h-[450px] object-cover rounded-lg">
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
@@ -46,11 +46,10 @@
                         </div>
                         <div class="flex items-center">
                             <span class="text-gray-600 mr-2">Type:</span>
-                            @if ($program->type ==='Public')
-                            <span
-                                class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Public</span>
+                            @if ($program->type === 'Public')
+                                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Public</span>
                             @else
-                            <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Private</span>
+                                <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Private</span>
                             @endif
                         </div>
 
@@ -91,7 +90,7 @@
                             <i class="bi bi-coin"></i>
                             <span class="text-gray-600 mr-2">Program Fee:</span>
                             <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">
-                                {{ $program->program_fee }} {{$program->university->destination->currency}}
+                                {{ $program->program_fee }} {{ $program->university->destination->currency }}
                             </span>
                         </div>
 
@@ -108,12 +107,12 @@
                         <h4 class="text-lg font-semibold text-gray-900 mb-2">Overview</h4>
                         <p class="text-gray-600 mb-6">{{ $program->description }}</p>
                         <div class="prose">
-                            {!!$program->detail!!}
+                            {!! $program->detail !!}
                         </div>
 
                         <h4 class="text-lg font-semibold text-gray-900 mb-2">Tuition fee</h4>
                         <div class="text-gray-600">
-                            {{$program->program_fee }} {{$program->university->destination->currency}}
+                            {{ $program->program_fee }} {{ $program->university->destination->currency }}
                         </div>
                     </div>
                 </div>

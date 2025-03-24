@@ -10,5 +10,5 @@ class Blog extends Model
     public $timestamps = true;
     protected $casts = ['is_published' => 'boolean', 'publish_date' => 'date',];
 
-    protected $fillable = ["title", "slug", "description", "image", "content", "category", "publish_date", "is_published"];
+    protected $fillable = ["title", "slug", "description", "image_url", "image_public_id", "content", "category", "publish_date", "is_published"];
 }

@@ -25,7 +25,7 @@
                     </div>
 
                     <div class="mb-6">
-                        <img src="{{ asset('storage/images/destinations/' . $destination->image) }}" alt="{{ $destination->name }}"
+                        <img src="{{ $destination->image }}" alt="{{ $destination->name }}"
                             class="w-full h-[450px] object-cover rounded-lg">
                     </div>
 
@@ -39,10 +39,9 @@
                         <div class="flex items-center">
                             <span class="text-gray-600 mr-2">Status:</span>
                             @if ($destination->is_popular)
-                            <span
-                                class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Popular</span>
+                                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Popular</span>
                             @else
-                            <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Not Popular</span>
+                                <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Not Popular</span>
                             @endif
                         </div>
 
@@ -54,7 +53,7 @@
 
                         <h4 class="text-lg font-semibold text-gray-900 mb-2">Study Cost</h4>
                         <div class="text-gray-600">
-                            USD {{$destination->study_cost }}
+                            USD {{ $destination->study_cost }}
                         </div>
                     </div>
                 </div>

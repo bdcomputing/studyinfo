@@ -11,7 +11,7 @@
                 <div class="p-6">
                     <div class="flex justify-between items-center  mb-6">
                         <div class="p-5 flex gap-5 items-center">
-                            <img src="{{ asset('storage/' . $university->logo_url) }}" alt="{{ $university->name }}"
+                            <img src="{{ $university->logo_url }}" alt="{{ $university->name }}"
                                 class=" size-16 object-cover rounded-md">
                             <h3 class="text-2xl font-bold text-gray-900">{{ $university->name }}</h3>
                         </div>
@@ -29,7 +29,7 @@
                     </div>
 
                     <div class="mb-6">
-                        <img src="{{ asset('storage/' . $university->image_url) }}" alt="{{ $university->name }}"
+                        <img src="{{ $university->image_url }}" alt="{{ $university->name }}"
                             class="w-full h-[450px] object-cover rounded-lg">
                     </div>
 
@@ -48,11 +48,10 @@
                         </div>
                         <div class="flex items-center">
                             <span class="text-gray-600 mr-2">Type:</span>
-                            @if ($university->type ==='Public')
-                            <span
-                                class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Public</span>
+                            @if ($university->type === 'Public')
+                                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Public</span>
                             @else
-                            <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Private</span>
+                                <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Private</span>
                             @endif
                         </div>
 
@@ -62,12 +61,12 @@
                         <h4 class="text-lg font-semibold text-gray-900 mb-2">Overview</h4>
                         <p class="text-gray-600 mb-6">{{ $university->description }}</p>
                         <div class="prose">
-                            {!!$university->detail!!}
+                            {!! $university->detail !!}
                         </div>
 
                         <h4 class="text-lg font-semibold text-gray-900 mb-2">Tuition fee</h4>
                         <div class="text-gray-600">
-                            {{$university->destination->currency}} {{$university->tuition_fee }}
+                            {{ $university->destination->currency }} {{ $university->tuition_fee }}
                         </div>
                     </div>
                 </div>

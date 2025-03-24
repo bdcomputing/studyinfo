@@ -14,12 +14,13 @@ class Destination extends Model
         'description',
         'cost_of_living',
         'language',
-        'image',
         'detail',
         'country',
         "currency",
         'image_url',
+        "image_public_id",
         'flag_url',
+        "flag_publlic_id",
         "continent_id",
         'is_popular'
     ];

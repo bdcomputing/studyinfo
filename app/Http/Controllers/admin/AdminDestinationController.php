@@ -3,16 +3,16 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\City;
 use App\Models\Continent;
 use App\Models\Destination;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\View\View;
 use Illuminate\Support\Str;
+use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
 
 class AdminDestinationController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      */
@@ -37,13 +37,14 @@ class AdminDestinationController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request);
         //
+
         $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'required|string',
             'detail' => 'required|string',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'flag' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
             'currency' => 'sometimes|string',
             'continent_id' => "required|string",
             'cost_of_living' => 'sometimes|integer|min:1',
@@ -51,20 +52,15 @@ class AdminDestinationController extends Controller
         ]);
         $data = $request->except(['image', "flag"]);
         if ($request->hasFile('image')) {
-            $image = $request->file('image');
-            $imageName = 'images/destinations/' . time() . "." . $image->getClientOriginalExtension();
-
-            // Store file in storage
-            Storage::disk('public')->put($imageName, file_get_contents($image));
-            $data['image_url'] = $imageName;
+            // upload to cloudinary
+            $uploadedFile =  $request->file('image')->storeOnCloudinary("destinations");
+            $data['image_url'] = $uploadedFile->getSecurePath();
+            $data['image_public_id'] = $uploadedFile->getPublicId();
         }
         if ($request->hasFile('flag')) {
-            $flag = $request->file('flag');
-            $flagName = 'images/destinations/flags/' . time() . "." . $flag->getClientOriginalExtension();
-
-            // Store file in storage
-            Storage::disk('public')->put($flagName, file_get_contents($flag));
-            $data['flag_url'] = $flagName;
+            $flag = $request->file('flag')->storeOnCloudinary("destinations/flags");
+            $data['flag_url'] = $flag->getSecurePath();
+            $data['flag_public_id'] = $flag->getPublicId();
         }
         $data['slug'] = Str::slug($request->name) . '-' . time();
         Destination::create($data);
@@ -99,6 +95,7 @@ class AdminDestinationController extends Controller
             'description' => 'required|string',
             'detail' => 'sometimes|string',
             'image' => 'sometimes|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'flag' => 'sometimes|image|mimes:jpeg,png,jpg,gif|max:2048',
             'currency' => 'sometimes|string',
             'continent_id' => "required|string",
             'cost_of_living' => 'sometimes|integer|min:1',
@@ -108,25 +105,23 @@ class AdminDestinationController extends Controller
 
         if ($request->hasFile('image')) {
             // Delete old image
-            if ($destination->image_url) {
-                Storage::delete($destination->image_url);
+            if ($destination->image_public_id) {
+                Cloudinary::destroy($destination->image_public_id);
             }
             // Store New Image
-            $image = $request->file('image');
-            $imageName = 'images/destinations/' . time() . '.' . $image->getClientOriginalExtension();
-            Storage::disk('public')->put($imageName, file_get_contents($image));
-            $data['image_url'] = $imageName;
+            $uploadedFile =  $request->file('image')->storeOnCloudinary("destinations");
+            $data['image_url'] = $uploadedFile->getSecurePath();
+            $data['image_public_id'] = $uploadedFile->getPublicId();
         };
         if ($request->hasFile('flag')) {
             // Delete old flag
-            if ($destination->flag_url) {
-                Storage::delete($destination->flag_url);
+            if ($destination->flag_public_id) {
+                Cloudinary::destroy($destination->flag_public_id);
             }
             // Store New Image
-            $flag = $request->file('flag');
-            $flagName = 'images/destinations/flags/' . time() . '.' . $flag->getClientOriginalExtension();
-            Storage::disk('public')->put($flagName, file_get_contents($flag));
-            $data['flag_url'] = $flagName;
+            $flag = $request->file('flag')->storeOnCloudinary("destinations/flags");
+            $data['flag_url'] = $flag->getSecurePath();
+            $data['flag_public_id'] = $flag->getPublicId();
         };
         // Update slug if it has changed
         if ($request->name !== $destination->name) {
@@ -147,8 +142,12 @@ class AdminDestinationController extends Controller
     {
 
         // Delete image
-        if ($destination->image) {
-            Storage::disk('public')->delete('images/destinations/' . $destination->image);
+        if ($destination->image_public_id) {
+            Cloudinary::destroy($destination->image_public_id);
+        }
+        // Delete Flag
+        if ($destination->flag_public_id) {
+            Cloudinary::destroy($destination->flag_public_id);
         }
 
         $destination->delete();

@@ -1,5 +1,5 @@
 <nav class="relative top-0 left-0 right-0 z-50 bg-primary-100">
-    <div class="grid md:grid-cols-12  container gap-x-8 items-center mx-auto p-4">
+    <div class="grid md:grid-cols-12  container gap-x-8 items-center mx-auto py-4 md:px-4 ">
         <div class="flex gap-3 items-center col-span-2 justify-between">
             <a href="{{ route('web.home') }}" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <img class="h-14 w-auto" src="{{ asset('/assets/logos/logo.png') }}" alt="STUDYINFO Logo" />
@@ -34,24 +34,28 @@
                             <i x-show="!open" class="bi bi-chevron-down ml-2 text-sm"></i>
                             <i x-show="open" class="bi bi-chevron-up ml-2 text-sm"></i>
                         </button>
-                        <div x-show="open" x-transition class=" absolute left-0 w-screen bg-transparent  shadow-md py-5">
+                        <div x-show="open" x-transition
+                            class=" absolute left-0 w-screen bg-transparent  shadow-md py-5">
                             <div class="bg-white">
                                 <div class="container mx-auto p-5">
-                                    <div class="grid max-w-screen-2xl px-0 gap-5 mx-auto mt-5  text-sm text-gray-500  md:grid-cols-4 md:px-6">
-                                        @foreach($continents as $continent)
-                                        <ul class="space-y-3">
-                                            <p class="text-lg font-bold"><a href="{{ route('web.universities.index',['continent'=>$continent->name]) }} ">{{$continent->name}}</a></p>
-                                            @foreach ($destinations as $destination)
-                                            @if($destination->continent->name===$continent->name)
-                                            <li>
-                                                <a href="{{ route('web.universities.index',['destination'=>$destination->name]) }}"
-                                                    class="hover:underline text-sm font-medium hover:text-secondary ">
-                                                    {{$destination->name}}
-                                                </a>
-                                            </li>
-                                            @endif
-                                            @endforeach
-                                        </ul>
+                                    <div
+                                        class="grid max-w-screen-2xl px-0 gap-5 mx-auto mt-5  text-sm text-gray-500  md:grid-cols-4 md:px-6">
+                                        @foreach ($continents as $continent)
+                                            <ul class="space-y-3">
+                                                <p class="text-lg font-bold"><a
+                                                        href="{{ route('web.universities.index', ['continent' => $continent->name]) }} ">{{ $continent->name }}</a>
+                                                </p>
+                                                @foreach ($destinations as $destination)
+                                                    @if ($destination->continent->name === $continent->name)
+                                                        <li>
+                                                            <a href="{{ route('web.universities.index', ['destination' => $destination->name]) }}"
+                                                                class="hover:underline text-sm font-medium hover:text-secondary ">
+                                                                {{ $destination->name }}
+                                                            </a>
+                                                        </li>
+                                                    @endif
+                                                @endforeach
+                                            </ul>
                                         @endforeach
 
                                     </div>
@@ -61,21 +65,21 @@
                     </div>
                 </li>
                 <li>
-                    <a href="{{route('web.universities.index')}}"
+                    <a href="{{ route('web.universities.index') }}"
                         class="block py-2 px-3  text-primary border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-secondary-700 md:p-0">Universities</a>
                 </li>
                 <li>
-                    <a href="{{route('web.programs.index')}}"
+                    <a href="{{ route('web.programs.index') }}"
                         class="block py-2 px-3  text-primary border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-secondary-700 md:p-0">Programs</a>
                 </li>
 
                 <li>
-                    <a href="{{route('web.blog.index')}}"
+                    <a href="{{ route('web.blog.index') }}"
                         class="block py-2 px-3  text-primary border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-secondary-700 md:p-0">Blog</a>
                 </li>
 
                 <li>
-                    <a href="{{route('web.events.index')}}"
+                    <a href="{{ route('web.events.index') }}"
                         class="block py-2 px-3  text-primary border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-secondary-700 md:p-0">Events</a>
                 </li>
 
@@ -93,9 +97,6 @@
         <div class="col-span-2 hidden md:block place-self-end items-center  h-full content-center">
             <button class="px-4 py-1.5 rounded-full bg-primary text-white font-bold ">Apply</button>
         </div>
-
-    </div>
-    <div id="mega-menu-full-image-dropdown" class="mt-1 bg-white border-gray-200 shadow-sm border-y  hidden">
 
     </div>
 </nav>

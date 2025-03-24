@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\City;
 use App\Models\Destination;
 use App\Models\University;
+use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -52,25 +53,22 @@ class AdminUniversityController extends Controller
             "contact_email" => "required|email",
             "tuition_fee" => "required|integer|min:1",
             "is_popular" => "sometimes|boolean",
+            'logo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
         $data = $request->except(['logo', 'image']);
 
-        if ($request->hasFile('image')) {
-            $image = $request->file('image');
-            $imageName = 'images/universities/' . time() . "." . $image->getClientOriginalExtension();
 
-            // store image in storage
-            Storage::disk("public")->put($imageName, file_get_contents($image));
-            $data['image_url'] = $imageName;
+        if ($request->hasFile('image')) {
+            $image = $request->file('image')->storeOnCloudinary('universities');
+            $data['image_url'] = $image->getSecurePath();
+            $data['image_public_id'] = $image->getPublicId();
         }
 
         if ($request->hasFile('logo')) {
-            $logo = $request->file('logo');
-            $logoName = "images/universities/logos/" . time() . "." . $logo->getClientOriginalExtension();
-
-            // store Logo in storage
-            Storage::disk('public')->put($logoName, file_get_contents($logo));
-            $data['logo_url'] = $logoName;
+            $logo = $request->file('logo')->storeOnCloudinary('universities/logos');
+            $data['logo_url'] = $logo->getSecurePath();
+            $data['logo_public_id'] = $logo->getPublicId();
         }
         $data["slug"] = Str::slug($request->name);
         University::create($data);
@@ -115,31 +113,28 @@ class AdminUniversityController extends Controller
             "contact_email" => "required|email",
             "tuition_fee" => "required|integer|min:1",
             "is_popular" => "sometimes|boolean",
+            'logo' => 'sometimes|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image' => 'sometimes|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
         $data = $request->except(['logo', 'image']);
 
         if ($request->hasFile('image')) {
-            if ($university->image_url) {
-                Storage::disk('public')->delete($university->image_url);
+            if ($university->image_public_id) {
+                Cloudinary::destroy($university->image_public_id);
             }
-            $image = $request->file('image');
-            $imageName = 'images/universities/' . time() . "." . $image->getClientOriginalExtension();
+            $image = $request->file('image')->storeOnCloudinary('universities');
 
-            // store image in storage
-            Storage::disk("public")->put($imageName, file_get_contents($image));
-            $data['image_url'] = $imageName;
+            $data['image_url'] = $image->getSecurePath();
+            $data['image_public_id'] = $image->getPublicId();
         }
 
         if ($request->hasFile('logo')) {
-            if ($university->logo_url) {
-                Storage::disk('public')->delete($university->logo_url);
+            if ($university->logo_public_id) {
+                Storage::disk('cloudinary')->delete($university->logo_public_id);
             }
-            $logo = $request->file('logo');
-            $logoName = "images/universities/logos/" . time() . "." . $logo->getClientOriginalExtension();
-
-            // store Logo in storage
-            Storage::disk('public')->put($logoName, file_get_contents($logo));
-            $data['logo_url'] = $logoName;
+            $logo = $request->file('logo')->storeOnCloudinary("universities/logos");
+            $data['logo_url'] = $logo->getSecurePath();
+            $data['logo_public_id'] = $image->getPublicId();
         }
         if ($request->name !== $university->name) {
 
@@ -155,11 +150,11 @@ class AdminUniversityController extends Controller
     public function destroy(University $university)
     {
         //
-        if ($university->image_url) {
-            Storage::disk('public')->delete($university->image_url);
+        if ($university->image_public_id) {
+            Cloudinary::destroy($university->image_public_id);
         }
-        if ($university->logo_url) {
-            Storage::disk("public")->delete($university->logo_url);
+        if ($university->logo_public_id) {
+            Cloudinary::destroy($university->logo_public_id);
         }
         $university->delete();
         return redirect()->route("admin.universities.index")->with("success", "University deleted successfully");

@@ -51,7 +51,6 @@ class AdminProgramController extends Controller
             'has_scholarship' => "sometimes|boolean",
         ]);
         $data = $request->all();
-        // dd($data);
         Program::create($data);
         return redirect()->route("admin.programs.index")->with("success", "Program created successfully");
     }
