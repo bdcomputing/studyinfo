@@ -43,7 +43,7 @@
 
             <!-- Quick Links -->
             <div class="col-span-1">
-                <h3 class="text-lg font-medium mb-4">Quick Links</h3>
+                <h3 class="text-lg font-medium mb-4 text-secondary">Quick Links</h3>
                 <ul class="space-y-2">
                     <li><a href="{{ route('web.about') }}" class=" hover:underline text-sm">About Us</a>
                     </li>
@@ -61,7 +61,7 @@
 
             <!-- Contact Information -->
             <div class="col-span-1">
-                <h3 class="text-lg font-medium mb-4">Contact Us</h3>
+                <h3 class="text-lg font-medium mb-4 text-secondary">Contact Us</h3>
                 <div class="space-y-4">
                     <div class="flex items-start gap-2">
                         <i class="bi bi-geo-alt text-lg"></i>
@@ -101,7 +101,9 @@
                 </p>
                 <p class="text-sm text-primary">
                     Developed by
-                    <a href="https://www.bdcomputing.co.ke" class="text-secondary hover:underline">BD Computing Limited
+                    <a target="_blank" href="https://www.bdcomputing.co.ke"
+                        class="text-secondary hover:underline font-semibold">BD
+                        Computing LLC
                         &reg;
                     </a>
                 </p>

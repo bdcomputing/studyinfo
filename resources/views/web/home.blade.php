@@ -7,108 +7,140 @@
     <section class="relative bg-primary-50 z-0">
         <div x-data="{
             activeTab: 1,
+            isPaused: false,
+            intervalId: null,
+        
+            startAutoPlay() {
+                this.intervalId = setInterval(() => {
+                    if (!this.isPaused) {
+                        this.activeTab = this.activeTab >= 3 ? 1 : this.activeTab + 1;
+                    }
+                }, 5000);
+            },
+        
+            toggle() {
+                this.isPaused = !this.isPaused;
+            },
+        
+        
+        
             init() {
-                setInterval(() => {
-                    this.activeTab = this.activeTab >= 3 ? 1 : this.activeTab + 1;
-                }, 5000); // Changes every 3 seconds
+                this.startAutoPlay();
+        
+                // Clean up interval when component is destroyed
+                this.$watch('$destroy', () => {
+                    clearInterval(this.intervalId);
+                });
             }
         }"
-            class="container mx-auto h-full pt-20 md:pt-0 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 ">
+            class="container mx-auto h-full  md:pt-0 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 ">
             <!-- Text Content -->
-            <div x-cloak x-show="activeTab==1"
-                class="text-primary z-40 py-10 md:py-20 px-5 md:px-10 flex flex-col justify-center">
-                <h1
-                    class="text-xl md:text-3xl lg:text-5xl  mb-6 font-extrabold leading-tight tracking-wide text-transparent bg-gradient-to-r from-secondary to-accent-700 bg-clip-text">
-                    Your Global Future Starts Here
-                    <span class="block mt-2">Study Abroad with Confidence!</span>
-                </h1>
+            <div class="relative h-full flex items-center py-10 min-h-[50dvh] md:gap-5">
+                <div x-cloak x-show="activeTab==1" class=" z-40  px-5 md:px-10 flex flex-col justify-center">
+                    <h1
+                        class="text-xl md:text-3xl lg:text-5xl  mb-6 font-extrabold tracking-wide text-transparent bg-gradient-to-r from-secondary to-accent-700 bg-clip-text">
+                        Your Global Future Starts Here with Us
+                    </h1>
 
-                <p class="text-base md:text-lg mb-8 opacity-90 md:font-semibold">
-                    Find your dream university, apply for scholarships, and get visa assistance -
-                    <span class="text-secondary">all in one place.</span>
-                </p>
+                    <p class=" md:text-lg mb-8 opacity-90 ">
+                        Find your dream university, apply for scholarships, and get visa assistance -
+                        <span class="text-secondary">all in one place.</span>
+                    </p>
 
-                <div class="flex flex-wrap gap-4">
-                    <a href="{{ route('web.contact') }}"
-                        class="bg-gradient-to-br from-secondary via-secondary/50 to-secondary hover:bg-secondary-500 text-white font-medium py-2.5 px-5 rounded-full transition duration-300">
-                        Explore Programs
-                    </a>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="{{ route('web.contact') }}"
+                            class="bg-gradient-to-br bg-secondary hover:bg-secondary-500 text-white font-medium py-2.5 px-5 rounded-full transition duration-300">
+                            Explore Programs
+                        </a>
 
+                    </div>
                 </div>
-            </div>
-            <div x-cloak x-show="activeTab==2"
-                class="text-primary z-40 py-10 md:py-20 px-5 md:px-10 flex flex-col justify-center">
-                <h1
-                    class="text-xl md:text-3xl lg:text-5xl  mb-6 font-extrabold leading-tight tracking-wide text-transparent bg-gradient-to-r from-secondary to-accent-700 bg-clip-text">
-                    Expert Guidance Every Step of the Way
-                </h1>
+                <div x-cloak x-show="activeTab==2" class="text-primary   px-5 md:px-10 flex flex-col justify-center">
+                    <h1
+                        class="text-xl md:text-3xl lg:text-5xl py-2  mb-6 font-extrabold  tracking-wide text-transparent bg-gradient-to-r from-secondary to-accent-700 bg-clip-text">
+                        Expert Guidance Every Step of the Way
 
-                <p class="text-base md:text-lg mb-8 opacity-90 md:font-semibold">
+                    </h1>
 
-                    Navigate the complexities of international education with confidence, backed by advisors with 20+ years
-                    of collective global experience.
-                </p>
+                    <p class="md:text-lg mb-8 opacity-90 ">
 
-                <div class="flex flex-wrap gap-4">
-                    <a href="{{ route('web.contact') }}"
-                        class="bg-gradient-to-br from-secondary via-secondary/50 to-secondary hover:bg-secondary-500 text-white font-medium py-2.5 px-5 rounded-full transition duration-300">
-                        Talk to Expert
-                    </a>
-                    <a href="{{ route('web.programs.index') }}"
-                        class="bg-transparent hover:bg-gradient-to-br from-secondary via-secondary/50 to-secondary text-secondary hover:text-white font-medium py-2.5 px-5 rounded-full border-2 border-secondary/80 transition duration-300">
-                        Programs
-                    </a>
+                        Navigate the complexities of international education with confidence, backed by advisors with 20+
+                        years
+                        of collective global experience.
+                    </p>
+
+                    <div class="flex flex-wrap gap-4">
+                        <a href="{{ route('web.contact') }}"
+                            class="bg-gradient-to-br bg-secondary hover:bg-secondary-500 text-white font-medium py-2.5 px-5 rounded-full  flex items-center">
+                            Talk to Expert
+                        </a>
+                        <a href="{{ route('web.programs.index') }}"
+                            class="bg-transparent hover:bg-gradient-to-br bg-secondary text-secondary hover:text-white hover:bg-secondary font-medium py-2.5 px-5 rounded-full border-2 border-secondary/80 ">
+                            Programs
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div x-cloak x-show="activeTab==3"
-                class="text-primary z-40 py-10 md:py-20 px-5 md:px-10 flex flex-col justify-center">
-                <h1
-                    class="text-xl md:text-3xl lg:text-5xl  mb-6 font-extrabold leading-tight tracking-wide text-transparent bg-gradient-to-r from-secondary to-accent-700 bg-clip-text">
-                    Discover Your Global Education Journey
-                </h1>
+                <div x-cloak x-show="activeTab==3" class="text-primary px-5 md:px-10 flex flex-col justify-center">
+                    <h1
+                        class="text-xl md:text-3xl lg:text-5xl py-2  mb-6 font-extrabold tracking-wide  text-transparent bg-gradient-to-r from-secondary to-accent-700 bg-clip-text">
+                        Discover Your Global Education Journey
+                    </h1>
 
-                <p class="text-base md:text-lg mb-8 opacity-90 md:font-semibold">
-                    With programs in 50+ countries and partnerships with over 300 prestigious universities worldwide, we
-                    open doors to life-changing international experiences.
-                </p>
+                    <p class="md:text-lg mb-8">
+                        With programs in 50+ countries and partnerships with over 300 prestigious universities worldwide, we
+                        open doors to life-changing international experiences.
+                    </p>
 
-                <div class="flex flex-wrap gap-4">
-                    <a href="{{ route('web.contact') }}"
-                        class="bg-gradient-to-br from-secondary via-secondary/50 to-secondary hover:bg-secondary-500 text-white font-medium py-2.5 px-5 rounded-full transition duration-300">
-                        Talk to Expert
-                    </a>
-                    <a href="{{ route('web.programs.index') }}"
-                        class="bg-transparent hover:bg-gradient-to-br from-secondary via-secondary/50 to-secondary text-secondary hover:text-white font-medium py-2.5 px-5 rounded-full border-2 border-secondary/80 transition duration-300">
-                        Programs
-                    </a>
+                    <div class="flex items-center flex-wrap gap-4">
+                        <a href="{{ route('web.contact') }}"
+                            class="bg-gradient-to-br bg-secondary  hover:bg-secondary-500 text-white font-medium py-2.5 px-5 rounded-full transition duration-300">
+                            Talk to Us
+                        </a>
+
+                    </div>
+                </div>
+                <div class="p-5 bottom-0 absolute  flex justify-center items-center gap-2 z-50">
+                    <button @click='toggle()' class="size-8 border-2 border-red-500 rounded-full">
+                        <i :class="{ 'bi-play': isPaused, 'bi-pause': !isPaused }" class="bi text-red-500"></i>
+
+                    </button>
+                    <button @click="activeTab = 1"
+                        :class="{ 'bg-secondary w-8': activeTab == 1, 'bg-primary-200 w-4': activeTab != 1 }"
+                        class="h-4 rounded-full transition-all duration-300"></button>
+                    <button @click="activeTab = 2"
+                        :class="{ 'bg-secondary w-8': activeTab == 2, 'bg-primary-200 w-4': activeTab != 2 }"
+                        class="h-4 rounded-full transition-all duration-300"></button>
+                    <button @click="activeTab = 3"
+                        :class="{ 'bg-secondary w-8': activeTab == 3, 'bg-primary-200 w-4': activeTab != 3 }"
+                        class="h-4 rounded-full transition-all duration-300"></button>
                 </div>
             </div>
 
             <!-- Image -->
             <div class="relative z-50 h-full">
                 <img src="{{ asset('/assets/images/hero.webp') }}" alt="STUDYINFO Students"
-                    class="w-full h-full object-cover object-top rounded-lg ">
+                    class="w-full max-h-[75dvh] object-contain object-top rounded-lg ">
             </div>
         </div>
     </section>
 
     <div class="bg-white py-10">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
-            <h2 class="text-center text-lg/8 font-bold text-primary">
+            <h2 class="text-center text-xl md:text-xl font-bold text-primary">
                 Our Partner Institutions
             </h2>
             <div
-                class="mx-auto mt-5 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-                <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+                class="mx-auto py-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+                <img class="col-span-2 h-20 w-full object-contain lg:col-span-1"
                     src="{{ asset('/assets/logos/Kalenjins-abroas-300x171.png') }}" alt="Transistor" width="158"
                     height="48">
-                <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+                <img class="col-span-2 h-20 w-full object-contain lg:col-span-1"
                     src="{{ asset('/assets/logos/Holmes-300x115.png') }}" alt="Reform" width="158" height="48">
-                <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+                <img class="col-span-2 h-20 w-full object-contain lg:col-span-1"
                     src="{{ asset('/assets/logos/SI-UK-300x157.png') }}" alt="Tuple" width="158" height="48">
-                <img class="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
+                <img class="col-span-2 h-20 w-full object-contain sm:col-start-2 lg:col-span-1"
                     src="{{ asset('/assets/logos/uGGSPLogo-square.jpg') }}" alt="SavvyCal" width="158" height="48">
-                <img class="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
+                <img class="col-span-2 col-start-2 h-20 w-full object-contain sm:col-start-auto lg:col-span-1"
                     src="{{ asset('/assets/logos/KNQA.jpeg') }}" alt="Statamic" width="158" height="48">
             </div>
         </div>
@@ -121,9 +153,9 @@
                     <p class="">We have been guiding students through every step from program choice to visa
                         application, including scholarship to achieve their study abroad dreams.</p>
                 </div>
-                <div class=" md:p-5 py-5 grid grid-cols-2 gap-2 md:gap-5">
+                <div class=" md:p-5 py-5 grid grid-cols-2 gap-2 md:gap-5 text-gray-600">
                     <div
-                        class=" flex gap-2 justify-around items-center  rounded-xl bg-white border border-accent-100 hover:shadow-xl p-5 min-h-40">
+                        class=" flex gap-2 justify-around items-center  rounded-xl bg-white border border-accent-100 hover:shadow p-5 min-h-40">
                         <div class="flex">
                             <div class="space-y-2">
                                 <p class="font-extrabold text-2xl md:text-3xl">10+</p>
@@ -185,15 +217,17 @@
         </div>
     </section>
     <section class="bg-primary-50 p-5">
-        <div class="container mx-auto py-20">
-            <div class="text-center text-mb-12">
-                <h2 class="text-2xl md:text-3xl font-extrabold text-primary mb-6">
+        <div class="container mx-auto ">
+            <div class="text-center py-20 space-y-5">
+                <h2 class="text-2xl md:text-3xl font-extrabold text-primary ">
                     Services for Students
                 </h2>
+                <p>Guiding Students from Application to Global Academic Success. We provide full-spectrum Student Services
+                    for International Education</p>
             </div>
 
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3  gap-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3  gap-8 pb-5">
                 @php
                     $services = [
                         [
@@ -223,15 +257,16 @@
                     <div
                         class="bg-white p-5  border border-accent-100 hover:shadow hover:border-secondary-200 rounded-xl max-w-sm">
 
-                        <div class="md:p-5  w-full bg-white/90 space-y-3">
+                        <div class="md:p-5  w-full bg-white/90 space-y-3 text-center">
                             <div class="flex justify-center p-5">
                                 <i class="bi {{ $service['icon'] }} text-secondary text-5xl"></i>
                             </div>
-                            <p class="font-bold text-primary">{{ $service['title'] }}</p>
+                            <p class="font-bold text-xl  text-primary">{{ $service['title'] }}</p>
                             <p class="line-clamp-2 ">{{ $service['description'] }}</p>
                             <div class="pt-5">
-                                <button class="p-3 py-1.5 rounded-md bg-primary text-sm text-white">View
-                                    Details</button>
+                                <a href="{{ route('web.contact') }}"
+                                    class="p-3 py-1.5 rounded-md bg-primary text-sm text-white">Know more
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -240,34 +275,36 @@
             </div>
         </div>
     </section>
-    <section class=" bg-gradient-to-b from-secondary-50/20 via-secondary-200 to-secondary-50/20 p-5">
-        <div class="container mx-auto md:p-5">
-            <div class="text-center md:py-20">
+    <section class=" p-5">
+        <div class="container mx-auto ">
+            <div class="text-center md:py-16 space-y-5">
                 <h2 class="text-2xl md:text-3xl font-extrabold text-primary  mb-6">
                     How we work
                 </h2>
+                <p>Our Comprehensive Step-by-Step Study Abroad Support Process</p>
             </div>
             <div class=" grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8 ">
-                <div class="bg-white border border-gray-100 p-5 rounded-xl ">
+                <div
+                    class="bg-gradient-to-b from-secondary-400 to-secondary  border border-gray-100 p-5 py-10 rounded-xl ">
                     <span class=" bg-secondary text-white  py-1 px-3 rounded-full">Step 1</span>
-                    <div class="py-3 space-y-3">
+                    <div class="py-3 space-y-3 text-white">
                         <p class="font-bold text-base md:text-xl">Consult</p>
                         <p class="">Connect with expert to assess your educational goals and visa requirements
                         </p>
                     </div>
 
                 </div>
-                <div class="bg-white border border-gray-100 p-5 rounded-xl">
+                <div class="bg-gradient-to-b from-secondary-400 to-secondary  border border-gray-100 p-5 py-10 rounded-xl">
                     <span class=" bg-secondary text-white  py-1 px-3 rounded-full">Step 2</span>
-                    <div class="py-3 space-y-3">
+                    <div class="py-3 space-y-3 text-white">
                         <p class="font-bold text-base md:text-xl">Apply</p>
                         <p class="text-sm md:text-base">We guide you in selecting the right program, university and
                             provide support for your visa application.</p>
                     </div>
                 </div>
-                <div class="bg-white border border-gray-100 p-5 rounded-xl">
+                <div class="bg-gradient-to-b from-secondary-400 to-secondary  border border-gray-100 p-5 py-10 rounded-xl">
                     <span class=" bg-secondary text-white  py-1 px-3 rounded-full">Step 3</span>
-                    <div class="py-3">
+                    <div class="py-3 space-y-3 text-white">
                         <p class="font-bold text-base md:text-xl">Fly</p>
                         <p class="text-sm md:text-base">Once you are approved you can start your juorney to your dream
                             destination.</p>
@@ -276,20 +313,21 @@
             </div>
         </div>
     </section>
-    <section class="bg-white py-20 px-4 sm:px-6 lg:px-8">
+    <section class=" py-20 px-4 sm:px-6 lg:px-8">
 
         <div class="container mx-auto">
-            <div class="text-center md:py-20">
+            <div class="text-center ">
                 <h2 class="text-2xl md:text-3xl font-extrabold text-primary mb-6">
                     Choose Your Study Destination
                 </h2>
-                <p class="md:text-lg text-gray-600 mb-6 max-w-2xl mx-auto font-bold">
-                    Featured Destinations
+                <p class="  mb-6 max-w-2xl mx-auto ">
+                    Explore world-class universities across continents, tailored to your academic goals and personal
+                    aspirations.
                 </p>
             </div>
 
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4  gap-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3  gap-8">
                 @php
                     $destinations = [
                         [
@@ -343,10 +381,13 @@
                                 alt="">
                         </div>
                         <div
-                            class="p-5 bottom-0 absolute z-50 w-full bg-gradient-to-t from-secondary-50 via-white to-transparent">
-                            <p class="font-bold text-primary">Study in {{ $destination['destination'] }}</p>
-                            <button class="p-1  md:text-sm py-2 bg-secondy hover:underline  text-secondary">Read
-                                More</button>
+                            class="px-5 pt-5 flex flex-col justify-end bottom-0 absolute z-50 w-full bg-gradient-to-t from-white via-white to-transparent">
+                            <p class="font-bold pt-10 text-lg text-primary">Study in {{ $destination['destination'] }}</p>
+                            <div>
+                                <a href={{ route('web.universities.index') }}
+                                    class=" pb-2 hover:underline  text-secondary">Read
+                                    More</a>
+                            </div>
                         </div>
                     </div>
                 @endforeach
@@ -361,9 +402,8 @@
                 Inspiring Journeys of Students Who <span class="text-secondary ">Made It Big</span>
             </h1>
 
-            <p class="max-w-2xl mx-auto mt-6 text-center text-gray-600 ">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo incidunt ex placeat modi magni quia error
-                alias, adipisci rem similique, at omnis eligendi optio eos harum.
+            <p class="max-w-2xl mx-auto mt-6 text-center ">
+                Real stories from students who turned dreams of global education into life-changing adventures.
             </p>
 
             <section class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 lg:grid-cols-2 xl:grid-cols-3">
