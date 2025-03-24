@@ -4,7 +4,6 @@
             {{ __('Edit Blog Post') }}
         </h2>
     </x-slot>
-    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 
 
     <div class="py-12">
@@ -19,8 +18,7 @@
                         </a>
                     </div>
 
-                    <form action="{{ route('admin.blog.update', $blog) }}" method="POST"
-                        enctype="multipart/form-data">
+                    <form action="{{ route('admin.blog.update', $blog) }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
 
@@ -31,7 +29,7 @@
                                     value="{{ old('title', $blog->title) }}" required
                                     class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500">
                                 @error('title')
-                                <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
+                                    <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
                                 @enderror
                             </div>
 
@@ -40,14 +38,14 @@
                                 <select name="category" id="category" required
                                     class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500">
                                     @foreach ($categories as $category)
-                                    <option value="{{ $category }}"
-                                        {{ old('category', $blog->category) == $category ? 'selected' : '' }}>
-                                        {{ $category }}
-                                    </option>
+                                        <option value="{{ $category }}"
+                                            {{ old('category', $blog->category) == $category ? 'selected' : '' }}>
+                                            {{ $category }}
+                                        </option>
                                     @endforeach
                                 </select>
                                 @error('category')
-                                <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
+                                    <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
                                 @enderror
                             </div>
 
@@ -58,7 +56,7 @@
                                     value="{{ old('publish_date', $blog->publish_date->format('Y-m-d')) }}" required
                                     class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500">
                                 @error('publish_date')
-                                <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
+                                    <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
                                 @enderror
                             </div>
 
@@ -66,15 +64,15 @@
                                 <label for="image" class="block text-sm font-medium text-gray-700">Blog
                                     Image</label>
                                 <div class="mt-2 mb-4">
-                                    <img src="{{ asset('storage/images/blog/' . $blog->image) }}"
-                                        alt="{{ $blog->title }}" class="h-40 w-auto object-cover rounded-md">
+                                    <img src="{{ $blog->image_url }}" alt="{{ $blog->title }}"
+                                        class="h-40 w-auto object-cover rounded-md">
                                 </div>
                                 <input type="file" name="image" id="image"
                                     class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500">
                                 <p class="mt-1 text-sm text-gray-500">Leave empty to keep current
                                     image. Recommended size: 800x450px. Max 2MB.</p>
                                 @error('image')
-                                <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
+                                    <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
                                 @enderror
                             </div>
 
@@ -86,17 +84,17 @@
                                 <p class="mt-1 text-sm text-gray-500">A brief summary of the blog
                                     post (shown in listings).</p>
                                 @error('description')
-                                <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
+                                    <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
                                 @enderror
                             </div>
 
                             <div class="col-span-2">
                                 <label for="content" class="block text-sm font-medium text-gray-700">Content</label>
-                                <div class="!h-40 rounded-md " id="editor" style="height: 300px;">{!! $blog->content !!}</div>
+
                                 <textarea name="content" id="content" rows="10" required
-                                    class="mt-1 hidden w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500">{{ old('content', $blog->content) }}</textarea>
+                                    class="mt-1 editor w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500">{{ old('content', $blog->content) }}</textarea>
                                 @error('content')
-                                <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
+                                    <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
                                 @enderror
                             </div>
 
@@ -125,31 +123,4 @@
             </div>
         </div>
     </div>
-    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-
-    <script>
-        const quill = new Quill('#editor', {
-            theme: 'snow', // Use the Snow theme
-            modules: {
-                toolbar: [
-                    [{
-                        'header': [1, 2, 3, false]
-                    }],
-                    ['bold', 'italic', 'underline', 'strike'],
-                    [{
-                        'list': 'ordered'
-                    }, {
-                        'list': 'bullet'
-                    }],
-                    ['clean']
-                ]
-            }
-        });
-
-        const form = document.querySelector('#form');
-        form.onsubmit = function() {
-            const content = document.querySelector('#content');
-            content.value = quill.root.innerHTML; // Get the HTML content from Quill
-        };
-    </script>
 </x-app-layout>

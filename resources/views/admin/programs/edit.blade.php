@@ -81,7 +81,7 @@
                                     class="block required text-sm font-medium text-gray-700 ">Program
                                     Details<span class="text-red-500">*</span></label>
                                 <textarea name="detail" id="detail" rows="3" required
-                                    class="mt-1 block w-full rounded-md border-gray-300    shadow-sm focus:border-primary focus:ring-primary">{{ old('detail',$program->detail) }}</textarea>
+                                    class="mt-1 editor block w-full rounded-md border-gray-300    shadow-sm focus:border-primary focus:ring-primary">{{ old('detail',$program->detail) }}</textarea>
                                 <p class="mt-1 text-sm text-gray-500 ">Program details</p>
                                 @error('detail')
                                 <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
@@ -205,30 +205,4 @@
             </div>
         </div>
     </div>
-
-    <script>
-        const quill = new Quill('#editor', {
-            theme: 'snow', // Use the Snow theme
-            modules: {
-                toolbar: [
-                    [{
-                        'header': [1, 2, 3, false]
-                    }],
-                    ['bold', 'italic', 'underline', 'strike'],
-                    [{
-                        'list': 'ordered'
-                    }, {
-                        'list': 'bullet'
-                    }],
-                    ['clean']
-                ]
-            }
-        });
-
-        const form = document.querySelector('#form');
-        form.onsubmit = function() {
-            const content = document.querySelector('#content');
-            content.value = quill.root.innerHTML; // Get the HTML content from Quill
-        };
-    </script>
 </x-app-layout>

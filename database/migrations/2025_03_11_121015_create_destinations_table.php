@@ -19,11 +19,12 @@ return new class extends Migration
             $table->text('detail')->nullable();       // Detailed description
             $table->string('cost_of_living')->nullable();  // Cost of living info
             $table->string('language')->nullable();        // Language spoken
-            $table->string('best_for')->nullable();        // Example: "Engineering", "Budget"
             $table->string('image_url')->nullable();
+            $table->string('image_public_id')->nullable();
             $table->string("currency")->nullable();
             $table->foreignId("continent_id")->constrained("continents", "id");
             $table->string("flag_url")->nullable();
+            $table->string("flag_public_id")->nullable();
             $table->boolean("is_popular")->default(false);
             $table->timestamps();
         });

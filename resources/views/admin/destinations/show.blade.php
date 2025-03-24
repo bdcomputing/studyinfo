@@ -14,18 +14,18 @@
                         <div class="flex space-x-4">
 
                             <a href="{{ route('admin.destinations.edit', $destination) }}"
-                                class="px-6 py-2 bg-primary-500 text-white rounded-full hover:bg-primary-600 transition">
+                                class="px-6 py-1.5 bg-primary text-white rounded-lg hover:bg-primary-900 transition">
                                 Edit
                             </a>
                             <a href="{{ route('admin.destinations.index') }}"
-                                class="px-4 py-2 bg-gray-500 text-white rounded-full hover:bg-gray-600 transition">
+                                class="px-4 py-1.5 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition">
                                 Back to List
                             </a>
                         </div>
                     </div>
 
                     <div class="mb-6">
-                        <img src="{{ asset('storage/images/destinations/' . $destination->image) }}" alt="{{ $destination->name }}"
+                        <img src="{{ $destination->image_url }}" alt="{{ $destination->name }}"
                             class="w-full h-[450px] object-cover rounded-lg">
                     </div>
 
@@ -39,10 +39,9 @@
                         <div class="flex items-center">
                             <span class="text-gray-600 mr-2">Status:</span>
                             @if ($destination->is_popular)
-                            <span
-                                class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Popular</span>
+                                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Popular</span>
                             @else
-                            <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Not Popular</span>
+                                <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Not Popular</span>
                             @endif
                         </div>
 
@@ -51,10 +50,13 @@
                     <div class="prose max-w-none">
                         <h4 class="text-lg font-semibold text-gray-900 mb-2">Description</h4>
                         <p class="text-gray-600 mb-6">{{ $destination->description }}</p>
+                        <div>
+                            {!! $destination->detail !!}
+                        </div>
 
-                        <h4 class="text-lg font-semibold text-gray-900 mb-2">Study Cost</h4>
+                        <h4 class="text-lg font-semibold text-gray-900 mb-2">Cost of Living</h4>
                         <div class="text-gray-600">
-                            USD {{$destination->study_cost }}
+                            USD {{ $destination->cost_of_living }}
                         </div>
                     </div>
                 </div>

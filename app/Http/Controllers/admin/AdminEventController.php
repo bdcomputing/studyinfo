@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Event;
 use App\Models\EventRegistration;
+use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
 use Illuminate\Support\Facades\Storage;
 
 
@@ -26,7 +27,7 @@ class AdminEventController extends Controller
 
     public function store(Request $request)
     {
-        $validated = $request->validate([
+        $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'required|string',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
@@ -37,15 +38,17 @@ class AdminEventController extends Controller
             'capacity' => 'nullable|integer|min:1',
             'is_active' => 'sometimes|boolean',
         ]);
+        $data = $request->except("image");
 
         if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('images/events', 'public');
-            $validated['image'] = $imagePath;
+            $image = $request->file('image')->storeOnCloudinary("events");
+            $data['image_url'] = $image->getSecurePath();
+            $data['image_public_id'] = $image->getPublicId();
         }
 
-        $validated['is_active'] = $request->has('is_active');
+        $data['is_active'] = $request->has('is_active');
 
-        Event::create($validated);
+        Event::create($data);
 
         return redirect()->route('admin.events.index')
             ->with('success', 'Event created successfully');
@@ -77,12 +80,13 @@ class AdminEventController extends Controller
 
         if ($request->hasFile('image')) {
             // Delete old image if exists
-            if ($event->image) {
-                Storage::disk('public')->delete('images/events/' . $event->image);
+            if ($event->image_public_id) {
+                Cloudinary::destroy($event->image_public_id);
             }
 
-            $imagePath = $request->file('image')->store('images/events', 'public');
-            $validated['image'] = $imagePath;
+            $imagePath = $request->file('image')->storeOnCloudinary("events");
+            $validated['image_url'] = $imagePath->getSecurePath();
+            $validated['image_public_id'] = $imagePath->getPublicId();
         }
 
         $validated['is_active'] = $request->has('is_active');
@@ -96,8 +100,8 @@ class AdminEventController extends Controller
     public function destroy(Event $event)
     {
         // Delete image if exists
-        if ($event->image) {
-            Storage::disk('public')->delete('images/blog/' . $event->image);
+        if ($event->image_public_id) {
+            Cloudinary::destroy($event->image_public_id);
         }
 
         $event->delete();

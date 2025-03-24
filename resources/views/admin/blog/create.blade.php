@@ -11,52 +11,49 @@
                     <div class="py-5">
                         <p class="text-lg md:text-xl">Create Blog</p>
                     </div>
-                    <form id="form" action="{{ route('admin.blog.store') }}" method="POST" enctype="multipart/form-data">
+                    <form id="form" action="{{ route('admin.blog.store') }}" method="POST"
+                        enctype="multipart/form-data">
                         @csrf
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div class="col-span-2">
-                                <label for="title"
-                                    class="block text-sm font-medium text-gray-700 ">Title</label>
+                                <label for="title" class="block text-sm font-medium text-gray-700 ">Title</label>
                                 <input type="text" name="title" id="title" value="{{ old('title') }}" required
                                     class="mt-1 block w-full rounded-md border-gray-300    shadow-sm focus:border-primary-500 focus:ring-primary-500">
                                 @error('title')
-                                <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
+                                    <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
                                 @enderror
                             </div>
 
                             <div>
-                                <label for="category"
-                                    class="block text-sm font-medium text-gray-700 ">Category</label>
+                                <label for="category" class="block text-sm font-medium text-gray-700 ">Category</label>
                                 <select name="category" id="category" required
                                     class="mt-1 block w-full rounded-md border-gray-300    shadow-sm focus:border-primary-500 focus:ring-primary-500">
                                     @foreach ($categories as $category)
-                                    <option value="{{ $category }}"
-                                        {{ old('category') == $category ? 'selected' : '' }}>
-                                        {{ $category }}
-                                    </option>
+                                        <option value="{{ $category }}"
+                                            {{ old('category') == $category ? 'selected' : '' }}>
+                                            {{ $category }}
+                                        </option>
                                     @endforeach
                                 </select>
                                 @error('category')
-                                <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
+                                    <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
                                 @enderror
                             </div>
 
                             <div>
-                                <label for="publish_date"
-                                    class="block text-sm font-medium text-gray-700 ">Publish
+                                <label for="publish_date" class="block text-sm font-medium text-gray-700 ">Publish
                                     Date</label>
                                 <input type="date" name="publish_date" id="publish_date"
                                     value="{{ old('publish_date', date('Y-m-d')) }}" required
                                     class="mt-1 block w-full rounded-md border-gray-300    shadow-sm focus:border-primary-500 focus:ring-primary-500">
                                 @error('publish_date')
-                                <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
+                                    <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
                                 @enderror
                             </div>
 
                             <div class="col-span-2">
-                                <label for="image"
-                                    class="block text-sm font-medium text-gray-700 ">
+                                <label for="image" class="block text-sm font-medium text-gray-700 ">
                                     <span class="flex items-center">
                                         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor"
                                             viewBox="0 0 24 24">
@@ -83,31 +80,28 @@
                                     </div>
                                 </div>
                                 @error('image')
-                                <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
+                                    <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
                                 @enderror
                             </div>
 
                             <div class="col-span-2">
-                                <label for="description"
-                                    class="block text-sm font-medium text-gray-700 ">Short
+                                <label for="description" class="block text-sm font-medium text-gray-700 ">Short
                                     Description</label>
                                 <textarea name="description" id="description" rows="3" required
                                     class="mt-1 block w-full rounded-md border-gray-300    shadow-sm focus:border-primary-500 focus:ring-primary-500">{{ old('description') }}</textarea>
                                 <p class="mt-1 text-sm text-gray-500 ">A brief summary of the blog
                                     post (shown in listings).</p>
                                 @error('description')
-                                <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
+                                    <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
                                 @enderror
                             </div>
 
                             <div class="col-span-2">
-                                <label for="content"
-                                    class="block text-sm font-medium text-gray-700 ">Content</label>
-                                <div class="!h-40 rounded-md " id="editor"></div>
+                                <label for="content" class="block text-sm font-medium text-gray-700 ">Content</label>
                                 <textarea name="content" id="content" rows="10"
-                                    class="mt-1  w-full rounded-md hidden border-gray-300    shadow-sm focus:border-primary-500 focus:ring-primary-500">{{ old('content') }}</textarea>
+                                    class="mt-1 editor  w-full rounded-md  border-gray-300    shadow-sm focus:border-primary-500 focus:ring-primary-500">{{ old('content') }}</textarea>
                                 @error('content')
-                                <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
+                                    <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
                                 @enderror
                             </div>
 
@@ -119,8 +113,7 @@
                                             class="rounded border-gray-300 text-primary-600 shadow-sm focus:border-primary-500 focus:ring-primary-500">
                                     </div>
                                     <div class="ml-3 text-sm">
-                                        <label for="is_published"
-                                            class="font-medium text-gray-700 ">Publish
+                                        <label for="is_published" class="font-medium text-gray-700 ">Publish
                                             immediately</label>
                                     </div>
                                 </div>
@@ -138,31 +131,5 @@
             </div>
         </div>
     </div>
-    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 
-    <script>
-        const quill = new Quill('#editor', {
-            theme: 'snow', // Use the Snow theme
-            modules: {
-                toolbar: [
-                    [{
-                        'header': [1, 2, 3, false]
-                    }],
-                    ['bold', 'italic', 'underline', 'strike'],
-                    [{
-                        'list': 'ordered'
-                    }, {
-                        'list': 'bullet'
-                    }],
-                    ['clean']
-                ]
-            }
-        });
-
-        const form = document.querySelector('#form');
-        form.onsubmit = function() {
-            const content = document.querySelector('#content');
-            content.value = quill.root.innerHTML; // Get the HTML content from Quill
-        };
-    </script>
 </x-app-layout>

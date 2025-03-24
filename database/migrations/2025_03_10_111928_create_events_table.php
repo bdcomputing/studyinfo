@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('description');
-            $table->string('image')->nullable();
+            $table->string('image_url')->nullable();
+            $table->string('image_public_id')->nullable();
             $table->date('event_date');
             $table->time('start_time');
             $table->time('end_time');

@@ -32,8 +32,7 @@
                                     <span>No universities to select</span>
                                     @endforelse
                                 </select>
-                                <!-- <input type="text" name="name" id="title" value="{{ old('name') }}" required
-                                    class="mt-1 block w-full rounded-md border-gray-300    shadow-sm focus:border-primary focus:ring-primary-500"> -->
+
                                 @error('university_id')
                                 <p class="mt-1 text-sm text-red-600 ">{{ $message }}</p>
                                 @enderror
@@ -96,30 +95,4 @@
             </div>
         </div>
     </div>
-
-    <script>
-        const quill = new Quill('#editor', {
-            theme: 'snow', // Use the Snow theme
-            modules: {
-                toolbar: [
-                    [{
-                        'header': [1, 2, 3, false]
-                    }],
-                    ['bold', 'italic', 'underline', 'strike'],
-                    [{
-                        'list': 'ordered'
-                    }, {
-                        'list': 'bullet'
-                    }],
-                    ['clean']
-                ]
-            }
-        });
-
-        const form = document.querySelector('#form');
-        form.onsubmit = function() {
-            const content = document.querySelector('#content');
-            content.value = quill.root.innerHTML; // Get the HTML content from Quill
-        };
-    </script>
 </x-app-layout>

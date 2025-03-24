@@ -4,12 +4,11 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Blog;
+use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\View\View;
 use Illuminate\Support\Str;
 
-use function PHPUnit\Framework\returnSelf;
 
 class AdminBlogController extends Controller
 {
@@ -51,10 +50,11 @@ class AdminBlogController extends Controller
         // Handle image upload
         if ($request->hasFile('image')) {
             $image = $request->file('image');
-            $imageName = time() . '.' . $image->getClientOriginalExtension();
             // Store in public disk instead of private
-            Storage::disk('public')->put('images/blog/' . $imageName, file_get_contents($image));
-            $data['image'] = $imageName;
+            $uploadedImage = $request->file('image')->storeOnCloudinary('blogs');
+            // get secure path from cloudinary
+            $data['image_url'] = $uploadedImage->getSecurePath();
+            $data['image_public_id'] = $uploadedImage->getPublicId();
         }
 
         // Generate slug with timestamp
@@ -106,15 +106,14 @@ class AdminBlogController extends Controller
         // Handle image upload if a new image is provided
         if ($request->hasFile('image')) {
             // Delete old image
-            if ($blog->image) {
-                Storage::disk('public')->delete('images/blog/' . $blog->image);
+            if ($blog->image_public_id) {
+                Cloudinary::destroy($blog->image_public_id);
             }
 
             // Store new image
-            $image = $request->file('image');
-            $imageName = time() . '.' . $image->getClientOriginalExtension();
-            Storage::disk('public')->put('images/blog/' . $imageName, file_get_contents($image));
-            $data['image'] = $imageName;
+            $image = $request->file('image')->storeOnCloudinary('blogs');
+            $data['image_url'] = $image->getSecurePath();
+            $data['image_public_id'] = $image->getPublicId();
         }
 
         // Update slug if title has changed
@@ -137,8 +136,8 @@ class AdminBlogController extends Controller
     public function destroy(Blog $blog)
     {
         // Delete image
-        if ($blog->image) {
-            Storage::disk('public')->delete('images/blog/' . $blog->image);
+        if ($blog->image_public_id) {
+            Cloudinary::destroy($blog->image_public_id);
         }
 
         $blog->delete();

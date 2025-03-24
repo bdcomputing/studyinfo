@@ -48,12 +48,10 @@
                     <li><a href="{{ route('web.about') }}" class=" hover:underline text-sm">About Us</a>
                     </li>
 
-                    <li><a href="#"
-                            class=" hover:underline text-sm">Success
+                    <li><a href="#" class=" hover:underline text-sm">Success
                             Stories</a></li>
-                    <li><a href="{{ route('web.events.index')}}"
-                            class=" hover:underline text-sm">Events</a></li>
-                    <li><a href="{{route('web.blog.index')}}" class=" hover:underline text-sm">Blog</a>
+                    <li><a href="{{ route('web.events.index') }}" class=" hover:underline text-sm">Events</a></li>
+                    <li><a href="{{ route('web.blog.index') }}" class=" hover:underline text-sm">Blog</a>
                     </li>
                     <li><a href="{{ route('web.faqs') }}" class=" hover:underline text-sm">FAQs</a></li>
                 </ul>
@@ -97,23 +95,17 @@
         <!-- Bottom Footer -->
         <div class="mt-12 pt-6 ">
             <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-primary flex items-center">
+                    Study Info {{ date('Y') }} . All rights reserved.
+
+                </p>
                 <p class="text-sm text-primary">
-                    &copy; {{ date('Y') }} STUDYINFO. All rights reserved. Powered by <a
-                        href="https://www.bdcomputing.co.ke" class="text-secondary hover:underline">BD Computing Limited
+                    Developed by
+                    <a href="https://www.bdcomputing.co.ke" class="text-secondary hover:underline">BD Computing Limited
                         &reg;
                     </a>
                 </p>
-                <div class="mt-4 md:mt-0 flex space-x-6">
-                    <a href="{{ route('web.bottom.privacy') }}" class="text-sm text-primary hover:underline">
-                        Privacy Policy
-                    </a>
-                    <a href="{{ route('web.bottom.terms') }}" class="text-sm text-primary hover:underline">
-                        Terms of Service
-                    </a>
-                    <a href="{{ route('web.bottom.cookie') }}" class="text-sm text-primary hover:underline">
-                        Cookie Policy
-                    </a>
-                </div>
+
             </div>
         </div>
     </div>

@@ -90,7 +90,6 @@
                                 <label for="detail"
                                     class="block required text-sm font-medium text-gray-700 ">University
                                     Details<span class="text-red-500">*</span></label>
-                                <div id="editor"></div>
                                 <textarea name="detail" id="detail" rows="3"
                                     class="mt-1 editor block w-full rounded-md border-gray-300    shadow-sm focus:border-primary-500 focus:ring-primary-500">{{ old('detail') }}</textarea>
                                 <p class="mt-1 text-sm text-gray-500 ">University Details</p>
@@ -244,16 +243,4 @@
         </div>
     </div>
 
-    <!-- Tinymce -->
-    <script src="{{ asset('assets/tinymce/tinymce.min.js') }}"></script>
-    <script>
-        tinymce.init({
-            selector: 'textarea.editor',
-            height: 400,
-            toolbar: 'undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat ',
-            content_css: '{{ asset("tinymce/skins/content/default/content.min.css") }}',
-            branding: false,
-            promotion: false,
-        });
-    </script>
 </x-app-layout>

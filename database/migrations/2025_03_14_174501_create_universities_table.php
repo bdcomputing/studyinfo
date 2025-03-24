@@ -24,7 +24,9 @@ return new class extends Migration
             $table->string("contact_email");
             $table->decimal('tuition_fee', 10, 2);
             $table->string('image_url')->nullable();
+            $table->string('image_public_id')->nullable();
             $table->string('logo_url')->nullable();
+            $table->string('logo_public_id')->nullable();
             $table->boolean("is_popular")->default(false);
             $table->timestamps();
         });
