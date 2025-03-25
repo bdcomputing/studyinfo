@@ -151,9 +151,9 @@
                     <p class="">We have been guiding students through every step from program choice to visa
                         application, including scholarship to achieve their study abroad dreams.</p>
                 </div>
-                <div class=" md:p-5 py-5 grid grid-cols-2 gap-2 md:gap-5 text-gray-600">
+                <div class=" py-5 grid grid-cols-2 gap-2 md:gap-5 text-gray-600">
                     <div
-                        class=" flex gap-2 justify-around items-center  rounded-xl bg-white border border-accent-100 hover:shadow p-5 min-h-40">
+                        class=" flex gap-2 justify-around items-center  rounded-xl bg-primary text-white border border-accent-100 hover:shadow p-5 min-h-40">
                         <div class="flex">
                             <div class="space-y-2">
                                 <p class="font-extrabold text-2xl md:text-3xl">10+</p>
@@ -170,7 +170,7 @@
                         </div>
                     </div>
                     <div
-                        class=" flex gap-2 justify-around items-center rounded-xl bg-white border border-accent-100 hover:shadow p-5">
+                        class=" flex gap-2 justify-around items-center rounded-xl bg-primary text-white border border-accent-100 hover:shadow p-5">
 
                         <div class="flex items-center">
                             <div class="space-y-2">
@@ -185,10 +185,10 @@
                                     d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z" />
                             </svg>
 
-                        </div>toCurrency(10)
+                        </div>
                     </div>
                     <div
-                        class=" flex gap-2 md:gap-5 w-max gap-x-8 items-center justify-around p-5 rounded-xl col-span-2 min-h-40 bg-primary border border-accent-100 hover:shadow">
+                        class=" flex gap-2 md:gap-5 w-max gap-x-8 items-center justify-around p-5 rounded-xl col-span-2 min-h-40 bg-primary text-white border border-accent-100 hover:shadow">
 
                         <div class="flex items-center">
                             <div class="space-y-2">
@@ -481,9 +481,11 @@
                 @forelse($events as $event)
                     <div class="bg-white group relative border border-accent-100  hover:shadow-lg rounded-xl max-w-sm">
                         <div class="overflow-hidden rounded-xl ">
-                            <img src="{{ asset('storage/' . $event->image) }}"
+                            {{-- add placeholder image if  --}}
+                            <img src="{{ $event->image_url }}"
                                 class="transition-transform duration-500 group-hover:scale-105 overflow-hidden rounded-t-xl max-h-30 overflow-y-hidden object-cover w-full"
                                 alt="{{ $event->title }}">
+
                         </div>
                         <div class="p-5 bottom-0 absolute z-50 w-full bg-white/90">
                             <p class="font-bold text-primary">{{ $event->description }}</p>
@@ -496,6 +498,9 @@
                         </div>
                     </div>
                 @empty
+                    <div class="p-5 w-full col-span-3 text-center">
+                        <p class="">There are currently no events at this time, check back soon!</p>
+                    </div>
                 @endforelse
             </div>
         </div>
