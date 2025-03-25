@@ -22,8 +22,6 @@
                 this.isPaused = !this.isPaused;
             },
         
-        
-        
             init() {
                 this.startAutoPlay();
         
@@ -187,10 +185,10 @@
                                     d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z" />
                             </svg>
 
-                        </div>
+                        </div>toCurrency(10)
                     </div>
                     <div
-                        class=" flex gap-2 md:gap-5 w-max gap-x-8 items-center justify-around p-5 rounded-xl col-span-2 min-h-40 bg-white border border-accent-100 hover:shadow">
+                        class=" flex gap-2 md:gap-5 w-max gap-x-8 items-center justify-around p-5 rounded-xl col-span-2 min-h-40 bg-primary border border-accent-100 hover:shadow">
 
                         <div class="flex items-center">
                             <div class="space-y-2">
@@ -284,9 +282,8 @@
                 <p>Our Comprehensive Step-by-Step Study Abroad Support Process</p>
             </div>
             <div class=" grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8 ">
-                <div
-                    class="bg-gradient-to-b from-secondary-400 to-secondary  border border-gray-100 p-5 py-10 rounded-xl ">
-                    <span class=" bg-secondary text-white  py-1 px-3 rounded-full">Step 1</span>
+                <div class="bg-primary  border border-gray-100 p-5 py-10 rounded-xl ">
+                    <span class=" bg-white text-primary py-1 px-3 rounded-full">Step 1</span>
                     <div class="py-3 space-y-3 text-white">
                         <p class="font-bold text-base md:text-xl">Consult</p>
                         <p class="">Connect with expert to assess your educational goals and visa requirements
@@ -294,16 +291,16 @@
                     </div>
 
                 </div>
-                <div class="bg-gradient-to-b from-secondary-400 to-secondary  border border-gray-100 p-5 py-10 rounded-xl">
-                    <span class=" bg-secondary text-white  py-1 px-3 rounded-full">Step 2</span>
+                <div class="bg-primary  border border-gray-100 p-5 py-10 rounded-xl">
+                    <span class=" bg-white text-primary py-1 px-3 rounded-full">Step 2</span>
                     <div class="py-3 space-y-3 text-white">
                         <p class="font-bold text-base md:text-xl">Apply</p>
                         <p class="text-sm md:text-base">We guide you in selecting the right program, university and
                             provide support for your visa application.</p>
                     </div>
                 </div>
-                <div class="bg-gradient-to-b from-secondary-400 to-secondary  border border-gray-100 p-5 py-10 rounded-xl">
-                    <span class=" bg-secondary text-white  py-1 px-3 rounded-full">Step 3</span>
+                <div class="bg-primary  border border-gray-100 p-5 py-10 rounded-xl">
+                    <span class=" bg-white text-primary py-1 px-3 rounded-full">Step 3</span>
                     <div class="py-3 space-y-3 text-white">
                         <p class="font-bold text-base md:text-xl">Fly</p>
                         <p class="text-sm md:text-base">Once you are approved you can start your juorney to your dream
@@ -381,7 +378,7 @@
                                 alt="">
                         </div>
                         <div
-                            class="px-5 pt-5 flex flex-col justify-end bottom-0 absolute z-50 w-full bg-gradient-to-t from-white via-white to-transparent">
+                            class="px-5 pt-16 flex flex-col justify-end bottom-0 absolute z-50 w-full bg-gradient-to-t from-primary-50 via-white/80 to-transparent">
                             <p class="font-bold pt-10 text-lg text-primary">Study in {{ $destination['destination'] }}</p>
                             <div>
                                 <a href={{ route('web.universities.index') }}

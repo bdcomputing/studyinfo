@@ -41,11 +41,29 @@ class Program extends Model
 
     public function scopeFilter($query, $filter)
     {
-        return $query->when(isset($filter['search']), function ($query) use ($filter) {
-            $query->where("name", "like", '%' . $filter['search'] . '%')
-                ->orWhereHas("university", function ($q) use ($filter) { // Related table filter
-                    $q->where("name", "like", '%' . $filter['search'] . '%');
+        return $query
+            ->when(isset($filter['search']), function ($query) use ($filter) {
+                $query->where(function ($q) use ($filter) {
+                    $q->where("name", "like", '%' . $filter['search'] . '%')
+                        ->orWhereHas("university", function ($q) use ($filter) {
+                            $q->where("name", "like", '%' . $filter['search'] . '%');
+                        });
                 });
-        });
+            })
+            ->when(isset($filter['language']), function ($query) use ($filter) {
+                $query->where("language_of_instruction", $filter['language']);
+            })
+            ->when(isset($filter['field_of_study']), function ($query) use ($filter) {
+                $query->where("field_of_study", $filter['field_of_study']);
+            })
+            ->when(isset($filter['has_scholarship']), function ($query) use ($filter) {
+                $query->where("has_scholarship", $filter['has_scholarship']);
+            })
+            ->when(isset($filter['level']), function ($query) use ($filter) {
+                $query->where("level", $filter['level']);
+            })
+            ->when(isset($filter['mode']), function ($query) use ($filter) {
+                $query->where("mode_of_study", $filter['mode']);
+            });
     }
 }

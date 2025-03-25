@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Destination;
 use App\Models\Program;
+use App\Models\University;
 use Illuminate\Http\Request;
 
 class ProgramsController extends Controller
@@ -13,8 +15,17 @@ class ProgramsController extends Controller
     public function index(Request $request)
     {
         //
-        $programs = Program::query()->filter($request->only(['search']))->paginate(20);
-        return view("web.programs.index", compact("programs"));
+        $programs = Program::query()->filter($request->all())->paginate(20);
+        $universities = University::all();
+        // get all distict programstudy levels
+        $studyLevels = Program::select('level')->distinct()->get();
+        // get all destinations
+        $destinations = Destination::all();
+        // get distinct program language of instruction
+        $languages = Program::select('language_of_instruction')->distinct()->get();
+        // get distinct program field of study
+        $fieldsOfStudy = Program::select('field_of_study')->distinct()->get();
+        return view("web.programs.index", compact("programs", "universities", "studyLevels", "destinations", "languages", "fieldsOfStudy"));
     }
 
     /**

@@ -17,11 +17,11 @@
 </head>
 
 <body class="font-sans text-primary antialiased">
-    <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-primary-50  p-2">
+    <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-50  p-2">
 
 
 
-        <div class="flex flex-col  bg-white p-5  ">
+        <div class="flex flex-col  bg-white p-10 shadow rounded-lg w-full max-w-xl">
             <div class="flex flex-row gap-3 items-center justify-center pb-4">
                 <div>
                     <img class="h-12 md:h-14 w-auto" src="{{ asset('/assets/logos/logo.png') }}" alt="STUDYINFO Logo" />
